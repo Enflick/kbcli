@@ -14,19 +14,20 @@ import (
 
 // Options for command line
 type Options struct {
-	Host       string
-	Username   string
-	Password   string
-	CreatedBy  string
-	APIKey     string
-	APISecret  string
-	PrintDebug bool
-	Args       []string
-	client     *kbclient.KillBill
-	devClient  *debug.Client
-	Log        Logger
-	out        io.Writer
-	FO         *FormatOptions
+	Host            string
+	Username        string
+	Password        string
+	CreatedBy       string
+	APIKey          string
+	APISecret       string
+	PrintDebug      bool
+	Args            []string
+	client          *kbclient.KillBill
+	devClient       *debug.Client
+	Log             Logger
+	out             io.Writer
+	FO              *FormatOptions
+	TransportScheme string
 }
 
 // Client returns killbill client

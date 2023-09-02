@@ -135,6 +135,13 @@ func (r *App) init() {
 			EnvVar:      "KB_API_SECRET",
 		},
 		cli.StringFlag{
+			Name:        "transport_scheme",
+			Value:       "https,http",
+			Usage:       "Transport scheme to use. Use http for KB without https (One of http https http,https)",
+			Destination: &r.o.TransportScheme,
+			EnvVar:      "KB_TRANSPORT_SCHEME",
+		},
+		cli.StringFlag{
 			Name:  "format, f",
 			Value: "default",
 			Usage: `Output format. (One of table, short, default, list, json)
@@ -168,7 +175,8 @@ func (r *App) toAction(fn HandlerFn) func(c *cli.Context) error {
 		o := *r.o
 		o.Args = c.Args()
 
-		trp := httptransport.New(o.Host, "", []string{"http", "https"})
+		trp := httptransport.New(o.Host, "", strings.Split(o.TransportScheme, ","))
+
 		// Add text/xml producer which is not handled by openapi runtime.
 		trp.Producers["text/xml"] = runtime.TextProducer()
 		trp.Consumers["text/xml"] = runtime.TextConsumer()

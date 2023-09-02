@@ -58,6 +58,29 @@ func createTenant(ctx context.Context, o *cmdlib.Options) error {
 	return nil
 }
 
+func registerPushNotificationCallback(ctx context.Context, o *cmdlib.Options) error {
+	if len(o.Args) != 1 {
+		return cmdlib.ErrorInvalidArgs
+	}
+	Uri := o.Args[0]
+
+	registerPushNotification := &tenant.RegisterPushNotificationCallbackParams{
+		Cb: &Uri,
+	}
+
+	registerPushNotification.SetContext(ctx)
+
+	result, err := o.Client().Tenant.RegisterPushNotificationCallback(ctx, &tenant.RegisterPushNotificationCallbackParams{
+		Cb: &Uri,
+	})
+	_ = result
+	if err != nil {
+		return err
+	}
+	o.Print(registerPushNotification)
+	return nil
+}
+
 func configureStripePlugin(ctx context.Context, o *cmdlib.Options) error {
 	if len(o.Args) != 2 {
 		return cmdlib.ErrorInvalidArgs
@@ -104,6 +127,26 @@ func registerTenantCommands(r *cmdlib.App) {
 			},
 		},
 	})
+	cmdlib.AddFormatter(reflect.TypeOf(&tenant.RegisterPushNotificationCallbackParams{}), cmdlib.Formatter{
+		Columns: []cmdlib.Column{
+			{
+				Name: "CallBack URL",
+				Path: "$.Cb",
+			},
+			{
+				Name: "Comment",
+				Path: "$.XKillbillComment",
+			},
+			{
+				Name: "Created By",
+				Path: "$.XKillbillCreatedBy",
+			},
+			{
+				Name: "Reason",
+				Path: "$.XKillbillReason",
+			},
+		},
+	})
 
 	// Register top level command
 	r.Register("", cli.Command{
@@ -117,6 +160,12 @@ func registerTenantCommands(r *cmdlib.App) {
 		Usage:     "create new tenant",
 		ArgsUsage: "UNIQUE_NAME API_KEY API_SECRET",
 	}, createTenant)
+
+	r.Register("tenants", cli.Command{
+		Name:      "registerPushNotificationCallBack",
+		Usage:     "register a new PushNotificationCallBack",
+		ArgsUsage: "CallBackUri",
+	}, registerPushNotificationCallback)
 
 	// add stripe plugin
 	r.Register("tenants", cli.Command{
