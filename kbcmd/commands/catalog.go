@@ -5,9 +5,11 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"reflect"
 
 	"github.com/killbill/kbcli/v3/kbclient/catalog"
 	"github.com/killbill/kbcli/v3/kbcmd/cmdlib"
+	"github.com/killbill/kbcli/v3/kbmodel"
 	"github.com/urfave/cli"
 )
 
@@ -62,7 +64,46 @@ func uploadCatalog(ctx context.Context, o *cmdlib.Options) error {
 	return err
 }
 
+func validateCatalog(ctx context.Context, o *cmdlib.Options) error {
+	if len(o.Args) != 1 {
+		return cmdlib.ErrorInvalidArgs
+	}
+	catalogFile := o.Args[0]
+	contents, err := os.ReadFile(catalogFile)
+	if err != nil {
+		return fmt.Errorf("unable to read catalog file %s. %v", catalogFile, err)
+	}
+	strContents := string(contents)
+
+	response, err := o.Client().Catalog.ValidateCatalogXML(ctx, &catalog.ValidateCatalogXMLParams{
+		Body: strContents,
+	})
+	if err != nil {
+		return err
+	}
+
+	o.Print(response.Payload)
+	return err
+}
+
 func registerCatalogCommands(r *cmdlib.App) {
+	cmdlib.AddFormatter(reflect.TypeOf(&kbmodel.CatalogValidation{}), cmdlib.Formatter{
+		SubItems: []cmdlib.SubItem{
+			{
+				Name:      "Catalog Validation Errors",
+				FieldName: "CatalogValidationErrors",
+				Formatter: &cmdlib.Formatter{
+					Columns: []cmdlib.Column{
+						{
+							Name: "Error Code",
+							Path: "$.errorDescription",
+						},
+					},
+				},
+			},
+		},
+	})
+
 	// Register top level command
 	r.Register("", cli.Command{
 		Name:    "catalog",
@@ -96,4 +137,15 @@ For ex.,
 `,
 		Description: "Uploads the catalog",
 	}, uploadCatalog)
+
+	r.Register("catalog", cli.Command{
+		Name:  "validate",
+		Usage: "validate given catalog",
+		ArgsUsage: `CATALOG_FILE
+		
+For ex.,
+		kbcmd catalog upload /tmp/catalog.json
+`,
+		Description: "Uploads the catalog",
+	}, validateCatalog)
 }
