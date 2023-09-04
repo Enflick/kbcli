@@ -2,7 +2,7 @@
 
 ## Prerequisites
 This walkthrough assumes that killbill is running
-in localhost:8080 with username/password set to 'username' and 'password'. If your
+in localhost:8080 with username/password set to 'admin' and 'password'. If your
 killbill installation has different values, you can set the values through exporting
 the appropriate KB_* variables. (For details run `kbcmd -h`)
 
@@ -11,6 +11,8 @@ the appropriate KB_* variables. (For details run `kbcmd -h`)
 # Set the api key and secret so future calls will use this.
 # These exports ensure kbcmd uses them for future calls.
 # Note: You can also pass these in explicitly to each command through flags.
+
+# You can also pass these as parameters on each command. This may be useful if using a script to bootstrap an instance of KB
 export KB_API_KEY=tenant1key
 export KB_API_SECRET=tenant1secret
 
@@ -25,7 +27,26 @@ tenant2      tenant2key tenant2secret
 
 This is the default output of kbcmd. To change formatting option, you can specify -f option.
 
-## Step 2: Upload catalog
+## Step 2: Register a Push Notification Callback (optional)
+Register a sample Callback URL to receive Events from KB.
+
+In this example, we explicitly setting the host, user and password. We also are setting the api key and api secret.
+
+Note: The default transport scheme will use https and if you're running KB in docker along with not configuring TLS in KB, you will get an error because the client is expecting an https connection. To overcome this, use the transport_scheme parameter and set it `http`
+```sh
+kbcmd --host "127.0.0.1:8080" --user "admin" --password "password" --api_key "tenant1key" --api_secret "tenant1secret" --transport_scheme "http" tenants registerPushNotificationCallBack http://host.docker.internal:42722/events
+```
+Same as above and assuming the host, user, password, api key and api secret are configured through environment variables
+
+Note: You may get your commands working since the default username and password along with the host information have default values set up kbcmd that match the default values set in the docker image.
+```sh
+kbcmd --transport_scheme "http" tenants registerPushNotificationCallBack http://host.docker.internal:42722/events
+```
+
+## Step 3: Create new Account
+Let's create a new killbill account.
+
+## Step 4: Upload catalog
 Upload a sample catalog to the created tenant.
 ```sh
 kbcmd catalog upload docs/samples/simple-catalog.xml
@@ -33,7 +54,7 @@ kbcmd catalog upload docs/samples/simple-catalog.xml
 
 Now the catalog has been uploaded.
 
-## Step 3: Create new Account
+## Step 5: Create new Account
 Let's create a new killbill account.
 
 ```sh
@@ -49,12 +70,12 @@ John Doe johndoe      e4f47a6b-9975-4922-9c5a-baae7ef4d03c johndoe@gmail.com <ni
 If you want to get help for specific command, just specify `-h` option. For ex.,
 `kbcmd acc create -h` will print help for create command.
 
-## Step 4: Configure stripe (optional)
+## Step 6: Configure stripe (optional)
 This step configures stripe plugin. To do this, you need to get stripe account.
 Visit https://stripe.com/ and create a new account for yourself. After that, you
 can get the public/private key from Developers -> API Keys section.
 
-### Step 4.1 Configure plugin for tenant
+### Step 6.1 Configure plugin for tenant
 ```bash
 # Set your stripe keys here
 STRIPE_PRIVATE_KEY=sk_test_YOUR_STRIPE_KEY
@@ -64,7 +85,7 @@ STRIPE_PUBLIC_KEY=pk_test_YOUR_STRIPE_KEY
 kbcmd ten configure-stripe-plugin $STRIPE_PUBLIC_KEY $STRIPE_PRIVATE_KEY
 ```
 
-### Step 4.2 Generate stripe card token
+### Step 6.2 Generate stripe card token
 Stripe card token is anonymized credit card information. We will use this instead
 of using credit card directly.
 ```bash
@@ -72,13 +93,13 @@ kbcmd stripe --stripe_key $STRIPE_PRIVATE_KEY new-card-token  Name="John Doe" Nu
 ```
 store the card token in `CARD_TOKEN` variable.
 
-### Step 4.3 Set default payment method
+### Step 6.3 Set default payment method
 ```bash
 # Add the payment method and set to default
 kbcmd acc payment-methods add johndoe killbill-stripe visa true false token=$CARD_TOKEN
 ```
 
-## Step 5: Create new subscription
+## Step 7: Create new subscription
 ```sh
 kbcmd subscriptions create ExternalKey=bundle1 Account=johndoe PlanName=simple-monthly
 ```
@@ -88,7 +109,7 @@ EXTERNAL_KEY BUNDLE_ID
 bundle1      447ac056-182f-40a0-a672-8f7a4daa3851
 ```
 
-## Step 6: Check invoices
+## Step 8: Check invoices
 Get list of invoices for account `johndoe`.
 ```bash
 kbcmd invoices list johndoe
@@ -99,7 +120,7 @@ AMOUNT BALANCE INVOICE_ID                           TARGET_DATE
 200    <nil>   303b4d21-2809-4e8a-a553-665b313da860 2018-08-03
 ```
 
-## Step 7: Generate upcoming invoice (Dry Run)
+## Step 9: Generate upcoming invoice (Dry Run)
 ```sh
 kbcmd invoices dry-run johndoe
 ```
