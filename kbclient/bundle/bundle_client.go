@@ -95,6 +95,7 @@ AddBundleBlockingState blocks a bundle
 */
 func (a *Client) AddBundleBlockingState(ctx context.Context, params *AddBundleBlockingStateParams) (*AddBundleBlockingStateCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewAddBundleBlockingStateParams()
 	}
@@ -140,10 +141,15 @@ func (a *Client) AddBundleBlockingState(ctx context.Context, params *AddBundleBl
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*AddBundleBlockingStateCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *AddBundleBlockingStateCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -162,7 +168,13 @@ func (a *Client) AddBundleBlockingState(ctx context.Context, params *AddBundleBl
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*AddBundleBlockingStateCreated), nil
+
+	switch value := getResult.(type) {
+	case *AddBundleBlockingStateCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -171,6 +183,7 @@ CreateBundleCustomFields adds custom fields to bundle
 */
 func (a *Client) CreateBundleCustomFields(ctx context.Context, params *CreateBundleCustomFieldsParams) (*CreateBundleCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateBundleCustomFieldsParams()
 	}
@@ -216,10 +229,15 @@ func (a *Client) CreateBundleCustomFields(ctx context.Context, params *CreateBun
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreateBundleCustomFieldsCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreateBundleCustomFieldsCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -238,7 +256,13 @@ func (a *Client) CreateBundleCustomFields(ctx context.Context, params *CreateBun
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreateBundleCustomFieldsCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreateBundleCustomFieldsCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -247,6 +271,7 @@ CreateBundleTags adds tags to bundle
 */
 func (a *Client) CreateBundleTags(ctx context.Context, params *CreateBundleTagsParams) (*CreateBundleTagsCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateBundleTagsParams()
 	}
@@ -292,10 +317,15 @@ func (a *Client) CreateBundleTags(ctx context.Context, params *CreateBundleTagsP
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreateBundleTagsCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreateBundleTagsCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -314,7 +344,13 @@ func (a *Client) CreateBundleTags(ctx context.Context, params *CreateBundleTagsP
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreateBundleTagsCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreateBundleTagsCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -323,6 +359,7 @@ DeleteBundleCustomFields removes custom fields from bundle
 */
 func (a *Client) DeleteBundleCustomFields(ctx context.Context, params *DeleteBundleCustomFieldsParams) (*DeleteBundleCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewDeleteBundleCustomFieldsParams()
 	}
@@ -381,6 +418,7 @@ DeleteBundleTags removes tags from bundle
 */
 func (a *Client) DeleteBundleTags(ctx context.Context, params *DeleteBundleTagsParams) (*DeleteBundleTagsNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewDeleteBundleTagsParams()
 	}
@@ -439,6 +477,7 @@ GetBundle retrieves a bundle by id
 */
 func (a *Client) GetBundle(ctx context.Context, params *GetBundleParams) (*GetBundleOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetBundleParams()
 	}
@@ -485,6 +524,7 @@ GetBundleAuditLogsWithHistory retrieves bundle audit logs with history by id
 */
 func (a *Client) GetBundleAuditLogsWithHistory(ctx context.Context, params *GetBundleAuditLogsWithHistoryParams) (*GetBundleAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetBundleAuditLogsWithHistoryParams()
 	}
@@ -531,6 +571,7 @@ GetBundleByKey retrieves a bundle by external key
 */
 func (a *Client) GetBundleByKey(ctx context.Context, params *GetBundleByKeyParams) (*GetBundleByKeyOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetBundleByKeyParams()
 	}
@@ -577,6 +618,7 @@ GetBundleCustomFields retrieves bundle custom fields
 */
 func (a *Client) GetBundleCustomFields(ctx context.Context, params *GetBundleCustomFieldsParams) (*GetBundleCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetBundleCustomFieldsParams()
 	}
@@ -623,6 +665,7 @@ GetBundleTags retrieves bundle tags
 */
 func (a *Client) GetBundleTags(ctx context.Context, params *GetBundleTagsParams) (*GetBundleTagsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetBundleTagsParams()
 	}
@@ -669,6 +712,7 @@ GetBundles lists bundles
 */
 func (a *Client) GetBundles(ctx context.Context, params *GetBundlesParams) (*GetBundlesOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetBundlesParams()
 	}
@@ -715,6 +759,7 @@ ModifyBundleCustomFields modifies custom fields to bundle
 */
 func (a *Client) ModifyBundleCustomFields(ctx context.Context, params *ModifyBundleCustomFieldsParams) (*ModifyBundleCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewModifyBundleCustomFieldsParams()
 	}
@@ -773,6 +818,7 @@ PauseBundle pauses a bundle
 */
 func (a *Client) PauseBundle(ctx context.Context, params *PauseBundleParams) (*PauseBundleNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewPauseBundleParams()
 	}
@@ -831,6 +877,7 @@ RenameExternalKey updates a bundle external key
 */
 func (a *Client) RenameExternalKey(ctx context.Context, params *RenameExternalKeyParams) (*RenameExternalKeyNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewRenameExternalKeyParams()
 	}
@@ -889,6 +936,7 @@ ResumeBundle resumes a bundle
 */
 func (a *Client) ResumeBundle(ctx context.Context, params *ResumeBundleParams) (*ResumeBundleNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewResumeBundleParams()
 	}
@@ -947,6 +995,7 @@ SearchBundles searches bundles
 */
 func (a *Client) SearchBundles(ctx context.Context, params *SearchBundlesParams) (*SearchBundlesOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewSearchBundlesParams()
 	}
@@ -993,6 +1042,7 @@ TransferBundle transfers a bundle to another account
 */
 func (a *Client) TransferBundle(ctx context.Context, params *TransferBundleParams) (*TransferBundleCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewTransferBundleParams()
 	}
@@ -1038,10 +1088,15 @@ func (a *Client) TransferBundle(ctx context.Context, params *TransferBundleParam
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*TransferBundleCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *TransferBundleCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -1060,7 +1115,13 @@ func (a *Client) TransferBundle(ctx context.Context, params *TransferBundleParam
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*TransferBundleCreated), nil
+
+	switch value := getResult.(type) {
+	case *TransferBundleCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 

@@ -77,6 +77,7 @@ CreateInvoiceItemCustomFields adds custom fields to invoice item
 */
 func (a *Client) CreateInvoiceItemCustomFields(ctx context.Context, params *CreateInvoiceItemCustomFieldsParams) (*CreateInvoiceItemCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateInvoiceItemCustomFieldsParams()
 	}
@@ -122,10 +123,15 @@ func (a *Client) CreateInvoiceItemCustomFields(ctx context.Context, params *Crea
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreateInvoiceItemCustomFieldsCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreateInvoiceItemCustomFieldsCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -144,7 +150,13 @@ func (a *Client) CreateInvoiceItemCustomFields(ctx context.Context, params *Crea
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreateInvoiceItemCustomFieldsCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreateInvoiceItemCustomFieldsCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -153,6 +165,7 @@ CreateInvoiceItemTags adds tags to invoice item
 */
 func (a *Client) CreateInvoiceItemTags(ctx context.Context, params *CreateInvoiceItemTagsParams) (*CreateInvoiceItemTagsCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateInvoiceItemTagsParams()
 	}
@@ -198,10 +211,15 @@ func (a *Client) CreateInvoiceItemTags(ctx context.Context, params *CreateInvoic
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreateInvoiceItemTagsCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreateInvoiceItemTagsCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -220,7 +238,13 @@ func (a *Client) CreateInvoiceItemTags(ctx context.Context, params *CreateInvoic
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreateInvoiceItemTagsCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreateInvoiceItemTagsCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -229,6 +253,7 @@ DeleteInvoiceItemCustomFields removes custom fields from invoice item
 */
 func (a *Client) DeleteInvoiceItemCustomFields(ctx context.Context, params *DeleteInvoiceItemCustomFieldsParams) (*DeleteInvoiceItemCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewDeleteInvoiceItemCustomFieldsParams()
 	}
@@ -287,6 +312,7 @@ DeleteInvoiceItemTags removes tags from invoice item
 */
 func (a *Client) DeleteInvoiceItemTags(ctx context.Context, params *DeleteInvoiceItemTagsParams) (*DeleteInvoiceItemTagsNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewDeleteInvoiceItemTagsParams()
 	}
@@ -345,6 +371,7 @@ GetInvoiceItemAuditLogsWithHistory retrieves invoice item audit logs with histor
 */
 func (a *Client) GetInvoiceItemAuditLogsWithHistory(ctx context.Context, params *GetInvoiceItemAuditLogsWithHistoryParams) (*GetInvoiceItemAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceItemAuditLogsWithHistoryParams()
 	}
@@ -391,6 +418,7 @@ GetInvoiceItemCustomFields retrieves invoice item custom fields
 */
 func (a *Client) GetInvoiceItemCustomFields(ctx context.Context, params *GetInvoiceItemCustomFieldsParams) (*GetInvoiceItemCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceItemCustomFieldsParams()
 	}
@@ -437,6 +465,7 @@ GetInvoiceItemTags retrieves invoice item tags
 */
 func (a *Client) GetInvoiceItemTags(ctx context.Context, params *GetInvoiceItemTagsParams) (*GetInvoiceItemTagsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceItemTagsParams()
 	}
@@ -483,6 +512,7 @@ ModifyInvoiceItemCustomFields modifies custom fields to invoice item
 */
 func (a *Client) ModifyInvoiceItemCustomFields(ctx context.Context, params *ModifyInvoiceItemCustomFieldsParams) (*ModifyInvoiceItemCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewModifyInvoiceItemCustomFieldsParams()
 	}

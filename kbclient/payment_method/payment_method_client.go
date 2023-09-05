@@ -81,6 +81,7 @@ CreatePaymentMethodCustomFields adds custom fields to payment method
 */
 func (a *Client) CreatePaymentMethodCustomFields(ctx context.Context, params *CreatePaymentMethodCustomFieldsParams) (*CreatePaymentMethodCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreatePaymentMethodCustomFieldsParams()
 	}
@@ -126,10 +127,15 @@ func (a *Client) CreatePaymentMethodCustomFields(ctx context.Context, params *Cr
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreatePaymentMethodCustomFieldsCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreatePaymentMethodCustomFieldsCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -148,7 +154,13 @@ func (a *Client) CreatePaymentMethodCustomFields(ctx context.Context, params *Cr
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreatePaymentMethodCustomFieldsCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreatePaymentMethodCustomFieldsCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -157,6 +169,7 @@ DeletePaymentMethod deletes a payment method
 */
 func (a *Client) DeletePaymentMethod(ctx context.Context, params *DeletePaymentMethodParams) (*DeletePaymentMethodNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewDeletePaymentMethodParams()
 	}
@@ -215,6 +228,7 @@ DeletePaymentMethodCustomFields removes custom fields from payment method
 */
 func (a *Client) DeletePaymentMethodCustomFields(ctx context.Context, params *DeletePaymentMethodCustomFieldsParams) (*DeletePaymentMethodCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewDeletePaymentMethodCustomFieldsParams()
 	}
@@ -273,6 +287,7 @@ GetPaymentMethod retrieves a payment method by id
 */
 func (a *Client) GetPaymentMethod(ctx context.Context, params *GetPaymentMethodParams) (*GetPaymentMethodOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetPaymentMethodParams()
 	}
@@ -319,6 +334,7 @@ GetPaymentMethodAuditLogsWithHistory retrieves payment method audit logs with hi
 */
 func (a *Client) GetPaymentMethodAuditLogsWithHistory(ctx context.Context, params *GetPaymentMethodAuditLogsWithHistoryParams) (*GetPaymentMethodAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetPaymentMethodAuditLogsWithHistoryParams()
 	}
@@ -365,6 +381,7 @@ GetPaymentMethodByKey retrieves a payment method by external key
 */
 func (a *Client) GetPaymentMethodByKey(ctx context.Context, params *GetPaymentMethodByKeyParams) (*GetPaymentMethodByKeyOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetPaymentMethodByKeyParams()
 	}
@@ -411,6 +428,7 @@ GetPaymentMethodCustomFields retrieves payment method custom fields
 */
 func (a *Client) GetPaymentMethodCustomFields(ctx context.Context, params *GetPaymentMethodCustomFieldsParams) (*GetPaymentMethodCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetPaymentMethodCustomFieldsParams()
 	}
@@ -457,6 +475,7 @@ GetPaymentMethods lists payment methods
 */
 func (a *Client) GetPaymentMethods(ctx context.Context, params *GetPaymentMethodsParams) (*GetPaymentMethodsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetPaymentMethodsParams()
 	}
@@ -503,6 +522,7 @@ ModifyPaymentMethodCustomFields modifies custom fields to payment method
 */
 func (a *Client) ModifyPaymentMethodCustomFields(ctx context.Context, params *ModifyPaymentMethodCustomFieldsParams) (*ModifyPaymentMethodCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewModifyPaymentMethodCustomFieldsParams()
 	}
@@ -561,6 +581,7 @@ SearchPaymentMethods searches payment methods
 */
 func (a *Client) SearchPaymentMethods(ctx context.Context, params *SearchPaymentMethodsParams) (*SearchPaymentMethodsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewSearchPaymentMethodsParams()
 	}

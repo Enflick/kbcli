@@ -64,6 +64,7 @@ GetNodesInfo retrieves all the nodes infos
 */
 func (a *Client) GetNodesInfo(ctx context.Context, params *GetNodesInfoParams) (*GetNodesInfoOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetNodesInfoParams()
 	}
@@ -110,6 +111,7 @@ TriggerNodeCommand triggers a node command
 */
 func (a *Client) TriggerNodeCommand(ctx context.Context, params *TriggerNodeCommandParams) (*TriggerNodeCommandAccepted, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewTriggerNodeCommandParams()
 	}

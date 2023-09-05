@@ -71,6 +71,7 @@ CreateTagDefinition creates a tag definition
 */
 func (a *Client) CreateTagDefinition(ctx context.Context, params *CreateTagDefinitionParams) (*CreateTagDefinitionCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateTagDefinitionParams()
 	}
@@ -116,10 +117,15 @@ func (a *Client) CreateTagDefinition(ctx context.Context, params *CreateTagDefin
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreateTagDefinitionCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreateTagDefinitionCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -138,7 +144,13 @@ func (a *Client) CreateTagDefinition(ctx context.Context, params *CreateTagDefin
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreateTagDefinitionCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreateTagDefinitionCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -147,6 +159,7 @@ DeleteTagDefinition deletes a tag definition
 */
 func (a *Client) DeleteTagDefinition(ctx context.Context, params *DeleteTagDefinitionParams) (*DeleteTagDefinitionNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewDeleteTagDefinitionParams()
 	}
@@ -205,6 +218,7 @@ GetTagDefinition retrieves a tag definition
 */
 func (a *Client) GetTagDefinition(ctx context.Context, params *GetTagDefinitionParams) (*GetTagDefinitionOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetTagDefinitionParams()
 	}
@@ -251,6 +265,7 @@ GetTagDefinitionAuditLogsWithHistory retrieves tag definition audit logs with hi
 */
 func (a *Client) GetTagDefinitionAuditLogsWithHistory(ctx context.Context, params *GetTagDefinitionAuditLogsWithHistoryParams) (*GetTagDefinitionAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetTagDefinitionAuditLogsWithHistoryParams()
 	}
@@ -297,6 +312,7 @@ GetTagDefinitions lists tag definitions
 */
 func (a *Client) GetTagDefinitions(ctx context.Context, params *GetTagDefinitionsParams) (*GetTagDefinitionsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetTagDefinitionsParams()
 	}

@@ -68,6 +68,7 @@ GetCustomFieldAuditLogsWithHistory retrieves custom field audit logs with histor
 */
 func (a *Client) GetCustomFieldAuditLogsWithHistory(ctx context.Context, params *GetCustomFieldAuditLogsWithHistoryParams) (*GetCustomFieldAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetCustomFieldAuditLogsWithHistoryParams()
 	}
@@ -114,6 +115,7 @@ GetCustomFields lists custom fields
 */
 func (a *Client) GetCustomFields(ctx context.Context, params *GetCustomFieldsParams) (*GetCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetCustomFieldsParams()
 	}
@@ -160,6 +162,7 @@ SearchCustomFields searches custom fields
 */
 func (a *Client) SearchCustomFields(ctx context.Context, params *SearchCustomFieldsParams) (*SearchCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewSearchCustomFieldsParams()
 	}
@@ -206,6 +209,7 @@ SearchCustomFieldsByTypeName searches custom fields by type name and optional va
 */
 func (a *Client) SearchCustomFieldsByTypeName(ctx context.Context, params *SearchCustomFieldsByTypeNameParams) (*SearchCustomFieldsByTypeNameOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewSearchCustomFieldsByTypeNameParams()
 	}

@@ -5,17 +5,29 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Account: Create Account",
+            "name": "Tenant: Create Tenant",
             "type": "go",
             "request": "launch",
             "mode": "debug",
             "program": "${workspaceRoot}/kbcmd",
             "args": [
-                "acc",
-                "create",
-                "ExternalKey=p4",
-                "Name=p3",
-                "email=p1@p1.com"
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "tenants", //command
+                "create", //subcommand
+                "TextNow", //tenant name
+                "bob", //api key
+                "lazar" //api secret
             ]
         },
         {
@@ -40,6 +52,54 @@
                 "tenants",
                 "registerPushNotificationCallBack",
                 "http://host.docker.internal:42722/events"
+            ]
+        },
+        {
+            "name": "Catalog: Validate a Catalog XML file",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "catalog",
+                "validate",
+                "/root/go/src/github.com/Enflick/killbill/catalogs/TextNow/9-3-23.xml"
+            ]
+        },
+        {
+            "name": "Catalog: Upload a Catalog XML file",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "catalog",
+                "validate",
+                "/root/go/src/github.com/Enflick/killbill/catalogs/TextNow/9-3-23.xml"
             ]
         },
         {

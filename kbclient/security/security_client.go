@@ -81,6 +81,7 @@ AddRoleDefinition adds a new role definition
 */
 func (a *Client) AddRoleDefinition(ctx context.Context, params *AddRoleDefinitionParams) (*AddRoleDefinitionCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewAddRoleDefinitionParams()
 	}
@@ -126,10 +127,15 @@ func (a *Client) AddRoleDefinition(ctx context.Context, params *AddRoleDefinitio
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*AddRoleDefinitionCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *AddRoleDefinitionCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -148,7 +154,13 @@ func (a *Client) AddRoleDefinition(ctx context.Context, params *AddRoleDefinitio
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*AddRoleDefinitionCreated), nil
+
+	switch value := getResult.(type) {
+	case *AddRoleDefinitionCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -157,6 +169,7 @@ AddUserRoles adds a new user with roles to make api requests
 */
 func (a *Client) AddUserRoles(ctx context.Context, params *AddUserRolesParams) (*AddUserRolesCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewAddUserRolesParams()
 	}
@@ -202,10 +215,15 @@ func (a *Client) AddUserRoles(ctx context.Context, params *AddUserRolesParams) (
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*AddUserRolesCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *AddUserRolesCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -224,7 +242,13 @@ func (a *Client) AddUserRoles(ctx context.Context, params *AddUserRolesParams) (
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*AddUserRolesCreated), nil
+
+	switch value := getResult.(type) {
+	case *AddUserRolesCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -233,6 +257,7 @@ GetCurrentUserPermissions lists user permissions
 */
 func (a *Client) GetCurrentUserPermissions(ctx context.Context, params *GetCurrentUserPermissionsParams) (*GetCurrentUserPermissionsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetCurrentUserPermissionsParams()
 	}
@@ -279,6 +304,7 @@ GetCurrentUserSubject gets user information
 */
 func (a *Client) GetCurrentUserSubject(ctx context.Context, params *GetCurrentUserSubjectParams) (*GetCurrentUserSubjectOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetCurrentUserSubjectParams()
 	}
@@ -325,6 +351,7 @@ GetRoleDefinition gets role definition
 */
 func (a *Client) GetRoleDefinition(ctx context.Context, params *GetRoleDefinitionParams) (*GetRoleDefinitionOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetRoleDefinitionParams()
 	}
@@ -371,6 +398,7 @@ GetUserRoles gets roles associated to a user
 */
 func (a *Client) GetUserRoles(ctx context.Context, params *GetUserRolesParams) (*GetUserRolesOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetUserRolesParams()
 	}
@@ -417,6 +445,7 @@ InvalidateUser invalidates an existing user
 */
 func (a *Client) InvalidateUser(ctx context.Context, params *InvalidateUserParams) (*InvalidateUserNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewInvalidateUserParams()
 	}
@@ -475,6 +504,7 @@ UpdateRoleDefinition updates a new role definition
 */
 func (a *Client) UpdateRoleDefinition(ctx context.Context, params *UpdateRoleDefinitionParams) (*UpdateRoleDefinitionNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewUpdateRoleDefinitionParams()
 	}
@@ -533,6 +563,7 @@ UpdateUserPassword updates a user password
 */
 func (a *Client) UpdateUserPassword(ctx context.Context, params *UpdateUserPasswordParams) (*UpdateUserPasswordNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewUpdateUserPasswordParams()
 	}
@@ -591,6 +622,7 @@ UpdateUserRoles updates roles associated to a user
 */
 func (a *Client) UpdateUserRoles(ctx context.Context, params *UpdateUserRolesParams) (*UpdateUserRolesNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewUpdateUserRolesParams()
 	}

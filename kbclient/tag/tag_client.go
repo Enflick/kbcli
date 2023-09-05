@@ -66,6 +66,7 @@ GetTagAuditLogsWithHistory retrieves tag audit logs with history by id
 */
 func (a *Client) GetTagAuditLogsWithHistory(ctx context.Context, params *GetTagAuditLogsWithHistoryParams) (*GetTagAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetTagAuditLogsWithHistoryParams()
 	}
@@ -112,6 +113,7 @@ GetTags lists tags
 */
 func (a *Client) GetTags(ctx context.Context, params *GetTagsParams) (*GetTagsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetTagsParams()
 	}
@@ -158,6 +160,7 @@ SearchTags searches tags
 */
 func (a *Client) SearchTags(ctx context.Context, params *SearchTagsParams) (*SearchTagsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewSearchTagsParams()
 	}

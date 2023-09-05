@@ -76,6 +76,7 @@ GetQueueEntries gets queues entries
 */
 func (a *Client) GetQueueEntries(ctx context.Context, params *GetQueueEntriesParams) (*GetQueueEntriesOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetQueueEntriesParams()
 	}
@@ -122,6 +123,7 @@ InvalidatesCache invalidates the given cache if specified otherwise invalidates 
 */
 func (a *Client) InvalidatesCache(ctx context.Context, params *InvalidatesCacheParams) (*InvalidatesCacheNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewInvalidatesCacheParams()
 	}
@@ -168,6 +170,7 @@ InvalidatesCacheByAccount invalidates caches per account level
 */
 func (a *Client) InvalidatesCacheByAccount(ctx context.Context, params *InvalidatesCacheByAccountParams) (*InvalidatesCacheByAccountNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewInvalidatesCacheByAccountParams()
 	}
@@ -214,6 +217,7 @@ InvalidatesCacheByTenant invalidates caches per tenant level
 */
 func (a *Client) InvalidatesCacheByTenant(ctx context.Context, params *InvalidatesCacheByTenantParams) (*InvalidatesCacheByTenantNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewInvalidatesCacheByTenantParams()
 	}
@@ -260,6 +264,7 @@ PutInRotation puts the host back into rotation
 */
 func (a *Client) PutInRotation(ctx context.Context, params *PutInRotationParams) (*PutInRotationNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewPutInRotationParams()
 	}
@@ -306,6 +311,7 @@ PutOutOfRotation puts the host out of rotation
 */
 func (a *Client) PutOutOfRotation(ctx context.Context, params *PutOutOfRotationParams) (*PutOutOfRotationNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewPutOutOfRotationParams()
 	}
@@ -352,6 +358,7 @@ TriggerInvoiceGenerationForParkedAccounts triggers an invoice generation for all
 */
 func (a *Client) TriggerInvoiceGenerationForParkedAccounts(ctx context.Context, params *TriggerInvoiceGenerationForParkedAccountsParams) (*TriggerInvoiceGenerationForParkedAccountsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewTriggerInvoiceGenerationForParkedAccountsParams()
 	}
@@ -410,6 +417,7 @@ UpdatePaymentTransactionState updates existing payment transaction and associate
 */
 func (a *Client) UpdatePaymentTransactionState(ctx context.Context, params *UpdatePaymentTransactionStateParams) (*UpdatePaymentTransactionStateNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewUpdatePaymentTransactionStateParams()
 	}

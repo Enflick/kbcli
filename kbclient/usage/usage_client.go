@@ -66,6 +66,7 @@ GetAllUsage retrieves usage for a subscription
 */
 func (a *Client) GetAllUsage(ctx context.Context, params *GetAllUsageParams) (*GetAllUsageOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetAllUsageParams()
 	}
@@ -112,6 +113,7 @@ GetUsage retrieves usage for a subscription and unit type
 */
 func (a *Client) GetUsage(ctx context.Context, params *GetUsageParams) (*GetUsageOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetUsageParams()
 	}
@@ -158,6 +160,7 @@ RecordUsage records usage for a subscription
 */
 func (a *Client) RecordUsage(ctx context.Context, params *RecordUsageParams) (*RecordUsageOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewRecordUsageParams()
 	}

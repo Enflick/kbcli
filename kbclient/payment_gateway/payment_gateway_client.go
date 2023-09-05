@@ -66,6 +66,7 @@ BuildComboFormDescriptor combos API to generate form data to redirect the custom
 */
 func (a *Client) BuildComboFormDescriptor(ctx context.Context, params *BuildComboFormDescriptorParams) (*BuildComboFormDescriptorOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewBuildComboFormDescriptorParams()
 	}
@@ -124,6 +125,7 @@ BuildFormDescriptor generates form data to redirect the customer to the gateway
 */
 func (a *Client) BuildFormDescriptor(ctx context.Context, params *BuildFormDescriptorParams) (*BuildFormDescriptorOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewBuildFormDescriptorParams()
 	}
@@ -184,6 +186,7 @@ The response is built by the appropriate plugin
 */
 func (a *Client) ProcessNotification(ctx context.Context, params *ProcessNotificationParams) (*ProcessNotificationOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewProcessNotificationParams()
 	}

@@ -131,6 +131,7 @@ AdjustInvoiceItem adjusts an invoice item
 */
 func (a *Client) AdjustInvoiceItem(ctx context.Context, params *AdjustInvoiceItemParams) (*AdjustInvoiceItemCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewAdjustInvoiceItemParams()
 	}
@@ -176,10 +177,15 @@ func (a *Client) AdjustInvoiceItem(ctx context.Context, params *AdjustInvoiceIte
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*AdjustInvoiceItemCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *AdjustInvoiceItemCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -198,7 +204,13 @@ func (a *Client) AdjustInvoiceItem(ctx context.Context, params *AdjustInvoiceIte
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*AdjustInvoiceItemCreated), nil
+
+	switch value := getResult.(type) {
+	case *AdjustInvoiceItemCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -207,6 +219,7 @@ CommitInvoice performs the invoice status transition from d r a f t to c o m m i
 */
 func (a *Client) CommitInvoice(ctx context.Context, params *CommitInvoiceParams) (*CommitInvoiceNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCommitInvoiceParams()
 	}
@@ -265,6 +278,7 @@ CreateExternalCharges creates external charge s
 */
 func (a *Client) CreateExternalCharges(ctx context.Context, params *CreateExternalChargesParams) (*CreateExternalChargesCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateExternalChargesParams()
 	}
@@ -310,10 +324,15 @@ func (a *Client) CreateExternalCharges(ctx context.Context, params *CreateExtern
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreateExternalChargesCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreateExternalChargesCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -332,7 +351,13 @@ func (a *Client) CreateExternalCharges(ctx context.Context, params *CreateExtern
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreateExternalChargesCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreateExternalChargesCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -341,6 +366,7 @@ CreateFutureInvoice triggers an invoice generation
 */
 func (a *Client) CreateFutureInvoice(ctx context.Context, params *CreateFutureInvoiceParams) (*CreateFutureInvoiceCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateFutureInvoiceParams()
 	}
@@ -386,10 +412,15 @@ func (a *Client) CreateFutureInvoice(ctx context.Context, params *CreateFutureIn
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreateFutureInvoiceCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreateFutureInvoiceCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -408,7 +439,13 @@ func (a *Client) CreateFutureInvoice(ctx context.Context, params *CreateFutureIn
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreateFutureInvoiceCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreateFutureInvoiceCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -417,6 +454,7 @@ CreateFutureInvoiceGroup triggers an invoice generation
 */
 func (a *Client) CreateFutureInvoiceGroup(ctx context.Context, params *CreateFutureInvoiceGroupParams) (*CreateFutureInvoiceGroupCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateFutureInvoiceGroupParams()
 	}
@@ -462,10 +500,15 @@ func (a *Client) CreateFutureInvoiceGroup(ctx context.Context, params *CreateFut
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreateFutureInvoiceGroupCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreateFutureInvoiceGroupCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -484,7 +527,13 @@ func (a *Client) CreateFutureInvoiceGroup(ctx context.Context, params *CreateFut
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreateFutureInvoiceGroupCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreateFutureInvoiceGroupCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -493,22 +542,25 @@ CreateInstantPayment triggers a payment for invoice
 */
 func (a *Client) CreateInstantPayment(ctx context.Context, params *CreateInstantPaymentParams) (*CreateInstantPaymentCreated, *CreateInstantPaymentNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateInstantPaymentParams()
 	}
+	getParams := NewCreateInstantPaymentParams()
+	getParams.Context = ctx
 	params.Context = ctx
 	if params.XKillbillComment == nil && a.defaults.XKillbillComment() != nil {
 		params.XKillbillComment = a.defaults.XKillbillComment()
 	}
-
+	getParams.XKillbillComment = params.XKillbillComment
 	if params.XKillbillCreatedBy == "" && a.defaults.XKillbillCreatedBy() != nil {
 		params.XKillbillCreatedBy = *a.defaults.XKillbillCreatedBy()
 	}
-
+	getParams.XKillbillCreatedBy = params.XKillbillCreatedBy
 	if params.XKillbillReason == nil && a.defaults.XKillbillReason() != nil {
 		params.XKillbillReason = a.defaults.XKillbillReason()
 	}
-
+	getParams.XKillbillReason = params.XKillbillReason
 	if params.WithProfilingInfo == nil && a.defaults.KillbillWithProfilingInfo() != nil {
 		params.WithProfilingInfo = a.defaults.KillbillWithProfilingInfo()
 	}
@@ -516,6 +568,7 @@ func (a *Client) CreateInstantPayment(ctx context.Context, params *CreateInstant
 	if params.WithStackTrace == nil && a.defaults.KillbillWithStackTrace() != nil {
 		params.WithStackTrace = a.defaults.KillbillWithStackTrace()
 	}
+	getParams.WithStackTrace = params.WithStackTrace
 
 	op := &runtime.ClientOperation{
 		ID:                 "createInstantPayment",
@@ -535,15 +588,47 @@ func (a *Client) CreateInstantPayment(ctx context.Context, params *CreateInstant
 	if err != nil {
 		return nil, nil, err
 	}
+	var location string
 	switch value := result.(type) {
+	case *CreateInstantPaymentCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil, nil
+		}
+	case *CreateInstantPaymentNoContent:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return nil, value, nil
+		}
+	default:
+		return nil, nil, fmt.Errorf("unexpected result type: %T", result)
+	}
+
+	getResult, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "createInstantPayment",
+		Method:             "GET",
+		PathPattern:        location,
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             getParams,
+		Reader:             &CreateInstantPaymentReader{formats: a.formats},
+		AuthInfo:           a.authInfo,
+		Context:            getParams.Context,
+		Client:             getParams.HTTPClient,
+	})
+	if err != nil {
+		return nil, nil, err
+	}
+
+	switch value := getResult.(type) {
 	case *CreateInstantPaymentCreated:
 		return value, nil, nil
 	case *CreateInstantPaymentNoContent:
 		return nil, value, nil
+	default:
+		return nil, nil, fmt.Errorf("unexpected result type: %T", result)
 	}
-	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
-	msg := fmt.Sprintf("unexpected success response for invoice: API contract not enforced by server. Client expected to get an error, but got: %T", result)
-	panic(msg)
 
 }
 
@@ -552,6 +637,7 @@ CreateInvoiceCustomFields adds custom fields to invoice
 */
 func (a *Client) CreateInvoiceCustomFields(ctx context.Context, params *CreateInvoiceCustomFieldsParams) (*CreateInvoiceCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateInvoiceCustomFieldsParams()
 	}
@@ -597,10 +683,15 @@ func (a *Client) CreateInvoiceCustomFields(ctx context.Context, params *CreateIn
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreateInvoiceCustomFieldsCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreateInvoiceCustomFieldsCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -619,7 +710,13 @@ func (a *Client) CreateInvoiceCustomFields(ctx context.Context, params *CreateIn
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreateInvoiceCustomFieldsCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreateInvoiceCustomFieldsCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -628,6 +725,7 @@ CreateInvoiceTags adds tags to invoice
 */
 func (a *Client) CreateInvoiceTags(ctx context.Context, params *CreateInvoiceTagsParams) (*CreateInvoiceTagsCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateInvoiceTagsParams()
 	}
@@ -673,10 +771,15 @@ func (a *Client) CreateInvoiceTags(ctx context.Context, params *CreateInvoiceTag
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreateInvoiceTagsCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreateInvoiceTagsCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -695,7 +798,13 @@ func (a *Client) CreateInvoiceTags(ctx context.Context, params *CreateInvoiceTag
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreateInvoiceTagsCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreateInvoiceTagsCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -704,6 +813,7 @@ CreateMigrationInvoice creates a migration invoice
 */
 func (a *Client) CreateMigrationInvoice(ctx context.Context, params *CreateMigrationInvoiceParams) (*CreateMigrationInvoiceCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateMigrationInvoiceParams()
 	}
@@ -749,10 +859,15 @@ func (a *Client) CreateMigrationInvoice(ctx context.Context, params *CreateMigra
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreateMigrationInvoiceCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreateMigrationInvoiceCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -771,7 +886,13 @@ func (a *Client) CreateMigrationInvoice(ctx context.Context, params *CreateMigra
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreateMigrationInvoiceCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreateMigrationInvoiceCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -780,6 +901,7 @@ CreateTaxItems creates tax items
 */
 func (a *Client) CreateTaxItems(ctx context.Context, params *CreateTaxItemsParams) (*CreateTaxItemsCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewCreateTaxItemsParams()
 	}
@@ -825,10 +947,15 @@ func (a *Client) CreateTaxItems(ctx context.Context, params *CreateTaxItemsParam
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*CreateTaxItemsCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *CreateTaxItemsCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -847,7 +974,13 @@ func (a *Client) CreateTaxItems(ctx context.Context, params *CreateTaxItemsParam
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*CreateTaxItemsCreated), nil
+
+	switch value := getResult.(type) {
+	case *CreateTaxItemsCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -856,6 +989,7 @@ DeleteCBA deletes a c b a item
 */
 func (a *Client) DeleteCBA(ctx context.Context, params *DeleteCBAParams) (*DeleteCBANoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewDeleteCBAParams()
 	}
@@ -914,6 +1048,7 @@ DeleteInvoiceCustomFields removes custom fields from invoice
 */
 func (a *Client) DeleteInvoiceCustomFields(ctx context.Context, params *DeleteInvoiceCustomFieldsParams) (*DeleteInvoiceCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewDeleteInvoiceCustomFieldsParams()
 	}
@@ -972,6 +1107,7 @@ DeleteInvoiceTags removes tags from invoice
 */
 func (a *Client) DeleteInvoiceTags(ctx context.Context, params *DeleteInvoiceTagsParams) (*DeleteInvoiceTagsNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewDeleteInvoiceTagsParams()
 	}
@@ -1030,6 +1166,7 @@ GenerateDryRunInvoice generates a dry run invoice
 */
 func (a *Client) GenerateDryRunInvoice(ctx context.Context, params *GenerateDryRunInvoiceParams) (*GenerateDryRunInvoiceOK, *GenerateDryRunInvoiceNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGenerateDryRunInvoiceParams()
 	}
@@ -1089,6 +1226,7 @@ GetCatalogTranslation retrieves the catalog translation for the tenant
 */
 func (a *Client) GetCatalogTranslation(ctx context.Context, params *GetCatalogTranslationParams) (*GetCatalogTranslationOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetCatalogTranslationParams()
 	}
@@ -1135,6 +1273,7 @@ GetInvoice retrieves an invoice by id
 */
 func (a *Client) GetInvoice(ctx context.Context, params *GetInvoiceParams) (*GetInvoiceOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceParams()
 	}
@@ -1181,6 +1320,7 @@ GetInvoiceAsHTML renders an invoice as HTML
 */
 func (a *Client) GetInvoiceAsHTML(ctx context.Context, params *GetInvoiceAsHTMLParams) (*GetInvoiceAsHTMLOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceAsHTMLParams()
 	}
@@ -1227,6 +1367,7 @@ GetInvoiceAuditLogsWithHistory retrieves invoice audit logs with history by id
 */
 func (a *Client) GetInvoiceAuditLogsWithHistory(ctx context.Context, params *GetInvoiceAuditLogsWithHistoryParams) (*GetInvoiceAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceAuditLogsWithHistoryParams()
 	}
@@ -1273,6 +1414,7 @@ GetInvoiceByItemID retrieves an invoice by invoice item id
 */
 func (a *Client) GetInvoiceByItemID(ctx context.Context, params *GetInvoiceByItemIDParams) (*GetInvoiceByItemIDOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceByItemIDParams()
 	}
@@ -1319,6 +1461,7 @@ GetInvoiceByNumber retrieves an invoice by number
 */
 func (a *Client) GetInvoiceByNumber(ctx context.Context, params *GetInvoiceByNumberParams) (*GetInvoiceByNumberOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceByNumberParams()
 	}
@@ -1365,6 +1508,7 @@ GetInvoiceCustomFields retrieves invoice custom fields
 */
 func (a *Client) GetInvoiceCustomFields(ctx context.Context, params *GetInvoiceCustomFieldsParams) (*GetInvoiceCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceCustomFieldsParams()
 	}
@@ -1411,6 +1555,7 @@ GetInvoiceMPTemplate retrieves the manual pay invoice template for the tenant
 */
 func (a *Client) GetInvoiceMPTemplate(ctx context.Context, params *GetInvoiceMPTemplateParams) (*GetInvoiceMPTemplateOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceMPTemplateParams()
 	}
@@ -1457,6 +1602,7 @@ GetInvoiceTags retrieves invoice tags
 */
 func (a *Client) GetInvoiceTags(ctx context.Context, params *GetInvoiceTagsParams) (*GetInvoiceTagsOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceTagsParams()
 	}
@@ -1503,6 +1649,7 @@ GetInvoiceTemplate retrieves the invoice template for the tenant
 */
 func (a *Client) GetInvoiceTemplate(ctx context.Context, params *GetInvoiceTemplateParams) (*GetInvoiceTemplateOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceTemplateParams()
 	}
@@ -1549,6 +1696,7 @@ GetInvoiceTranslation retrieves the invoice translation for the tenant
 */
 func (a *Client) GetInvoiceTranslation(ctx context.Context, params *GetInvoiceTranslationParams) (*GetInvoiceTranslationOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoiceTranslationParams()
 	}
@@ -1595,6 +1743,7 @@ GetInvoices lists invoices
 */
 func (a *Client) GetInvoices(ctx context.Context, params *GetInvoicesParams) (*GetInvoicesOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoicesParams()
 	}
@@ -1641,6 +1790,7 @@ GetInvoicesGroup retrieves a set of invoices by group id
 */
 func (a *Client) GetInvoicesGroup(ctx context.Context, params *GetInvoicesGroupParams) (*GetInvoicesGroupOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetInvoicesGroupParams()
 	}
@@ -1687,6 +1837,7 @@ GetPaymentsForInvoice retrieves payments associated with an invoice
 */
 func (a *Client) GetPaymentsForInvoice(ctx context.Context, params *GetPaymentsForInvoiceParams) (*GetPaymentsForInvoiceOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewGetPaymentsForInvoiceParams()
 	}
@@ -1733,6 +1884,7 @@ ModifyInvoiceCustomFields modifies custom fields to invoice
 */
 func (a *Client) ModifyInvoiceCustomFields(ctx context.Context, params *ModifyInvoiceCustomFieldsParams) (*ModifyInvoiceCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewModifyInvoiceCustomFieldsParams()
 	}
@@ -1791,6 +1943,7 @@ SearchInvoices searches invoices
 */
 func (a *Client) SearchInvoices(ctx context.Context, params *SearchInvoicesParams) (*SearchInvoicesOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewSearchInvoicesParams()
 	}
@@ -1837,6 +1990,7 @@ UploadCatalogTranslation uploads the catalog translation for the tenant
 */
 func (a *Client) UploadCatalogTranslation(ctx context.Context, params *UploadCatalogTranslationParams) (*UploadCatalogTranslationCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewUploadCatalogTranslationParams()
 	}
@@ -1882,10 +2036,15 @@ func (a *Client) UploadCatalogTranslation(ctx context.Context, params *UploadCat
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*UploadCatalogTranslationCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *UploadCatalogTranslationCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -1904,7 +2063,13 @@ func (a *Client) UploadCatalogTranslation(ctx context.Context, params *UploadCat
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*UploadCatalogTranslationCreated), nil
+
+	switch value := getResult.(type) {
+	case *UploadCatalogTranslationCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -1913,6 +2078,7 @@ UploadInvoiceMPTemplate uploads the manual pay invoice template for the tenant
 */
 func (a *Client) UploadInvoiceMPTemplate(ctx context.Context, params *UploadInvoiceMPTemplateParams) (*UploadInvoiceMPTemplateOK, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewUploadInvoiceMPTemplateParams()
 	}
@@ -1971,6 +2137,7 @@ UploadInvoiceTemplate uploads the invoice template for the tenant
 */
 func (a *Client) UploadInvoiceTemplate(ctx context.Context, params *UploadInvoiceTemplateParams) (*UploadInvoiceTemplateCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewUploadInvoiceTemplateParams()
 	}
@@ -2016,10 +2183,15 @@ func (a *Client) UploadInvoiceTemplate(ctx context.Context, params *UploadInvoic
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*UploadInvoiceTemplateCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *UploadInvoiceTemplateCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -2038,7 +2210,13 @@ func (a *Client) UploadInvoiceTemplate(ctx context.Context, params *UploadInvoic
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*UploadInvoiceTemplateCreated), nil
+
+	switch value := getResult.(type) {
+	case *UploadInvoiceTemplateCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -2047,6 +2225,7 @@ UploadInvoiceTranslation uploads the invoice translation for the tenant
 */
 func (a *Client) UploadInvoiceTranslation(ctx context.Context, params *UploadInvoiceTranslationParams) (*UploadInvoiceTranslationCreated, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewUploadInvoiceTranslationParams()
 	}
@@ -2092,10 +2271,15 @@ func (a *Client) UploadInvoiceTranslation(ctx context.Context, params *UploadInv
 	if err != nil {
 		return nil, err
 	}
-	createdResult := result.(*UploadInvoiceTranslationCreated)
-	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
-	if !params.ProcessLocationHeader || location == "" {
-		return createdResult, nil
+	var location string
+	switch value := result.(type) {
+	case *UploadInvoiceTranslationCreated:
+		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
+		if !params.ProcessLocationHeader || location == "" {
+			return value, nil
+		}
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -2114,7 +2298,13 @@ func (a *Client) UploadInvoiceTranslation(ctx context.Context, params *UploadInv
 	if err != nil {
 		return nil, err
 	}
-	return getResult.(*UploadInvoiceTranslationCreated), nil
+
+	switch value := getResult.(type) {
+	case *UploadInvoiceTranslationCreated:
+		return value, nil
+	default:
+		return nil, fmt.Errorf("unexpected result type: %T", result)
+	}
 
 }
 
@@ -2123,6 +2313,7 @@ VoidInvoice performs the action of voiding an invoice
 */
 func (a *Client) VoidInvoice(ctx context.Context, params *VoidInvoiceParams) (*VoidInvoiceNoContent, error) {
 	// TODO: Validate the params before sending
+
 	if params == nil {
 		params = NewVoidInvoiceParams()
 	}
