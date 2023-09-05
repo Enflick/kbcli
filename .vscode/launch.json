@@ -251,6 +251,55 @@
                 "paymentId=requiredValue",
                 "paymentTransactionId=requiredValue"
             ]
+        },
+        {
+            "name": "Admin: Invalidate Tenant Cache",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host", "127.0.0.1:8080",
+                "--user", "admin",
+                "--password", "password",
+                "--api_key", "bob",
+                "--api_secret", "lazar",
+                "--transport_scheme", "http",
+                "admin", "invalidate-tenant-cache"
+            ]
+        },
+        {
+            "name": "Admin: Invalidate All Caches For Instance",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host", "127.0.0.1:8080",
+                "--user", "admin",
+                "--password", "password",
+                "--api_key", "bob",
+                "--api_secret", "lazar",
+                "--transport_scheme", "http",
+                "admin", "invalidate-instance-cache"
+            ]
+        },
+        {
+            "name": "Admin: Invalidate Account Cache",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host", "127.0.0.1:8080",
+                "--user", "admin",
+                "--password", "password",
+                "--api_key", "bob",
+                "--api_secret", "lazar",
+                "--transport_scheme", "http",
+                "admin", "invalidate-account-cache",
+                "yourAccountIdHere" // Replace with an actual accountId when debugging
+            ]
         }
     ]
 }
