@@ -52,7 +52,13 @@ Upload a sample catalog to the created tenant.
 kbcmd catalog upload docs/samples/simple-catalog.xml
 ```
 
-Now the catalog has been uploaded.
+Now the catalog has been uploaded or you got an error like `[400] Invalid catalog for tenant : 1` 
+
+## Step 4.1: Validate the Catalog (optional but helpful to find out why your catalog is not valid)
+Validate a catalog against your KB instance.
+```sh
+kbcmd catalog validate docs/samples/simple-catalog.xml
+```
 
 ## Step 5: Create new Account
 Let's create a new killbill account.
