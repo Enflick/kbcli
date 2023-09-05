@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch kbcmd",
+            "name": "Account: Create Account",
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -19,7 +19,7 @@
             ]
         },
         {
-            "name": "Launch RegisterCB",
+            "name": "Tenant: RegisterCallBack for Push Notifications",
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -40,6 +40,216 @@
                 "tenants",
                 "registerPushNotificationCallBack",
                 "http://host.docker.internal:42722/events"
+            ]
+        },
+        {
+            "name": "Admin: Get Queues",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "admin",
+                "get-queues"
+            ]
+        },
+        {
+            "name": "Admin: Put Server In Rotation",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "admin",
+                "put-in-rotation"
+            ]
+        },
+        {
+            "name": "Admin: Take Server Out from Rotation",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "admin",
+                "take-from-rotation"
+            ]
+        },
+        {
+            "name": "Admin: Update Payment Transaction State (No Params)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host", "127.0.0.1:8080",
+                "--user", "admin",
+                "--password", "password",
+                "--api_key", "bob",
+                "--api_secret", "lazar",
+                "--transport_scheme", "http",
+                "admin", "update-payment-transaction-state"
+            ]
+        },
+        {
+            "name": "Admin: Update Payment Transaction State (Required Params)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host", "127.0.0.1:8080",
+                "--user", "admin",
+                "--password", "password",
+                "--api_key", "bob",
+                "--api_secret", "lazar",
+                "--transport_scheme", "http",
+                "admin", "update-payment-transaction-state",
+                "paymentId=requiredValue",
+                "paymentTransactionId=requiredValue"
+            ]
+        },
+        {
+            "name": "Admin: Update Payment Transaction State (All Params)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host", "127.0.0.1:8080",
+                "--user", "admin",
+                "--password", "password",
+                "--api_key", "bob",
+                "--api_secret", "lazar",
+                "--transport_scheme", "http",
+                "admin", "update-payment-transaction-state",
+                "lastSuccessfulPaymentState=value",
+                "currentPaymentStateName=value",
+                "transactionStatus=value",
+                "paymentId=value",
+                "paymentTransactionId=value"
+            ]
+        },{
+            "name": "Admin: Update Payment Transaction State (Only lastSuccessfulPaymentState)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host", "127.0.0.1:8080",
+                "--user", "admin",
+                "--password", "password",
+                "--api_key", "bob",
+                "--api_secret", "lazar",
+                "--transport_scheme", "http",
+                "admin", "update-payment-transaction-state",
+                "lastSuccessfulPaymentState=value",
+                "paymentId=requiredValue",
+                "paymentTransactionId=requiredValue"
+            ]
+        },
+        {
+            "name": "Admin: Update Payment Transaction State (Only currentPaymentStateName)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                // ... Other args
+                "currentPaymentStateName=value",
+                "paymentId=requiredValue",
+                "paymentTransactionId=requiredValue"
+            ]
+        },
+        {
+            "name": "Admin: Update Payment Transaction State (Only transactionStatus)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                // ... Other args
+                "transactionStatus=value",
+                "paymentId=requiredValue",
+                "paymentTransactionId=requiredValue"
+            ]
+        },
+        {
+            "name": "Admin: Update Payment Transaction State (lastSuccessfulPaymentState + currentPaymentStateName)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                // ... Other args
+                "lastSuccessfulPaymentState=value",
+                "currentPaymentStateName=value",
+                "paymentId=requiredValue",
+                "paymentTransactionId=requiredValue"
+            ]
+        },
+        {
+            "name": "Admin: Update Payment Transaction State (lastSuccessfulPaymentState + transactionStatus)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                // ... Other args
+                "lastSuccessfulPaymentState=value",
+                "transactionStatus=value",
+                "paymentId=requiredValue",
+                "paymentTransactionId=requiredValue"
+            ]
+        },
+        {
+            "name": "Admin: Update Payment Transaction State (currentPaymentStateName + transactionStatus)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                // ... Other args
+                "currentPaymentStateName=value",
+                "transactionStatus=value",
+                "paymentId=requiredValue",
+                "paymentTransactionId=requiredValue"
             ]
         }
     ]
