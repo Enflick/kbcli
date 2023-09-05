@@ -282,6 +282,103 @@ func Int64Ptr(i int64) *int64 {
 	return &i
 }
 
+func ValidatePaymentState(lastSuccessPaymentState, currentPaymentStateName, transactionStatus string) error {
+	// Define the valid transaction types and their states
+	validStates := map[string][]string{
+		"AUTHORIZE":  {"AUTH_SUCCESS", "AUTH_PENDING", "AUTH_FAILED", "AUTH_ERRORED"},
+		"CAPTURE":    {"CAPTURE_SUCCESS", "CAPTURE_PENDING", "CAPTURE_FAILED", "CAPTURE_ERRORED"},
+		"PURCHASE":   {"PURCHASE_SUCCESS", "PURCHASE_PENDING", "PURCHASE_FAILED", "PURCHASE_ERRORED"},
+		"REFUND":     {"REFUND_SUCCESS", "REFUND_PENDING", "REFUND_FAILED", "REFUND_ERRORED"},
+		"CREDIT":     {"CREDIT_SUCCESS", "CREDIT_PENDING", "CREDIT_FAILED", "CREDIT_ERRORED"},
+		"VOID":       {"VOID_SUCCESS", "VOID_PENDING", "VOID_FAILED", "VOID_ERRORED"},
+		"CHARGEBACK": {"CHARGEBACK_SUCCESS", "CHARGEBACK_PENDING", "CHARGEBACK_FAILED", "CHARGEBACK_ERRORED"},
+	}
+
+	// Validate lastSuccessPaymentState independently
+	isValidLastState := false
+	for _, states := range validStates {
+		for _, state := range states {
+			if lastSuccessPaymentState == state {
+				isValidLastState = true
+				break
+			}
+		}
+		if isValidLastState {
+			break
+		}
+	}
+	if !isValidLastState {
+		return errors.New("invalid lastSuccessPaymentState")
+	}
+
+	// Validate currentPaymentStateName independently
+	isValidCurrentState := false
+	for _, states := range validStates {
+		for _, state := range states {
+			if currentPaymentStateName == state {
+				isValidCurrentState = true
+				break
+			}
+		}
+		if isValidCurrentState {
+			break
+		}
+	}
+	if !isValidCurrentState {
+		return errors.New("invalid currentPaymentStateName")
+	}
+
+	// Mapping between currentPaymentStateName and transactionStatus
+	// Assumptions:
+	// A state ending with _SUCCESS should map to SUCCESS.
+	// A state ending with _PENDING should map to PENDING.
+	// A state ending with _FAILED should map to PAYMENT_FAILURE.
+	// A state ending with _ERRORED should map to PLUGIN_FAILURE.
+	stateToStatusMapping := map[string]string{
+		"AUTH_SUCCESS": "SUCCESS",
+		"AUTH_PENDING": "PENDING",
+		"AUTH_FAILED":  "PAYMENT_FAILURE",
+		"AUTH_ERRORED": "PLUGIN_FAILURE",
+
+		"CAPTURE_SUCCESS": "SUCCESS",
+		"CAPTURE_PENDING": "PENDING",
+		"CAPTURE_FAILED":  "PAYMENT_FAILURE",
+		"CAPTURE_ERRORED": "PLUGIN_FAILURE",
+
+		"PURCHASE_SUCCESS": "SUCCESS",
+		"PURCHASE_PENDING": "PENDING",
+		"PURCHASE_FAILED":  "PAYMENT_FAILURE",
+		"PURCHASE_ERRORED": "PLUGIN_FAILURE",
+
+		"REFUND_SUCCESS": "SUCCESS",
+		"REFUND_PENDING": "PENDING",
+		"REFUND_FAILED":  "PAYMENT_FAILURE",
+		"REFUND_ERRORED": "PLUGIN_FAILURE",
+
+		"CREDIT_SUCCESS": "SUCCESS",
+		"CREDIT_PENDING": "PENDING",
+		"CREDIT_FAILED":  "PAYMENT_FAILURE",
+		"CREDIT_ERRORED": "PLUGIN_FAILURE",
+
+		"VOID_SUCCESS": "SUCCESS",
+		"VOID_PENDING": "PENDING",
+		"VOID_FAILED":  "PAYMENT_FAILURE",
+		"VOID_ERRORED": "PLUGIN_FAILURE",
+
+		"CHARGEBACK_SUCCESS": "SUCCESS",
+		"CHARGEBACK_PENDING": "PENDING",
+		"CHARGEBACK_FAILED":  "PAYMENT_FAILURE",
+		"CHARGEBACK_ERRORED": "PLUGIN_FAILURE",
+	}
+
+	expectedStatus, exists := stateToStatusMapping[currentPaymentStateName]
+	if !exists || expectedStatus != transactionStatus {
+		return errors.New("mismatch between currentPaymentStateName and transactionStatus")
+	}
+
+	return nil
+}
+
 func updatePaymentTransactionState(ctx context.Context, o *cmdlib.Options) error {
 	if len(o.Args) < 5 {
 		return cmdlib.ErrorInvalidArgs
@@ -328,7 +425,13 @@ func updatePaymentTransactionState(ctx context.Context, o *cmdlib.Options) error
 	paymentId := strfmt.UUID(paymentIdString)
 	paymentTransactionId := strfmt.UUID(paymentTransactionIdString)
 
-	_, err := o.Client().Admin.UpdatePaymentTransactionState(ctx, &admin.UpdatePaymentTransactionStateParams{
+	// Validate the payment state
+	err := ValidatePaymentState(lastSuccessfulPaymentState, currentPaymentStateName, transactionStatus)
+	if err != nil {
+		return err
+	}
+
+	_, err = o.Client().Admin.UpdatePaymentTransactionState(ctx, &admin.UpdatePaymentTransactionStateParams{
 		Body: &kbmodel.AdminPayment{
 			LastSuccessPaymentState: lastSuccessfulPaymentState,
 			CurrentPaymentStateName: currentPaymentStateName,
@@ -338,6 +441,9 @@ func updatePaymentTransactionState(ctx context.Context, o *cmdlib.Options) error
 		PaymentTransactionID: paymentTransactionId,
 	})
 	if err != nil {
+		result := adminFormatter{}
+		result.Message = "failed to update payment transaction state"
+		o.Print(&result)
 		return err
 	}
 	result := adminFormatter{}
