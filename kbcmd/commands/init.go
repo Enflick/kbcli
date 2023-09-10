@@ -21,6 +21,7 @@ func RegisterAll(r *cmdlib.App) {
 	registerTagDefinitionCommands(r)
 	registerTenantCommands(r)
 	registerAdminCommands(r)
+	registerNodesInfoCommands(r)
 
 	// Dev
 	registerDevCommands(r)
