@@ -6,6 +6,9 @@
     "configurations": [
         {
             "name": "Tenant: Create Tenant",
+            "presentation": {
+                "group": "Tenant"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -31,7 +34,38 @@
             ]
         },
         {
+            "name": "Tenant: Configure Stripe",
+            "presentation": {
+                "group": "Tenant"
+                },
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "tenants", //command
+                "configure-stripe-plugin", //subcommand
+                "pk_test_WgswzvAG2ssFcB7Xk7tBi0XL", // public key
+                "sk_test_aM1UY1u411tPNI4LEL2tTFay" //private key
+            ]
+        },
+        {
             "name": "Tenant: RegisterCallBack for Push Notifications",
+            "presentation": {
+                "group": "Tenant"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -55,7 +89,344 @@
             ]
         },
         {
+            "name": "Stripe: Add Stripe Customer ID to Account",
+            "presentation": {
+                "group": "Stripe"
+                },
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "accounts",
+                "stripe",
+                "set-id",
+                "yourAccountIdHere", // Replace with an actual accountId when debugging
+                "cus_123456789" // Replace with an actual Stripe Customer ID when debugging
+            ]
+        },
+        {
+            "name": "Stripe: Sync Payment Methods",
+            "presentation": {
+                "group": "Stripe"
+                },
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "accounts",
+                "stripe",
+                "set-id",
+                "yourAccountIdHere", // Replace with an actual accountId when debugging
+            ]
+        },
+        {
+            "name": "Stripe: New Payment Method with Stripe Token (No Previous Stripe Customer ID)",
+            "presentation": {
+                "group": "Stripe"
+                },
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "accounts",
+                "stripe",
+                "add-token",
+                "yourAccountIdHere", // ACCOUNT_ID - Replace with an actual accountId when debugging
+                "tok_123456789" // STRIPE_TOKEN - Replace with an actual Stripe Token when debugging
+            ]
+        },
+        {
+            "name": "Stripe: New Payment Method with Stripe Token (With Previous Stripe Customer ID - No Customer ID Override)",
+            "presentation": {
+                "group": "Stripe"
+                },
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "accounts",
+                "stripe",
+                "add-token",
+                "yourAccountIdHere", // ACCOUNT_ID - Replace with an actual accountId when debugging
+                "tok_123456789", // STRIPE_TOKEN - Replace with an actual Stripe Token when debugging
+                "cus_123456789", // STRIPE_CUSTOMER_ID - Replace with an actual Stripe Customer ID when debugging
+                "false" // OVERRIDE_CUSTOMER_ID -Replace with a desired boolean value when debugging
+            ]
+        },
+        {
+            "name": "Stripe: New Payment Method with Stripe Token (With Previous Stripe Customer ID - With Customer ID Override)",
+            "presentation": {
+                "group": "Stripe"
+                },
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "accounts",
+                "stripe",
+                "add-token",
+                "yourAccountIdHere", // ACCOUNT_ID - Replace with an actual accountId when debugging
+                "tok_123456789", // STRIPE_TOKEN - Replace with an actual Stripe Token when debugging
+                "cus_123456789", // STRIPE_CUSTOMER_ID - Replace with an actual Stripe Customer ID when debugging
+                "true" // OVERRIDE_CUSTOMER_ID - Replace with a desired boolean value when debugging
+            ]
+        },
+        {
+            "name": "Stripe: New Payment Method with Stripe Token (With Previous Stripe Customer ID - No Customer ID Override - New Default)",
+            "presentation": {
+                "group": "Stripe"
+                },
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "accounts",
+                "stripe",
+                "add-token",
+                "yourAccountIdHere", // ACCOUNT_ID - Replace with an actual accountId when debugging
+                "tok_123456789", // STRIPE_TOKEN - Replace with an actual Stripe Token when debugging
+                "cus_123456789", // STRIPE_CUSTOMER_ID - Replace with an actual Stripe Customer ID when debugging
+                "true", // OVERRIDE_CUSTOMER_ID - Replace with a desired boolean value when debugging
+                "true" // IS_NEW_DEFAULT - Replace with a desired boolean value when debugging
+            ]
+        },
+        {
+            "name": "Account: Sync All Payment Methods",
+            "presentation": {
+                "group": "Account"
+                },
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "acc",
+                "pm",
+                "sync",
+                "yourAccountIdHere", // Replace with an actual accountId when debugging
+            ]
+        },
+        {
+            "name": "Account: Create Basic Account",
+            "presentation": {
+                "group": "Account"
+                },
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http", // needed to avoid TLS error between the client and killbill
+                "acc", // shorthand for accounts
+                "create", //create command
+                "Name=Bob Lazar", // start of parameters
+                "Email=bob@myhibrid.com", 
+            ]
+        },
+        {
+            "name": "Account: Create Comprehensive Account",
+            "presentation": {
+                "group": "Account"
+            },
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "acc",
+                "create",
+                "Name=Bob Lazar",
+                "Email=bob@myhibrid.com",
+                "AccountBalance=100.50",
+                "AccountCBA=50",
+                "AccountID=123e4567-e89b-12d3-a456-426614174000",
+                "Address1=123 Main St",
+                "Address2=Apt 4B",
+                "BillCycleDayLocal=5",
+                "City=Los Angeles",
+                "Company=SpaceX",
+                "Country=USA",
+                "Currency=USD",
+                "ExternalKey=Ext123",
+                "FirstNameLength=3",
+                "IsMigrated=True",
+                "IsPaymentDelegatedToParent=False",
+                "Locale=en_US",
+                "Notes=VIP customer",
+                //"ParentAccountID=123e4567-e89b-12d3-a456-426614174001",
+                //"PaymentMethodID=123e4567-e89b-12d3-a456-426614174002",
+                "Phone=1234567890",
+                "PostalCode=90001",
+                "ReferenceTime=2023-09-10T15:31:59-05:00",
+                "State=CA",
+                "TimeZone=UTC"
+            ]
+        },       
+        {
+            "name": "Account: Update Default Payment Method",
+            "presentation": {
+                "group": "Account"
+            },
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "--host",
+                "127.0.0.1:8080",
+                "--user",
+                "admin",
+                "--password",
+                "password",
+                "--api_key",
+                "bob",
+                "--api_secret",
+                "lazar",
+                "--transport_scheme",
+                "http",
+                "update-default-payment-method",
+                "AccountIDOrNameHere",
+                "PaymentMethodIDHere",
+                "true", // Example of paying all unpaid invoices
+                "pluginKey1=pluginValue1", "pluginKey2=pluginValue2" // Example of passing multiple plugin properties
+            ]
+        }, 
+        {
+            "name": "Account: Update Account",
+            "presentation": {
+                "group": "Account"
+            },
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/kbcmd",
+            "args": [
+                "accounts",
+                "update",
+                "YOUR_ACCOUNT_KEY_OR_ID",
+                "Name=UpdatedName",
+                "Email=updated@email.com",
+                "TreatNullAsReset=False"
+            ]
+        },
+        {
             "name": "Catalog: Validate a Catalog XML file",
+            "presentation": {
+                "group": "Catalog"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -80,6 +451,9 @@
         },
         {
             "name": "Catalog: Upload a Catalog XML file",
+            "presentation": {
+                "group": "Catalog"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -104,6 +478,9 @@
         },
         {
             "name": "Invoices: Get Invoice",
+            "presentation": {
+                "group": "Invoice"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -128,6 +505,9 @@
         },
         {
             "name": "Node Infomation: Get Node Info",
+            "presentation": {
+                "group": "Node Info"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -151,6 +531,9 @@
         },
         {
             "name": "Node Infomation: Install Payment Test Plugin",
+            "presentation": {
+                "group": "Node Info"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -179,6 +562,9 @@
         },
         {
             "name": "Node Infomation: Install Stripe Plugin",
+            "presentation": {
+                "group": "Node Info"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -204,6 +590,9 @@
         },
         {
             "name": "Node Infomation: Start Stripe Plugin",
+            "presentation": {
+                "group": "Node Info"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -228,6 +617,9 @@
         },
         {
             "name": "Node Infomation: Start Payment Test Plugin",
+            "presentation": {
+                "group": "Node Info"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -253,6 +645,9 @@
         },
         {
             "name": "Node Infomation: Stop Payment Test Plugin",
+            "presentation": {
+                "group": "Node Info"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -277,6 +672,9 @@
         },
         {
             "name": "Node Infomation: Restart Payment Test Plugin",
+            "presentation": {
+                "group": "Node Info"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -301,6 +699,9 @@
         },
         {
             "name": "Node Infomation: Uninstall Payment Test Plugin",
+            "presentation": {
+                "group": "Node Info"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -326,6 +727,9 @@
         },
         {
             "name": "Admin: Get Queues",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -349,6 +753,9 @@
         },
         {
             "name": "Admin: Put Server In Rotation",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -372,6 +779,9 @@
         },
         {
             "name": "Admin: Take Server Out from Rotation",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -395,6 +805,9 @@
         },
         {
             "name": "Admin: Update Payment Transaction State (No Params)",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -411,6 +824,9 @@
         },
         {
             "name": "Admin: Update Payment Transaction State (Required Params)",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -429,6 +845,9 @@
         },
         {
             "name": "Admin: Update Payment Transaction State (All Params)",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -449,6 +868,9 @@
             ]
         },{
             "name": "Admin: Update Payment Transaction State (Only lastSuccessfulPaymentState)",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -468,6 +890,9 @@
         },
         {
             "name": "Admin: Update Payment Transaction State (Only currentPaymentStateName)",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -481,6 +906,9 @@
         },
         {
             "name": "Admin: Update Payment Transaction State (Only transactionStatus)",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -494,6 +922,9 @@
         },
         {
             "name": "Admin: Update Payment Transaction State (lastSuccessfulPaymentState + currentPaymentStateName)",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -508,6 +939,9 @@
         },
         {
             "name": "Admin: Update Payment Transaction State (lastSuccessfulPaymentState + transactionStatus)",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -522,6 +956,9 @@
         },
         {
             "name": "Admin: Update Payment Transaction State (currentPaymentStateName + transactionStatus)",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -536,6 +973,9 @@
         },
         {
             "name": "Admin: Invalidate Tenant Cache",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -552,6 +992,9 @@
         },
         {
             "name": "Admin: Invalidate All Caches For Instance",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",
@@ -568,6 +1011,9 @@
         },
         {
             "name": "Admin: Invalidate Account Cache",
+            "presentation": {
+                "group": "Admin"
+                },
             "type": "go",
             "request": "launch",
             "mode": "debug",

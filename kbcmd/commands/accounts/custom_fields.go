@@ -2,7 +2,7 @@ package accounts
 
 import (
 	"context"
-	"fmt"
+	"reflect"
 
 	"github.com/go-openapi/strfmt"
 	"github.com/killbill/kbcli/v3/kbclient"
@@ -34,7 +34,8 @@ func getCustomFieldByNameOrID(
 			return cf, nil
 		}
 	}
-	return nil, fmt.Errorf("custom field %s not found", cfIDOrName)
+
+	return nil, account.NewGetAccountCustomFieldsBadRequest() //fmt.Errorf("custom field %s not found", cfIDOrName)
 }
 
 // listCustomFields - list all custom fields
@@ -91,6 +92,37 @@ func addCustomField(ctx context.Context, o *cmdlib.Options) error {
 	return err
 }
 
+func updateCustomField(ctx context.Context, o *cmdlib.Options) error {
+	if len(o.Args) != 3 {
+		return cmdlib.ErrorInvalidArgs
+	}
+	accIDOrName := o.Args[0]
+	cfName := o.Args[1]
+	cfValue := o.Args[2]
+
+	acc, err := kblib.GetAccountByKeyOrID(ctx, o.Client(), accIDOrName)
+	if err != nil {
+		return err
+	}
+	cf := &kbmodel.CustomField{
+		Name:  &cfName,
+		Value: &cfValue,
+	}
+
+	resp, err := o.Client().Account.ModifyAccountCustomFields(ctx, &account.ModifyAccountCustomFieldsParams{
+		AccountID:             acc.AccountID,
+		Body:                  []*kbmodel.CustomField{cf},
+		ProcessLocationHeader: true,
+	})
+	if err != nil {
+		return err
+	}
+
+	o.Print(resp)
+
+	return err
+}
+
 // deleteCustomField - Delete custom field to account
 func deleteCustomField(ctx context.Context, o *cmdlib.Options) error {
 	if len(o.Args) != 2 {
@@ -121,6 +153,10 @@ func deleteCustomField(ctx context.Context, o *cmdlib.Options) error {
 }
 
 func registerAccountCustomFieldCommands(r *cmdlib.App) {
+
+	// register the no content formatter
+	cmdlib.AddFormatter(reflect.TypeOf(&account.ModifyAccountCustomFieldsNoContent{}), accountNoContentFormatter)
+
 	r.Register("accounts", cli.Command{
 		Name:    "custom-fields",
 		Aliases: []string{"cf"},

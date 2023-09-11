@@ -104,7 +104,9 @@ org.killbill.billing.plugin.stripe.publicKey=%s
 	config, err := o.Client().Tenant.GetPluginConfiguration(ctx, &tenant.GetPluginConfigurationParams{
 		PluginName: "killbill-stripe",
 	})
-	o.Print(err)
+	if err != nil {
+		o.Print(err)
+	}
 	o.Print(config.Payload)
 	return nil
 }

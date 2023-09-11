@@ -361,7 +361,6 @@ func registerNodesInfoCommands(r *cmdlib.App) {
 			},
 		},
 		CustomFn: cmdlib.CustomFormatter(func(v interface{}, fo cmdlib.FormatOptions) cmdlib.Output {
-			//if i, ok := v.(int); ok {
 			return cmdlib.Output{
 				Title:   "Node Command Successfully Triggered",
 				Columns: []string{"Formatted Value"},
@@ -372,12 +371,6 @@ func registerNodesInfoCommands(r *cmdlib.App) {
 					},
 				},
 			}
-			//}
-			/*
-				return cmdlib.Output{
-					Title: "Error", Columns: []string{"Node Command Successfully Triggered"}, Rows: []cmdlib.OutputRow{{Values: []string{"Invalid response"}}},
-				}
-			*/
 		}),
 	})
 
