@@ -17,6 +17,7 @@ tags:
 - name: "Credit"
 - name: "CustomField"
 - name: "Export"
+- name: "Healthcheck"
 - name: "InvoiceItem"
 - name: "InvoicePayment"
 - name: "Invoice"
@@ -3945,6 +3946,24 @@ paths:
           description: "Invalid account id supplied"
         "404":
           description: "Account not found"
+      security:
+      - basicAuth: []
+      - Killbill Api Key: []
+      - Killbill Api Secret: []
+  /1.0/healthcheck:
+    get:
+      tags:
+      - "Healthcheck"
+      summary: "Get the healthcheck information"
+      description: ""
+      operationId: "healthcheck"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Healthcheck"
       security:
       - basicAuth: []
       - Killbill Api Key: []
@@ -11948,6 +11967,14 @@ definitions:
       id:
         type: "string"
         format: "uuid"
+  Healthcheck:
+    type: "object"
+    properties:
+        main.pool.ConnectivityCheck:
+          type: object
+          properties:
+            healthy:
+              type: boolean
   Tag:
     type: "object"
     properties:
