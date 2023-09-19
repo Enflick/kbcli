@@ -52,12 +52,10 @@ func NewGetPluginPaymentStateMachineConfigParamsWithHTTPClient(client *http.Clie
 	}
 }
 
-/*
-GetPluginPaymentStateMachineConfigParams contains all the parameters to send to the API endpoint
+/* GetPluginPaymentStateMachineConfigParams contains all the parameters to send to the API endpoint
+   for the get plugin payment state machine config operation.
 
-	for the get plugin payment state machine config operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPluginPaymentStateMachineConfigParams struct {
 

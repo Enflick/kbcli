@@ -52,12 +52,10 @@ func NewUploadPluginPaymentStateMachineConfigParamsWithHTTPClient(client *http.C
 	}
 }
 
-/*
-UploadPluginPaymentStateMachineConfigParams contains all the parameters to send to the API endpoint
+/* UploadPluginPaymentStateMachineConfigParams contains all the parameters to send to the API endpoint
+   for the upload plugin payment state machine config operation.
 
-	for the upload plugin payment state machine config operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UploadPluginPaymentStateMachineConfigParams struct {
 

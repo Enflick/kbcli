@@ -47,8 +47,7 @@ func NewGetPaymentAttemptAuditLogsWithHistoryOK() *GetPaymentAttemptAuditLogsWit
 	return &GetPaymentAttemptAuditLogsWithHistoryOK{}
 }
 
-/*
-GetPaymentAttemptAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
+/* GetPaymentAttemptAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetPaymentAttemptAuditLogsWithHistoryNotFound() *GetPaymentAttemptAuditL
 	return &GetPaymentAttemptAuditLogsWithHistoryNotFound{}
 }
 
-/*
-GetPaymentAttemptAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
+/* GetPaymentAttemptAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

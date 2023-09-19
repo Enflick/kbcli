@@ -52,12 +52,10 @@ func NewGetPlanForSubscriptionAndDateParamsWithHTTPClient(client *http.Client) *
 	}
 }
 
-/*
-GetPlanForSubscriptionAndDateParams contains all the parameters to send to the API endpoint
+/* GetPlanForSubscriptionAndDateParams contains all the parameters to send to the API endpoint
+   for the get plan for subscription and date operation.
 
-	for the get plan for subscription and date operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPlanForSubscriptionAndDateParams struct {
 

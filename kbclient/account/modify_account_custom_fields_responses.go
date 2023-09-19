@@ -45,8 +45,7 @@ func NewModifyAccountCustomFieldsNoContent() *ModifyAccountCustomFieldsNoContent
 	return &ModifyAccountCustomFieldsNoContent{}
 }
 
-/*
-ModifyAccountCustomFieldsNoContent describes a response with status code 204, with default header values.
+/* ModifyAccountCustomFieldsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewModifyAccountCustomFieldsBadRequest() *ModifyAccountCustomFieldsBadReque
 	return &ModifyAccountCustomFieldsBadRequest{}
 }
 
-/*
-ModifyAccountCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* ModifyAccountCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */

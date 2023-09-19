@@ -47,8 +47,7 @@ func NewGetPaymentByExternalKeyOK() *GetPaymentByExternalKeyOK {
 	return &GetPaymentByExternalKeyOK{}
 }
 
-/*
-GetPaymentByExternalKeyOK describes a response with status code 200, with default header values.
+/* GetPaymentByExternalKeyOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetPaymentByExternalKeyNotFound() *GetPaymentByExternalKeyNotFound {
 	return &GetPaymentByExternalKeyNotFound{}
 }
 
-/*
-GetPaymentByExternalKeyNotFound describes a response with status code 404, with default header values.
+/* GetPaymentByExternalKeyNotFound describes a response with status code 404, with default header values.
 
 Payment not found
 */

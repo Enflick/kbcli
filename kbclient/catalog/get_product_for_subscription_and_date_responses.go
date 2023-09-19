@@ -46,8 +46,7 @@ func NewGetProductForSubscriptionAndDateOK() *GetProductForSubscriptionAndDateOK
 	return &GetProductForSubscriptionAndDateOK{}
 }
 
-/*
-GetProductForSubscriptionAndDateOK describes a response with status code 200, with default header values.
+/* GetProductForSubscriptionAndDateOK describes a response with status code 200, with default header values.
 
 successful operation
 */

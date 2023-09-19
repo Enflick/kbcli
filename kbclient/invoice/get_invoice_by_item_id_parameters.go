@@ -53,12 +53,10 @@ func NewGetInvoiceByItemIDParamsWithHTTPClient(client *http.Client) *GetInvoiceB
 	}
 }
 
-/*
-GetInvoiceByItemIDParams contains all the parameters to send to the API endpoint
+/* GetInvoiceByItemIDParams contains all the parameters to send to the API endpoint
+   for the get invoice by item Id operation.
 
-	for the get invoice by item Id operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetInvoiceByItemIDParams struct {
 

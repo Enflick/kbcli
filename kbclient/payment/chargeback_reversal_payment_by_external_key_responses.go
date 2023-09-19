@@ -47,8 +47,7 @@ func NewChargebackReversalPaymentByExternalKeyCreated() *ChargebackReversalPayme
 	return &ChargebackReversalPaymentByExternalKeyCreated{}
 }
 
-/*
-ChargebackReversalPaymentByExternalKeyCreated describes a response with status code 201, with default header values.
+/* ChargebackReversalPaymentByExternalKeyCreated describes a response with status code 201, with default header values.
 
 Payment transaction created successfully
 */
@@ -116,8 +115,7 @@ func NewChargebackReversalPaymentByExternalKeyPaymentRequired() *ChargebackRever
 	return &ChargebackReversalPaymentByExternalKeyPaymentRequired{}
 }
 
-/*
-ChargebackReversalPaymentByExternalKeyPaymentRequired describes a response with status code 402, with default header values.
+/* ChargebackReversalPaymentByExternalKeyPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -173,8 +171,7 @@ func NewChargebackReversalPaymentByExternalKeyNotFound() *ChargebackReversalPaym
 	return &ChargebackReversalPaymentByExternalKeyNotFound{}
 }
 
-/*
-ChargebackReversalPaymentByExternalKeyNotFound describes a response with status code 404, with default header values.
+/* ChargebackReversalPaymentByExternalKeyNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */
@@ -230,8 +227,7 @@ func NewChargebackReversalPaymentByExternalKeyUnprocessableEntity() *ChargebackR
 	return &ChargebackReversalPaymentByExternalKeyUnprocessableEntity{}
 }
 
-/*
-ChargebackReversalPaymentByExternalKeyUnprocessableEntity describes a response with status code 422, with default header values.
+/* ChargebackReversalPaymentByExternalKeyUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -287,8 +283,7 @@ func NewChargebackReversalPaymentByExternalKeyBadGateway() *ChargebackReversalPa
 	return &ChargebackReversalPaymentByExternalKeyBadGateway{}
 }
 
-/*
-ChargebackReversalPaymentByExternalKeyBadGateway describes a response with status code 502, with default header values.
+/* ChargebackReversalPaymentByExternalKeyBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -344,8 +339,7 @@ func NewChargebackReversalPaymentByExternalKeyServiceUnavailable() *ChargebackRe
 	return &ChargebackReversalPaymentByExternalKeyServiceUnavailable{}
 }
 
-/*
-ChargebackReversalPaymentByExternalKeyServiceUnavailable describes a response with status code 503, with default header values.
+/* ChargebackReversalPaymentByExternalKeyServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -401,8 +395,7 @@ func NewChargebackReversalPaymentByExternalKeyGatewayTimeout() *ChargebackRevers
 	return &ChargebackReversalPaymentByExternalKeyGatewayTimeout{}
 }
 
-/*
-ChargebackReversalPaymentByExternalKeyGatewayTimeout describes a response with status code 504, with default header values.
+/* ChargebackReversalPaymentByExternalKeyGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

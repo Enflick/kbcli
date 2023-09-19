@@ -52,12 +52,10 @@ func NewGetPluginsInfoParamsWithHTTPClient(client *http.Client) *GetPluginsInfoP
 	}
 }
 
-/*
-GetPluginsInfoParams contains all the parameters to send to the API endpoint
+/* GetPluginsInfoParams contains all the parameters to send to the API endpoint
+   for the get plugins info operation.
 
-	for the get plugins info operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPluginsInfoParams struct {
 	WithProfilingInfo     *string // If set, return KB hprof headers

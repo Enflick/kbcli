@@ -45,8 +45,7 @@ func NewRemoveEmailNoContent() *RemoveEmailNoContent {
 	return &RemoveEmailNoContent{}
 }
 
-/*
-RemoveEmailNoContent describes a response with status code 204, with default header values.
+/* RemoveEmailNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewRemoveEmailBadRequest() *RemoveEmailBadRequest {
 	return &RemoveEmailBadRequest{}
 }
 
-/*
-RemoveEmailBadRequest describes a response with status code 400, with default header values.
+/* RemoveEmailBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */

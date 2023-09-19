@@ -46,8 +46,7 @@ func NewGetPaymentsOK() *GetPaymentsOK {
 	return &GetPaymentsOK{}
 }
 
-/*
-GetPaymentsOK describes a response with status code 200, with default header values.
+/* GetPaymentsOK describes a response with status code 200, with default header values.
 
 successful operation
 */

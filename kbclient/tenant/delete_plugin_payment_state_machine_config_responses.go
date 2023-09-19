@@ -45,8 +45,7 @@ func NewDeletePluginPaymentStateMachineConfigNoContent() *DeletePluginPaymentSta
 	return &DeletePluginPaymentStateMachineConfigNoContent{}
 }
 
-/*
-DeletePluginPaymentStateMachineConfigNoContent describes a response with status code 204, with default header values.
+/* DeletePluginPaymentStateMachineConfigNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeletePluginPaymentStateMachineConfigBadRequest() *DeletePluginPaymentSt
 	return &DeletePluginPaymentStateMachineConfigBadRequest{}
 }
 
-/*
-DeletePluginPaymentStateMachineConfigBadRequest describes a response with status code 400, with default header values.
+/* DeletePluginPaymentStateMachineConfigBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

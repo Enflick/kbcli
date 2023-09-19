@@ -55,8 +55,7 @@ func NewGenerateDryRunInvoiceOK() *GenerateDryRunInvoiceOK {
 	return &GenerateDryRunInvoiceOK{}
 }
 
-/*
-GenerateDryRunInvoiceOK describes a response with status code 200, with default header values.
+/* GenerateDryRunInvoiceOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -124,8 +123,7 @@ func NewGenerateDryRunInvoiceNoContent() *GenerateDryRunInvoiceNoContent {
 	return &GenerateDryRunInvoiceNoContent{}
 }
 
-/*
-GenerateDryRunInvoiceNoContent describes a response with status code 204, with default header values.
+/* GenerateDryRunInvoiceNoContent describes a response with status code 204, with default header values.
 
 Nothing to generate
 */
@@ -181,8 +179,7 @@ func NewGenerateDryRunInvoiceBadRequest() *GenerateDryRunInvoiceBadRequest {
 	return &GenerateDryRunInvoiceBadRequest{}
 }
 
-/*
-GenerateDryRunInvoiceBadRequest describes a response with status code 400, with default header values.
+/* GenerateDryRunInvoiceBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id or target datetime supplied
 */

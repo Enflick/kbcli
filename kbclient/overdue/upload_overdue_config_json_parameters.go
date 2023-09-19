@@ -54,12 +54,10 @@ func NewUploadOverdueConfigJSONParamsWithHTTPClient(client *http.Client) *Upload
 	}
 }
 
-/*
-UploadOverdueConfigJSONParams contains all the parameters to send to the API endpoint
+/* UploadOverdueConfigJSONParams contains all the parameters to send to the API endpoint
+   for the upload overdue config Json operation.
 
-	for the upload overdue config Json operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UploadOverdueConfigJSONParams struct {
 

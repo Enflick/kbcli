@@ -47,8 +47,7 @@ func NewGetUserKeyValueOK() *GetUserKeyValueOK {
 	return &GetUserKeyValueOK{}
 }
 
-/*
-GetUserKeyValueOK describes a response with status code 200, with default header values.
+/* GetUserKeyValueOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetUserKeyValueBadRequest() *GetUserKeyValueBadRequest {
 	return &GetUserKeyValueBadRequest{}
 }
 
-/*
-GetUserKeyValueBadRequest describes a response with status code 400, with default header values.
+/* GetUserKeyValueBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

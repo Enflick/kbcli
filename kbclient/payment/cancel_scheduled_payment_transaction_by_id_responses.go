@@ -45,8 +45,7 @@ func NewCancelScheduledPaymentTransactionByIDNoContent() *CancelScheduledPayment
 	return &CancelScheduledPaymentTransactionByIDNoContent{}
 }
 
-/*
-CancelScheduledPaymentTransactionByIDNoContent describes a response with status code 204, with default header values.
+/* CancelScheduledPaymentTransactionByIDNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewCancelScheduledPaymentTransactionByIDBadRequest() *CancelScheduledPaymen
 	return &CancelScheduledPaymentTransactionByIDBadRequest{}
 }
 
-/*
-CancelScheduledPaymentTransactionByIDBadRequest describes a response with status code 400, with default header values.
+/* CancelScheduledPaymentTransactionByIDBadRequest describes a response with status code 400, with default header values.
 
 Invalid paymentTransactionId supplied
 */

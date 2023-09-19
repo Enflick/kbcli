@@ -52,12 +52,10 @@ func NewUploadPluginConfigurationParamsWithHTTPClient(client *http.Client) *Uplo
 	}
 }
 
-/*
-UploadPluginConfigurationParams contains all the parameters to send to the API endpoint
+/* UploadPluginConfigurationParams contains all the parameters to send to the API endpoint
+   for the upload plugin configuration operation.
 
-	for the upload plugin configuration operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UploadPluginConfigurationParams struct {
 

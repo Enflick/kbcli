@@ -45,8 +45,7 @@ func NewCompleteTransactionByExternalKeyNoContent() *CompleteTransactionByExtern
 	return &CompleteTransactionByExternalKeyNoContent{}
 }
 
-/*
-CompleteTransactionByExternalKeyNoContent describes a response with status code 204, with default header values.
+/* CompleteTransactionByExternalKeyNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewCompleteTransactionByExternalKeyPaymentRequired() *CompleteTransactionBy
 	return &CompleteTransactionByExternalKeyPaymentRequired{}
 }
 
-/*
-CompleteTransactionByExternalKeyPaymentRequired describes a response with status code 402, with default header values.
+/* CompleteTransactionByExternalKeyPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -159,8 +157,7 @@ func NewCompleteTransactionByExternalKeyNotFound() *CompleteTransactionByExterna
 	return &CompleteTransactionByExternalKeyNotFound{}
 }
 
-/*
-CompleteTransactionByExternalKeyNotFound describes a response with status code 404, with default header values.
+/* CompleteTransactionByExternalKeyNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */
@@ -216,8 +213,7 @@ func NewCompleteTransactionByExternalKeyUnprocessableEntity() *CompleteTransacti
 	return &CompleteTransactionByExternalKeyUnprocessableEntity{}
 }
 
-/*
-CompleteTransactionByExternalKeyUnprocessableEntity describes a response with status code 422, with default header values.
+/* CompleteTransactionByExternalKeyUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -273,8 +269,7 @@ func NewCompleteTransactionByExternalKeyBadGateway() *CompleteTransactionByExter
 	return &CompleteTransactionByExternalKeyBadGateway{}
 }
 
-/*
-CompleteTransactionByExternalKeyBadGateway describes a response with status code 502, with default header values.
+/* CompleteTransactionByExternalKeyBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -330,8 +325,7 @@ func NewCompleteTransactionByExternalKeyServiceUnavailable() *CompleteTransactio
 	return &CompleteTransactionByExternalKeyServiceUnavailable{}
 }
 
-/*
-CompleteTransactionByExternalKeyServiceUnavailable describes a response with status code 503, with default header values.
+/* CompleteTransactionByExternalKeyServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -387,8 +381,7 @@ func NewCompleteTransactionByExternalKeyGatewayTimeout() *CompleteTransactionByE
 	return &CompleteTransactionByExternalKeyGatewayTimeout{}
 }
 
-/*
-CompleteTransactionByExternalKeyGatewayTimeout describes a response with status code 504, with default header values.
+/* CompleteTransactionByExternalKeyGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

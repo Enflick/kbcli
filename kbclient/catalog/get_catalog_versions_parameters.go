@@ -52,12 +52,10 @@ func NewGetCatalogVersionsParamsWithHTTPClient(client *http.Client) *GetCatalogV
 	}
 }
 
-/*
-GetCatalogVersionsParams contains all the parameters to send to the API endpoint
+/* GetCatalogVersionsParams contains all the parameters to send to the API endpoint
+   for the get catalog versions operation.
 
-	for the get catalog versions operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetCatalogVersionsParams struct {
 

@@ -53,12 +53,10 @@ func NewSearchInvoicesParamsWithHTTPClient(client *http.Client) *SearchInvoicesP
 	}
 }
 
-/*
-SearchInvoicesParams contains all the parameters to send to the API endpoint
+/* SearchInvoicesParams contains all the parameters to send to the API endpoint
+   for the search invoices operation.
 
-	for the search invoices operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type SearchInvoicesParams struct {
 

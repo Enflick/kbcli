@@ -45,8 +45,7 @@ func NewUpdateAccountNoContent() *UpdateAccountNoContent {
 	return &UpdateAccountNoContent{}
 }
 
-/*
-UpdateAccountNoContent describes a response with status code 204, with default header values.
+/* UpdateAccountNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewUpdateAccountBadRequest() *UpdateAccountBadRequest {
 	return &UpdateAccountBadRequest{}
 }
 
-/*
-UpdateAccountBadRequest describes a response with status code 400, with default header values.
+/* UpdateAccountBadRequest describes a response with status code 400, with default header values.
 
 Invalid account data supplied
 */

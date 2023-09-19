@@ -45,8 +45,7 @@ func NewGetQueueEntriesOK() *GetQueueEntriesOK {
 	return &GetQueueEntriesOK{}
 }
 
-/*
-GetQueueEntriesOK describes a response with status code 200, with default header values.
+/* GetQueueEntriesOK describes a response with status code 200, with default header values.
 
 Success
 */
@@ -102,8 +101,7 @@ func NewGetQueueEntriesBadRequest() *GetQueueEntriesBadRequest {
 	return &GetQueueEntriesBadRequest{}
 }
 
-/*
-GetQueueEntriesBadRequest describes a response with status code 400, with default header values.
+/* GetQueueEntriesBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -159,8 +157,7 @@ func NewGetQueueEntriesNotFound() *GetQueueEntriesNotFound {
 	return &GetQueueEntriesNotFound{}
 }
 
-/*
-GetQueueEntriesNotFound describes a response with status code 404, with default header values.
+/* GetQueueEntriesNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

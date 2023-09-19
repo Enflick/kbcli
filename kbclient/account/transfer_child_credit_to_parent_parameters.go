@@ -52,12 +52,10 @@ func NewTransferChildCreditToParentParamsWithHTTPClient(client *http.Client) *Tr
 	}
 }
 
-/*
-TransferChildCreditToParentParams contains all the parameters to send to the API endpoint
+/* TransferChildCreditToParentParams contains all the parameters to send to the API endpoint
+   for the transfer child credit to parent operation.
 
-	for the transfer child credit to parent operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type TransferChildCreditToParentParams struct {
 

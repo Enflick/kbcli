@@ -54,12 +54,10 @@ func NewModifyInvoiceCustomFieldsParamsWithHTTPClient(client *http.Client) *Modi
 	}
 }
 
-/*
-ModifyInvoiceCustomFieldsParams contains all the parameters to send to the API endpoint
+/* ModifyInvoiceCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the modify invoice custom fields operation.
 
-	for the modify invoice custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ModifyInvoiceCustomFieldsParams struct {
 

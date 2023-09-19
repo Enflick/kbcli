@@ -52,12 +52,10 @@ func NewRegisterPushNotificationCallbackParamsWithHTTPClient(client *http.Client
 	}
 }
 
-/*
-RegisterPushNotificationCallbackParams contains all the parameters to send to the API endpoint
+/* RegisterPushNotificationCallbackParams contains all the parameters to send to the API endpoint
+   for the register push notification callback operation.
 
-	for the register push notification callback operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type RegisterPushNotificationCallbackParams struct {
 

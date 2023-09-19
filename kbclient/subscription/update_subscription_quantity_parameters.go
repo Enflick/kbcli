@@ -55,12 +55,10 @@ func NewUpdateSubscriptionQuantityParamsWithHTTPClient(client *http.Client) *Upd
 	}
 }
 
-/*
-UpdateSubscriptionQuantityParams contains all the parameters to send to the API endpoint
+/* UpdateSubscriptionQuantityParams contains all the parameters to send to the API endpoint
+   for the update subscription quantity operation.
 
-	for the update subscription quantity operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UpdateSubscriptionQuantityParams struct {
 

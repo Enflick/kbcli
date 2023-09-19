@@ -127,7 +127,7 @@ type ClientService interface {
 }
 
 /*
-AdjustInvoiceItem adjusts an invoice item
+  AdjustInvoiceItem adjusts an invoice item
 */
 func (a *Client) AdjustInvoiceItem(ctx context.Context, params *AdjustInvoiceItemParams) (*AdjustInvoiceItemCreated, error) {
 	// TODO: Validate the params before sending
@@ -215,7 +215,7 @@ func (a *Client) AdjustInvoiceItem(ctx context.Context, params *AdjustInvoiceIte
 }
 
 /*
-CommitInvoice performs the invoice status transition from d r a f t to c o m m i t t e d
+  CommitInvoice performs the invoice status transition from d r a f t to c o m m i t t e d
 */
 func (a *Client) CommitInvoice(ctx context.Context, params *CommitInvoiceParams) (*CommitInvoiceNoContent, error) {
 	// TODO: Validate the params before sending
@@ -274,7 +274,7 @@ func (a *Client) CommitInvoice(ctx context.Context, params *CommitInvoiceParams)
 }
 
 /*
-CreateExternalCharges creates external charge s
+  CreateExternalCharges creates external charge s
 */
 func (a *Client) CreateExternalCharges(ctx context.Context, params *CreateExternalChargesParams) (*CreateExternalChargesCreated, error) {
 	// TODO: Validate the params before sending
@@ -362,7 +362,7 @@ func (a *Client) CreateExternalCharges(ctx context.Context, params *CreateExtern
 }
 
 /*
-CreateFutureInvoice triggers an invoice generation
+  CreateFutureInvoice triggers an invoice generation
 */
 func (a *Client) CreateFutureInvoice(ctx context.Context, params *CreateFutureInvoiceParams) (*CreateFutureInvoiceCreated, error) {
 	// TODO: Validate the params before sending
@@ -450,7 +450,7 @@ func (a *Client) CreateFutureInvoice(ctx context.Context, params *CreateFutureIn
 }
 
 /*
-CreateFutureInvoiceGroup triggers an invoice generation
+  CreateFutureInvoiceGroup triggers an invoice generation
 */
 func (a *Client) CreateFutureInvoiceGroup(ctx context.Context, params *CreateFutureInvoiceGroupParams) (*CreateFutureInvoiceGroupCreated, error) {
 	// TODO: Validate the params before sending
@@ -538,7 +538,7 @@ func (a *Client) CreateFutureInvoiceGroup(ctx context.Context, params *CreateFut
 }
 
 /*
-CreateInstantPayment triggers a payment for invoice
+  CreateInstantPayment triggers a payment for invoice
 */
 func (a *Client) CreateInstantPayment(ctx context.Context, params *CreateInstantPaymentParams) (*CreateInstantPaymentCreated, *CreateInstantPaymentNoContent, error) {
 	// TODO: Validate the params before sending
@@ -633,7 +633,7 @@ func (a *Client) CreateInstantPayment(ctx context.Context, params *CreateInstant
 }
 
 /*
-CreateInvoiceCustomFields adds custom fields to invoice
+  CreateInvoiceCustomFields adds custom fields to invoice
 */
 func (a *Client) CreateInvoiceCustomFields(ctx context.Context, params *CreateInvoiceCustomFieldsParams) (*CreateInvoiceCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
@@ -721,7 +721,7 @@ func (a *Client) CreateInvoiceCustomFields(ctx context.Context, params *CreateIn
 }
 
 /*
-CreateInvoiceTags adds tags to invoice
+  CreateInvoiceTags adds tags to invoice
 */
 func (a *Client) CreateInvoiceTags(ctx context.Context, params *CreateInvoiceTagsParams) (*CreateInvoiceTagsCreated, error) {
 	// TODO: Validate the params before sending
@@ -809,7 +809,7 @@ func (a *Client) CreateInvoiceTags(ctx context.Context, params *CreateInvoiceTag
 }
 
 /*
-CreateMigrationInvoice creates a migration invoice
+  CreateMigrationInvoice creates a migration invoice
 */
 func (a *Client) CreateMigrationInvoice(ctx context.Context, params *CreateMigrationInvoiceParams) (*CreateMigrationInvoiceCreated, error) {
 	// TODO: Validate the params before sending
@@ -897,7 +897,7 @@ func (a *Client) CreateMigrationInvoice(ctx context.Context, params *CreateMigra
 }
 
 /*
-CreateTaxItems creates tax items
+  CreateTaxItems creates tax items
 */
 func (a *Client) CreateTaxItems(ctx context.Context, params *CreateTaxItemsParams) (*CreateTaxItemsCreated, error) {
 	// TODO: Validate the params before sending
@@ -985,7 +985,7 @@ func (a *Client) CreateTaxItems(ctx context.Context, params *CreateTaxItemsParam
 }
 
 /*
-DeleteCBA deletes a c b a item
+  DeleteCBA deletes a c b a item
 */
 func (a *Client) DeleteCBA(ctx context.Context, params *DeleteCBAParams) (*DeleteCBANoContent, error) {
 	// TODO: Validate the params before sending
@@ -1044,7 +1044,7 @@ func (a *Client) DeleteCBA(ctx context.Context, params *DeleteCBAParams) (*Delet
 }
 
 /*
-DeleteInvoiceCustomFields removes custom fields from invoice
+  DeleteInvoiceCustomFields removes custom fields from invoice
 */
 func (a *Client) DeleteInvoiceCustomFields(ctx context.Context, params *DeleteInvoiceCustomFieldsParams) (*DeleteInvoiceCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1103,7 +1103,7 @@ func (a *Client) DeleteInvoiceCustomFields(ctx context.Context, params *DeleteIn
 }
 
 /*
-DeleteInvoiceTags removes tags from invoice
+  DeleteInvoiceTags removes tags from invoice
 */
 func (a *Client) DeleteInvoiceTags(ctx context.Context, params *DeleteInvoiceTagsParams) (*DeleteInvoiceTagsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1162,7 +1162,7 @@ func (a *Client) DeleteInvoiceTags(ctx context.Context, params *DeleteInvoiceTag
 }
 
 /*
-GenerateDryRunInvoice generates a dry run invoice
+  GenerateDryRunInvoice generates a dry run invoice
 */
 func (a *Client) GenerateDryRunInvoice(ctx context.Context, params *GenerateDryRunInvoiceParams) (*GenerateDryRunInvoiceOK, *GenerateDryRunInvoiceNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1222,7 +1222,7 @@ func (a *Client) GenerateDryRunInvoice(ctx context.Context, params *GenerateDryR
 }
 
 /*
-GetCatalogTranslation retrieves the catalog translation for the tenant
+  GetCatalogTranslation retrieves the catalog translation for the tenant
 */
 func (a *Client) GetCatalogTranslation(ctx context.Context, params *GetCatalogTranslationParams) (*GetCatalogTranslationOK, error) {
 	// TODO: Validate the params before sending
@@ -1269,7 +1269,7 @@ func (a *Client) GetCatalogTranslation(ctx context.Context, params *GetCatalogTr
 }
 
 /*
-GetInvoice retrieves an invoice by id
+  GetInvoice retrieves an invoice by id
 */
 func (a *Client) GetInvoice(ctx context.Context, params *GetInvoiceParams) (*GetInvoiceOK, error) {
 	// TODO: Validate the params before sending
@@ -1316,7 +1316,7 @@ func (a *Client) GetInvoice(ctx context.Context, params *GetInvoiceParams) (*Get
 }
 
 /*
-GetInvoiceAsHTML renders an invoice as HTML
+  GetInvoiceAsHTML renders an invoice as HTML
 */
 func (a *Client) GetInvoiceAsHTML(ctx context.Context, params *GetInvoiceAsHTMLParams) (*GetInvoiceAsHTMLOK, error) {
 	// TODO: Validate the params before sending
@@ -1363,7 +1363,7 @@ func (a *Client) GetInvoiceAsHTML(ctx context.Context, params *GetInvoiceAsHTMLP
 }
 
 /*
-GetInvoiceAuditLogsWithHistory retrieves invoice audit logs with history by id
+  GetInvoiceAuditLogsWithHistory retrieves invoice audit logs with history by id
 */
 func (a *Client) GetInvoiceAuditLogsWithHistory(ctx context.Context, params *GetInvoiceAuditLogsWithHistoryParams) (*GetInvoiceAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
@@ -1410,7 +1410,7 @@ func (a *Client) GetInvoiceAuditLogsWithHistory(ctx context.Context, params *Get
 }
 
 /*
-GetInvoiceByItemID retrieves an invoice by invoice item id
+  GetInvoiceByItemID retrieves an invoice by invoice item id
 */
 func (a *Client) GetInvoiceByItemID(ctx context.Context, params *GetInvoiceByItemIDParams) (*GetInvoiceByItemIDOK, error) {
 	// TODO: Validate the params before sending
@@ -1457,7 +1457,7 @@ func (a *Client) GetInvoiceByItemID(ctx context.Context, params *GetInvoiceByIte
 }
 
 /*
-GetInvoiceByNumber retrieves an invoice by number
+  GetInvoiceByNumber retrieves an invoice by number
 */
 func (a *Client) GetInvoiceByNumber(ctx context.Context, params *GetInvoiceByNumberParams) (*GetInvoiceByNumberOK, error) {
 	// TODO: Validate the params before sending
@@ -1504,7 +1504,7 @@ func (a *Client) GetInvoiceByNumber(ctx context.Context, params *GetInvoiceByNum
 }
 
 /*
-GetInvoiceCustomFields retrieves invoice custom fields
+  GetInvoiceCustomFields retrieves invoice custom fields
 */
 func (a *Client) GetInvoiceCustomFields(ctx context.Context, params *GetInvoiceCustomFieldsParams) (*GetInvoiceCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
@@ -1551,7 +1551,7 @@ func (a *Client) GetInvoiceCustomFields(ctx context.Context, params *GetInvoiceC
 }
 
 /*
-GetInvoiceMPTemplate retrieves the manual pay invoice template for the tenant
+  GetInvoiceMPTemplate retrieves the manual pay invoice template for the tenant
 */
 func (a *Client) GetInvoiceMPTemplate(ctx context.Context, params *GetInvoiceMPTemplateParams) (*GetInvoiceMPTemplateOK, error) {
 	// TODO: Validate the params before sending
@@ -1598,7 +1598,7 @@ func (a *Client) GetInvoiceMPTemplate(ctx context.Context, params *GetInvoiceMPT
 }
 
 /*
-GetInvoiceTags retrieves invoice tags
+  GetInvoiceTags retrieves invoice tags
 */
 func (a *Client) GetInvoiceTags(ctx context.Context, params *GetInvoiceTagsParams) (*GetInvoiceTagsOK, error) {
 	// TODO: Validate the params before sending
@@ -1645,7 +1645,7 @@ func (a *Client) GetInvoiceTags(ctx context.Context, params *GetInvoiceTagsParam
 }
 
 /*
-GetInvoiceTemplate retrieves the invoice template for the tenant
+  GetInvoiceTemplate retrieves the invoice template for the tenant
 */
 func (a *Client) GetInvoiceTemplate(ctx context.Context, params *GetInvoiceTemplateParams) (*GetInvoiceTemplateOK, error) {
 	// TODO: Validate the params before sending
@@ -1692,7 +1692,7 @@ func (a *Client) GetInvoiceTemplate(ctx context.Context, params *GetInvoiceTempl
 }
 
 /*
-GetInvoiceTranslation retrieves the invoice translation for the tenant
+  GetInvoiceTranslation retrieves the invoice translation for the tenant
 */
 func (a *Client) GetInvoiceTranslation(ctx context.Context, params *GetInvoiceTranslationParams) (*GetInvoiceTranslationOK, error) {
 	// TODO: Validate the params before sending
@@ -1739,7 +1739,7 @@ func (a *Client) GetInvoiceTranslation(ctx context.Context, params *GetInvoiceTr
 }
 
 /*
-GetInvoices lists invoices
+  GetInvoices lists invoices
 */
 func (a *Client) GetInvoices(ctx context.Context, params *GetInvoicesParams) (*GetInvoicesOK, error) {
 	// TODO: Validate the params before sending
@@ -1786,7 +1786,7 @@ func (a *Client) GetInvoices(ctx context.Context, params *GetInvoicesParams) (*G
 }
 
 /*
-GetInvoicesGroup retrieves a set of invoices by group id
+  GetInvoicesGroup retrieves a set of invoices by group id
 */
 func (a *Client) GetInvoicesGroup(ctx context.Context, params *GetInvoicesGroupParams) (*GetInvoicesGroupOK, error) {
 	// TODO: Validate the params before sending
@@ -1833,7 +1833,7 @@ func (a *Client) GetInvoicesGroup(ctx context.Context, params *GetInvoicesGroupP
 }
 
 /*
-GetPaymentsForInvoice retrieves payments associated with an invoice
+  GetPaymentsForInvoice retrieves payments associated with an invoice
 */
 func (a *Client) GetPaymentsForInvoice(ctx context.Context, params *GetPaymentsForInvoiceParams) (*GetPaymentsForInvoiceOK, error) {
 	// TODO: Validate the params before sending
@@ -1880,7 +1880,7 @@ func (a *Client) GetPaymentsForInvoice(ctx context.Context, params *GetPaymentsF
 }
 
 /*
-ModifyInvoiceCustomFields modifies custom fields to invoice
+  ModifyInvoiceCustomFields modifies custom fields to invoice
 */
 func (a *Client) ModifyInvoiceCustomFields(ctx context.Context, params *ModifyInvoiceCustomFieldsParams) (*ModifyInvoiceCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1939,7 +1939,7 @@ func (a *Client) ModifyInvoiceCustomFields(ctx context.Context, params *ModifyIn
 }
 
 /*
-SearchInvoices searches invoices
+  SearchInvoices searches invoices
 */
 func (a *Client) SearchInvoices(ctx context.Context, params *SearchInvoicesParams) (*SearchInvoicesOK, error) {
 	// TODO: Validate the params before sending
@@ -1986,7 +1986,7 @@ func (a *Client) SearchInvoices(ctx context.Context, params *SearchInvoicesParam
 }
 
 /*
-UploadCatalogTranslation uploads the catalog translation for the tenant
+  UploadCatalogTranslation uploads the catalog translation for the tenant
 */
 func (a *Client) UploadCatalogTranslation(ctx context.Context, params *UploadCatalogTranslationParams) (*UploadCatalogTranslationCreated, error) {
 	// TODO: Validate the params before sending
@@ -2074,7 +2074,7 @@ func (a *Client) UploadCatalogTranslation(ctx context.Context, params *UploadCat
 }
 
 /*
-UploadInvoiceMPTemplate uploads the manual pay invoice template for the tenant
+  UploadInvoiceMPTemplate uploads the manual pay invoice template for the tenant
 */
 func (a *Client) UploadInvoiceMPTemplate(ctx context.Context, params *UploadInvoiceMPTemplateParams) (*UploadInvoiceMPTemplateOK, error) {
 	// TODO: Validate the params before sending
@@ -2133,7 +2133,7 @@ func (a *Client) UploadInvoiceMPTemplate(ctx context.Context, params *UploadInvo
 }
 
 /*
-UploadInvoiceTemplate uploads the invoice template for the tenant
+  UploadInvoiceTemplate uploads the invoice template for the tenant
 */
 func (a *Client) UploadInvoiceTemplate(ctx context.Context, params *UploadInvoiceTemplateParams) (*UploadInvoiceTemplateCreated, error) {
 	// TODO: Validate the params before sending
@@ -2221,7 +2221,7 @@ func (a *Client) UploadInvoiceTemplate(ctx context.Context, params *UploadInvoic
 }
 
 /*
-UploadInvoiceTranslation uploads the invoice translation for the tenant
+  UploadInvoiceTranslation uploads the invoice translation for the tenant
 */
 func (a *Client) UploadInvoiceTranslation(ctx context.Context, params *UploadInvoiceTranslationParams) (*UploadInvoiceTranslationCreated, error) {
 	// TODO: Validate the params before sending
@@ -2309,7 +2309,7 @@ func (a *Client) UploadInvoiceTranslation(ctx context.Context, params *UploadInv
 }
 
 /*
-VoidInvoice performs the action of voiding an invoice
+  VoidInvoice performs the action of voiding an invoice
 */
 func (a *Client) VoidInvoice(ctx context.Context, params *VoidInvoiceParams) (*VoidInvoiceNoContent, error) {
 	// TODO: Validate the params before sending

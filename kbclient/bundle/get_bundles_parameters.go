@@ -53,12 +53,10 @@ func NewGetBundlesParamsWithHTTPClient(client *http.Client) *GetBundlesParams {
 	}
 }
 
-/*
-GetBundlesParams contains all the parameters to send to the API endpoint
+/* GetBundlesParams contains all the parameters to send to the API endpoint
+   for the get bundles operation.
 
-	for the get bundles operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetBundlesParams struct {
 

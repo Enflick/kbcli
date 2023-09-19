@@ -54,12 +54,10 @@ func NewModifyTransactionCustomFieldsParamsWithHTTPClient(client *http.Client) *
 	}
 }
 
-/*
-ModifyTransactionCustomFieldsParams contains all the parameters to send to the API endpoint
+/* ModifyTransactionCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the modify transaction custom fields operation.
 
-	for the modify transaction custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ModifyTransactionCustomFieldsParams struct {
 

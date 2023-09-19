@@ -47,8 +47,7 @@ func NewCreateChargebackCreated() *CreateChargebackCreated {
 	return &CreateChargebackCreated{}
 }
 
-/*
-CreateChargebackCreated describes a response with status code 201, with default header values.
+/* CreateChargebackCreated describes a response with status code 201, with default header values.
 
 Created chargeback successfully
 */
@@ -116,8 +115,7 @@ func NewCreateChargebackBadRequest() *CreateChargebackBadRequest {
 	return &CreateChargebackBadRequest{}
 }
 
-/*
-CreateChargebackBadRequest describes a response with status code 400, with default header values.
+/* CreateChargebackBadRequest describes a response with status code 400, with default header values.
 
 Invalid payment id supplied
 */
@@ -173,8 +171,7 @@ func NewCreateChargebackNotFound() *CreateChargebackNotFound {
 	return &CreateChargebackNotFound{}
 }
 
-/*
-CreateChargebackNotFound describes a response with status code 404, with default header values.
+/* CreateChargebackNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */

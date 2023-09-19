@@ -77,7 +77,7 @@ type ClientService interface {
 }
 
 /*
-AddRoleDefinition adds a new role definition
+  AddRoleDefinition adds a new role definition
 */
 func (a *Client) AddRoleDefinition(ctx context.Context, params *AddRoleDefinitionParams) (*AddRoleDefinitionCreated, error) {
 	// TODO: Validate the params before sending
@@ -165,7 +165,7 @@ func (a *Client) AddRoleDefinition(ctx context.Context, params *AddRoleDefinitio
 }
 
 /*
-AddUserRoles adds a new user with roles to make api requests
+  AddUserRoles adds a new user with roles to make api requests
 */
 func (a *Client) AddUserRoles(ctx context.Context, params *AddUserRolesParams) (*AddUserRolesCreated, error) {
 	// TODO: Validate the params before sending
@@ -253,7 +253,7 @@ func (a *Client) AddUserRoles(ctx context.Context, params *AddUserRolesParams) (
 }
 
 /*
-GetCurrentUserPermissions lists user permissions
+  GetCurrentUserPermissions lists user permissions
 */
 func (a *Client) GetCurrentUserPermissions(ctx context.Context, params *GetCurrentUserPermissionsParams) (*GetCurrentUserPermissionsOK, error) {
 	// TODO: Validate the params before sending
@@ -300,7 +300,7 @@ func (a *Client) GetCurrentUserPermissions(ctx context.Context, params *GetCurre
 }
 
 /*
-GetCurrentUserSubject gets user information
+  GetCurrentUserSubject gets user information
 */
 func (a *Client) GetCurrentUserSubject(ctx context.Context, params *GetCurrentUserSubjectParams) (*GetCurrentUserSubjectOK, error) {
 	// TODO: Validate the params before sending
@@ -347,7 +347,7 @@ func (a *Client) GetCurrentUserSubject(ctx context.Context, params *GetCurrentUs
 }
 
 /*
-GetRoleDefinition gets role definition
+  GetRoleDefinition gets role definition
 */
 func (a *Client) GetRoleDefinition(ctx context.Context, params *GetRoleDefinitionParams) (*GetRoleDefinitionOK, error) {
 	// TODO: Validate the params before sending
@@ -394,7 +394,7 @@ func (a *Client) GetRoleDefinition(ctx context.Context, params *GetRoleDefinitio
 }
 
 /*
-GetUserRoles gets roles associated to a user
+  GetUserRoles gets roles associated to a user
 */
 func (a *Client) GetUserRoles(ctx context.Context, params *GetUserRolesParams) (*GetUserRolesOK, error) {
 	// TODO: Validate the params before sending
@@ -441,7 +441,7 @@ func (a *Client) GetUserRoles(ctx context.Context, params *GetUserRolesParams) (
 }
 
 /*
-InvalidateUser invalidates an existing user
+  InvalidateUser invalidates an existing user
 */
 func (a *Client) InvalidateUser(ctx context.Context, params *InvalidateUserParams) (*InvalidateUserNoContent, error) {
 	// TODO: Validate the params before sending
@@ -500,7 +500,7 @@ func (a *Client) InvalidateUser(ctx context.Context, params *InvalidateUserParam
 }
 
 /*
-UpdateRoleDefinition updates a new role definition
+  UpdateRoleDefinition updates a new role definition
 */
 func (a *Client) UpdateRoleDefinition(ctx context.Context, params *UpdateRoleDefinitionParams) (*UpdateRoleDefinitionNoContent, error) {
 	// TODO: Validate the params before sending
@@ -559,7 +559,7 @@ func (a *Client) UpdateRoleDefinition(ctx context.Context, params *UpdateRoleDef
 }
 
 /*
-UpdateUserPassword updates a user password
+  UpdateUserPassword updates a user password
 */
 func (a *Client) UpdateUserPassword(ctx context.Context, params *UpdateUserPasswordParams) (*UpdateUserPasswordNoContent, error) {
 	// TODO: Validate the params before sending
@@ -618,7 +618,7 @@ func (a *Client) UpdateUserPassword(ctx context.Context, params *UpdateUserPassw
 }
 
 /*
-UpdateUserRoles updates roles associated to a user
+  UpdateUserRoles updates roles associated to a user
 */
 func (a *Client) UpdateUserRoles(ctx context.Context, params *UpdateUserRolesParams) (*UpdateUserRolesNoContent, error) {
 	// TODO: Validate the params before sending

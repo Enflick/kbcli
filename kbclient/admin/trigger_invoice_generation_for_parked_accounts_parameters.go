@@ -53,12 +53,10 @@ func NewTriggerInvoiceGenerationForParkedAccountsParamsWithHTTPClient(client *ht
 	}
 }
 
-/*
-TriggerInvoiceGenerationForParkedAccountsParams contains all the parameters to send to the API endpoint
+/* TriggerInvoiceGenerationForParkedAccountsParams contains all the parameters to send to the API endpoint
+   for the trigger invoice generation for parked accounts operation.
 
-	for the trigger invoice generation for parked accounts operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type TriggerInvoiceGenerationForParkedAccountsParams struct {
 

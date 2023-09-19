@@ -47,8 +47,7 @@ func NewCreateComboPaymentCreated() *CreateComboPaymentCreated {
 	return &CreateComboPaymentCreated{}
 }
 
-/*
-CreateComboPaymentCreated describes a response with status code 201, with default header values.
+/* CreateComboPaymentCreated describes a response with status code 201, with default header values.
 
 Payment transaction created successfully
 */
@@ -116,8 +115,7 @@ func NewCreateComboPaymentBadRequest() *CreateComboPaymentBadRequest {
 	return &CreateComboPaymentBadRequest{}
 }
 
-/*
-CreateComboPaymentBadRequest describes a response with status code 400, with default header values.
+/* CreateComboPaymentBadRequest describes a response with status code 400, with default header values.
 
 Invalid data for Account or PaymentMethod
 */
@@ -173,8 +171,7 @@ func NewCreateComboPaymentPaymentRequired() *CreateComboPaymentPaymentRequired {
 	return &CreateComboPaymentPaymentRequired{}
 }
 
-/*
-CreateComboPaymentPaymentRequired describes a response with status code 402, with default header values.
+/* CreateComboPaymentPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -230,8 +227,7 @@ func NewCreateComboPaymentUnprocessableEntity() *CreateComboPaymentUnprocessable
 	return &CreateComboPaymentUnprocessableEntity{}
 }
 
-/*
-CreateComboPaymentUnprocessableEntity describes a response with status code 422, with default header values.
+/* CreateComboPaymentUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -287,8 +283,7 @@ func NewCreateComboPaymentBadGateway() *CreateComboPaymentBadGateway {
 	return &CreateComboPaymentBadGateway{}
 }
 
-/*
-CreateComboPaymentBadGateway describes a response with status code 502, with default header values.
+/* CreateComboPaymentBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -344,8 +339,7 @@ func NewCreateComboPaymentServiceUnavailable() *CreateComboPaymentServiceUnavail
 	return &CreateComboPaymentServiceUnavailable{}
 }
 
-/*
-CreateComboPaymentServiceUnavailable describes a response with status code 503, with default header values.
+/* CreateComboPaymentServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -401,8 +395,7 @@ func NewCreateComboPaymentGatewayTimeout() *CreateComboPaymentGatewayTimeout {
 	return &CreateComboPaymentGatewayTimeout{}
 }
 
-/*
-CreateComboPaymentGatewayTimeout describes a response with status code 504, with default header values.
+/* CreateComboPaymentGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

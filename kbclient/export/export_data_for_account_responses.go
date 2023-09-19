@@ -45,8 +45,7 @@ func NewExportDataForAccountOK() *ExportDataForAccountOK {
 	return &ExportDataForAccountOK{}
 }
 
-/*
-ExportDataForAccountOK describes a response with status code 200, with default header values.
+/* ExportDataForAccountOK describes a response with status code 200, with default header values.
 
 Success
 */
@@ -102,8 +101,7 @@ func NewExportDataForAccountBadRequest() *ExportDataForAccountBadRequest {
 	return &ExportDataForAccountBadRequest{}
 }
 
-/*
-ExportDataForAccountBadRequest describes a response with status code 400, with default header values.
+/* ExportDataForAccountBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -159,8 +157,7 @@ func NewExportDataForAccountNotFound() *ExportDataForAccountNotFound {
 	return &ExportDataForAccountNotFound{}
 }
 
-/*
-ExportDataForAccountNotFound describes a response with status code 404, with default header values.
+/* ExportDataForAccountNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

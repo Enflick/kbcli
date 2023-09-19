@@ -46,8 +46,7 @@ func NewGetPhaseForSubscriptionAndDateOK() *GetPhaseForSubscriptionAndDateOK {
 	return &GetPhaseForSubscriptionAndDateOK{}
 }
 
-/*
-GetPhaseForSubscriptionAndDateOK describes a response with status code 200, with default header values.
+/* GetPhaseForSubscriptionAndDateOK describes a response with status code 200, with default header values.
 
 successful operation
 */

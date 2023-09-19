@@ -55,12 +55,10 @@ func NewTransferBundleParamsWithHTTPClient(client *http.Client) *TransferBundleP
 	}
 }
 
-/*
-TransferBundleParams contains all the parameters to send to the API endpoint
+/* TransferBundleParams contains all the parameters to send to the API endpoint
+   for the transfer bundle operation.
 
-	for the transfer bundle operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type TransferBundleParams struct {
 

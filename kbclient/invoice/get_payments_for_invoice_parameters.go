@@ -53,12 +53,10 @@ func NewGetPaymentsForInvoiceParamsWithHTTPClient(client *http.Client) *GetPayme
 	}
 }
 
-/*
-GetPaymentsForInvoiceParams contains all the parameters to send to the API endpoint
+/* GetPaymentsForInvoiceParams contains all the parameters to send to the API endpoint
+   for the get payments for invoice operation.
 
-	for the get payments for invoice operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPaymentsForInvoiceParams struct {
 

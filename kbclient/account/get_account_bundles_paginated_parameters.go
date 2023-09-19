@@ -53,12 +53,10 @@ func NewGetAccountBundlesPaginatedParamsWithHTTPClient(client *http.Client) *Get
 	}
 }
 
-/*
-GetAccountBundlesPaginatedParams contains all the parameters to send to the API endpoint
+/* GetAccountBundlesPaginatedParams contains all the parameters to send to the API endpoint
+   for the get account bundles paginated operation.
 
-	for the get account bundles paginated operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetAccountBundlesPaginatedParams struct {
 

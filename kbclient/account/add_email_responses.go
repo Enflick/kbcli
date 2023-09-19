@@ -47,8 +47,7 @@ func NewAddEmailCreated() *AddEmailCreated {
 	return &AddEmailCreated{}
 }
 
-/*
-AddEmailCreated describes a response with status code 201, with default header values.
+/* AddEmailCreated describes a response with status code 201, with default header values.
 
 Email created successfully
 */
@@ -114,8 +113,7 @@ func NewAddEmailBadRequest() *AddEmailBadRequest {
 	return &AddEmailBadRequest{}
 }
 
-/*
-AddEmailBadRequest describes a response with status code 400, with default header values.
+/* AddEmailBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -171,8 +169,7 @@ func NewAddEmailNotFound() *AddEmailNotFound {
 	return &AddEmailNotFound{}
 }
 
-/*
-AddEmailNotFound describes a response with status code 404, with default header values.
+/* AddEmailNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

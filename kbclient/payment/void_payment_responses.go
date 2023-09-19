@@ -45,8 +45,7 @@ func NewVoidPaymentNoContent() *VoidPaymentNoContent {
 	return &VoidPaymentNoContent{}
 }
 
-/*
-VoidPaymentNoContent describes a response with status code 204, with default header values.
+/* VoidPaymentNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewVoidPaymentBadRequest() *VoidPaymentBadRequest {
 	return &VoidPaymentBadRequest{}
 }
 
-/*
-VoidPaymentBadRequest describes a response with status code 400, with default header values.
+/* VoidPaymentBadRequest describes a response with status code 400, with default header values.
 
 Invalid paymentId supplied
 */
@@ -159,8 +157,7 @@ func NewVoidPaymentPaymentRequired() *VoidPaymentPaymentRequired {
 	return &VoidPaymentPaymentRequired{}
 }
 
-/*
-VoidPaymentPaymentRequired describes a response with status code 402, with default header values.
+/* VoidPaymentPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -216,8 +213,7 @@ func NewVoidPaymentNotFound() *VoidPaymentNotFound {
 	return &VoidPaymentNotFound{}
 }
 
-/*
-VoidPaymentNotFound describes a response with status code 404, with default header values.
+/* VoidPaymentNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */
@@ -273,8 +269,7 @@ func NewVoidPaymentUnprocessableEntity() *VoidPaymentUnprocessableEntity {
 	return &VoidPaymentUnprocessableEntity{}
 }
 
-/*
-VoidPaymentUnprocessableEntity describes a response with status code 422, with default header values.
+/* VoidPaymentUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -330,8 +325,7 @@ func NewVoidPaymentBadGateway() *VoidPaymentBadGateway {
 	return &VoidPaymentBadGateway{}
 }
 
-/*
-VoidPaymentBadGateway describes a response with status code 502, with default header values.
+/* VoidPaymentBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -387,8 +381,7 @@ func NewVoidPaymentServiceUnavailable() *VoidPaymentServiceUnavailable {
 	return &VoidPaymentServiceUnavailable{}
 }
 
-/*
-VoidPaymentServiceUnavailable describes a response with status code 503, with default header values.
+/* VoidPaymentServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -444,8 +437,7 @@ func NewVoidPaymentGatewayTimeout() *VoidPaymentGatewayTimeout {
 	return &VoidPaymentGatewayTimeout{}
 }
 
-/*
-VoidPaymentGatewayTimeout describes a response with status code 504, with default header values.
+/* VoidPaymentGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

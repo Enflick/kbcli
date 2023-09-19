@@ -52,12 +52,10 @@ func NewGetPerTenantConfigurationParamsWithHTTPClient(client *http.Client) *GetP
 	}
 }
 
-/*
-GetPerTenantConfigurationParams contains all the parameters to send to the API endpoint
+/* GetPerTenantConfigurationParams contains all the parameters to send to the API endpoint
+   for the get per tenant configuration operation.
 
-	for the get per tenant configuration operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPerTenantConfigurationParams struct {
 	WithProfilingInfo     *string // If set, return KB hprof headers

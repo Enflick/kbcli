@@ -44,8 +44,7 @@ func NewUploadCatalogXMLCreated() *UploadCatalogXMLCreated {
 	return &UploadCatalogXMLCreated{}
 }
 
-/*
-UploadCatalogXMLCreated describes a response with status code 201, with default header values.
+/* UploadCatalogXMLCreated describes a response with status code 201, with default header values.
 
 Catalog XML created successfully
 */

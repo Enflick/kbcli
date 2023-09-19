@@ -55,12 +55,10 @@ func NewAddSubscriptionBlockingStateParamsWithHTTPClient(client *http.Client) *A
 	}
 }
 
-/*
-AddSubscriptionBlockingStateParams contains all the parameters to send to the API endpoint
+/* AddSubscriptionBlockingStateParams contains all the parameters to send to the API endpoint
+   for the add subscription blocking state operation.
 
-	for the add subscription blocking state operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type AddSubscriptionBlockingStateParams struct {
 

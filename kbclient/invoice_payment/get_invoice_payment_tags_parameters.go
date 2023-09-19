@@ -53,12 +53,10 @@ func NewGetInvoicePaymentTagsParamsWithHTTPClient(client *http.Client) *GetInvoi
 	}
 }
 
-/*
-GetInvoicePaymentTagsParams contains all the parameters to send to the API endpoint
+/* GetInvoicePaymentTagsParams contains all the parameters to send to the API endpoint
+   for the get invoice payment tags operation.
 
-	for the get invoice payment tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetInvoicePaymentTagsParams struct {
 

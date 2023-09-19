@@ -55,12 +55,10 @@ func NewCaptureAuthorizationParamsWithHTTPClient(client *http.Client) *CaptureAu
 	}
 }
 
-/*
-CaptureAuthorizationParams contains all the parameters to send to the API endpoint
+/* CaptureAuthorizationParams contains all the parameters to send to the API endpoint
+   for the capture authorization operation.
 
-	for the capture authorization operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CaptureAuthorizationParams struct {
 

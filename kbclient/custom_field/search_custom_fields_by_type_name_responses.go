@@ -46,8 +46,7 @@ func NewSearchCustomFieldsByTypeNameOK() *SearchCustomFieldsByTypeNameOK {
 	return &SearchCustomFieldsByTypeNameOK{}
 }
 
-/*
-SearchCustomFieldsByTypeNameOK describes a response with status code 200, with default header values.
+/* SearchCustomFieldsByTypeNameOK describes a response with status code 200, with default header values.
 
 successful operation
 */

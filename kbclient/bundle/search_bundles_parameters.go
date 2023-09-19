@@ -53,12 +53,10 @@ func NewSearchBundlesParamsWithHTTPClient(client *http.Client) *SearchBundlesPar
 	}
 }
 
-/*
-SearchBundlesParams contains all the parameters to send to the API endpoint
+/* SearchBundlesParams contains all the parameters to send to the API endpoint
+   for the search bundles operation.
 
-	for the search bundles operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type SearchBundlesParams struct {
 

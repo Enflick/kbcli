@@ -47,8 +47,7 @@ func NewProcessPaymentByExternalKeyCreated() *ProcessPaymentByExternalKeyCreated
 	return &ProcessPaymentByExternalKeyCreated{}
 }
 
-/*
-ProcessPaymentByExternalKeyCreated describes a response with status code 201, with default header values.
+/* ProcessPaymentByExternalKeyCreated describes a response with status code 201, with default header values.
 
 Payment transaction created successfully
 */
@@ -116,8 +115,7 @@ func NewProcessPaymentByExternalKeyBadRequest() *ProcessPaymentByExternalKeyBadR
 	return &ProcessPaymentByExternalKeyBadRequest{}
 }
 
-/*
-ProcessPaymentByExternalKeyBadRequest describes a response with status code 400, with default header values.
+/* ProcessPaymentByExternalKeyBadRequest describes a response with status code 400, with default header values.
 
 Invalid account external key supplied
 */
@@ -173,8 +171,7 @@ func NewProcessPaymentByExternalKeyPaymentRequired() *ProcessPaymentByExternalKe
 	return &ProcessPaymentByExternalKeyPaymentRequired{}
 }
 
-/*
-ProcessPaymentByExternalKeyPaymentRequired describes a response with status code 402, with default header values.
+/* ProcessPaymentByExternalKeyPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -230,8 +227,7 @@ func NewProcessPaymentByExternalKeyNotFound() *ProcessPaymentByExternalKeyNotFou
 	return &ProcessPaymentByExternalKeyNotFound{}
 }
 
-/*
-ProcessPaymentByExternalKeyNotFound describes a response with status code 404, with default header values.
+/* ProcessPaymentByExternalKeyNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */
@@ -287,8 +283,7 @@ func NewProcessPaymentByExternalKeyUnprocessableEntity() *ProcessPaymentByExtern
 	return &ProcessPaymentByExternalKeyUnprocessableEntity{}
 }
 
-/*
-ProcessPaymentByExternalKeyUnprocessableEntity describes a response with status code 422, with default header values.
+/* ProcessPaymentByExternalKeyUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -344,8 +339,7 @@ func NewProcessPaymentByExternalKeyBadGateway() *ProcessPaymentByExternalKeyBadG
 	return &ProcessPaymentByExternalKeyBadGateway{}
 }
 
-/*
-ProcessPaymentByExternalKeyBadGateway describes a response with status code 502, with default header values.
+/* ProcessPaymentByExternalKeyBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -401,8 +395,7 @@ func NewProcessPaymentByExternalKeyServiceUnavailable() *ProcessPaymentByExterna
 	return &ProcessPaymentByExternalKeyServiceUnavailable{}
 }
 
-/*
-ProcessPaymentByExternalKeyServiceUnavailable describes a response with status code 503, with default header values.
+/* ProcessPaymentByExternalKeyServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -458,8 +451,7 @@ func NewProcessPaymentByExternalKeyGatewayTimeout() *ProcessPaymentByExternalKey
 	return &ProcessPaymentByExternalKeyGatewayTimeout{}
 }
 
-/*
-ProcessPaymentByExternalKeyGatewayTimeout describes a response with status code 504, with default header values.
+/* ProcessPaymentByExternalKeyGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

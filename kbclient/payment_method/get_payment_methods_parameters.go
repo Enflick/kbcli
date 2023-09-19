@@ -53,12 +53,10 @@ func NewGetPaymentMethodsParamsWithHTTPClient(client *http.Client) *GetPaymentMe
 	}
 }
 
-/*
-GetPaymentMethodsParams contains all the parameters to send to the API endpoint
+/* GetPaymentMethodsParams contains all the parameters to send to the API endpoint
+   for the get payment methods operation.
 
-	for the get payment methods operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPaymentMethodsParams struct {
 

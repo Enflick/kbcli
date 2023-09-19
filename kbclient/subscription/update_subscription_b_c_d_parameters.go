@@ -55,12 +55,10 @@ func NewUpdateSubscriptionBCDParamsWithHTTPClient(client *http.Client) *UpdateSu
 	}
 }
 
-/*
-UpdateSubscriptionBCDParams contains all the parameters to send to the API endpoint
+/* UpdateSubscriptionBCDParams contains all the parameters to send to the API endpoint
+   for the update subscription b c d operation.
 
-	for the update subscription b c d operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UpdateSubscriptionBCDParams struct {
 

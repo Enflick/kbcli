@@ -45,8 +45,7 @@ func NewDeleteUserKeyValueNoContent() *DeleteUserKeyValueNoContent {
 	return &DeleteUserKeyValueNoContent{}
 }
 
-/*
-DeleteUserKeyValueNoContent describes a response with status code 204, with default header values.
+/* DeleteUserKeyValueNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteUserKeyValueBadRequest() *DeleteUserKeyValueBadRequest {
 	return &DeleteUserKeyValueBadRequest{}
 }
 
-/*
-DeleteUserKeyValueBadRequest describes a response with status code 400, with default header values.
+/* DeleteUserKeyValueBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

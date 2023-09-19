@@ -52,12 +52,10 @@ func NewGetOverdueConfigJSONParamsWithHTTPClient(client *http.Client) *GetOverdu
 	}
 }
 
-/*
-GetOverdueConfigJSONParams contains all the parameters to send to the API endpoint
+/* GetOverdueConfigJSONParams contains all the parameters to send to the API endpoint
+   for the get overdue config Json operation.
 
-	for the get overdue config Json operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetOverdueConfigJSONParams struct {
 	WithProfilingInfo     *string // If set, return KB hprof headers

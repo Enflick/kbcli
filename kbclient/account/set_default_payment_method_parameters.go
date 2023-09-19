@@ -53,12 +53,10 @@ func NewSetDefaultPaymentMethodParamsWithHTTPClient(client *http.Client) *SetDef
 	}
 }
 
-/*
-SetDefaultPaymentMethodParams contains all the parameters to send to the API endpoint
+/* SetDefaultPaymentMethodParams contains all the parameters to send to the API endpoint
+   for the set default payment method operation.
 
-	for the set default payment method operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type SetDefaultPaymentMethodParams struct {
 

@@ -83,7 +83,7 @@ type ClientService interface {
 }
 
 /*
-CompleteInvoicePaymentTransaction completes an existing transaction
+  CompleteInvoicePaymentTransaction completes an existing transaction
 */
 func (a *Client) CompleteInvoicePaymentTransaction(ctx context.Context, params *CompleteInvoicePaymentTransactionParams) (*CompleteInvoicePaymentTransactionNoContent, error) {
 	// TODO: Validate the params before sending
@@ -142,7 +142,7 @@ func (a *Client) CompleteInvoicePaymentTransaction(ctx context.Context, params *
 }
 
 /*
-CreateChargeback records a chargeback
+  CreateChargeback records a chargeback
 */
 func (a *Client) CreateChargeback(ctx context.Context, params *CreateChargebackParams) (*CreateChargebackCreated, error) {
 	// TODO: Validate the params before sending
@@ -230,7 +230,7 @@ func (a *Client) CreateChargeback(ctx context.Context, params *CreateChargebackP
 }
 
 /*
-CreateChargebackReversal records a chargeback reversal
+  CreateChargebackReversal records a chargeback reversal
 */
 func (a *Client) CreateChargebackReversal(ctx context.Context, params *CreateChargebackReversalParams) (*CreateChargebackReversalCreated, error) {
 	// TODO: Validate the params before sending
@@ -318,7 +318,7 @@ func (a *Client) CreateChargebackReversal(ctx context.Context, params *CreateCha
 }
 
 /*
-CreateInvoicePaymentCustomFields adds custom fields to payment
+  CreateInvoicePaymentCustomFields adds custom fields to payment
 */
 func (a *Client) CreateInvoicePaymentCustomFields(ctx context.Context, params *CreateInvoicePaymentCustomFieldsParams) (*CreateInvoicePaymentCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
@@ -406,7 +406,7 @@ func (a *Client) CreateInvoicePaymentCustomFields(ctx context.Context, params *C
 }
 
 /*
-CreateInvoicePaymentTags adds tags to payment
+  CreateInvoicePaymentTags adds tags to payment
 */
 func (a *Client) CreateInvoicePaymentTags(ctx context.Context, params *CreateInvoicePaymentTagsParams) (*CreateInvoicePaymentTagsCreated, error) {
 	// TODO: Validate the params before sending
@@ -494,7 +494,7 @@ func (a *Client) CreateInvoicePaymentTags(ctx context.Context, params *CreateInv
 }
 
 /*
-CreateRefundWithAdjustments refunds a payment and adjust the invoice if needed
+  CreateRefundWithAdjustments refunds a payment and adjust the invoice if needed
 */
 func (a *Client) CreateRefundWithAdjustments(ctx context.Context, params *CreateRefundWithAdjustmentsParams) (*CreateRefundWithAdjustmentsCreated, error) {
 	// TODO: Validate the params before sending
@@ -582,7 +582,7 @@ func (a *Client) CreateRefundWithAdjustments(ctx context.Context, params *Create
 }
 
 /*
-DeleteInvoicePaymentCustomFields removes custom fields from payment
+  DeleteInvoicePaymentCustomFields removes custom fields from payment
 */
 func (a *Client) DeleteInvoicePaymentCustomFields(ctx context.Context, params *DeleteInvoicePaymentCustomFieldsParams) (*DeleteInvoicePaymentCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -641,7 +641,7 @@ func (a *Client) DeleteInvoicePaymentCustomFields(ctx context.Context, params *D
 }
 
 /*
-DeleteInvoicePaymentTags removes tags from payment
+  DeleteInvoicePaymentTags removes tags from payment
 */
 func (a *Client) DeleteInvoicePaymentTags(ctx context.Context, params *DeleteInvoicePaymentTagsParams) (*DeleteInvoicePaymentTagsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -700,7 +700,7 @@ func (a *Client) DeleteInvoicePaymentTags(ctx context.Context, params *DeleteInv
 }
 
 /*
-GetInvoicePayment retrieves a payment by id
+  GetInvoicePayment retrieves a payment by id
 */
 func (a *Client) GetInvoicePayment(ctx context.Context, params *GetInvoicePaymentParams) (*GetInvoicePaymentOK, error) {
 	// TODO: Validate the params before sending
@@ -747,7 +747,7 @@ func (a *Client) GetInvoicePayment(ctx context.Context, params *GetInvoicePaymen
 }
 
 /*
-GetInvoicePaymentAuditLogsWithHistory retrieves invoice payment audit logs with history by id
+  GetInvoicePaymentAuditLogsWithHistory retrieves invoice payment audit logs with history by id
 */
 func (a *Client) GetInvoicePaymentAuditLogsWithHistory(ctx context.Context, params *GetInvoicePaymentAuditLogsWithHistoryParams) (*GetInvoicePaymentAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
@@ -794,7 +794,7 @@ func (a *Client) GetInvoicePaymentAuditLogsWithHistory(ctx context.Context, para
 }
 
 /*
-GetInvoicePaymentCustomFields retrieves payment custom fields
+  GetInvoicePaymentCustomFields retrieves payment custom fields
 */
 func (a *Client) GetInvoicePaymentCustomFields(ctx context.Context, params *GetInvoicePaymentCustomFieldsParams) (*GetInvoicePaymentCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
@@ -841,7 +841,7 @@ func (a *Client) GetInvoicePaymentCustomFields(ctx context.Context, params *GetI
 }
 
 /*
-GetInvoicePaymentTags retrieves payment tags
+  GetInvoicePaymentTags retrieves payment tags
 */
 func (a *Client) GetInvoicePaymentTags(ctx context.Context, params *GetInvoicePaymentTagsParams) (*GetInvoicePaymentTagsOK, error) {
 	// TODO: Validate the params before sending
@@ -888,7 +888,7 @@ func (a *Client) GetInvoicePaymentTags(ctx context.Context, params *GetInvoicePa
 }
 
 /*
-ModifyInvoicePaymentCustomFields modifies custom fields to payment
+  ModifyInvoicePaymentCustomFields modifies custom fields to payment
 */
 func (a *Client) ModifyInvoicePaymentCustomFields(ctx context.Context, params *ModifyInvoicePaymentCustomFieldsParams) (*ModifyInvoicePaymentCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending

@@ -54,12 +54,10 @@ func NewCreateSubscriptionCustomFieldsParamsWithHTTPClient(client *http.Client) 
 	}
 }
 
-/*
-CreateSubscriptionCustomFieldsParams contains all the parameters to send to the API endpoint
+/* CreateSubscriptionCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the create subscription custom fields operation.
 
-	for the create subscription custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateSubscriptionCustomFieldsParams struct {
 

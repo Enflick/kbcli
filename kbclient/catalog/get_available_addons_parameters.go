@@ -52,12 +52,10 @@ func NewGetAvailableAddonsParamsWithHTTPClient(client *http.Client) *GetAvailabl
 	}
 }
 
-/*
-GetAvailableAddonsParams contains all the parameters to send to the API endpoint
+/* GetAvailableAddonsParams contains all the parameters to send to the API endpoint
+   for the get available addons operation.
 
-	for the get available addons operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetAvailableAddonsParams struct {
 

@@ -52,12 +52,10 @@ func NewGetOverdueConfigXMLParamsWithHTTPClient(client *http.Client) *GetOverdue
 	}
 }
 
-/*
-GetOverdueConfigXMLParams contains all the parameters to send to the API endpoint
+/* GetOverdueConfigXMLParams contains all the parameters to send to the API endpoint
+   for the get overdue config Xml operation.
 
-	for the get overdue config Xml operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetOverdueConfigXMLParams struct {
 	WithProfilingInfo     *string // If set, return KB hprof headers

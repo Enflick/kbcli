@@ -52,12 +52,10 @@ func NewGetPushNotificationCallbacksParamsWithHTTPClient(client *http.Client) *G
 	}
 }
 
-/*
-GetPushNotificationCallbacksParams contains all the parameters to send to the API endpoint
+/* GetPushNotificationCallbacksParams contains all the parameters to send to the API endpoint
+   for the get push notification callbacks operation.
 
-	for the get push notification callbacks operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPushNotificationCallbacksParams struct {
 	WithProfilingInfo     *string // If set, return KB hprof headers

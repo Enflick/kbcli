@@ -45,8 +45,7 @@ func NewDeleteSubscriptionCustomFieldsNoContent() *DeleteSubscriptionCustomField
 	return &DeleteSubscriptionCustomFieldsNoContent{}
 }
 
-/*
-DeleteSubscriptionCustomFieldsNoContent describes a response with status code 204, with default header values.
+/* DeleteSubscriptionCustomFieldsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteSubscriptionCustomFieldsBadRequest() *DeleteSubscriptionCustomFiel
 	return &DeleteSubscriptionCustomFieldsBadRequest{}
 }
 
-/*
-DeleteSubscriptionCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* DeleteSubscriptionCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid subscription id supplied
 */

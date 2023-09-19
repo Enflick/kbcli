@@ -47,8 +47,7 @@ func NewGetSubscriptionTagsOK() *GetSubscriptionTagsOK {
 	return &GetSubscriptionTagsOK{}
 }
 
-/*
-GetSubscriptionTagsOK describes a response with status code 200, with default header values.
+/* GetSubscriptionTagsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetSubscriptionTagsBadRequest() *GetSubscriptionTagsBadRequest {
 	return &GetSubscriptionTagsBadRequest{}
 }
 
-/*
-GetSubscriptionTagsBadRequest describes a response with status code 400, with default header values.
+/* GetSubscriptionTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid subscription id supplied
 */
@@ -171,8 +169,7 @@ func NewGetSubscriptionTagsNotFound() *GetSubscriptionTagsNotFound {
 	return &GetSubscriptionTagsNotFound{}
 }
 
-/*
-GetSubscriptionTagsNotFound describes a response with status code 404, with default header values.
+/* GetSubscriptionTagsNotFound describes a response with status code 404, with default header values.
 
 Subscription not found
 */

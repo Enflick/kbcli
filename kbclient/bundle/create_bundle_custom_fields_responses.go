@@ -47,8 +47,7 @@ func NewCreateBundleCustomFieldsCreated() *CreateBundleCustomFieldsCreated {
 	return &CreateBundleCustomFieldsCreated{}
 }
 
-/*
-CreateBundleCustomFieldsCreated describes a response with status code 201, with default header values.
+/* CreateBundleCustomFieldsCreated describes a response with status code 201, with default header values.
 
 Custom field created successfully
 */
@@ -114,8 +113,7 @@ func NewCreateBundleCustomFieldsBadRequest() *CreateBundleCustomFieldsBadRequest
 	return &CreateBundleCustomFieldsBadRequest{}
 }
 
-/*
-CreateBundleCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* CreateBundleCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid bundle id supplied
 */

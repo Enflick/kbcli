@@ -47,8 +47,7 @@ func NewGetBundleOK() *GetBundleOK {
 	return &GetBundleOK{}
 }
 
-/*
-GetBundleOK describes a response with status code 200, with default header values.
+/* GetBundleOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetBundleBadRequest() *GetBundleBadRequest {
 	return &GetBundleBadRequest{}
 }
 
-/*
-GetBundleBadRequest describes a response with status code 400, with default header values.
+/* GetBundleBadRequest describes a response with status code 400, with default header values.
 
 Invalid bundle id supplied
 */
@@ -173,8 +171,7 @@ func NewGetBundleNotFound() *GetBundleNotFound {
 	return &GetBundleNotFound{}
 }
 
-/*
-GetBundleNotFound describes a response with status code 404, with default header values.
+/* GetBundleNotFound describes a response with status code 404, with default header values.
 
 Bundle not found
 */

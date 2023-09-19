@@ -47,8 +47,7 @@ func NewGetInvoiceOK() *GetInvoiceOK {
 	return &GetInvoiceOK{}
 }
 
-/*
-GetInvoiceOK describes a response with status code 200, with default header values.
+/* GetInvoiceOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetInvoiceBadRequest() *GetInvoiceBadRequest {
 	return &GetInvoiceBadRequest{}
 }
 
-/*
-GetInvoiceBadRequest describes a response with status code 400, with default header values.
+/* GetInvoiceBadRequest describes a response with status code 400, with default header values.
 
 Invalid invoice id supplied
 */
@@ -173,8 +171,7 @@ func NewGetInvoiceNotFound() *GetInvoiceNotFound {
 	return &GetInvoiceNotFound{}
 }
 
-/*
-GetInvoiceNotFound describes a response with status code 404, with default header values.
+/* GetInvoiceNotFound describes a response with status code 404, with default header values.
 
 Invoice not found
 */

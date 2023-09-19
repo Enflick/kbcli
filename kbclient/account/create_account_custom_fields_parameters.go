@@ -54,12 +54,10 @@ func NewCreateAccountCustomFieldsParamsWithHTTPClient(client *http.Client) *Crea
 	}
 }
 
-/*
-CreateAccountCustomFieldsParams contains all the parameters to send to the API endpoint
+/* CreateAccountCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the create account custom fields operation.
 
-	for the create account custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateAccountCustomFieldsParams struct {
 

@@ -55,12 +55,10 @@ func NewCreateSubscriptionsWithAddOnsParamsWithHTTPClient(client *http.Client) *
 	}
 }
 
-/*
-CreateSubscriptionsWithAddOnsParams contains all the parameters to send to the API endpoint
+/* CreateSubscriptionsWithAddOnsParams contains all the parameters to send to the API endpoint
+   for the create subscriptions with add ons operation.
 
-	for the create subscriptions with add ons operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateSubscriptionsWithAddOnsParams struct {
 

@@ -45,8 +45,7 @@ func NewCreateSubscriptionTagsCreated() *CreateSubscriptionTagsCreated {
 	return &CreateSubscriptionTagsCreated{}
 }
 
-/*
-CreateSubscriptionTagsCreated describes a response with status code 201, with default header values.
+/* CreateSubscriptionTagsCreated describes a response with status code 201, with default header values.
 
 Tag created successfully
 */
@@ -102,8 +101,7 @@ func NewCreateSubscriptionTagsBadRequest() *CreateSubscriptionTagsBadRequest {
 	return &CreateSubscriptionTagsBadRequest{}
 }
 
-/*
-CreateSubscriptionTagsBadRequest describes a response with status code 400, with default header values.
+/* CreateSubscriptionTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid subscription id supplied
 */

@@ -47,8 +47,7 @@ func NewBuildComboFormDescriptorOK() *BuildComboFormDescriptorOK {
 	return &BuildComboFormDescriptorOK{}
 }
 
-/*
-BuildComboFormDescriptorOK describes a response with status code 200, with default header values.
+/* BuildComboFormDescriptorOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewBuildComboFormDescriptorBadRequest() *BuildComboFormDescriptorBadRequest
 	return &BuildComboFormDescriptorBadRequest{}
 }
 
-/*
-BuildComboFormDescriptorBadRequest describes a response with status code 400, with default header values.
+/* BuildComboFormDescriptorBadRequest describes a response with status code 400, with default header values.
 
 Invalid data for Account or PaymentMethod
 */

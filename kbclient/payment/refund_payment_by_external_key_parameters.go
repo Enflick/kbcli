@@ -55,12 +55,10 @@ func NewRefundPaymentByExternalKeyParamsWithHTTPClient(client *http.Client) *Ref
 	}
 }
 
-/*
-RefundPaymentByExternalKeyParams contains all the parameters to send to the API endpoint
+/* RefundPaymentByExternalKeyParams contains all the parameters to send to the API endpoint
+   for the refund payment by external key operation.
 
-	for the refund payment by external key operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type RefundPaymentByExternalKeyParams struct {
 

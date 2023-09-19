@@ -47,8 +47,7 @@ func NewGetTransactionTagsOK() *GetTransactionTagsOK {
 	return &GetTransactionTagsOK{}
 }
 
-/*
-GetTransactionTagsOK describes a response with status code 200, with default header values.
+/* GetTransactionTagsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetTransactionTagsBadRequest() *GetTransactionTagsBadRequest {
 	return &GetTransactionTagsBadRequest{}
 }
 
-/*
-GetTransactionTagsBadRequest describes a response with status code 400, with default header values.
+/* GetTransactionTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid transaction id supplied
 */
@@ -171,8 +169,7 @@ func NewGetTransactionTagsNotFound() *GetTransactionTagsNotFound {
 	return &GetTransactionTagsNotFound{}
 }
 
-/*
-GetTransactionTagsNotFound describes a response with status code 404, with default header values.
+/* GetTransactionTagsNotFound describes a response with status code 404, with default header values.
 
 Invoice not found
 */

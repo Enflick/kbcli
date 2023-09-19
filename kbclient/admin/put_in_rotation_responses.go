@@ -44,8 +44,7 @@ func NewPutInRotationNoContent() *PutInRotationNoContent {
 	return &PutInRotationNoContent{}
 }
 
-/*
-PutInRotationNoContent describes a response with status code 204, with default header values.
+/* PutInRotationNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */

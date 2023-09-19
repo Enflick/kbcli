@@ -47,8 +47,7 @@ func NewGetBundleByKeyOK() *GetBundleByKeyOK {
 	return &GetBundleByKeyOK{}
 }
 
-/*
-GetBundleByKeyOK describes a response with status code 200, with default header values.
+/* GetBundleByKeyOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetBundleByKeyNotFound() *GetBundleByKeyNotFound {
 	return &GetBundleByKeyNotFound{}
 }
 
-/*
-GetBundleByKeyNotFound describes a response with status code 404, with default header values.
+/* GetBundleByKeyNotFound describes a response with status code 404, with default header values.
 
 Bundle not found
 */

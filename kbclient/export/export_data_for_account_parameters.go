@@ -52,12 +52,10 @@ func NewExportDataForAccountParamsWithHTTPClient(client *http.Client) *ExportDat
 	}
 }
 
-/*
-ExportDataForAccountParams contains all the parameters to send to the API endpoint
+/* ExportDataForAccountParams contains all the parameters to send to the API endpoint
+   for the export data for account operation.
 
-	for the export data for account operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ExportDataForAccountParams struct {
 

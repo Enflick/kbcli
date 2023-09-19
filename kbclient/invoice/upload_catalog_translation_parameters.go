@@ -53,12 +53,10 @@ func NewUploadCatalogTranslationParamsWithHTTPClient(client *http.Client) *Uploa
 	}
 }
 
-/*
-UploadCatalogTranslationParams contains all the parameters to send to the API endpoint
+/* UploadCatalogTranslationParams contains all the parameters to send to the API endpoint
+   for the upload catalog translation operation.
 
-	for the upload catalog translation operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UploadCatalogTranslationParams struct {
 

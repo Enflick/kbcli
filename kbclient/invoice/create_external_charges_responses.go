@@ -47,8 +47,7 @@ func NewCreateExternalChargesCreated() *CreateExternalChargesCreated {
 	return &CreateExternalChargesCreated{}
 }
 
-/*
-CreateExternalChargesCreated describes a response with status code 201, with default header values.
+/* CreateExternalChargesCreated describes a response with status code 201, with default header values.
 
 Created external charge Successfully
 */
@@ -114,8 +113,7 @@ func NewCreateExternalChargesBadRequest() *CreateExternalChargesBadRequest {
 	return &CreateExternalChargesBadRequest{}
 }
 
-/*
-CreateExternalChargesBadRequest describes a response with status code 400, with default header values.
+/* CreateExternalChargesBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -171,8 +169,7 @@ func NewCreateExternalChargesNotFound() *CreateExternalChargesNotFound {
 	return &CreateExternalChargesNotFound{}
 }
 
-/*
-CreateExternalChargesNotFound describes a response with status code 404, with default header values.
+/* CreateExternalChargesNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

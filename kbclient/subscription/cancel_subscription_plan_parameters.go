@@ -53,12 +53,10 @@ func NewCancelSubscriptionPlanParamsWithHTTPClient(client *http.Client) *CancelS
 	}
 }
 
-/*
-CancelSubscriptionPlanParams contains all the parameters to send to the API endpoint
+/* CancelSubscriptionPlanParams contains all the parameters to send to the API endpoint
+   for the cancel subscription plan operation.
 
-	for the cancel subscription plan operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CancelSubscriptionPlanParams struct {
 

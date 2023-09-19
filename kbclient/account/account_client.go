@@ -143,7 +143,7 @@ type ClientService interface {
 }
 
 /*
-AddAccountBlockingState blocks an account
+  AddAccountBlockingState blocks an account
 */
 func (a *Client) AddAccountBlockingState(ctx context.Context, params *AddAccountBlockingStateParams) (*AddAccountBlockingStateCreated, error) {
 	// TODO: Validate the params before sending
@@ -231,7 +231,7 @@ func (a *Client) AddAccountBlockingState(ctx context.Context, params *AddAccount
 }
 
 /*
-AddEmail adds account email
+  AddEmail adds account email
 */
 func (a *Client) AddEmail(ctx context.Context, params *AddEmailParams) (*AddEmailCreated, error) {
 	// TODO: Validate the params before sending
@@ -319,7 +319,7 @@ func (a *Client) AddEmail(ctx context.Context, params *AddEmailParams) (*AddEmai
 }
 
 /*
-CloseAccount closes account
+  CloseAccount closes account
 */
 func (a *Client) CloseAccount(ctx context.Context, params *CloseAccountParams) (*CloseAccountNoContent, error) {
 	// TODO: Validate the params before sending
@@ -378,7 +378,7 @@ func (a *Client) CloseAccount(ctx context.Context, params *CloseAccountParams) (
 }
 
 /*
-CreateAccount creates account
+  CreateAccount creates account
 */
 func (a *Client) CreateAccount(ctx context.Context, params *CreateAccountParams) (*CreateAccountCreated, error) {
 	// TODO: Validate the params before sending
@@ -466,7 +466,7 @@ func (a *Client) CreateAccount(ctx context.Context, params *CreateAccountParams)
 }
 
 /*
-CreateAccountCustomFields adds custom fields to account
+  CreateAccountCustomFields adds custom fields to account
 */
 func (a *Client) CreateAccountCustomFields(ctx context.Context, params *CreateAccountCustomFieldsParams) (*CreateAccountCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
@@ -554,7 +554,7 @@ func (a *Client) CreateAccountCustomFields(ctx context.Context, params *CreateAc
 }
 
 /*
-CreateAccountTags adds tags to account
+  CreateAccountTags adds tags to account
 */
 func (a *Client) CreateAccountTags(ctx context.Context, params *CreateAccountTagsParams) (*CreateAccountTagsCreated, error) {
 	// TODO: Validate the params before sending
@@ -642,7 +642,7 @@ func (a *Client) CreateAccountTags(ctx context.Context, params *CreateAccountTag
 }
 
 /*
-CreatePaymentMethod adds a payment method
+  CreatePaymentMethod adds a payment method
 */
 func (a *Client) CreatePaymentMethod(ctx context.Context, params *CreatePaymentMethodParams) (*CreatePaymentMethodCreated, error) {
 	// TODO: Validate the params before sending
@@ -730,7 +730,7 @@ func (a *Client) CreatePaymentMethod(ctx context.Context, params *CreatePaymentM
 }
 
 /*
-DeleteAccountCustomFields removes custom fields from account
+  DeleteAccountCustomFields removes custom fields from account
 */
 func (a *Client) DeleteAccountCustomFields(ctx context.Context, params *DeleteAccountCustomFieldsParams) (*DeleteAccountCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -789,7 +789,7 @@ func (a *Client) DeleteAccountCustomFields(ctx context.Context, params *DeleteAc
 }
 
 /*
-DeleteAccountTags removes tags from account
+  DeleteAccountTags removes tags from account
 */
 func (a *Client) DeleteAccountTags(ctx context.Context, params *DeleteAccountTagsParams) (*DeleteAccountTagsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -848,7 +848,7 @@ func (a *Client) DeleteAccountTags(ctx context.Context, params *DeleteAccountTag
 }
 
 /*
-GetAccount retrieves an account by id
+  GetAccount retrieves an account by id
 */
 func (a *Client) GetAccount(ctx context.Context, params *GetAccountParams) (*GetAccountOK, error) {
 	// TODO: Validate the params before sending
@@ -895,7 +895,7 @@ func (a *Client) GetAccount(ctx context.Context, params *GetAccountParams) (*Get
 }
 
 /*
-GetAccountAuditLogs retrieves audit logs by account id
+  GetAccountAuditLogs retrieves audit logs by account id
 */
 func (a *Client) GetAccountAuditLogs(ctx context.Context, params *GetAccountAuditLogsParams) (*GetAccountAuditLogsOK, error) {
 	// TODO: Validate the params before sending
@@ -942,7 +942,7 @@ func (a *Client) GetAccountAuditLogs(ctx context.Context, params *GetAccountAudi
 }
 
 /*
-GetAccountAuditLogsWithHistory retrieves account audit logs with history by account id
+  GetAccountAuditLogsWithHistory retrieves account audit logs with history by account id
 */
 func (a *Client) GetAccountAuditLogsWithHistory(ctx context.Context, params *GetAccountAuditLogsWithHistoryParams) (*GetAccountAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
@@ -989,7 +989,7 @@ func (a *Client) GetAccountAuditLogsWithHistory(ctx context.Context, params *Get
 }
 
 /*
-GetAccountBundles retrieves bundles for account
+  GetAccountBundles retrieves bundles for account
 */
 func (a *Client) GetAccountBundles(ctx context.Context, params *GetAccountBundlesParams) (*GetAccountBundlesOK, error) {
 	// TODO: Validate the params before sending
@@ -1036,7 +1036,7 @@ func (a *Client) GetAccountBundles(ctx context.Context, params *GetAccountBundle
 }
 
 /*
-GetAccountBundlesPaginated retrieves paginated bundles for account
+  GetAccountBundlesPaginated retrieves paginated bundles for account
 */
 func (a *Client) GetAccountBundlesPaginated(ctx context.Context, params *GetAccountBundlesPaginatedParams) (*GetAccountBundlesPaginatedOK, error) {
 	// TODO: Validate the params before sending
@@ -1083,7 +1083,7 @@ func (a *Client) GetAccountBundlesPaginated(ctx context.Context, params *GetAcco
 }
 
 /*
-GetAccountByKey retrieves an account by external key
+  GetAccountByKey retrieves an account by external key
 */
 func (a *Client) GetAccountByKey(ctx context.Context, params *GetAccountByKeyParams) (*GetAccountByKeyOK, error) {
 	// TODO: Validate the params before sending
@@ -1130,7 +1130,7 @@ func (a *Client) GetAccountByKey(ctx context.Context, params *GetAccountByKeyPar
 }
 
 /*
-GetAccountCustomFields retrieves account custom fields
+  GetAccountCustomFields retrieves account custom fields
 */
 func (a *Client) GetAccountCustomFields(ctx context.Context, params *GetAccountCustomFieldsParams) (*GetAccountCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
@@ -1177,7 +1177,7 @@ func (a *Client) GetAccountCustomFields(ctx context.Context, params *GetAccountC
 }
 
 /*
-GetAccountEmailAuditLogsWithHistory retrieves account email audit logs with history by id
+  GetAccountEmailAuditLogsWithHistory retrieves account email audit logs with history by id
 */
 func (a *Client) GetAccountEmailAuditLogsWithHistory(ctx context.Context, params *GetAccountEmailAuditLogsWithHistoryParams) (*GetAccountEmailAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
@@ -1224,7 +1224,7 @@ func (a *Client) GetAccountEmailAuditLogsWithHistory(ctx context.Context, params
 }
 
 /*
-GetAccountTags retrieves account tags
+  GetAccountTags retrieves account tags
 */
 func (a *Client) GetAccountTags(ctx context.Context, params *GetAccountTagsParams) (*GetAccountTagsOK, error) {
 	// TODO: Validate the params before sending
@@ -1271,7 +1271,7 @@ func (a *Client) GetAccountTags(ctx context.Context, params *GetAccountTagsParam
 }
 
 /*
-GetAccountTimeline retrieves account timeline
+  GetAccountTimeline retrieves account timeline
 */
 func (a *Client) GetAccountTimeline(ctx context.Context, params *GetAccountTimelineParams) (*GetAccountTimelineOK, error) {
 	// TODO: Validate the params before sending
@@ -1318,7 +1318,7 @@ func (a *Client) GetAccountTimeline(ctx context.Context, params *GetAccountTimel
 }
 
 /*
-GetAccounts lists accounts
+  GetAccounts lists accounts
 */
 func (a *Client) GetAccounts(ctx context.Context, params *GetAccountsParams) (*GetAccountsOK, error) {
 	// TODO: Validate the params before sending
@@ -1365,7 +1365,7 @@ func (a *Client) GetAccounts(ctx context.Context, params *GetAccountsParams) (*G
 }
 
 /*
-GetAllCustomFields retrieves account custom fields
+  GetAllCustomFields retrieves account custom fields
 */
 func (a *Client) GetAllCustomFields(ctx context.Context, params *GetAllCustomFieldsParams) (*GetAllCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
@@ -1412,7 +1412,7 @@ func (a *Client) GetAllCustomFields(ctx context.Context, params *GetAllCustomFie
 }
 
 /*
-GetAllTags retrieves account tags
+  GetAllTags retrieves account tags
 */
 func (a *Client) GetAllTags(ctx context.Context, params *GetAllTagsParams) (*GetAllTagsOK, error) {
 	// TODO: Validate the params before sending
@@ -1459,7 +1459,7 @@ func (a *Client) GetAllTags(ctx context.Context, params *GetAllTagsParams) (*Get
 }
 
 /*
-GetBlockingStateAuditLogsWithHistory retrieves blocking state audit logs with history by id
+  GetBlockingStateAuditLogsWithHistory retrieves blocking state audit logs with history by id
 */
 func (a *Client) GetBlockingStateAuditLogsWithHistory(ctx context.Context, params *GetBlockingStateAuditLogsWithHistoryParams) (*GetBlockingStateAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
@@ -1506,7 +1506,7 @@ func (a *Client) GetBlockingStateAuditLogsWithHistory(ctx context.Context, param
 }
 
 /*
-GetBlockingStates retrieves blocking states for account
+  GetBlockingStates retrieves blocking states for account
 */
 func (a *Client) GetBlockingStates(ctx context.Context, params *GetBlockingStatesParams) (*GetBlockingStatesOK, error) {
 	// TODO: Validate the params before sending
@@ -1553,7 +1553,7 @@ func (a *Client) GetBlockingStates(ctx context.Context, params *GetBlockingState
 }
 
 /*
-GetChildrenAccounts lists children accounts
+  GetChildrenAccounts lists children accounts
 */
 func (a *Client) GetChildrenAccounts(ctx context.Context, params *GetChildrenAccountsParams) (*GetChildrenAccountsOK, error) {
 	// TODO: Validate the params before sending
@@ -1600,7 +1600,7 @@ func (a *Client) GetChildrenAccounts(ctx context.Context, params *GetChildrenAcc
 }
 
 /*
-GetEmails retrieves an account emails
+  GetEmails retrieves an account emails
 */
 func (a *Client) GetEmails(ctx context.Context, params *GetEmailsParams) (*GetEmailsOK, error) {
 	// TODO: Validate the params before sending
@@ -1647,7 +1647,7 @@ func (a *Client) GetEmails(ctx context.Context, params *GetEmailsParams) (*GetEm
 }
 
 /*
-GetInvoicePayments retrieves account invoice payments
+  GetInvoicePayments retrieves account invoice payments
 */
 func (a *Client) GetInvoicePayments(ctx context.Context, params *GetInvoicePaymentsParams) (*GetInvoicePaymentsOK, error) {
 	// TODO: Validate the params before sending
@@ -1694,7 +1694,7 @@ func (a *Client) GetInvoicePayments(ctx context.Context, params *GetInvoicePayme
 }
 
 /*
-GetInvoicesForAccount retrieves account invoices
+  GetInvoicesForAccount retrieves account invoices
 */
 func (a *Client) GetInvoicesForAccount(ctx context.Context, params *GetInvoicesForAccountParams) (*GetInvoicesForAccountOK, error) {
 	// TODO: Validate the params before sending
@@ -1741,7 +1741,7 @@ func (a *Client) GetInvoicesForAccount(ctx context.Context, params *GetInvoicesF
 }
 
 /*
-GetInvoicesForAccountPaginated retrieves paginated invoices for account
+  GetInvoicesForAccountPaginated retrieves paginated invoices for account
 */
 func (a *Client) GetInvoicesForAccountPaginated(ctx context.Context, params *GetInvoicesForAccountPaginatedParams) (*GetInvoicesForAccountPaginatedOK, error) {
 	// TODO: Validate the params before sending
@@ -1788,7 +1788,7 @@ func (a *Client) GetInvoicesForAccountPaginated(ctx context.Context, params *Get
 }
 
 /*
-GetOverdueAccount retrieves overdue state for account
+  GetOverdueAccount retrieves overdue state for account
 */
 func (a *Client) GetOverdueAccount(ctx context.Context, params *GetOverdueAccountParams) (*GetOverdueAccountOK, error) {
 	// TODO: Validate the params before sending
@@ -1835,7 +1835,7 @@ func (a *Client) GetOverdueAccount(ctx context.Context, params *GetOverdueAccoun
 }
 
 /*
-GetPaymentMethodsForAccount retrieves account payment methods
+  GetPaymentMethodsForAccount retrieves account payment methods
 */
 func (a *Client) GetPaymentMethodsForAccount(ctx context.Context, params *GetPaymentMethodsForAccountParams) (*GetPaymentMethodsForAccountOK, error) {
 	// TODO: Validate the params before sending
@@ -1882,7 +1882,7 @@ func (a *Client) GetPaymentMethodsForAccount(ctx context.Context, params *GetPay
 }
 
 /*
-GetPaymentsForAccount retrieves account payments
+  GetPaymentsForAccount retrieves account payments
 */
 func (a *Client) GetPaymentsForAccount(ctx context.Context, params *GetPaymentsForAccountParams) (*GetPaymentsForAccountOK, error) {
 	// TODO: Validate the params before sending
@@ -1929,7 +1929,7 @@ func (a *Client) GetPaymentsForAccount(ctx context.Context, params *GetPaymentsF
 }
 
 /*
-ModifyAccountCustomFields modifies custom fields to account
+  ModifyAccountCustomFields modifies custom fields to account
 */
 func (a *Client) ModifyAccountCustomFields(ctx context.Context, params *ModifyAccountCustomFieldsParams) (*ModifyAccountCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1988,7 +1988,7 @@ func (a *Client) ModifyAccountCustomFields(ctx context.Context, params *ModifyAc
 }
 
 /*
-PayAllInvoices triggers a payment for all unpaid invoices
+  PayAllInvoices triggers a payment for all unpaid invoices
 */
 func (a *Client) PayAllInvoices(ctx context.Context, params *PayAllInvoicesParams) (*PayAllInvoicesCreated, *PayAllInvoicesNoContent, error) {
 	// TODO: Validate the params before sending
@@ -2083,7 +2083,7 @@ func (a *Client) PayAllInvoices(ctx context.Context, params *PayAllInvoicesParam
 }
 
 /*
-ProcessPayment triggers a payment authorization purchase or credit
+  ProcessPayment triggers a payment authorization purchase or credit
 */
 func (a *Client) ProcessPayment(ctx context.Context, params *ProcessPaymentParams) (*ProcessPaymentCreated, error) {
 	// TODO: Validate the params before sending
@@ -2171,7 +2171,7 @@ func (a *Client) ProcessPayment(ctx context.Context, params *ProcessPaymentParam
 }
 
 /*
-ProcessPaymentByExternalKey triggers a payment using the account external key authorization purchase or credit
+  ProcessPaymentByExternalKey triggers a payment using the account external key authorization purchase or credit
 */
 func (a *Client) ProcessPaymentByExternalKey(ctx context.Context, params *ProcessPaymentByExternalKeyParams) (*ProcessPaymentByExternalKeyCreated, error) {
 	// TODO: Validate the params before sending
@@ -2259,7 +2259,7 @@ func (a *Client) ProcessPaymentByExternalKey(ctx context.Context, params *Proces
 }
 
 /*
-RebalanceExistingCBAOnAccount rebalances account c b a
+  RebalanceExistingCBAOnAccount rebalances account c b a
 */
 func (a *Client) RebalanceExistingCBAOnAccount(ctx context.Context, params *RebalanceExistingCBAOnAccountParams) (*RebalanceExistingCBAOnAccountNoContent, error) {
 	// TODO: Validate the params before sending
@@ -2318,7 +2318,7 @@ func (a *Client) RebalanceExistingCBAOnAccount(ctx context.Context, params *Reba
 }
 
 /*
-RefreshPaymentMethods refreshes account payment methods
+  RefreshPaymentMethods refreshes account payment methods
 */
 func (a *Client) RefreshPaymentMethods(ctx context.Context, params *RefreshPaymentMethodsParams) (*RefreshPaymentMethodsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -2377,7 +2377,7 @@ func (a *Client) RefreshPaymentMethods(ctx context.Context, params *RefreshPayme
 }
 
 /*
-RemoveEmail deletes email from account
+  RemoveEmail deletes email from account
 */
 func (a *Client) RemoveEmail(ctx context.Context, params *RemoveEmailParams) (*RemoveEmailNoContent, error) {
 	// TODO: Validate the params before sending
@@ -2436,7 +2436,7 @@ func (a *Client) RemoveEmail(ctx context.Context, params *RemoveEmailParams) (*R
 }
 
 /*
-SearchAccounts searches accounts
+  SearchAccounts searches accounts
 */
 func (a *Client) SearchAccounts(ctx context.Context, params *SearchAccountsParams) (*SearchAccountsOK, error) {
 	// TODO: Validate the params before sending
@@ -2483,7 +2483,7 @@ func (a *Client) SearchAccounts(ctx context.Context, params *SearchAccountsParam
 }
 
 /*
-SetDefaultPaymentMethod sets the default payment method
+  SetDefaultPaymentMethod sets the default payment method
 */
 func (a *Client) SetDefaultPaymentMethod(ctx context.Context, params *SetDefaultPaymentMethodParams) (*SetDefaultPaymentMethodNoContent, error) {
 	// TODO: Validate the params before sending
@@ -2542,7 +2542,7 @@ func (a *Client) SetDefaultPaymentMethod(ctx context.Context, params *SetDefault
 }
 
 /*
-TransferChildCreditToParent moves a given child credit to the parent level
+  TransferChildCreditToParent moves a given child credit to the parent level
 */
 func (a *Client) TransferChildCreditToParent(ctx context.Context, params *TransferChildCreditToParentParams) (*TransferChildCreditToParentNoContent, error) {
 	// TODO: Validate the params before sending
@@ -2601,7 +2601,7 @@ func (a *Client) TransferChildCreditToParent(ctx context.Context, params *Transf
 }
 
 /*
-UpdateAccount updates account
+  UpdateAccount updates account
 */
 func (a *Client) UpdateAccount(ctx context.Context, params *UpdateAccountParams) (*UpdateAccountNoContent, error) {
 	// TODO: Validate the params before sending

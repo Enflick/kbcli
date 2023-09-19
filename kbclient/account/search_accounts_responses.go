@@ -46,8 +46,7 @@ func NewSearchAccountsOK() *SearchAccountsOK {
 	return &SearchAccountsOK{}
 }
 
-/*
-SearchAccountsOK describes a response with status code 200, with default header values.
+/* SearchAccountsOK describes a response with status code 200, with default header values.
 
 successful operation
 */

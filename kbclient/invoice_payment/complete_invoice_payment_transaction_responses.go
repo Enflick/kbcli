@@ -45,8 +45,7 @@ func NewCompleteInvoicePaymentTransactionNoContent() *CompleteInvoicePaymentTran
 	return &CompleteInvoicePaymentTransactionNoContent{}
 }
 
-/*
-CompleteInvoicePaymentTransactionNoContent describes a response with status code 204, with default header values.
+/* CompleteInvoicePaymentTransactionNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewCompleteInvoicePaymentTransactionBadRequest() *CompleteInvoicePaymentTra
 	return &CompleteInvoicePaymentTransactionBadRequest{}
 }
 
-/*
-CompleteInvoicePaymentTransactionBadRequest describes a response with status code 400, with default header values.
+/* CompleteInvoicePaymentTransactionBadRequest describes a response with status code 400, with default header values.
 
 Invalid paymentId supplied
 */
@@ -159,8 +157,7 @@ func NewCompleteInvoicePaymentTransactionPaymentRequired() *CompleteInvoicePayme
 	return &CompleteInvoicePaymentTransactionPaymentRequired{}
 }
 
-/*
-CompleteInvoicePaymentTransactionPaymentRequired describes a response with status code 402, with default header values.
+/* CompleteInvoicePaymentTransactionPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -216,8 +213,7 @@ func NewCompleteInvoicePaymentTransactionNotFound() *CompleteInvoicePaymentTrans
 	return &CompleteInvoicePaymentTransactionNotFound{}
 }
 
-/*
-CompleteInvoicePaymentTransactionNotFound describes a response with status code 404, with default header values.
+/* CompleteInvoicePaymentTransactionNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */
@@ -273,8 +269,7 @@ func NewCompleteInvoicePaymentTransactionUnprocessableEntity() *CompleteInvoiceP
 	return &CompleteInvoicePaymentTransactionUnprocessableEntity{}
 }
 
-/*
-CompleteInvoicePaymentTransactionUnprocessableEntity describes a response with status code 422, with default header values.
+/* CompleteInvoicePaymentTransactionUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -330,8 +325,7 @@ func NewCompleteInvoicePaymentTransactionBadGateway() *CompleteInvoicePaymentTra
 	return &CompleteInvoicePaymentTransactionBadGateway{}
 }
 
-/*
-CompleteInvoicePaymentTransactionBadGateway describes a response with status code 502, with default header values.
+/* CompleteInvoicePaymentTransactionBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -387,8 +381,7 @@ func NewCompleteInvoicePaymentTransactionServiceUnavailable() *CompleteInvoicePa
 	return &CompleteInvoicePaymentTransactionServiceUnavailable{}
 }
 
-/*
-CompleteInvoicePaymentTransactionServiceUnavailable describes a response with status code 503, with default header values.
+/* CompleteInvoicePaymentTransactionServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -444,8 +437,7 @@ func NewCompleteInvoicePaymentTransactionGatewayTimeout() *CompleteInvoicePaymen
 	return &CompleteInvoicePaymentTransactionGatewayTimeout{}
 }
 
-/*
-CompleteInvoicePaymentTransactionGatewayTimeout describes a response with status code 504, with default header values.
+/* CompleteInvoicePaymentTransactionGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

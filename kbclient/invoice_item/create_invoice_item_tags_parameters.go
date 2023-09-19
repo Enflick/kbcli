@@ -52,12 +52,10 @@ func NewCreateInvoiceItemTagsParamsWithHTTPClient(client *http.Client) *CreateIn
 	}
 }
 
-/*
-CreateInvoiceItemTagsParams contains all the parameters to send to the API endpoint
+/* CreateInvoiceItemTagsParams contains all the parameters to send to the API endpoint
+   for the create invoice item tags operation.
 
-	for the create invoice item tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateInvoiceItemTagsParams struct {
 

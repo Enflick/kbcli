@@ -47,8 +47,7 @@ func NewGetPaymentOK() *GetPaymentOK {
 	return &GetPaymentOK{}
 }
 
-/*
-GetPaymentOK describes a response with status code 200, with default header values.
+/* GetPaymentOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetPaymentBadRequest() *GetPaymentBadRequest {
 	return &GetPaymentBadRequest{}
 }
 
-/*
-GetPaymentBadRequest describes a response with status code 400, with default header values.
+/* GetPaymentBadRequest describes a response with status code 400, with default header values.
 
 Invalid paymentId supplied
 */
@@ -173,8 +171,7 @@ func NewGetPaymentNotFound() *GetPaymentNotFound {
 	return &GetPaymentNotFound{}
 }
 
-/*
-GetPaymentNotFound describes a response with status code 404, with default header values.
+/* GetPaymentNotFound describes a response with status code 404, with default header values.
 
 Payment not found
 */

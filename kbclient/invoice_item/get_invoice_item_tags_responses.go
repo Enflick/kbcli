@@ -47,8 +47,7 @@ func NewGetInvoiceItemTagsOK() *GetInvoiceItemTagsOK {
 	return &GetInvoiceItemTagsOK{}
 }
 
-/*
-GetInvoiceItemTagsOK describes a response with status code 200, with default header values.
+/* GetInvoiceItemTagsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetInvoiceItemTagsBadRequest() *GetInvoiceItemTagsBadRequest {
 	return &GetInvoiceItemTagsBadRequest{}
 }
 
-/*
-GetInvoiceItemTagsBadRequest describes a response with status code 400, with default header values.
+/* GetInvoiceItemTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid invoice item id supplied
 */
@@ -171,8 +169,7 @@ func NewGetInvoiceItemTagsNotFound() *GetInvoiceItemTagsNotFound {
 	return &GetInvoiceItemTagsNotFound{}
 }
 
-/*
-GetInvoiceItemTagsNotFound describes a response with status code 404, with default header values.
+/* GetInvoiceItemTagsNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

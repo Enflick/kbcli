@@ -47,8 +47,7 @@ func NewAddBundleBlockingStateCreated() *AddBundleBlockingStateCreated {
 	return &AddBundleBlockingStateCreated{}
 }
 
-/*
-AddBundleBlockingStateCreated describes a response with status code 201, with default header values.
+/* AddBundleBlockingStateCreated describes a response with status code 201, with default header values.
 
 Blocking state created successfully
 */
@@ -114,8 +113,7 @@ func NewAddBundleBlockingStateBadRequest() *AddBundleBlockingStateBadRequest {
 	return &AddBundleBlockingStateBadRequest{}
 }
 
-/*
-AddBundleBlockingStateBadRequest describes a response with status code 400, with default header values.
+/* AddBundleBlockingStateBadRequest describes a response with status code 400, with default header values.
 
 Invalid bundle id supplied
 */
@@ -171,8 +169,7 @@ func NewAddBundleBlockingStateNotFound() *AddBundleBlockingStateNotFound {
 	return &AddBundleBlockingStateNotFound{}
 }
 
-/*
-AddBundleBlockingStateNotFound describes a response with status code 404, with default header values.
+/* AddBundleBlockingStateNotFound describes a response with status code 404, with default header values.
 
 Bundle not found
 */

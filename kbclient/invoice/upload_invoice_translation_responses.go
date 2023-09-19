@@ -44,8 +44,7 @@ func NewUploadInvoiceTranslationCreated() *UploadInvoiceTranslationCreated {
 	return &UploadInvoiceTranslationCreated{}
 }
 
-/*
-UploadInvoiceTranslationCreated describes a response with status code 201, with default header values.
+/* UploadInvoiceTranslationCreated describes a response with status code 201, with default header values.
 
 Uploaded invoice translation Successfully
 */

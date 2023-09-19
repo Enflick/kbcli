@@ -47,8 +47,7 @@ func NewCreatePaymentMethodCreated() *CreatePaymentMethodCreated {
 	return &CreatePaymentMethodCreated{}
 }
 
-/*
-CreatePaymentMethodCreated describes a response with status code 201, with default header values.
+/* CreatePaymentMethodCreated describes a response with status code 201, with default header values.
 
 Payment method created
 */
@@ -116,8 +115,7 @@ func NewCreatePaymentMethodBadRequest() *CreatePaymentMethodBadRequest {
 	return &CreatePaymentMethodBadRequest{}
 }
 
-/*
-CreatePaymentMethodBadRequest describes a response with status code 400, with default header values.
+/* CreatePaymentMethodBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -173,8 +171,7 @@ func NewCreatePaymentMethodNotFound() *CreatePaymentMethodNotFound {
 	return &CreatePaymentMethodNotFound{}
 }
 
-/*
-CreatePaymentMethodNotFound describes a response with status code 404, with default header values.
+/* CreatePaymentMethodNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

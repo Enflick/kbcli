@@ -47,8 +47,7 @@ func NewGetBundleCustomFieldsOK() *GetBundleCustomFieldsOK {
 	return &GetBundleCustomFieldsOK{}
 }
 
-/*
-GetBundleCustomFieldsOK describes a response with status code 200, with default header values.
+/* GetBundleCustomFieldsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetBundleCustomFieldsBadRequest() *GetBundleCustomFieldsBadRequest {
 	return &GetBundleCustomFieldsBadRequest{}
 }
 
-/*
-GetBundleCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* GetBundleCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid bundle id supplied
 */

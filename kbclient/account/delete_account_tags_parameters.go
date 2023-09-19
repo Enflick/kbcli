@@ -53,12 +53,10 @@ func NewDeleteAccountTagsParamsWithHTTPClient(client *http.Client) *DeleteAccoun
 	}
 }
 
-/*
-DeleteAccountTagsParams contains all the parameters to send to the API endpoint
+/* DeleteAccountTagsParams contains all the parameters to send to the API endpoint
+   for the delete account tags operation.
 
-	for the delete account tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type DeleteAccountTagsParams struct {
 

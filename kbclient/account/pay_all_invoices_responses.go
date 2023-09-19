@@ -55,8 +55,7 @@ func NewPayAllInvoicesCreated() *PayAllInvoicesCreated {
 	return &PayAllInvoicesCreated{}
 }
 
-/*
-PayAllInvoicesCreated describes a response with status code 201, with default header values.
+/* PayAllInvoicesCreated describes a response with status code 201, with default header values.
 
 Successful operation
 */
@@ -122,8 +121,7 @@ func NewPayAllInvoicesNoContent() *PayAllInvoicesNoContent {
 	return &PayAllInvoicesNoContent{}
 }
 
-/*
-PayAllInvoicesNoContent describes a response with status code 204, with default header values.
+/* PayAllInvoicesNoContent describes a response with status code 204, with default header values.
 
 Nothing to pay
 */
@@ -179,8 +177,7 @@ func NewPayAllInvoicesNotFound() *PayAllInvoicesNotFound {
 	return &PayAllInvoicesNotFound{}
 }
 
-/*
-PayAllInvoicesNotFound describes a response with status code 404, with default header values.
+/* PayAllInvoicesNotFound describes a response with status code 404, with default header values.
 
 Invalid account id supplied
 */

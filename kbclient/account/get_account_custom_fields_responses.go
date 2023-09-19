@@ -47,8 +47,7 @@ func NewGetAccountCustomFieldsOK() *GetAccountCustomFieldsOK {
 	return &GetAccountCustomFieldsOK{}
 }
 
-/*
-GetAccountCustomFieldsOK describes a response with status code 200, with default header values.
+/* GetAccountCustomFieldsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetAccountCustomFieldsBadRequest() *GetAccountCustomFieldsBadRequest {
 	return &GetAccountCustomFieldsBadRequest{}
 }
 
-/*
-GetAccountCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* GetAccountCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */

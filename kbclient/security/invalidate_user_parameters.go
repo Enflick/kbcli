@@ -52,12 +52,10 @@ func NewInvalidateUserParamsWithHTTPClient(client *http.Client) *InvalidateUserP
 	}
 }
 
-/*
-InvalidateUserParams contains all the parameters to send to the API endpoint
+/* InvalidateUserParams contains all the parameters to send to the API endpoint
+   for the invalidate user operation.
 
-	for the invalidate user operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type InvalidateUserParams struct {
 

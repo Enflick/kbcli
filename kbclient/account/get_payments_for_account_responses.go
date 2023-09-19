@@ -47,8 +47,7 @@ func NewGetPaymentsForAccountOK() *GetPaymentsForAccountOK {
 	return &GetPaymentsForAccountOK{}
 }
 
-/*
-GetPaymentsForAccountOK describes a response with status code 200, with default header values.
+/* GetPaymentsForAccountOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetPaymentsForAccountBadRequest() *GetPaymentsForAccountBadRequest {
 	return &GetPaymentsForAccountBadRequest{}
 }
 
-/*
-GetPaymentsForAccountBadRequest describes a response with status code 400, with default header values.
+/* GetPaymentsForAccountBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */

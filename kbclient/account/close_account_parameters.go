@@ -53,12 +53,10 @@ func NewCloseAccountParamsWithHTTPClient(client *http.Client) *CloseAccountParam
 	}
 }
 
-/*
-CloseAccountParams contains all the parameters to send to the API endpoint
+/* CloseAccountParams contains all the parameters to send to the API endpoint
+   for the close account operation.
 
-	for the close account operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CloseAccountParams struct {
 

@@ -47,8 +47,7 @@ func NewChargebackPaymentCreated() *ChargebackPaymentCreated {
 	return &ChargebackPaymentCreated{}
 }
 
-/*
-ChargebackPaymentCreated describes a response with status code 201, with default header values.
+/* ChargebackPaymentCreated describes a response with status code 201, with default header values.
 
 Payment transaction created successfully
 */
@@ -116,8 +115,7 @@ func NewChargebackPaymentBadRequest() *ChargebackPaymentBadRequest {
 	return &ChargebackPaymentBadRequest{}
 }
 
-/*
-ChargebackPaymentBadRequest describes a response with status code 400, with default header values.
+/* ChargebackPaymentBadRequest describes a response with status code 400, with default header values.
 
 Invalid paymentId supplied
 */
@@ -173,8 +171,7 @@ func NewChargebackPaymentPaymentRequired() *ChargebackPaymentPaymentRequired {
 	return &ChargebackPaymentPaymentRequired{}
 }
 
-/*
-ChargebackPaymentPaymentRequired describes a response with status code 402, with default header values.
+/* ChargebackPaymentPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -230,8 +227,7 @@ func NewChargebackPaymentNotFound() *ChargebackPaymentNotFound {
 	return &ChargebackPaymentNotFound{}
 }
 
-/*
-ChargebackPaymentNotFound describes a response with status code 404, with default header values.
+/* ChargebackPaymentNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */
@@ -287,8 +283,7 @@ func NewChargebackPaymentUnprocessableEntity() *ChargebackPaymentUnprocessableEn
 	return &ChargebackPaymentUnprocessableEntity{}
 }
 
-/*
-ChargebackPaymentUnprocessableEntity describes a response with status code 422, with default header values.
+/* ChargebackPaymentUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -344,8 +339,7 @@ func NewChargebackPaymentBadGateway() *ChargebackPaymentBadGateway {
 	return &ChargebackPaymentBadGateway{}
 }
 
-/*
-ChargebackPaymentBadGateway describes a response with status code 502, with default header values.
+/* ChargebackPaymentBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -401,8 +395,7 @@ func NewChargebackPaymentServiceUnavailable() *ChargebackPaymentServiceUnavailab
 	return &ChargebackPaymentServiceUnavailable{}
 }
 
-/*
-ChargebackPaymentServiceUnavailable describes a response with status code 503, with default header values.
+/* ChargebackPaymentServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -458,8 +451,7 @@ func NewChargebackPaymentGatewayTimeout() *ChargebackPaymentGatewayTimeout {
 	return &ChargebackPaymentGatewayTimeout{}
 }
 
-/*
-ChargebackPaymentGatewayTimeout describes a response with status code 504, with default header values.
+/* ChargebackPaymentGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

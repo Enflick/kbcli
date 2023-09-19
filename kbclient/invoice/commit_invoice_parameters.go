@@ -52,12 +52,10 @@ func NewCommitInvoiceParamsWithHTTPClient(client *http.Client) *CommitInvoicePar
 	}
 }
 
-/*
-CommitInvoiceParams contains all the parameters to send to the API endpoint
+/* CommitInvoiceParams contains all the parameters to send to the API endpoint
+   for the commit invoice operation.
 
-	for the commit invoice operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CommitInvoiceParams struct {
 

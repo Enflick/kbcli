@@ -53,12 +53,10 @@ func NewGetPaymentByExternalKeyParamsWithHTTPClient(client *http.Client) *GetPay
 	}
 }
 
-/*
-GetPaymentByExternalKeyParams contains all the parameters to send to the API endpoint
+/* GetPaymentByExternalKeyParams contains all the parameters to send to the API endpoint
+   for the get payment by external key operation.
 
-	for the get payment by external key operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPaymentByExternalKeyParams struct {
 

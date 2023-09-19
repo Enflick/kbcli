@@ -55,12 +55,10 @@ func NewCreateComboPaymentParamsWithHTTPClient(client *http.Client) *CreateCombo
 	}
 }
 
-/*
-CreateComboPaymentParams contains all the parameters to send to the API endpoint
+/* CreateComboPaymentParams contains all the parameters to send to the API endpoint
+   for the create combo payment operation.
 
-	for the create combo payment operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateComboPaymentParams struct {
 

@@ -73,7 +73,7 @@ type ClientService interface {
 }
 
 /*
-CreateInvoiceItemCustomFields adds custom fields to invoice item
+  CreateInvoiceItemCustomFields adds custom fields to invoice item
 */
 func (a *Client) CreateInvoiceItemCustomFields(ctx context.Context, params *CreateInvoiceItemCustomFieldsParams) (*CreateInvoiceItemCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
@@ -161,7 +161,7 @@ func (a *Client) CreateInvoiceItemCustomFields(ctx context.Context, params *Crea
 }
 
 /*
-CreateInvoiceItemTags adds tags to invoice item
+  CreateInvoiceItemTags adds tags to invoice item
 */
 func (a *Client) CreateInvoiceItemTags(ctx context.Context, params *CreateInvoiceItemTagsParams) (*CreateInvoiceItemTagsCreated, error) {
 	// TODO: Validate the params before sending
@@ -249,7 +249,7 @@ func (a *Client) CreateInvoiceItemTags(ctx context.Context, params *CreateInvoic
 }
 
 /*
-DeleteInvoiceItemCustomFields removes custom fields from invoice item
+  DeleteInvoiceItemCustomFields removes custom fields from invoice item
 */
 func (a *Client) DeleteInvoiceItemCustomFields(ctx context.Context, params *DeleteInvoiceItemCustomFieldsParams) (*DeleteInvoiceItemCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -308,7 +308,7 @@ func (a *Client) DeleteInvoiceItemCustomFields(ctx context.Context, params *Dele
 }
 
 /*
-DeleteInvoiceItemTags removes tags from invoice item
+  DeleteInvoiceItemTags removes tags from invoice item
 */
 func (a *Client) DeleteInvoiceItemTags(ctx context.Context, params *DeleteInvoiceItemTagsParams) (*DeleteInvoiceItemTagsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -367,7 +367,7 @@ func (a *Client) DeleteInvoiceItemTags(ctx context.Context, params *DeleteInvoic
 }
 
 /*
-GetInvoiceItemAuditLogsWithHistory retrieves invoice item audit logs with history by id
+  GetInvoiceItemAuditLogsWithHistory retrieves invoice item audit logs with history by id
 */
 func (a *Client) GetInvoiceItemAuditLogsWithHistory(ctx context.Context, params *GetInvoiceItemAuditLogsWithHistoryParams) (*GetInvoiceItemAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
@@ -414,7 +414,7 @@ func (a *Client) GetInvoiceItemAuditLogsWithHistory(ctx context.Context, params 
 }
 
 /*
-GetInvoiceItemCustomFields retrieves invoice item custom fields
+  GetInvoiceItemCustomFields retrieves invoice item custom fields
 */
 func (a *Client) GetInvoiceItemCustomFields(ctx context.Context, params *GetInvoiceItemCustomFieldsParams) (*GetInvoiceItemCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
@@ -461,7 +461,7 @@ func (a *Client) GetInvoiceItemCustomFields(ctx context.Context, params *GetInvo
 }
 
 /*
-GetInvoiceItemTags retrieves invoice item tags
+  GetInvoiceItemTags retrieves invoice item tags
 */
 func (a *Client) GetInvoiceItemTags(ctx context.Context, params *GetInvoiceItemTagsParams) (*GetInvoiceItemTagsOK, error) {
 	// TODO: Validate the params before sending
@@ -508,7 +508,7 @@ func (a *Client) GetInvoiceItemTags(ctx context.Context, params *GetInvoiceItemT
 }
 
 /*
-ModifyInvoiceItemCustomFields modifies custom fields to invoice item
+  ModifyInvoiceItemCustomFields modifies custom fields to invoice item
 */
 func (a *Client) ModifyInvoiceItemCustomFields(ctx context.Context, params *ModifyInvoiceItemCustomFieldsParams) (*ModifyInvoiceItemCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending

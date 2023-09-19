@@ -47,8 +47,7 @@ func NewCreateFutureInvoiceGroupCreated() *CreateFutureInvoiceGroupCreated {
 	return &CreateFutureInvoiceGroupCreated{}
 }
 
-/*
-CreateFutureInvoiceGroupCreated describes a response with status code 201, with default header values.
+/* CreateFutureInvoiceGroupCreated describes a response with status code 201, with default header values.
 
 Created invoice successfully
 */
@@ -114,8 +113,7 @@ func NewCreateFutureInvoiceGroupBadRequest() *CreateFutureInvoiceGroupBadRequest
 	return &CreateFutureInvoiceGroupBadRequest{}
 }
 
-/*
-CreateFutureInvoiceGroupBadRequest describes a response with status code 400, with default header values.
+/* CreateFutureInvoiceGroupBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id or target datetime supplied
 */

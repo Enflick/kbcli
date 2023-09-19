@@ -55,12 +55,10 @@ func NewCompleteTransactionByExternalKeyParamsWithHTTPClient(client *http.Client
 	}
 }
 
-/*
-CompleteTransactionByExternalKeyParams contains all the parameters to send to the API endpoint
+/* CompleteTransactionByExternalKeyParams contains all the parameters to send to the API endpoint
+   for the complete transaction by external key operation.
 
-	for the complete transaction by external key operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CompleteTransactionByExternalKeyParams struct {
 

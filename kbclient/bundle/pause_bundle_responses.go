@@ -45,8 +45,7 @@ func NewPauseBundleNoContent() *PauseBundleNoContent {
 	return &PauseBundleNoContent{}
 }
 
-/*
-PauseBundleNoContent describes a response with status code 204, with default header values.
+/* PauseBundleNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewPauseBundleBadRequest() *PauseBundleBadRequest {
 	return &PauseBundleBadRequest{}
 }
 
-/*
-PauseBundleBadRequest describes a response with status code 400, with default header values.
+/* PauseBundleBadRequest describes a response with status code 400, with default header values.
 
 Invalid bundle id supplied
 */
@@ -159,8 +157,7 @@ func NewPauseBundleNotFound() *PauseBundleNotFound {
 	return &PauseBundleNotFound{}
 }
 
-/*
-PauseBundleNotFound describes a response with status code 404, with default header values.
+/* PauseBundleNotFound describes a response with status code 404, with default header values.
 
 Bundle not found
 */

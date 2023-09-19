@@ -45,8 +45,7 @@ func NewRebalanceExistingCBAOnAccountNoContent() *RebalanceExistingCBAOnAccountN
 	return &RebalanceExistingCBAOnAccountNoContent{}
 }
 
-/*
-RebalanceExistingCBAOnAccountNoContent describes a response with status code 204, with default header values.
+/* RebalanceExistingCBAOnAccountNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewRebalanceExistingCBAOnAccountBadRequest() *RebalanceExistingCBAOnAccount
 	return &RebalanceExistingCBAOnAccountBadRequest{}
 }
 
-/*
-RebalanceExistingCBAOnAccountBadRequest describes a response with status code 400, with default header values.
+/* RebalanceExistingCBAOnAccountBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */

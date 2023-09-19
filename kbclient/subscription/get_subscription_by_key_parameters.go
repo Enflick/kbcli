@@ -52,12 +52,10 @@ func NewGetSubscriptionByKeyParamsWithHTTPClient(client *http.Client) *GetSubscr
 	}
 }
 
-/*
-GetSubscriptionByKeyParams contains all the parameters to send to the API endpoint
+/* GetSubscriptionByKeyParams contains all the parameters to send to the API endpoint
+   for the get subscription by key operation.
 
-	for the get subscription by key operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetSubscriptionByKeyParams struct {
 

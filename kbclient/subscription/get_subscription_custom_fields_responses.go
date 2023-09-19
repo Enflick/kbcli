@@ -47,8 +47,7 @@ func NewGetSubscriptionCustomFieldsOK() *GetSubscriptionCustomFieldsOK {
 	return &GetSubscriptionCustomFieldsOK{}
 }
 
-/*
-GetSubscriptionCustomFieldsOK describes a response with status code 200, with default header values.
+/* GetSubscriptionCustomFieldsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetSubscriptionCustomFieldsBadRequest() *GetSubscriptionCustomFieldsBadR
 	return &GetSubscriptionCustomFieldsBadRequest{}
 }
 
-/*
-GetSubscriptionCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* GetSubscriptionCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid subscription id supplied
 */

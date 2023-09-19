@@ -45,8 +45,7 @@ func NewUpdateSubscriptionQuantityNoContent() *UpdateSubscriptionQuantityNoConte
 	return &UpdateSubscriptionQuantityNoContent{}
 }
 
-/*
-UpdateSubscriptionQuantityNoContent describes a response with status code 204, with default header values.
+/* UpdateSubscriptionQuantityNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewUpdateSubscriptionQuantityBadRequest() *UpdateSubscriptionQuantityBadReq
 	return &UpdateSubscriptionQuantityBadRequest{}
 }
 
-/*
-UpdateSubscriptionQuantityBadRequest describes a response with status code 400, with default header values.
+/* UpdateSubscriptionQuantityBadRequest describes a response with status code 400, with default header values.
 
 Invalid entitlement supplied
 */

@@ -47,8 +47,7 @@ func NewCreateChargebackReversalCreated() *CreateChargebackReversalCreated {
 	return &CreateChargebackReversalCreated{}
 }
 
-/*
-CreateChargebackReversalCreated describes a response with status code 201, with default header values.
+/* CreateChargebackReversalCreated describes a response with status code 201, with default header values.
 
 Created chargeback reversal successfully
 */
@@ -116,8 +115,7 @@ func NewCreateChargebackReversalBadRequest() *CreateChargebackReversalBadRequest
 	return &CreateChargebackReversalBadRequest{}
 }
 
-/*
-CreateChargebackReversalBadRequest describes a response with status code 400, with default header values.
+/* CreateChargebackReversalBadRequest describes a response with status code 400, with default header values.
 
 Invalid payment id supplied
 */
@@ -173,8 +171,7 @@ func NewCreateChargebackReversalNotFound() *CreateChargebackReversalNotFound {
 	return &CreateChargebackReversalNotFound{}
 }
 
-/*
-CreateChargebackReversalNotFound describes a response with status code 404, with default header values.
+/* CreateChargebackReversalNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */

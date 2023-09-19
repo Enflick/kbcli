@@ -52,12 +52,10 @@ func NewGetCatalogTranslationParamsWithHTTPClient(client *http.Client) *GetCatal
 	}
 }
 
-/*
-GetCatalogTranslationParams contains all the parameters to send to the API endpoint
+/* GetCatalogTranslationParams contains all the parameters to send to the API endpoint
+   for the get catalog translation operation.
 
-	for the get catalog translation operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetCatalogTranslationParams struct {
 

@@ -53,12 +53,10 @@ func NewUploadInvoiceMPTemplateParamsWithHTTPClient(client *http.Client) *Upload
 	}
 }
 
-/*
-UploadInvoiceMPTemplateParams contains all the parameters to send to the API endpoint
+/* UploadInvoiceMPTemplateParams contains all the parameters to send to the API endpoint
+   for the upload invoice m p template operation.
 
-	for the upload invoice m p template operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UploadInvoiceMPTemplateParams struct {
 

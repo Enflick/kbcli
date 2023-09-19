@@ -52,12 +52,10 @@ func NewVoidInvoiceParamsWithHTTPClient(client *http.Client) *VoidInvoiceParams 
 	}
 }
 
-/*
-VoidInvoiceParams contains all the parameters to send to the API endpoint
+/* VoidInvoiceParams contains all the parameters to send to the API endpoint
+   for the void invoice operation.
 
-	for the void invoice operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type VoidInvoiceParams struct {
 

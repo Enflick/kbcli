@@ -52,12 +52,10 @@ func NewGetTagAuditLogsWithHistoryParamsWithHTTPClient(client *http.Client) *Get
 	}
 }
 
-/*
-GetTagAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+/* GetTagAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+   for the get tag audit logs with history operation.
 
-	for the get tag audit logs with history operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetTagAuditLogsWithHistoryParams struct {
 

@@ -46,8 +46,7 @@ func NewSearchBundlesOK() *SearchBundlesOK {
 	return &SearchBundlesOK{}
 }
 
-/*
-SearchBundlesOK describes a response with status code 200, with default header values.
+/* SearchBundlesOK describes a response with status code 200, with default header values.
 
 successful operation
 */

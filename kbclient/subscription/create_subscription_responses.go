@@ -46,8 +46,7 @@ func NewCreateSubscriptionCreated() *CreateSubscriptionCreated {
 	return &CreateSubscriptionCreated{}
 }
 
-/*
-CreateSubscriptionCreated describes a response with status code 201, with default header values.
+/* CreateSubscriptionCreated describes a response with status code 201, with default header values.
 
 Subscription created successfully
 */

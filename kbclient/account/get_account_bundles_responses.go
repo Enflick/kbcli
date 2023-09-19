@@ -47,8 +47,7 @@ func NewGetAccountBundlesOK() *GetAccountBundlesOK {
 	return &GetAccountBundlesOK{}
 }
 
-/*
-GetAccountBundlesOK describes a response with status code 200, with default header values.
+/* GetAccountBundlesOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetAccountBundlesBadRequest() *GetAccountBundlesBadRequest {
 	return &GetAccountBundlesBadRequest{}
 }
 
-/*
-GetAccountBundlesBadRequest describes a response with status code 400, with default header values.
+/* GetAccountBundlesBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -171,8 +169,7 @@ func NewGetAccountBundlesNotFound() *GetAccountBundlesNotFound {
 	return &GetAccountBundlesNotFound{}
 }
 
-/*
-GetAccountBundlesNotFound describes a response with status code 404, with default header values.
+/* GetAccountBundlesNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

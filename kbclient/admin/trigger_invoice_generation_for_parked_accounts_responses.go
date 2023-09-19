@@ -44,8 +44,7 @@ func NewTriggerInvoiceGenerationForParkedAccountsOK() *TriggerInvoiceGenerationF
 	return &TriggerInvoiceGenerationForParkedAccountsOK{}
 }
 
-/*
-TriggerInvoiceGenerationForParkedAccountsOK describes a response with status code 200, with default header values.
+/* TriggerInvoiceGenerationForParkedAccountsOK describes a response with status code 200, with default header values.
 
 Successful operation
 */

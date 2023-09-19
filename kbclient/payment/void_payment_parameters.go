@@ -55,12 +55,10 @@ func NewVoidPaymentParamsWithHTTPClient(client *http.Client) *VoidPaymentParams 
 	}
 }
 
-/*
-VoidPaymentParams contains all the parameters to send to the API endpoint
+/* VoidPaymentParams contains all the parameters to send to the API endpoint
+   for the void payment operation.
 
-	for the void payment operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type VoidPaymentParams struct {
 

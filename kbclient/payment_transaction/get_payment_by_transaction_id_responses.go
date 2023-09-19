@@ -47,8 +47,7 @@ func NewGetPaymentByTransactionIDOK() *GetPaymentByTransactionIDOK {
 	return &GetPaymentByTransactionIDOK{}
 }
 
-/*
-GetPaymentByTransactionIDOK describes a response with status code 200, with default header values.
+/* GetPaymentByTransactionIDOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetPaymentByTransactionIDNotFound() *GetPaymentByTransactionIDNotFound {
 	return &GetPaymentByTransactionIDNotFound{}
 }
 
-/*
-GetPaymentByTransactionIDNotFound describes a response with status code 404, with default header values.
+/* GetPaymentByTransactionIDNotFound describes a response with status code 404, with default header values.
 
 Payment not found
 */

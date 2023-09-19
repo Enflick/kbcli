@@ -47,8 +47,7 @@ func NewGetEmailsOK() *GetEmailsOK {
 	return &GetEmailsOK{}
 }
 
-/*
-GetEmailsOK describes a response with status code 200, with default header values.
+/* GetEmailsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetEmailsBadRequest() *GetEmailsBadRequest {
 	return &GetEmailsBadRequest{}
 }
 
-/*
-GetEmailsBadRequest describes a response with status code 400, with default header values.
+/* GetEmailsBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */

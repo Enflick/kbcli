@@ -47,8 +47,7 @@ func NewGetInvoiceByItemIDOK() *GetInvoiceByItemIDOK {
 	return &GetInvoiceByItemIDOK{}
 }
 
-/*
-GetInvoiceByItemIDOK describes a response with status code 200, with default header values.
+/* GetInvoiceByItemIDOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetInvoiceByItemIDNotFound() *GetInvoiceByItemIDNotFound {
 	return &GetInvoiceByItemIDNotFound{}
 }
 
-/*
-GetInvoiceByItemIDNotFound describes a response with status code 404, with default header values.
+/* GetInvoiceByItemIDNotFound describes a response with status code 404, with default header values.
 
 Invoice not found
 */

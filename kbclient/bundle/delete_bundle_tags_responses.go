@@ -45,8 +45,7 @@ func NewDeleteBundleTagsNoContent() *DeleteBundleTagsNoContent {
 	return &DeleteBundleTagsNoContent{}
 }
 
-/*
-DeleteBundleTagsNoContent describes a response with status code 204, with default header values.
+/* DeleteBundleTagsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteBundleTagsBadRequest() *DeleteBundleTagsBadRequest {
 	return &DeleteBundleTagsBadRequest{}
 }
 
-/*
-DeleteBundleTagsBadRequest describes a response with status code 400, with default header values.
+/* DeleteBundleTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid bundle id supplied
 */

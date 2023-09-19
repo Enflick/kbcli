@@ -53,12 +53,10 @@ func NewSearchPaymentMethodsParamsWithHTTPClient(client *http.Client) *SearchPay
 	}
 }
 
-/*
-SearchPaymentMethodsParams contains all the parameters to send to the API endpoint
+/* SearchPaymentMethodsParams contains all the parameters to send to the API endpoint
+   for the search payment methods operation.
 
-	for the search payment methods operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type SearchPaymentMethodsParams struct {
 

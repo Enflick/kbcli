@@ -47,8 +47,7 @@ func NewGetPerTenantConfigurationOK() *GetPerTenantConfigurationOK {
 	return &GetPerTenantConfigurationOK{}
 }
 
-/*
-GetPerTenantConfigurationOK describes a response with status code 200, with default header values.
+/* GetPerTenantConfigurationOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetPerTenantConfigurationBadRequest() *GetPerTenantConfigurationBadReque
 	return &GetPerTenantConfigurationBadRequest{}
 }
 
-/*
-GetPerTenantConfigurationBadRequest describes a response with status code 400, with default header values.
+/* GetPerTenantConfigurationBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

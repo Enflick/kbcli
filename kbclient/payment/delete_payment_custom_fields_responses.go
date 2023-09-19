@@ -45,8 +45,7 @@ func NewDeletePaymentCustomFieldsNoContent() *DeletePaymentCustomFieldsNoContent
 	return &DeletePaymentCustomFieldsNoContent{}
 }
 
-/*
-DeletePaymentCustomFieldsNoContent describes a response with status code 204, with default header values.
+/* DeletePaymentCustomFieldsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeletePaymentCustomFieldsBadRequest() *DeletePaymentCustomFieldsBadReque
 	return &DeletePaymentCustomFieldsBadRequest{}
 }
 
-/*
-DeletePaymentCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* DeletePaymentCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid payment id supplied
 */

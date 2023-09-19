@@ -45,8 +45,7 @@ func NewChangeSubscriptionPlanNoContent() *ChangeSubscriptionPlanNoContent {
 	return &ChangeSubscriptionPlanNoContent{}
 }
 
-/*
-ChangeSubscriptionPlanNoContent describes a response with status code 204, with default header values.
+/* ChangeSubscriptionPlanNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewChangeSubscriptionPlanBadRequest() *ChangeSubscriptionPlanBadRequest {
 	return &ChangeSubscriptionPlanBadRequest{}
 }
 
-/*
-ChangeSubscriptionPlanBadRequest describes a response with status code 400, with default header values.
+/* ChangeSubscriptionPlanBadRequest describes a response with status code 400, with default header values.
 
 Invalid subscription id supplied
 */
@@ -159,8 +157,7 @@ func NewChangeSubscriptionPlanNotFound() *ChangeSubscriptionPlanNotFound {
 	return &ChangeSubscriptionPlanNotFound{}
 }
 
-/*
-ChangeSubscriptionPlanNotFound describes a response with status code 404, with default header values.
+/* ChangeSubscriptionPlanNotFound describes a response with status code 404, with default header values.
 
 Entitlement not found
 */

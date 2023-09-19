@@ -53,12 +53,10 @@ func NewGetAllTagsParamsWithHTTPClient(client *http.Client) *GetAllTagsParams {
 	}
 }
 
-/*
-GetAllTagsParams contains all the parameters to send to the API endpoint
+/* GetAllTagsParams contains all the parameters to send to the API endpoint
+   for the get all tags operation.
 
-	for the get all tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetAllTagsParams struct {
 

@@ -46,8 +46,7 @@ func NewGetPriceListForSubscriptionAndDateOK() *GetPriceListForSubscriptionAndDa
 	return &GetPriceListForSubscriptionAndDateOK{}
 }
 
-/*
-GetPriceListForSubscriptionAndDateOK describes a response with status code 200, with default header values.
+/* GetPriceListForSubscriptionAndDateOK describes a response with status code 200, with default header values.
 
 successful operation
 */

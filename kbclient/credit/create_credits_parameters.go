@@ -55,12 +55,10 @@ func NewCreateCreditsParamsWithHTTPClient(client *http.Client) *CreateCreditsPar
 	}
 }
 
-/*
-CreateCreditsParams contains all the parameters to send to the API endpoint
+/* CreateCreditsParams contains all the parameters to send to the API endpoint
+   for the create credits operation.
 
-	for the create credits operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateCreditsParams struct {
 

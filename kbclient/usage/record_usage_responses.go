@@ -45,8 +45,7 @@ func NewRecordUsageOK() *RecordUsageOK {
 	return &RecordUsageOK{}
 }
 
-/*
-RecordUsageOK describes a response with status code 200, with default header values.
+/* RecordUsageOK describes a response with status code 200, with default header values.
 
 Successfully recorded usage data change
 */
@@ -102,8 +101,7 @@ func NewRecordUsageBadRequest() *RecordUsageBadRequest {
 	return &RecordUsageBadRequest{}
 }
 
-/*
-RecordUsageBadRequest describes a response with status code 400, with default header values.
+/* RecordUsageBadRequest describes a response with status code 400, with default header values.
 
 Invalid subscription (e.g. inactive)
 */

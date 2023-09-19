@@ -45,8 +45,7 @@ func NewModifyInvoiceItemCustomFieldsNoContent() *ModifyInvoiceItemCustomFieldsN
 	return &ModifyInvoiceItemCustomFieldsNoContent{}
 }
 
-/*
-ModifyInvoiceItemCustomFieldsNoContent describes a response with status code 204, with default header values.
+/* ModifyInvoiceItemCustomFieldsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewModifyInvoiceItemCustomFieldsBadRequest() *ModifyInvoiceItemCustomFields
 	return &ModifyInvoiceItemCustomFieldsBadRequest{}
 }
 
-/*
-ModifyInvoiceItemCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* ModifyInvoiceItemCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid invoice item id supplied
 */

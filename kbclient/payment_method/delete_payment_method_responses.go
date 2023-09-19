@@ -45,8 +45,7 @@ func NewDeletePaymentMethodNoContent() *DeletePaymentMethodNoContent {
 	return &DeletePaymentMethodNoContent{}
 }
 
-/*
-DeletePaymentMethodNoContent describes a response with status code 204, with default header values.
+/* DeletePaymentMethodNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeletePaymentMethodBadRequest() *DeletePaymentMethodBadRequest {
 	return &DeletePaymentMethodBadRequest{}
 }
 
-/*
-DeletePaymentMethodBadRequest describes a response with status code 400, with default header values.
+/* DeletePaymentMethodBadRequest describes a response with status code 400, with default header values.
 
 Invalid paymentMethodId supplied
 */
@@ -159,8 +157,7 @@ func NewDeletePaymentMethodNotFound() *DeletePaymentMethodNotFound {
 	return &DeletePaymentMethodNotFound{}
 }
 
-/*
-DeletePaymentMethodNotFound describes a response with status code 404, with default header values.
+/* DeletePaymentMethodNotFound describes a response with status code 404, with default header values.
 
 Account or payment method not found
 */

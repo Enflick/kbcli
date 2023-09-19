@@ -47,8 +47,7 @@ func NewCreateFutureInvoiceCreated() *CreateFutureInvoiceCreated {
 	return &CreateFutureInvoiceCreated{}
 }
 
-/*
-CreateFutureInvoiceCreated describes a response with status code 201, with default header values.
+/* CreateFutureInvoiceCreated describes a response with status code 201, with default header values.
 
 Created invoice successfully
 */
@@ -116,8 +115,7 @@ func NewCreateFutureInvoiceBadRequest() *CreateFutureInvoiceBadRequest {
 	return &CreateFutureInvoiceBadRequest{}
 }
 
-/*
-CreateFutureInvoiceBadRequest describes a response with status code 400, with default header values.
+/* CreateFutureInvoiceBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id or target datetime supplied
 */

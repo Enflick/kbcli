@@ -53,12 +53,10 @@ func NewUploadInvoiceTranslationParamsWithHTTPClient(client *http.Client) *Uploa
 	}
 }
 
-/*
-UploadInvoiceTranslationParams contains all the parameters to send to the API endpoint
+/* UploadInvoiceTranslationParams contains all the parameters to send to the API endpoint
+   for the upload invoice translation operation.
 
-	for the upload invoice translation operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UploadInvoiceTranslationParams struct {
 

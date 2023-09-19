@@ -47,8 +47,7 @@ func NewGetAccountAuditLogsWithHistoryOK() *GetAccountAuditLogsWithHistoryOK {
 	return &GetAccountAuditLogsWithHistoryOK{}
 }
 
-/*
-GetAccountAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
+/* GetAccountAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetAccountAuditLogsWithHistoryNotFound() *GetAccountAuditLogsWithHistory
 	return &GetAccountAuditLogsWithHistoryNotFound{}
 }
 
-/*
-GetAccountAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
+/* GetAccountAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

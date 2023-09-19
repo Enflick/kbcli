@@ -47,8 +47,7 @@ func NewGetSubscriptionAuditLogsWithHistoryOK() *GetSubscriptionAuditLogsWithHis
 	return &GetSubscriptionAuditLogsWithHistoryOK{}
 }
 
-/*
-GetSubscriptionAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
+/* GetSubscriptionAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetSubscriptionAuditLogsWithHistoryNotFound() *GetSubscriptionAuditLogsW
 	return &GetSubscriptionAuditLogsWithHistoryNotFound{}
 }
 
-/*
-GetSubscriptionAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
+/* GetSubscriptionAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
 
 Subscription not found
 */

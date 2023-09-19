@@ -44,8 +44,7 @@ func NewGetCatalogVersionsOK() *GetCatalogVersionsOK {
 	return &GetCatalogVersionsOK{}
 }
 
-/*
-GetCatalogVersionsOK describes a response with status code 200, with default header values.
+/* GetCatalogVersionsOK describes a response with status code 200, with default header values.
 
 successful operation
 */

@@ -52,12 +52,10 @@ func NewCreateSubscriptionTagsParamsWithHTTPClient(client *http.Client) *CreateS
 	}
 }
 
-/*
-CreateSubscriptionTagsParams contains all the parameters to send to the API endpoint
+/* CreateSubscriptionTagsParams contains all the parameters to send to the API endpoint
+   for the create subscription tags operation.
 
-	for the create subscription tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateSubscriptionTagsParams struct {
 

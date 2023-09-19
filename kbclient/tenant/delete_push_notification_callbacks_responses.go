@@ -45,8 +45,7 @@ func NewDeletePushNotificationCallbacksNoContent() *DeletePushNotificationCallba
 	return &DeletePushNotificationCallbacksNoContent{}
 }
 
-/*
-DeletePushNotificationCallbacksNoContent describes a response with status code 204, with default header values.
+/* DeletePushNotificationCallbacksNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeletePushNotificationCallbacksBadRequest() *DeletePushNotificationCallb
 	return &DeletePushNotificationCallbacksBadRequest{}
 }
 
-/*
-DeletePushNotificationCallbacksBadRequest describes a response with status code 400, with default header values.
+/* DeletePushNotificationCallbacksBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

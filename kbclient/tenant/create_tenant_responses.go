@@ -47,8 +47,7 @@ func NewCreateTenantCreated() *CreateTenantCreated {
 	return &CreateTenantCreated{}
 }
 
-/*
-CreateTenantCreated describes a response with status code 201, with default header values.
+/* CreateTenantCreated describes a response with status code 201, with default header values.
 
 Tenant created successfully
 */
@@ -116,8 +115,7 @@ func NewCreateTenantConflict() *CreateTenantConflict {
 	return &CreateTenantConflict{}
 }
 
-/*
-CreateTenantConflict describes a response with status code 409, with default header values.
+/* CreateTenantConflict describes a response with status code 409, with default header values.
 
 Tenant already exists
 */

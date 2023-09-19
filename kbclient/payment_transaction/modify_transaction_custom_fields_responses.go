@@ -45,8 +45,7 @@ func NewModifyTransactionCustomFieldsNoContent() *ModifyTransactionCustomFieldsN
 	return &ModifyTransactionCustomFieldsNoContent{}
 }
 
-/*
-ModifyTransactionCustomFieldsNoContent describes a response with status code 204, with default header values.
+/* ModifyTransactionCustomFieldsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewModifyTransactionCustomFieldsBadRequest() *ModifyTransactionCustomFields
 	return &ModifyTransactionCustomFieldsBadRequest{}
 }
 
-/*
-ModifyTransactionCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* ModifyTransactionCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid transaction id supplied
 */

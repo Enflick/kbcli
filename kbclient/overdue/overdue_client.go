@@ -65,7 +65,7 @@ type ClientService interface {
 }
 
 /*
-GetOverdueConfigJSON retrieves the overdue config as JSON
+  GetOverdueConfigJSON retrieves the overdue config as JSON
 */
 func (a *Client) GetOverdueConfigJSON(ctx context.Context, params *GetOverdueConfigJSONParams) (*GetOverdueConfigJSONOK, error) {
 	// TODO: Validate the params before sending
@@ -112,7 +112,7 @@ func (a *Client) GetOverdueConfigJSON(ctx context.Context, params *GetOverdueCon
 }
 
 /*
-GetOverdueConfigXML retrieves the overdue config as XML
+  GetOverdueConfigXML retrieves the overdue config as XML
 */
 func (a *Client) GetOverdueConfigXML(ctx context.Context, params *GetOverdueConfigXMLParams) (*GetOverdueConfigXMLOK, error) {
 	// TODO: Validate the params before sending
@@ -159,7 +159,7 @@ func (a *Client) GetOverdueConfigXML(ctx context.Context, params *GetOverdueConf
 }
 
 /*
-UploadOverdueConfigJSON uploads the full overdue config as JSON
+  UploadOverdueConfigJSON uploads the full overdue config as JSON
 */
 func (a *Client) UploadOverdueConfigJSON(ctx context.Context, params *UploadOverdueConfigJSONParams) (*UploadOverdueConfigJSONCreated, error) {
 	// TODO: Validate the params before sending
@@ -247,7 +247,7 @@ func (a *Client) UploadOverdueConfigJSON(ctx context.Context, params *UploadOver
 }
 
 /*
-UploadOverdueConfigXML uploads the full overdue config as XML
+  UploadOverdueConfigXML uploads the full overdue config as XML
 */
 func (a *Client) UploadOverdueConfigXML(ctx context.Context, params *UploadOverdueConfigXMLParams) (*UploadOverdueConfigXMLCreated, error) {
 	// TODO: Validate the params before sending

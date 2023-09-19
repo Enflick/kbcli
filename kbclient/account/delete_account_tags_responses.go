@@ -45,8 +45,7 @@ func NewDeleteAccountTagsNoContent() *DeleteAccountTagsNoContent {
 	return &DeleteAccountTagsNoContent{}
 }
 
-/*
-DeleteAccountTagsNoContent describes a response with status code 204, with default header values.
+/* DeleteAccountTagsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteAccountTagsBadRequest() *DeleteAccountTagsBadRequest {
 	return &DeleteAccountTagsBadRequest{}
 }
 
-/*
-DeleteAccountTagsBadRequest describes a response with status code 400, with default header values.
+/* DeleteAccountTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied or account does not have a default payment method (AUTO_PAY_OFF tag only)
 */

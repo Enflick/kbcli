@@ -91,7 +91,7 @@ type ClientService interface {
 }
 
 /*
-AddBundleBlockingState blocks a bundle
+  AddBundleBlockingState blocks a bundle
 */
 func (a *Client) AddBundleBlockingState(ctx context.Context, params *AddBundleBlockingStateParams) (*AddBundleBlockingStateCreated, error) {
 	// TODO: Validate the params before sending
@@ -179,7 +179,7 @@ func (a *Client) AddBundleBlockingState(ctx context.Context, params *AddBundleBl
 }
 
 /*
-CreateBundleCustomFields adds custom fields to bundle
+  CreateBundleCustomFields adds custom fields to bundle
 */
 func (a *Client) CreateBundleCustomFields(ctx context.Context, params *CreateBundleCustomFieldsParams) (*CreateBundleCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
@@ -267,7 +267,7 @@ func (a *Client) CreateBundleCustomFields(ctx context.Context, params *CreateBun
 }
 
 /*
-CreateBundleTags adds tags to bundle
+  CreateBundleTags adds tags to bundle
 */
 func (a *Client) CreateBundleTags(ctx context.Context, params *CreateBundleTagsParams) (*CreateBundleTagsCreated, error) {
 	// TODO: Validate the params before sending
@@ -355,7 +355,7 @@ func (a *Client) CreateBundleTags(ctx context.Context, params *CreateBundleTagsP
 }
 
 /*
-DeleteBundleCustomFields removes custom fields from bundle
+  DeleteBundleCustomFields removes custom fields from bundle
 */
 func (a *Client) DeleteBundleCustomFields(ctx context.Context, params *DeleteBundleCustomFieldsParams) (*DeleteBundleCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -414,7 +414,7 @@ func (a *Client) DeleteBundleCustomFields(ctx context.Context, params *DeleteBun
 }
 
 /*
-DeleteBundleTags removes tags from bundle
+  DeleteBundleTags removes tags from bundle
 */
 func (a *Client) DeleteBundleTags(ctx context.Context, params *DeleteBundleTagsParams) (*DeleteBundleTagsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -473,7 +473,7 @@ func (a *Client) DeleteBundleTags(ctx context.Context, params *DeleteBundleTagsP
 }
 
 /*
-GetBundle retrieves a bundle by id
+  GetBundle retrieves a bundle by id
 */
 func (a *Client) GetBundle(ctx context.Context, params *GetBundleParams) (*GetBundleOK, error) {
 	// TODO: Validate the params before sending
@@ -520,7 +520,7 @@ func (a *Client) GetBundle(ctx context.Context, params *GetBundleParams) (*GetBu
 }
 
 /*
-GetBundleAuditLogsWithHistory retrieves bundle audit logs with history by id
+  GetBundleAuditLogsWithHistory retrieves bundle audit logs with history by id
 */
 func (a *Client) GetBundleAuditLogsWithHistory(ctx context.Context, params *GetBundleAuditLogsWithHistoryParams) (*GetBundleAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
@@ -567,7 +567,7 @@ func (a *Client) GetBundleAuditLogsWithHistory(ctx context.Context, params *GetB
 }
 
 /*
-GetBundleByKey retrieves a bundle by external key
+  GetBundleByKey retrieves a bundle by external key
 */
 func (a *Client) GetBundleByKey(ctx context.Context, params *GetBundleByKeyParams) (*GetBundleByKeyOK, error) {
 	// TODO: Validate the params before sending
@@ -614,7 +614,7 @@ func (a *Client) GetBundleByKey(ctx context.Context, params *GetBundleByKeyParam
 }
 
 /*
-GetBundleCustomFields retrieves bundle custom fields
+  GetBundleCustomFields retrieves bundle custom fields
 */
 func (a *Client) GetBundleCustomFields(ctx context.Context, params *GetBundleCustomFieldsParams) (*GetBundleCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
@@ -661,7 +661,7 @@ func (a *Client) GetBundleCustomFields(ctx context.Context, params *GetBundleCus
 }
 
 /*
-GetBundleTags retrieves bundle tags
+  GetBundleTags retrieves bundle tags
 */
 func (a *Client) GetBundleTags(ctx context.Context, params *GetBundleTagsParams) (*GetBundleTagsOK, error) {
 	// TODO: Validate the params before sending
@@ -708,7 +708,7 @@ func (a *Client) GetBundleTags(ctx context.Context, params *GetBundleTagsParams)
 }
 
 /*
-GetBundles lists bundles
+  GetBundles lists bundles
 */
 func (a *Client) GetBundles(ctx context.Context, params *GetBundlesParams) (*GetBundlesOK, error) {
 	// TODO: Validate the params before sending
@@ -755,7 +755,7 @@ func (a *Client) GetBundles(ctx context.Context, params *GetBundlesParams) (*Get
 }
 
 /*
-ModifyBundleCustomFields modifies custom fields to bundle
+  ModifyBundleCustomFields modifies custom fields to bundle
 */
 func (a *Client) ModifyBundleCustomFields(ctx context.Context, params *ModifyBundleCustomFieldsParams) (*ModifyBundleCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -814,7 +814,7 @@ func (a *Client) ModifyBundleCustomFields(ctx context.Context, params *ModifyBun
 }
 
 /*
-PauseBundle pauses a bundle
+  PauseBundle pauses a bundle
 */
 func (a *Client) PauseBundle(ctx context.Context, params *PauseBundleParams) (*PauseBundleNoContent, error) {
 	// TODO: Validate the params before sending
@@ -873,7 +873,7 @@ func (a *Client) PauseBundle(ctx context.Context, params *PauseBundleParams) (*P
 }
 
 /*
-RenameExternalKey updates a bundle external key
+  RenameExternalKey updates a bundle external key
 */
 func (a *Client) RenameExternalKey(ctx context.Context, params *RenameExternalKeyParams) (*RenameExternalKeyNoContent, error) {
 	// TODO: Validate the params before sending
@@ -932,7 +932,7 @@ func (a *Client) RenameExternalKey(ctx context.Context, params *RenameExternalKe
 }
 
 /*
-ResumeBundle resumes a bundle
+  ResumeBundle resumes a bundle
 */
 func (a *Client) ResumeBundle(ctx context.Context, params *ResumeBundleParams) (*ResumeBundleNoContent, error) {
 	// TODO: Validate the params before sending
@@ -991,7 +991,7 @@ func (a *Client) ResumeBundle(ctx context.Context, params *ResumeBundleParams) (
 }
 
 /*
-SearchBundles searches bundles
+  SearchBundles searches bundles
 */
 func (a *Client) SearchBundles(ctx context.Context, params *SearchBundlesParams) (*SearchBundlesOK, error) {
 	// TODO: Validate the params before sending
@@ -1038,7 +1038,7 @@ func (a *Client) SearchBundles(ctx context.Context, params *SearchBundlesParams)
 }
 
 /*
-TransferBundle transfers a bundle to another account
+  TransferBundle transfers a bundle to another account
 */
 func (a *Client) TransferBundle(ctx context.Context, params *TransferBundleParams) (*TransferBundleCreated, error) {
 	// TODO: Validate the params before sending

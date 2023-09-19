@@ -52,12 +52,10 @@ func NewPutOutOfRotationParamsWithHTTPClient(client *http.Client) *PutOutOfRotat
 	}
 }
 
-/*
-PutOutOfRotationParams contains all the parameters to send to the API endpoint
+/* PutOutOfRotationParams contains all the parameters to send to the API endpoint
+   for the put out of rotation operation.
 
-	for the put out of rotation operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type PutOutOfRotationParams struct {
 	WithProfilingInfo     *string // If set, return KB hprof headers

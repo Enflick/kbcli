@@ -55,12 +55,10 @@ func NewAdjustInvoiceItemParamsWithHTTPClient(client *http.Client) *AdjustInvoic
 	}
 }
 
-/*
-AdjustInvoiceItemParams contains all the parameters to send to the API endpoint
+/* AdjustInvoiceItemParams contains all the parameters to send to the API endpoint
+   for the adjust invoice item operation.
 
-	for the adjust invoice item operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type AdjustInvoiceItemParams struct {
 

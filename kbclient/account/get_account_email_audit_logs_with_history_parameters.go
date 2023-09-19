@@ -52,12 +52,10 @@ func NewGetAccountEmailAuditLogsWithHistoryParamsWithHTTPClient(client *http.Cli
 	}
 }
 
-/*
-GetAccountEmailAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+/* GetAccountEmailAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+   for the get account email audit logs with history operation.
 
-	for the get account email audit logs with history operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetAccountEmailAuditLogsWithHistoryParams struct {
 

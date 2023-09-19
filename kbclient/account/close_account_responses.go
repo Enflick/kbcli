@@ -45,8 +45,7 @@ func NewCloseAccountNoContent() *CloseAccountNoContent {
 	return &CloseAccountNoContent{}
 }
 
-/*
-CloseAccountNoContent describes a response with status code 204, with default header values.
+/* CloseAccountNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewCloseAccountBadRequest() *CloseAccountBadRequest {
 	return &CloseAccountBadRequest{}
 }
 
-/*
-CloseAccountBadRequest describes a response with status code 400, with default header values.
+/* CloseAccountBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */

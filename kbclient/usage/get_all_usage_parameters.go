@@ -53,12 +53,10 @@ func NewGetAllUsageParamsWithHTTPClient(client *http.Client) *GetAllUsageParams 
 	}
 }
 
-/*
-GetAllUsageParams contains all the parameters to send to the API endpoint
+/* GetAllUsageParams contains all the parameters to send to the API endpoint
+   for the get all usage operation.
 
-	for the get all usage operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetAllUsageParams struct {
 

@@ -45,8 +45,7 @@ func NewGetInvoiceMPTemplateOK() *GetInvoiceMPTemplateOK {
 	return &GetInvoiceMPTemplateOK{}
 }
 
-/*
-GetInvoiceMPTemplateOK describes a response with status code 200, with default header values.
+/* GetInvoiceMPTemplateOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -112,8 +111,7 @@ func NewGetInvoiceMPTemplateNotFound() *GetInvoiceMPTemplateNotFound {
 	return &GetInvoiceMPTemplateNotFound{}
 }
 
-/*
-GetInvoiceMPTemplateNotFound describes a response with status code 404, with default header values.
+/* GetInvoiceMPTemplateNotFound describes a response with status code 404, with default header values.
 
 Template not found
 */

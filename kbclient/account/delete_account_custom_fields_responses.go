@@ -45,8 +45,7 @@ func NewDeleteAccountCustomFieldsNoContent() *DeleteAccountCustomFieldsNoContent
 	return &DeleteAccountCustomFieldsNoContent{}
 }
 
-/*
-DeleteAccountCustomFieldsNoContent describes a response with status code 204, with default header values.
+/* DeleteAccountCustomFieldsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteAccountCustomFieldsBadRequest() *DeleteAccountCustomFieldsBadReque
 	return &DeleteAccountCustomFieldsBadRequest{}
 }
 
-/*
-DeleteAccountCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* DeleteAccountCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */

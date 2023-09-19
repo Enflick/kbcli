@@ -52,12 +52,10 @@ func NewGetAccountCustomFieldsParamsWithHTTPClient(client *http.Client) *GetAcco
 	}
 }
 
-/*
-GetAccountCustomFieldsParams contains all the parameters to send to the API endpoint
+/* GetAccountCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the get account custom fields operation.
 
-	for the get account custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetAccountCustomFieldsParams struct {
 

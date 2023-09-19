@@ -45,8 +45,7 @@ func NewModifySubscriptionCustomFieldsNoContent() *ModifySubscriptionCustomField
 	return &ModifySubscriptionCustomFieldsNoContent{}
 }
 
-/*
-ModifySubscriptionCustomFieldsNoContent describes a response with status code 204, with default header values.
+/* ModifySubscriptionCustomFieldsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewModifySubscriptionCustomFieldsBadRequest() *ModifySubscriptionCustomFiel
 	return &ModifySubscriptionCustomFieldsBadRequest{}
 }
 
-/*
-ModifySubscriptionCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* ModifySubscriptionCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid subscription id supplied
 */

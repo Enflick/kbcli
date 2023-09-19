@@ -47,8 +47,7 @@ func NewCreateAccountTagsCreated() *CreateAccountTagsCreated {
 	return &CreateAccountTagsCreated{}
 }
 
-/*
-CreateAccountTagsCreated describes a response with status code 201, with default header values.
+/* CreateAccountTagsCreated describes a response with status code 201, with default header values.
 
 Tag created successfully
 */
@@ -114,8 +113,7 @@ func NewCreateAccountTagsBadRequest() *CreateAccountTagsBadRequest {
 	return &CreateAccountTagsBadRequest{}
 }
 
-/*
-CreateAccountTagsBadRequest describes a response with status code 400, with default header values.
+/* CreateAccountTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */

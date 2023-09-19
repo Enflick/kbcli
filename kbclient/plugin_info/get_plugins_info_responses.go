@@ -46,8 +46,7 @@ func NewGetPluginsInfoOK() *GetPluginsInfoOK {
 	return &GetPluginsInfoOK{}
 }
 
-/*
-GetPluginsInfoOK describes a response with status code 200, with default header values.
+/* GetPluginsInfoOK describes a response with status code 200, with default header values.
 
 successful operation
 */

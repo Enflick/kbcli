@@ -46,8 +46,7 @@ func NewGetAvailableBasePlansOK() *GetAvailableBasePlansOK {
 	return &GetAvailableBasePlansOK{}
 }
 
-/*
-GetAvailableBasePlansOK describes a response with status code 200, with default header values.
+/* GetAvailableBasePlansOK describes a response with status code 200, with default header values.
 
 successful operation
 */

@@ -53,12 +53,10 @@ func NewRefreshPaymentMethodsParamsWithHTTPClient(client *http.Client) *RefreshP
 	}
 }
 
-/*
-RefreshPaymentMethodsParams contains all the parameters to send to the API endpoint
+/* RefreshPaymentMethodsParams contains all the parameters to send to the API endpoint
+   for the refresh payment methods operation.
 
-	for the refresh payment methods operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type RefreshPaymentMethodsParams struct {
 

@@ -54,12 +54,10 @@ func NewModifyBundleCustomFieldsParamsWithHTTPClient(client *http.Client) *Modif
 	}
 }
 
-/*
-ModifyBundleCustomFieldsParams contains all the parameters to send to the API endpoint
+/* ModifyBundleCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the modify bundle custom fields operation.
 
-	for the modify bundle custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ModifyBundleCustomFieldsParams struct {
 

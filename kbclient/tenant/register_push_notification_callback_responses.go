@@ -47,8 +47,7 @@ func NewRegisterPushNotificationCallbackCreated() *RegisterPushNotificationCallb
 	return &RegisterPushNotificationCallbackCreated{}
 }
 
-/*
-RegisterPushNotificationCallbackCreated describes a response with status code 201, with default header values.
+/* RegisterPushNotificationCallbackCreated describes a response with status code 201, with default header values.
 
 Push notification registered successfully
 */
@@ -116,8 +115,7 @@ func NewRegisterPushNotificationCallbackBadRequest() *RegisterPushNotificationCa
 	return &RegisterPushNotificationCallbackBadRequest{}
 }
 
-/*
-RegisterPushNotificationCallbackBadRequest describes a response with status code 400, with default header values.
+/* RegisterPushNotificationCallbackBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

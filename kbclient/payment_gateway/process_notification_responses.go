@@ -44,8 +44,7 @@ func NewProcessNotificationOK() *ProcessNotificationOK {
 	return &ProcessNotificationOK{}
 }
 
-/*
-ProcessNotificationOK describes a response with status code 200, with default header values.
+/* ProcessNotificationOK describes a response with status code 200, with default header values.
 
 Successful
 */

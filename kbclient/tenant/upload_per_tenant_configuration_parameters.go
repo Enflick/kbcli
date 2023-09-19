@@ -52,12 +52,10 @@ func NewUploadPerTenantConfigurationParamsWithHTTPClient(client *http.Client) *U
 	}
 }
 
-/*
-UploadPerTenantConfigurationParams contains all the parameters to send to the API endpoint
+/* UploadPerTenantConfigurationParams contains all the parameters to send to the API endpoint
+   for the upload per tenant configuration operation.
 
-	for the upload per tenant configuration operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UploadPerTenantConfigurationParams struct {
 

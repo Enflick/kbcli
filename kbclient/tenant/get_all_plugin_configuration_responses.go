@@ -47,8 +47,7 @@ func NewGetAllPluginConfigurationOK() *GetAllPluginConfigurationOK {
 	return &GetAllPluginConfigurationOK{}
 }
 
-/*
-GetAllPluginConfigurationOK describes a response with status code 200, with default header values.
+/* GetAllPluginConfigurationOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetAllPluginConfigurationBadRequest() *GetAllPluginConfigurationBadReque
 	return &GetAllPluginConfigurationBadRequest{}
 }
 
-/*
-GetAllPluginConfigurationBadRequest describes a response with status code 400, with default header values.
+/* GetAllPluginConfigurationBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

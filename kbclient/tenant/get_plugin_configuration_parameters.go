@@ -52,12 +52,10 @@ func NewGetPluginConfigurationParamsWithHTTPClient(client *http.Client) *GetPlug
 	}
 }
 
-/*
-GetPluginConfigurationParams contains all the parameters to send to the API endpoint
+/* GetPluginConfigurationParams contains all the parameters to send to the API endpoint
+   for the get plugin configuration operation.
 
-	for the get plugin configuration operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPluginConfigurationParams struct {
 

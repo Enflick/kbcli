@@ -52,12 +52,10 @@ func NewGetInvoiceCustomFieldsParamsWithHTTPClient(client *http.Client) *GetInvo
 	}
 }
 
-/*
-GetInvoiceCustomFieldsParams contains all the parameters to send to the API endpoint
+/* GetInvoiceCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the get invoice custom fields operation.
 
-	for the get invoice custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetInvoiceCustomFieldsParams struct {
 

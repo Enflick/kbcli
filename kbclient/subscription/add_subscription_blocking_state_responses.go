@@ -47,8 +47,7 @@ func NewAddSubscriptionBlockingStateCreated() *AddSubscriptionBlockingStateCreat
 	return &AddSubscriptionBlockingStateCreated{}
 }
 
-/*
-AddSubscriptionBlockingStateCreated describes a response with status code 201, with default header values.
+/* AddSubscriptionBlockingStateCreated describes a response with status code 201, with default header values.
 
 Blocking state created successfully
 */
@@ -114,8 +113,7 @@ func NewAddSubscriptionBlockingStateBadRequest() *AddSubscriptionBlockingStateBa
 	return &AddSubscriptionBlockingStateBadRequest{}
 }
 
-/*
-AddSubscriptionBlockingStateBadRequest describes a response with status code 400, with default header values.
+/* AddSubscriptionBlockingStateBadRequest describes a response with status code 400, with default header values.
 
 Invalid subscription id supplied
 */
@@ -171,8 +169,7 @@ func NewAddSubscriptionBlockingStateNotFound() *AddSubscriptionBlockingStateNotF
 	return &AddSubscriptionBlockingStateNotFound{}
 }
 
-/*
-AddSubscriptionBlockingStateNotFound describes a response with status code 404, with default header values.
+/* AddSubscriptionBlockingStateNotFound describes a response with status code 404, with default header values.
 
 Subscription not found
 */

@@ -53,12 +53,10 @@ func NewGetAccountTagsParamsWithHTTPClient(client *http.Client) *GetAccountTagsP
 	}
 }
 
-/*
-GetAccountTagsParams contains all the parameters to send to the API endpoint
+/* GetAccountTagsParams contains all the parameters to send to the API endpoint
+   for the get account tags operation.
 
-	for the get account tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetAccountTagsParams struct {
 

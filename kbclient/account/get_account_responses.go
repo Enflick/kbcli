@@ -47,8 +47,7 @@ func NewGetAccountOK() *GetAccountOK {
 	return &GetAccountOK{}
 }
 
-/*
-GetAccountOK describes a response with status code 200, with default header values.
+/* GetAccountOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetAccountBadRequest() *GetAccountBadRequest {
 	return &GetAccountBadRequest{}
 }
 
-/*
-GetAccountBadRequest describes a response with status code 400, with default header values.
+/* GetAccountBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -173,8 +171,7 @@ func NewGetAccountNotFound() *GetAccountNotFound {
 	return &GetAccountNotFound{}
 }
 
-/*
-GetAccountNotFound describes a response with status code 404, with default header values.
+/* GetAccountNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

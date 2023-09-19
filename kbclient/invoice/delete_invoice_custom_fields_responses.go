@@ -45,8 +45,7 @@ func NewDeleteInvoiceCustomFieldsNoContent() *DeleteInvoiceCustomFieldsNoContent
 	return &DeleteInvoiceCustomFieldsNoContent{}
 }
 
-/*
-DeleteInvoiceCustomFieldsNoContent describes a response with status code 204, with default header values.
+/* DeleteInvoiceCustomFieldsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteInvoiceCustomFieldsBadRequest() *DeleteInvoiceCustomFieldsBadReque
 	return &DeleteInvoiceCustomFieldsBadRequest{}
 }
 
-/*
-DeleteInvoiceCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* DeleteInvoiceCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid invoice id supplied
 */

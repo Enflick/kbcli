@@ -47,8 +47,7 @@ func NewGetInvoiceAuditLogsWithHistoryOK() *GetInvoiceAuditLogsWithHistoryOK {
 	return &GetInvoiceAuditLogsWithHistoryOK{}
 }
 
-/*
-GetInvoiceAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
+/* GetInvoiceAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetInvoiceAuditLogsWithHistoryNotFound() *GetInvoiceAuditLogsWithHistory
 	return &GetInvoiceAuditLogsWithHistoryNotFound{}
 }
 
-/*
-GetInvoiceAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
+/* GetInvoiceAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
 
 Invoice not found
 */

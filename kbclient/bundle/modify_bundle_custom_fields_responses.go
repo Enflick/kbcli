@@ -45,8 +45,7 @@ func NewModifyBundleCustomFieldsNoContent() *ModifyBundleCustomFieldsNoContent {
 	return &ModifyBundleCustomFieldsNoContent{}
 }
 
-/*
-ModifyBundleCustomFieldsNoContent describes a response with status code 204, with default header values.
+/* ModifyBundleCustomFieldsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewModifyBundleCustomFieldsBadRequest() *ModifyBundleCustomFieldsBadRequest
 	return &ModifyBundleCustomFieldsBadRequest{}
 }
 
-/*
-ModifyBundleCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* ModifyBundleCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid bundle id supplied
 */

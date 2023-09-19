@@ -53,12 +53,10 @@ func NewPayAllInvoicesParamsWithHTTPClient(client *http.Client) *PayAllInvoicesP
 	}
 }
 
-/*
-PayAllInvoicesParams contains all the parameters to send to the API endpoint
+/* PayAllInvoicesParams contains all the parameters to send to the API endpoint
+   for the pay all invoices operation.
 
-	for the pay all invoices operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type PayAllInvoicesParams struct {
 

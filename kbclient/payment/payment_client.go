@@ -113,7 +113,7 @@ type ClientService interface {
 }
 
 /*
-CancelScheduledPaymentTransactionByExternalKey cancels a scheduled payment attempt retry
+  CancelScheduledPaymentTransactionByExternalKey cancels a scheduled payment attempt retry
 */
 func (a *Client) CancelScheduledPaymentTransactionByExternalKey(ctx context.Context, params *CancelScheduledPaymentTransactionByExternalKeyParams) (*CancelScheduledPaymentTransactionByExternalKeyNoContent, error) {
 	// TODO: Validate the params before sending
@@ -172,7 +172,7 @@ func (a *Client) CancelScheduledPaymentTransactionByExternalKey(ctx context.Cont
 }
 
 /*
-CancelScheduledPaymentTransactionByID cancels a scheduled payment attempt retry
+  CancelScheduledPaymentTransactionByID cancels a scheduled payment attempt retry
 */
 func (a *Client) CancelScheduledPaymentTransactionByID(ctx context.Context, params *CancelScheduledPaymentTransactionByIDParams) (*CancelScheduledPaymentTransactionByIDNoContent, error) {
 	// TODO: Validate the params before sending
@@ -231,7 +231,7 @@ func (a *Client) CancelScheduledPaymentTransactionByID(ctx context.Context, para
 }
 
 /*
-CaptureAuthorization captures an existing authorization
+  CaptureAuthorization captures an existing authorization
 */
 func (a *Client) CaptureAuthorization(ctx context.Context, params *CaptureAuthorizationParams) (*CaptureAuthorizationCreated, error) {
 	// TODO: Validate the params before sending
@@ -319,7 +319,7 @@ func (a *Client) CaptureAuthorization(ctx context.Context, params *CaptureAuthor
 }
 
 /*
-CaptureAuthorizationByExternalKey captures an existing authorization
+  CaptureAuthorizationByExternalKey captures an existing authorization
 */
 func (a *Client) CaptureAuthorizationByExternalKey(ctx context.Context, params *CaptureAuthorizationByExternalKeyParams) (*CaptureAuthorizationByExternalKeyCreated, error) {
 	// TODO: Validate the params before sending
@@ -407,7 +407,7 @@ func (a *Client) CaptureAuthorizationByExternalKey(ctx context.Context, params *
 }
 
 /*
-ChargebackPayment records a chargeback
+  ChargebackPayment records a chargeback
 */
 func (a *Client) ChargebackPayment(ctx context.Context, params *ChargebackPaymentParams) (*ChargebackPaymentCreated, error) {
 	// TODO: Validate the params before sending
@@ -495,7 +495,7 @@ func (a *Client) ChargebackPayment(ctx context.Context, params *ChargebackPaymen
 }
 
 /*
-ChargebackPaymentByExternalKey records a chargeback
+  ChargebackPaymentByExternalKey records a chargeback
 */
 func (a *Client) ChargebackPaymentByExternalKey(ctx context.Context, params *ChargebackPaymentByExternalKeyParams) (*ChargebackPaymentByExternalKeyCreated, error) {
 	// TODO: Validate the params before sending
@@ -583,7 +583,7 @@ func (a *Client) ChargebackPaymentByExternalKey(ctx context.Context, params *Cha
 }
 
 /*
-ChargebackReversalPayment records a chargeback reversal
+  ChargebackReversalPayment records a chargeback reversal
 */
 func (a *Client) ChargebackReversalPayment(ctx context.Context, params *ChargebackReversalPaymentParams) (*ChargebackReversalPaymentCreated, error) {
 	// TODO: Validate the params before sending
@@ -671,7 +671,7 @@ func (a *Client) ChargebackReversalPayment(ctx context.Context, params *Chargeba
 }
 
 /*
-ChargebackReversalPaymentByExternalKey records a chargeback reversal
+  ChargebackReversalPaymentByExternalKey records a chargeback reversal
 */
 func (a *Client) ChargebackReversalPaymentByExternalKey(ctx context.Context, params *ChargebackReversalPaymentByExternalKeyParams) (*ChargebackReversalPaymentByExternalKeyCreated, error) {
 	// TODO: Validate the params before sending
@@ -759,7 +759,7 @@ func (a *Client) ChargebackReversalPaymentByExternalKey(ctx context.Context, par
 }
 
 /*
-CompleteTransaction completes an existing transaction
+  CompleteTransaction completes an existing transaction
 */
 func (a *Client) CompleteTransaction(ctx context.Context, params *CompleteTransactionParams) (*CompleteTransactionNoContent, error) {
 	// TODO: Validate the params before sending
@@ -818,7 +818,7 @@ func (a *Client) CompleteTransaction(ctx context.Context, params *CompleteTransa
 }
 
 /*
-CompleteTransactionByExternalKey completes an existing transaction
+  CompleteTransactionByExternalKey completes an existing transaction
 */
 func (a *Client) CompleteTransactionByExternalKey(ctx context.Context, params *CompleteTransactionByExternalKeyParams) (*CompleteTransactionByExternalKeyNoContent, error) {
 	// TODO: Validate the params before sending
@@ -877,7 +877,7 @@ func (a *Client) CompleteTransactionByExternalKey(ctx context.Context, params *C
 }
 
 /*
-CreateComboPayment combos api to create a new payment transaction on a existing or not account
+  CreateComboPayment combos api to create a new payment transaction on a existing or not account
 */
 func (a *Client) CreateComboPayment(ctx context.Context, params *CreateComboPaymentParams) (*CreateComboPaymentCreated, error) {
 	// TODO: Validate the params before sending
@@ -965,7 +965,7 @@ func (a *Client) CreateComboPayment(ctx context.Context, params *CreateComboPaym
 }
 
 /*
-CreatePaymentCustomFields adds custom fields to payment
+  CreatePaymentCustomFields adds custom fields to payment
 */
 func (a *Client) CreatePaymentCustomFields(ctx context.Context, params *CreatePaymentCustomFieldsParams) (*CreatePaymentCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
@@ -1053,7 +1053,7 @@ func (a *Client) CreatePaymentCustomFields(ctx context.Context, params *CreatePa
 }
 
 /*
-CreatePaymentTags adds tags to payment payment
+  CreatePaymentTags adds tags to payment payment
 */
 func (a *Client) CreatePaymentTags(ctx context.Context, params *CreatePaymentTagsParams) (*CreatePaymentTagsCreated, error) {
 	// TODO: Validate the params before sending
@@ -1141,7 +1141,7 @@ func (a *Client) CreatePaymentTags(ctx context.Context, params *CreatePaymentTag
 }
 
 /*
-DeletePaymentCustomFields removes custom fields from payment payment
+  DeletePaymentCustomFields removes custom fields from payment payment
 */
 func (a *Client) DeletePaymentCustomFields(ctx context.Context, params *DeletePaymentCustomFieldsParams) (*DeletePaymentCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1200,7 +1200,7 @@ func (a *Client) DeletePaymentCustomFields(ctx context.Context, params *DeletePa
 }
 
 /*
-DeletePaymentTags removes tags from payment payment
+  DeletePaymentTags removes tags from payment payment
 */
 func (a *Client) DeletePaymentTags(ctx context.Context, params *DeletePaymentTagsParams) (*DeletePaymentTagsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1259,7 +1259,7 @@ func (a *Client) DeletePaymentTags(ctx context.Context, params *DeletePaymentTag
 }
 
 /*
-GetPayment retrieves a payment by id
+  GetPayment retrieves a payment by id
 */
 func (a *Client) GetPayment(ctx context.Context, params *GetPaymentParams) (*GetPaymentOK, error) {
 	// TODO: Validate the params before sending
@@ -1306,7 +1306,7 @@ func (a *Client) GetPayment(ctx context.Context, params *GetPaymentParams) (*Get
 }
 
 /*
-GetPaymentAttemptAuditLogsWithHistory retrieves payment attempt audit logs with history by id
+  GetPaymentAttemptAuditLogsWithHistory retrieves payment attempt audit logs with history by id
 */
 func (a *Client) GetPaymentAttemptAuditLogsWithHistory(ctx context.Context, params *GetPaymentAttemptAuditLogsWithHistoryParams) (*GetPaymentAttemptAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
@@ -1353,7 +1353,7 @@ func (a *Client) GetPaymentAttemptAuditLogsWithHistory(ctx context.Context, para
 }
 
 /*
-GetPaymentAuditLogsWithHistory retrieves payment audit logs with history by id
+  GetPaymentAuditLogsWithHistory retrieves payment audit logs with history by id
 */
 func (a *Client) GetPaymentAuditLogsWithHistory(ctx context.Context, params *GetPaymentAuditLogsWithHistoryParams) (*GetPaymentAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
@@ -1400,7 +1400,7 @@ func (a *Client) GetPaymentAuditLogsWithHistory(ctx context.Context, params *Get
 }
 
 /*
-GetPaymentByExternalKey retrieves a payment by external key
+  GetPaymentByExternalKey retrieves a payment by external key
 */
 func (a *Client) GetPaymentByExternalKey(ctx context.Context, params *GetPaymentByExternalKeyParams) (*GetPaymentByExternalKeyOK, error) {
 	// TODO: Validate the params before sending
@@ -1447,7 +1447,7 @@ func (a *Client) GetPaymentByExternalKey(ctx context.Context, params *GetPayment
 }
 
 /*
-GetPaymentCustomFields retrieves payment custom fields
+  GetPaymentCustomFields retrieves payment custom fields
 */
 func (a *Client) GetPaymentCustomFields(ctx context.Context, params *GetPaymentCustomFieldsParams) (*GetPaymentCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
@@ -1494,7 +1494,7 @@ func (a *Client) GetPaymentCustomFields(ctx context.Context, params *GetPaymentC
 }
 
 /*
-GetPaymentTags retrieves payment payment tags
+  GetPaymentTags retrieves payment payment tags
 */
 func (a *Client) GetPaymentTags(ctx context.Context, params *GetPaymentTagsParams) (*GetPaymentTagsOK, error) {
 	// TODO: Validate the params before sending
@@ -1541,7 +1541,7 @@ func (a *Client) GetPaymentTags(ctx context.Context, params *GetPaymentTagsParam
 }
 
 /*
-GetPayments gets payments
+  GetPayments gets payments
 */
 func (a *Client) GetPayments(ctx context.Context, params *GetPaymentsParams) (*GetPaymentsOK, error) {
 	// TODO: Validate the params before sending
@@ -1588,7 +1588,7 @@ func (a *Client) GetPayments(ctx context.Context, params *GetPaymentsParams) (*G
 }
 
 /*
-ModifyPaymentCustomFields modifies custom fields to payment
+  ModifyPaymentCustomFields modifies custom fields to payment
 */
 func (a *Client) ModifyPaymentCustomFields(ctx context.Context, params *ModifyPaymentCustomFieldsParams) (*ModifyPaymentCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1647,7 +1647,7 @@ func (a *Client) ModifyPaymentCustomFields(ctx context.Context, params *ModifyPa
 }
 
 /*
-RefundPayment refunds an existing payment
+  RefundPayment refunds an existing payment
 */
 func (a *Client) RefundPayment(ctx context.Context, params *RefundPaymentParams) (*RefundPaymentCreated, error) {
 	// TODO: Validate the params before sending
@@ -1735,7 +1735,7 @@ func (a *Client) RefundPayment(ctx context.Context, params *RefundPaymentParams)
 }
 
 /*
-RefundPaymentByExternalKey refunds an existing payment
+  RefundPaymentByExternalKey refunds an existing payment
 */
 func (a *Client) RefundPaymentByExternalKey(ctx context.Context, params *RefundPaymentByExternalKeyParams) (*RefundPaymentByExternalKeyCreated, error) {
 	// TODO: Validate the params before sending
@@ -1823,7 +1823,7 @@ func (a *Client) RefundPaymentByExternalKey(ctx context.Context, params *RefundP
 }
 
 /*
-SearchPayments searches payments
+  SearchPayments searches payments
 */
 func (a *Client) SearchPayments(ctx context.Context, params *SearchPaymentsParams) (*SearchPaymentsOK, error) {
 	// TODO: Validate the params before sending
@@ -1870,7 +1870,7 @@ func (a *Client) SearchPayments(ctx context.Context, params *SearchPaymentsParam
 }
 
 /*
-VoidPayment voids an existing payment
+  VoidPayment voids an existing payment
 */
 func (a *Client) VoidPayment(ctx context.Context, params *VoidPaymentParams) (*VoidPaymentNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1929,7 +1929,7 @@ func (a *Client) VoidPayment(ctx context.Context, params *VoidPaymentParams) (*V
 }
 
 /*
-VoidPaymentByExternalKey voids an existing payment
+  VoidPaymentByExternalKey voids an existing payment
 */
 func (a *Client) VoidPaymentByExternalKey(ctx context.Context, params *VoidPaymentByExternalKeyParams) (*VoidPaymentByExternalKeyNoContent, error) {
 	// TODO: Validate the params before sending

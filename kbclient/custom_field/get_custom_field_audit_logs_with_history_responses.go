@@ -47,8 +47,7 @@ func NewGetCustomFieldAuditLogsWithHistoryOK() *GetCustomFieldAuditLogsWithHisto
 	return &GetCustomFieldAuditLogsWithHistoryOK{}
 }
 
-/*
-GetCustomFieldAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
+/* GetCustomFieldAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetCustomFieldAuditLogsWithHistoryNotFound() *GetCustomFieldAuditLogsWit
 	return &GetCustomFieldAuditLogsWithHistoryNotFound{}
 }
 
-/*
-GetCustomFieldAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
+/* GetCustomFieldAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

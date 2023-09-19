@@ -47,8 +47,7 @@ func NewGetPaymentMethodsForAccountOK() *GetPaymentMethodsForAccountOK {
 	return &GetPaymentMethodsForAccountOK{}
 }
 
-/*
-GetPaymentMethodsForAccountOK describes a response with status code 200, with default header values.
+/* GetPaymentMethodsForAccountOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetPaymentMethodsForAccountBadRequest() *GetPaymentMethodsForAccountBadR
 	return &GetPaymentMethodsForAccountBadRequest{}
 }
 
-/*
-GetPaymentMethodsForAccountBadRequest describes a response with status code 400, with default header values.
+/* GetPaymentMethodsForAccountBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -171,8 +169,7 @@ func NewGetPaymentMethodsForAccountNotFound() *GetPaymentMethodsForAccountNotFou
 	return &GetPaymentMethodsForAccountNotFound{}
 }
 
-/*
-GetPaymentMethodsForAccountNotFound describes a response with status code 404, with default header values.
+/* GetPaymentMethodsForAccountNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

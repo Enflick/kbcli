@@ -47,8 +47,7 @@ func NewTransferBundleCreated() *TransferBundleCreated {
 	return &TransferBundleCreated{}
 }
 
-/*
-TransferBundleCreated describes a response with status code 201, with default header values.
+/* TransferBundleCreated describes a response with status code 201, with default header values.
 
 Bundle transferred successfully
 */
@@ -116,8 +115,7 @@ func NewTransferBundleBadRequest() *TransferBundleBadRequest {
 	return &TransferBundleBadRequest{}
 }
 
-/*
-TransferBundleBadRequest describes a response with status code 400, with default header values.
+/* TransferBundleBadRequest describes a response with status code 400, with default header values.
 
 Invalid bundle id, requested date or policy supplied
 */
@@ -173,8 +171,7 @@ func NewTransferBundleNotFound() *TransferBundleNotFound {
 	return &TransferBundleNotFound{}
 }
 
-/*
-TransferBundleNotFound describes a response with status code 404, with default header values.
+/* TransferBundleNotFound describes a response with status code 404, with default header values.
 
 Bundle not found
 */

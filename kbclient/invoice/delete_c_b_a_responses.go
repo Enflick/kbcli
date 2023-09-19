@@ -45,8 +45,7 @@ func NewDeleteCBANoContent() *DeleteCBANoContent {
 	return &DeleteCBANoContent{}
 }
 
-/*
-DeleteCBANoContent describes a response with status code 204, with default header values.
+/* DeleteCBANoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteCBABadRequest() *DeleteCBABadRequest {
 	return &DeleteCBABadRequest{}
 }
 
-/*
-DeleteCBABadRequest describes a response with status code 400, with default header values.
+/* DeleteCBABadRequest describes a response with status code 400, with default header values.
 
 Invalid account id, invoice id or invoice item id supplied
 */
@@ -159,8 +157,7 @@ func NewDeleteCBANotFound() *DeleteCBANotFound {
 	return &DeleteCBANotFound{}
 }
 
-/*
-DeleteCBANotFound describes a response with status code 404, with default header values.
+/* DeleteCBANotFound describes a response with status code 404, with default header values.
 
 Account or invoice not found
 */

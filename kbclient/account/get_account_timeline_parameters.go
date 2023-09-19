@@ -53,12 +53,10 @@ func NewGetAccountTimelineParamsWithHTTPClient(client *http.Client) *GetAccountT
 	}
 }
 
-/*
-GetAccountTimelineParams contains all the parameters to send to the API endpoint
+/* GetAccountTimelineParams contains all the parameters to send to the API endpoint
+   for the get account timeline operation.
 
-	for the get account timeline operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetAccountTimelineParams struct {
 

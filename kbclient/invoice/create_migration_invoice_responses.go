@@ -47,8 +47,7 @@ func NewCreateMigrationInvoiceCreated() *CreateMigrationInvoiceCreated {
 	return &CreateMigrationInvoiceCreated{}
 }
 
-/*
-CreateMigrationInvoiceCreated describes a response with status code 201, with default header values.
+/* CreateMigrationInvoiceCreated describes a response with status code 201, with default header values.
 
 Created migration invoice successfully
 */
@@ -116,8 +115,7 @@ func NewCreateMigrationInvoiceBadRequest() *CreateMigrationInvoiceBadRequest {
 	return &CreateMigrationInvoiceBadRequest{}
 }
 
-/*
-CreateMigrationInvoiceBadRequest describes a response with status code 400, with default header values.
+/* CreateMigrationInvoiceBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id or target datetime supplied
 */

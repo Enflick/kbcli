@@ -45,8 +45,7 @@ func NewDeleteInvoiceItemTagsNoContent() *DeleteInvoiceItemTagsNoContent {
 	return &DeleteInvoiceItemTagsNoContent{}
 }
 
-/*
-DeleteInvoiceItemTagsNoContent describes a response with status code 204, with default header values.
+/* DeleteInvoiceItemTagsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteInvoiceItemTagsBadRequest() *DeleteInvoiceItemTagsBadRequest {
 	return &DeleteInvoiceItemTagsBadRequest{}
 }
 
-/*
-DeleteInvoiceItemTagsBadRequest describes a response with status code 400, with default header values.
+/* DeleteInvoiceItemTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid invoice item id supplied
 */

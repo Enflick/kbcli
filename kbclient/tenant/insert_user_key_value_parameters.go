@@ -52,12 +52,10 @@ func NewInsertUserKeyValueParamsWithHTTPClient(client *http.Client) *InsertUserK
 	}
 }
 
-/*
-InsertUserKeyValueParams contains all the parameters to send to the API endpoint
+/* InsertUserKeyValueParams contains all the parameters to send to the API endpoint
+   for the insert user key value operation.
 
-	for the insert user key value operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type InsertUserKeyValueParams struct {
 

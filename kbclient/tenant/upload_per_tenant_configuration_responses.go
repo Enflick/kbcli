@@ -47,8 +47,7 @@ func NewUploadPerTenantConfigurationCreated() *UploadPerTenantConfigurationCreat
 	return &UploadPerTenantConfigurationCreated{}
 }
 
-/*
-UploadPerTenantConfigurationCreated describes a response with status code 201, with default header values.
+/* UploadPerTenantConfigurationCreated describes a response with status code 201, with default header values.
 
 Per tenant configuration uploaded successfully
 */
@@ -116,8 +115,7 @@ func NewUploadPerTenantConfigurationBadRequest() *UploadPerTenantConfigurationBa
 	return &UploadPerTenantConfigurationBadRequest{}
 }
 
-/*
-UploadPerTenantConfigurationBadRequest describes a response with status code 400, with default header values.
+/* UploadPerTenantConfigurationBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

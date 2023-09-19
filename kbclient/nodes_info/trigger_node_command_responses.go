@@ -45,8 +45,7 @@ func NewTriggerNodeCommandAccepted() *TriggerNodeCommandAccepted {
 	return &TriggerNodeCommandAccepted{}
 }
 
-/*
-TriggerNodeCommandAccepted describes a response with status code 202, with default header values.
+/* TriggerNodeCommandAccepted describes a response with status code 202, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewTriggerNodeCommandBadRequest() *TriggerNodeCommandBadRequest {
 	return &TriggerNodeCommandBadRequest{}
 }
 
-/*
-TriggerNodeCommandBadRequest describes a response with status code 400, with default header values.
+/* TriggerNodeCommandBadRequest describes a response with status code 400, with default header values.
 
 Invalid node command supplied
 */

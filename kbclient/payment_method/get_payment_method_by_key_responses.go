@@ -47,8 +47,7 @@ func NewGetPaymentMethodByKeyOK() *GetPaymentMethodByKeyOK {
 	return &GetPaymentMethodByKeyOK{}
 }
 
-/*
-GetPaymentMethodByKeyOK describes a response with status code 200, with default header values.
+/* GetPaymentMethodByKeyOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetPaymentMethodByKeyNotFound() *GetPaymentMethodByKeyNotFound {
 	return &GetPaymentMethodByKeyNotFound{}
 }
 
-/*
-GetPaymentMethodByKeyNotFound describes a response with status code 404, with default header values.
+/* GetPaymentMethodByKeyNotFound describes a response with status code 404, with default header values.
 
 Account or payment method not found
 */

@@ -45,8 +45,7 @@ func NewUncancelSubscriptionPlanNoContent() *UncancelSubscriptionPlanNoContent {
 	return &UncancelSubscriptionPlanNoContent{}
 }
 
-/*
-UncancelSubscriptionPlanNoContent describes a response with status code 204, with default header values.
+/* UncancelSubscriptionPlanNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewUncancelSubscriptionPlanBadRequest() *UncancelSubscriptionPlanBadRequest
 	return &UncancelSubscriptionPlanBadRequest{}
 }
 
-/*
-UncancelSubscriptionPlanBadRequest describes a response with status code 400, with default header values.
+/* UncancelSubscriptionPlanBadRequest describes a response with status code 400, with default header values.
 
 Invalid subscription id supplied
 */
@@ -159,8 +157,7 @@ func NewUncancelSubscriptionPlanNotFound() *UncancelSubscriptionPlanNotFound {
 	return &UncancelSubscriptionPlanNotFound{}
 }
 
-/*
-UncancelSubscriptionPlanNotFound describes a response with status code 404, with default header values.
+/* UncancelSubscriptionPlanNotFound describes a response with status code 404, with default header values.
 
 Entitlement not found
 */

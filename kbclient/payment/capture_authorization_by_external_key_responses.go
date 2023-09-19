@@ -47,8 +47,7 @@ func NewCaptureAuthorizationByExternalKeyCreated() *CaptureAuthorizationByExtern
 	return &CaptureAuthorizationByExternalKeyCreated{}
 }
 
-/*
-CaptureAuthorizationByExternalKeyCreated describes a response with status code 201, with default header values.
+/* CaptureAuthorizationByExternalKeyCreated describes a response with status code 201, with default header values.
 
 Payment transaction created successfully
 */
@@ -116,8 +115,7 @@ func NewCaptureAuthorizationByExternalKeyPaymentRequired() *CaptureAuthorization
 	return &CaptureAuthorizationByExternalKeyPaymentRequired{}
 }
 
-/*
-CaptureAuthorizationByExternalKeyPaymentRequired describes a response with status code 402, with default header values.
+/* CaptureAuthorizationByExternalKeyPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -173,8 +171,7 @@ func NewCaptureAuthorizationByExternalKeyNotFound() *CaptureAuthorizationByExter
 	return &CaptureAuthorizationByExternalKeyNotFound{}
 }
 
-/*
-CaptureAuthorizationByExternalKeyNotFound describes a response with status code 404, with default header values.
+/* CaptureAuthorizationByExternalKeyNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */
@@ -230,8 +227,7 @@ func NewCaptureAuthorizationByExternalKeyUnprocessableEntity() *CaptureAuthoriza
 	return &CaptureAuthorizationByExternalKeyUnprocessableEntity{}
 }
 
-/*
-CaptureAuthorizationByExternalKeyUnprocessableEntity describes a response with status code 422, with default header values.
+/* CaptureAuthorizationByExternalKeyUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -287,8 +283,7 @@ func NewCaptureAuthorizationByExternalKeyBadGateway() *CaptureAuthorizationByExt
 	return &CaptureAuthorizationByExternalKeyBadGateway{}
 }
 
-/*
-CaptureAuthorizationByExternalKeyBadGateway describes a response with status code 502, with default header values.
+/* CaptureAuthorizationByExternalKeyBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -344,8 +339,7 @@ func NewCaptureAuthorizationByExternalKeyServiceUnavailable() *CaptureAuthorizat
 	return &CaptureAuthorizationByExternalKeyServiceUnavailable{}
 }
 
-/*
-CaptureAuthorizationByExternalKeyServiceUnavailable describes a response with status code 503, with default header values.
+/* CaptureAuthorizationByExternalKeyServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -401,8 +395,7 @@ func NewCaptureAuthorizationByExternalKeyGatewayTimeout() *CaptureAuthorizationB
 	return &CaptureAuthorizationByExternalKeyGatewayTimeout{}
 }
 
-/*
-CaptureAuthorizationByExternalKeyGatewayTimeout describes a response with status code 504, with default header values.
+/* CaptureAuthorizationByExternalKeyGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

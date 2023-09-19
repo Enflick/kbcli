@@ -47,8 +47,7 @@ func NewChargebackReversalPaymentCreated() *ChargebackReversalPaymentCreated {
 	return &ChargebackReversalPaymentCreated{}
 }
 
-/*
-ChargebackReversalPaymentCreated describes a response with status code 201, with default header values.
+/* ChargebackReversalPaymentCreated describes a response with status code 201, with default header values.
 
 Payment transaction created successfully
 */
@@ -116,8 +115,7 @@ func NewChargebackReversalPaymentBadRequest() *ChargebackReversalPaymentBadReque
 	return &ChargebackReversalPaymentBadRequest{}
 }
 
-/*
-ChargebackReversalPaymentBadRequest describes a response with status code 400, with default header values.
+/* ChargebackReversalPaymentBadRequest describes a response with status code 400, with default header values.
 
 Invalid paymentId supplied
 */
@@ -173,8 +171,7 @@ func NewChargebackReversalPaymentPaymentRequired() *ChargebackReversalPaymentPay
 	return &ChargebackReversalPaymentPaymentRequired{}
 }
 
-/*
-ChargebackReversalPaymentPaymentRequired describes a response with status code 402, with default header values.
+/* ChargebackReversalPaymentPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -230,8 +227,7 @@ func NewChargebackReversalPaymentNotFound() *ChargebackReversalPaymentNotFound {
 	return &ChargebackReversalPaymentNotFound{}
 }
 
-/*
-ChargebackReversalPaymentNotFound describes a response with status code 404, with default header values.
+/* ChargebackReversalPaymentNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */
@@ -287,8 +283,7 @@ func NewChargebackReversalPaymentUnprocessableEntity() *ChargebackReversalPaymen
 	return &ChargebackReversalPaymentUnprocessableEntity{}
 }
 
-/*
-ChargebackReversalPaymentUnprocessableEntity describes a response with status code 422, with default header values.
+/* ChargebackReversalPaymentUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -344,8 +339,7 @@ func NewChargebackReversalPaymentBadGateway() *ChargebackReversalPaymentBadGatew
 	return &ChargebackReversalPaymentBadGateway{}
 }
 
-/*
-ChargebackReversalPaymentBadGateway describes a response with status code 502, with default header values.
+/* ChargebackReversalPaymentBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -401,8 +395,7 @@ func NewChargebackReversalPaymentServiceUnavailable() *ChargebackReversalPayment
 	return &ChargebackReversalPaymentServiceUnavailable{}
 }
 
-/*
-ChargebackReversalPaymentServiceUnavailable describes a response with status code 503, with default header values.
+/* ChargebackReversalPaymentServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -458,8 +451,7 @@ func NewChargebackReversalPaymentGatewayTimeout() *ChargebackReversalPaymentGate
 	return &ChargebackReversalPaymentGatewayTimeout{}
 }
 
-/*
-ChargebackReversalPaymentGatewayTimeout describes a response with status code 504, with default header values.
+/* ChargebackReversalPaymentGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

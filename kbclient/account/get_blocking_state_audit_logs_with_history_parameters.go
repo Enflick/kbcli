@@ -52,12 +52,10 @@ func NewGetBlockingStateAuditLogsWithHistoryParamsWithHTTPClient(client *http.Cl
 	}
 }
 
-/*
-GetBlockingStateAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+/* GetBlockingStateAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+   for the get blocking state audit logs with history operation.
 
-	for the get blocking state audit logs with history operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetBlockingStateAuditLogsWithHistoryParams struct {
 

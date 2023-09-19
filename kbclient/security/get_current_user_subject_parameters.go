@@ -52,12 +52,10 @@ func NewGetCurrentUserSubjectParamsWithHTTPClient(client *http.Client) *GetCurre
 	}
 }
 
-/*
-GetCurrentUserSubjectParams contains all the parameters to send to the API endpoint
+/* GetCurrentUserSubjectParams contains all the parameters to send to the API endpoint
+   for the get current user subject operation.
 
-	for the get current user subject operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetCurrentUserSubjectParams struct {
 	WithProfilingInfo     *string // If set, return KB hprof headers

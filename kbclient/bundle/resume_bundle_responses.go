@@ -45,8 +45,7 @@ func NewResumeBundleNoContent() *ResumeBundleNoContent {
 	return &ResumeBundleNoContent{}
 }
 
-/*
-ResumeBundleNoContent describes a response with status code 204, with default header values.
+/* ResumeBundleNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewResumeBundleBadRequest() *ResumeBundleBadRequest {
 	return &ResumeBundleBadRequest{}
 }
 
-/*
-ResumeBundleBadRequest describes a response with status code 400, with default header values.
+/* ResumeBundleBadRequest describes a response with status code 400, with default header values.
 
 Invalid bundle id supplied
 */
@@ -159,8 +157,7 @@ func NewResumeBundleNotFound() *ResumeBundleNotFound {
 	return &ResumeBundleNotFound{}
 }
 
-/*
-ResumeBundleNotFound describes a response with status code 404, with default header values.
+/* ResumeBundleNotFound describes a response with status code 404, with default header values.
 
 Bundle not found
 */

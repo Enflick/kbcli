@@ -47,8 +47,7 @@ func NewGetUsageOK() *GetUsageOK {
 	return &GetUsageOK{}
 }
 
-/*
-GetUsageOK describes a response with status code 200, with default header values.
+/* GetUsageOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetUsageBadRequest() *GetUsageBadRequest {
 	return &GetUsageBadRequest{}
 }
 
-/*
-GetUsageBadRequest describes a response with status code 400, with default header values.
+/* GetUsageBadRequest describes a response with status code 400, with default header values.
 
 Missing start date or end date
 */

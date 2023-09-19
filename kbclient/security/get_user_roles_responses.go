@@ -47,8 +47,7 @@ func NewGetUserRolesOK() *GetUserRolesOK {
 	return &GetUserRolesOK{}
 }
 
-/*
-GetUserRolesOK describes a response with status code 200, with default header values.
+/* GetUserRolesOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetUserRolesNotFound() *GetUserRolesNotFound {
 	return &GetUserRolesNotFound{}
 }
 
-/*
-GetUserRolesNotFound describes a response with status code 404, with default header values.
+/* GetUserRolesNotFound describes a response with status code 404, with default header values.
 
 The user does not exist or has been inactivated
 */

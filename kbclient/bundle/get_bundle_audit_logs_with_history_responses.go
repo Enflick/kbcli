@@ -47,8 +47,7 @@ func NewGetBundleAuditLogsWithHistoryOK() *GetBundleAuditLogsWithHistoryOK {
 	return &GetBundleAuditLogsWithHistoryOK{}
 }
 
-/*
-GetBundleAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
+/* GetBundleAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetBundleAuditLogsWithHistoryNotFound() *GetBundleAuditLogsWithHistoryNo
 	return &GetBundleAuditLogsWithHistoryNotFound{}
 }
 
-/*
-GetBundleAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
+/* GetBundleAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
 
 Subscription bundle not found
 */

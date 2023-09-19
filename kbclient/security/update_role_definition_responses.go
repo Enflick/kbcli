@@ -44,8 +44,7 @@ func NewUpdateRoleDefinitionNoContent() *UpdateRoleDefinitionNoContent {
 	return &UpdateRoleDefinitionNoContent{}
 }
 
-/*
-UpdateRoleDefinitionNoContent describes a response with status code 204, with default header values.
+/* UpdateRoleDefinitionNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */

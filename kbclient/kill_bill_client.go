@@ -38,16 +38,18 @@ import (
 // New creates a new kill bill client
 // The following snippet provides creating killbill client with basic auth.
 //
-//		   trp := httptransport.New("127.0.0.1:8080" /*host*/, "" /*basePath*/, nil /*schemes*/)
-//		   // Add missing handler. OpenAPI runtime doesn't have this by default
-//		   trp.Producers["text/xml"] = runtime.TextProducer()
-//		   // Set tro true to print http/debug logs
-//		   trp.Debug = enableDebug
-//		   // Setup basic auth
-//		   authWriter := httptransport.BasicAuth("admin", "password")
-//		   client := kbclient.New(trp, strfmt.Default)
-//	    // Use client
-//	    client.Accounts.GetAccount(...)
+//
+// 	   trp := httptransport.New("127.0.0.1:8080" /*host*/, "" /*basePath*/, nil /*schemes*/)
+// 	   // Add missing handler. OpenAPI runtime doesn't have this by default
+// 	   trp.Producers["text/xml"] = runtime.TextProducer()
+// 	   // Set tro true to print http/debug logs
+// 	   trp.Debug = enableDebug
+// 	   // Setup basic auth
+// 	   authWriter := httptransport.BasicAuth("admin", "password")
+// 	   client := kbclient.New(trp, strfmt.Default)
+//     // Use client
+//     client.Accounts.GetAccount(...)
+//
 func New(transport runtime.ClientTransport,
 	formats strfmt.Registry,
 	authInfo runtime.ClientAuthInfoWriter,

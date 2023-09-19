@@ -45,8 +45,7 @@ func NewDeleteBundleCustomFieldsNoContent() *DeleteBundleCustomFieldsNoContent {
 	return &DeleteBundleCustomFieldsNoContent{}
 }
 
-/*
-DeleteBundleCustomFieldsNoContent describes a response with status code 204, with default header values.
+/* DeleteBundleCustomFieldsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteBundleCustomFieldsBadRequest() *DeleteBundleCustomFieldsBadRequest
 	return &DeleteBundleCustomFieldsBadRequest{}
 }
 
-/*
-DeleteBundleCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* DeleteBundleCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid bundle id supplied
 */

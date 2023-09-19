@@ -54,12 +54,10 @@ func NewAddSimplePlanParamsWithHTTPClient(client *http.Client) *AddSimplePlanPar
 	}
 }
 
-/*
-AddSimplePlanParams contains all the parameters to send to the API endpoint
+/* AddSimplePlanParams contains all the parameters to send to the API endpoint
+   for the add simple plan operation.
 
-	for the add simple plan operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type AddSimplePlanParams struct {
 

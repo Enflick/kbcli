@@ -47,8 +47,7 @@ func NewGetSubscriptionByKeyOK() *GetSubscriptionByKeyOK {
 	return &GetSubscriptionByKeyOK{}
 }
 
-/*
-GetSubscriptionByKeyOK describes a response with status code 200, with default header values.
+/* GetSubscriptionByKeyOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetSubscriptionByKeyNotFound() *GetSubscriptionByKeyNotFound {
 	return &GetSubscriptionByKeyNotFound{}
 }
 
-/*
-GetSubscriptionByKeyNotFound describes a response with status code 404, with default header values.
+/* GetSubscriptionByKeyNotFound describes a response with status code 404, with default header values.
 
 Subscription not found
 */

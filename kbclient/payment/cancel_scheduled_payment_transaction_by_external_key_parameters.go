@@ -52,12 +52,10 @@ func NewCancelScheduledPaymentTransactionByExternalKeyParamsWithHTTPClient(clien
 	}
 }
 
-/*
-CancelScheduledPaymentTransactionByExternalKeyParams contains all the parameters to send to the API endpoint
+/* CancelScheduledPaymentTransactionByExternalKeyParams contains all the parameters to send to the API endpoint
+   for the cancel scheduled payment transaction by external key operation.
 
-	for the cancel scheduled payment transaction by external key operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CancelScheduledPaymentTransactionByExternalKeyParams struct {
 

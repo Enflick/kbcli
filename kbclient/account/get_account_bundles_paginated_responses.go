@@ -47,8 +47,7 @@ func NewGetAccountBundlesPaginatedOK() *GetAccountBundlesPaginatedOK {
 	return &GetAccountBundlesPaginatedOK{}
 }
 
-/*
-GetAccountBundlesPaginatedOK describes a response with status code 200, with default header values.
+/* GetAccountBundlesPaginatedOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetAccountBundlesPaginatedBadRequest() *GetAccountBundlesPaginatedBadReq
 	return &GetAccountBundlesPaginatedBadRequest{}
 }
 
-/*
-GetAccountBundlesPaginatedBadRequest describes a response with status code 400, with default header values.
+/* GetAccountBundlesPaginatedBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -171,8 +169,7 @@ func NewGetAccountBundlesPaginatedNotFound() *GetAccountBundlesPaginatedNotFound
 	return &GetAccountBundlesPaginatedNotFound{}
 }
 
-/*
-GetAccountBundlesPaginatedNotFound describes a response with status code 404, with default header values.
+/* GetAccountBundlesPaginatedNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

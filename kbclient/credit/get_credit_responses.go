@@ -47,8 +47,7 @@ func NewGetCreditOK() *GetCreditOK {
 	return &GetCreditOK{}
 }
 
-/*
-GetCreditOK describes a response with status code 200, with default header values.
+/* GetCreditOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetCreditBadRequest() *GetCreditBadRequest {
 	return &GetCreditBadRequest{}
 }
 
-/*
-GetCreditBadRequest describes a response with status code 400, with default header values.
+/* GetCreditBadRequest describes a response with status code 400, with default header values.
 
 Invalid credit id supplied
 */
@@ -173,8 +171,7 @@ func NewGetCreditNotFound() *GetCreditNotFound {
 	return &GetCreditNotFound{}
 }
 
-/*
-GetCreditNotFound describes a response with status code 404, with default header values.
+/* GetCreditNotFound describes a response with status code 404, with default header values.
 
 Credit not found
 */

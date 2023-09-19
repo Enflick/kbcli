@@ -46,8 +46,7 @@ func NewSearchPaymentMethodsOK() *SearchPaymentMethodsOK {
 	return &SearchPaymentMethodsOK{}
 }
 
-/*
-SearchPaymentMethodsOK describes a response with status code 200, with default header values.
+/* SearchPaymentMethodsOK describes a response with status code 200, with default header values.
 
 successful operation
 */

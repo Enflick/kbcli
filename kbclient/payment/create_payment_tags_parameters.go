@@ -52,12 +52,10 @@ func NewCreatePaymentTagsParamsWithHTTPClient(client *http.Client) *CreatePaymen
 	}
 }
 
-/*
-CreatePaymentTagsParams contains all the parameters to send to the API endpoint
+/* CreatePaymentTagsParams contains all the parameters to send to the API endpoint
+   for the create payment tags operation.
 
-	for the create payment tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreatePaymentTagsParams struct {
 

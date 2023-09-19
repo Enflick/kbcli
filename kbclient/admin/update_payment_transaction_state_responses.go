@@ -45,8 +45,7 @@ func NewUpdatePaymentTransactionStateNoContent() *UpdatePaymentTransactionStateN
 	return &UpdatePaymentTransactionStateNoContent{}
 }
 
-/*
-UpdatePaymentTransactionStateNoContent describes a response with status code 204, with default header values.
+/* UpdatePaymentTransactionStateNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewUpdatePaymentTransactionStateBadRequest() *UpdatePaymentTransactionState
 	return &UpdatePaymentTransactionStateBadRequest{}
 }
 
-/*
-UpdatePaymentTransactionStateBadRequest describes a response with status code 400, with default header values.
+/* UpdatePaymentTransactionStateBadRequest describes a response with status code 400, with default header values.
 
 Invalid account data supplied
 */

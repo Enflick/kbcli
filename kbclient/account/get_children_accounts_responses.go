@@ -47,8 +47,7 @@ func NewGetChildrenAccountsOK() *GetChildrenAccountsOK {
 	return &GetChildrenAccountsOK{}
 }
 
-/*
-GetChildrenAccountsOK describes a response with status code 200, with default header values.
+/* GetChildrenAccountsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetChildrenAccountsBadRequest() *GetChildrenAccountsBadRequest {
 	return &GetChildrenAccountsBadRequest{}
 }
 
-/*
-GetChildrenAccountsBadRequest describes a response with status code 400, with default header values.
+/* GetChildrenAccountsBadRequest describes a response with status code 400, with default header values.
 
 Invalid parent account id supplied
 */
@@ -171,8 +169,7 @@ func NewGetChildrenAccountsNotFound() *GetChildrenAccountsNotFound {
 	return &GetChildrenAccountsNotFound{}
 }
 
-/*
-GetChildrenAccountsNotFound describes a response with status code 404, with default header values.
+/* GetChildrenAccountsNotFound describes a response with status code 404, with default header values.
 
 Parent Account not found
 */

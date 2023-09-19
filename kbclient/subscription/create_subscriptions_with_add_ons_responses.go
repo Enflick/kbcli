@@ -46,8 +46,7 @@ func NewCreateSubscriptionsWithAddOnsCreated() *CreateSubscriptionsWithAddOnsCre
 	return &CreateSubscriptionsWithAddOnsCreated{}
 }
 
-/*
-CreateSubscriptionsWithAddOnsCreated describes a response with status code 201, with default header values.
+/* CreateSubscriptionsWithAddOnsCreated describes a response with status code 201, with default header values.
 
 Subscriptions created successfully
 */

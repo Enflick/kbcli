@@ -47,8 +47,7 @@ func NewGetTenantByAPIKeyOK() *GetTenantByAPIKeyOK {
 	return &GetTenantByAPIKeyOK{}
 }
 
-/*
-GetTenantByAPIKeyOK describes a response with status code 200, with default header values.
+/* GetTenantByAPIKeyOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetTenantByAPIKeyNotFound() *GetTenantByAPIKeyNotFound {
 	return &GetTenantByAPIKeyNotFound{}
 }
 
-/*
-GetTenantByAPIKeyNotFound describes a response with status code 404, with default header values.
+/* GetTenantByAPIKeyNotFound describes a response with status code 404, with default header values.
 
 Tenant not found
 */

@@ -53,12 +53,10 @@ func NewPauseBundleParamsWithHTTPClient(client *http.Client) *PauseBundleParams 
 	}
 }
 
-/*
-PauseBundleParams contains all the parameters to send to the API endpoint
+/* PauseBundleParams contains all the parameters to send to the API endpoint
+   for the pause bundle operation.
 
-	for the pause bundle operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type PauseBundleParams struct {
 

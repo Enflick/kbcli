@@ -45,8 +45,7 @@ func NewCancelScheduledPaymentTransactionByExternalKeyNoContent() *CancelSchedul
 	return &CancelScheduledPaymentTransactionByExternalKeyNoContent{}
 }
 
-/*
-CancelScheduledPaymentTransactionByExternalKeyNoContent describes a response with status code 204, with default header values.
+/* CancelScheduledPaymentTransactionByExternalKeyNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewCancelScheduledPaymentTransactionByExternalKeyBadRequest() *CancelSchedu
 	return &CancelScheduledPaymentTransactionByExternalKeyBadRequest{}
 }
 
-/*
-CancelScheduledPaymentTransactionByExternalKeyBadRequest describes a response with status code 400, with default header values.
+/* CancelScheduledPaymentTransactionByExternalKeyBadRequest describes a response with status code 400, with default header values.
 
 Invalid paymentTransactionExternalKey supplied
 */

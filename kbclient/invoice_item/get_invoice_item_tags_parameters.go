@@ -53,12 +53,10 @@ func NewGetInvoiceItemTagsParamsWithHTTPClient(client *http.Client) *GetInvoiceI
 	}
 }
 
-/*
-GetInvoiceItemTagsParams contains all the parameters to send to the API endpoint
+/* GetInvoiceItemTagsParams contains all the parameters to send to the API endpoint
+   for the get invoice item tags operation.
 
-	for the get invoice item tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetInvoiceItemTagsParams struct {
 

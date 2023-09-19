@@ -45,8 +45,7 @@ func NewVoidPaymentByExternalKeyNoContent() *VoidPaymentByExternalKeyNoContent {
 	return &VoidPaymentByExternalKeyNoContent{}
 }
 
-/*
-VoidPaymentByExternalKeyNoContent describes a response with status code 204, with default header values.
+/* VoidPaymentByExternalKeyNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewVoidPaymentByExternalKeyPaymentRequired() *VoidPaymentByExternalKeyPayme
 	return &VoidPaymentByExternalKeyPaymentRequired{}
 }
 
-/*
-VoidPaymentByExternalKeyPaymentRequired describes a response with status code 402, with default header values.
+/* VoidPaymentByExternalKeyPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -159,8 +157,7 @@ func NewVoidPaymentByExternalKeyNotFound() *VoidPaymentByExternalKeyNotFound {
 	return &VoidPaymentByExternalKeyNotFound{}
 }
 
-/*
-VoidPaymentByExternalKeyNotFound describes a response with status code 404, with default header values.
+/* VoidPaymentByExternalKeyNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */
@@ -216,8 +213,7 @@ func NewVoidPaymentByExternalKeyUnprocessableEntity() *VoidPaymentByExternalKeyU
 	return &VoidPaymentByExternalKeyUnprocessableEntity{}
 }
 
-/*
-VoidPaymentByExternalKeyUnprocessableEntity describes a response with status code 422, with default header values.
+/* VoidPaymentByExternalKeyUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -273,8 +269,7 @@ func NewVoidPaymentByExternalKeyBadGateway() *VoidPaymentByExternalKeyBadGateway
 	return &VoidPaymentByExternalKeyBadGateway{}
 }
 
-/*
-VoidPaymentByExternalKeyBadGateway describes a response with status code 502, with default header values.
+/* VoidPaymentByExternalKeyBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -330,8 +325,7 @@ func NewVoidPaymentByExternalKeyServiceUnavailable() *VoidPaymentByExternalKeySe
 	return &VoidPaymentByExternalKeyServiceUnavailable{}
 }
 
-/*
-VoidPaymentByExternalKeyServiceUnavailable describes a response with status code 503, with default header values.
+/* VoidPaymentByExternalKeyServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -387,8 +381,7 @@ func NewVoidPaymentByExternalKeyGatewayTimeout() *VoidPaymentByExternalKeyGatewa
 	return &VoidPaymentByExternalKeyGatewayTimeout{}
 }
 
-/*
-VoidPaymentByExternalKeyGatewayTimeout describes a response with status code 504, with default header values.
+/* VoidPaymentByExternalKeyGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

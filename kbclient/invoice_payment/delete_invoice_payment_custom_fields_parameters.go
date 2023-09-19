@@ -53,12 +53,10 @@ func NewDeleteInvoicePaymentCustomFieldsParamsWithHTTPClient(client *http.Client
 	}
 }
 
-/*
-DeleteInvoicePaymentCustomFieldsParams contains all the parameters to send to the API endpoint
+/* DeleteInvoicePaymentCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the delete invoice payment custom fields operation.
 
-	for the delete invoice payment custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type DeleteInvoicePaymentCustomFieldsParams struct {
 

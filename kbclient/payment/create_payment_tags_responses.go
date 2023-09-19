@@ -47,8 +47,7 @@ func NewCreatePaymentTagsCreated() *CreatePaymentTagsCreated {
 	return &CreatePaymentTagsCreated{}
 }
 
-/*
-CreatePaymentTagsCreated describes a response with status code 201, with default header values.
+/* CreatePaymentTagsCreated describes a response with status code 201, with default header values.
 
 Tag created successfully
 */
@@ -114,8 +113,7 @@ func NewCreatePaymentTagsBadRequest() *CreatePaymentTagsBadRequest {
 	return &CreatePaymentTagsBadRequest{}
 }
 
-/*
-CreatePaymentTagsBadRequest describes a response with status code 400, with default header values.
+/* CreatePaymentTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid payment id supplied
 */

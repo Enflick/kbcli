@@ -45,8 +45,7 @@ func NewDeletePluginConfigurationNoContent() *DeletePluginConfigurationNoContent
 	return &DeletePluginConfigurationNoContent{}
 }
 
-/*
-DeletePluginConfigurationNoContent describes a response with status code 204, with default header values.
+/* DeletePluginConfigurationNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeletePluginConfigurationBadRequest() *DeletePluginConfigurationBadReque
 	return &DeletePluginConfigurationBadRequest{}
 }
 
-/*
-DeletePluginConfigurationBadRequest describes a response with status code 400, with default header values.
+/* DeletePluginConfigurationBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

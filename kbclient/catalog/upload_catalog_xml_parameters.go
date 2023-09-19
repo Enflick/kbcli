@@ -52,12 +52,10 @@ func NewUploadCatalogXMLParamsWithHTTPClient(client *http.Client) *UploadCatalog
 	}
 }
 
-/*
-UploadCatalogXMLParams contains all the parameters to send to the API endpoint
+/* UploadCatalogXMLParams contains all the parameters to send to the API endpoint
+   for the upload catalog Xml operation.
 
-	for the upload catalog Xml operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UploadCatalogXMLParams struct {
 

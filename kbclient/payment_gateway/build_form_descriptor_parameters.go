@@ -55,12 +55,10 @@ func NewBuildFormDescriptorParamsWithHTTPClient(client *http.Client) *BuildFormD
 	}
 }
 
-/*
-BuildFormDescriptorParams contains all the parameters to send to the API endpoint
+/* BuildFormDescriptorParams contains all the parameters to send to the API endpoint
+   for the build form descriptor operation.
 
-	for the build form descriptor operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type BuildFormDescriptorParams struct {
 

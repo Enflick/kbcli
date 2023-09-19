@@ -52,12 +52,10 @@ func NewCreateTransactionTagsParamsWithHTTPClient(client *http.Client) *CreateTr
 	}
 }
 
-/*
-CreateTransactionTagsParams contains all the parameters to send to the API endpoint
+/* CreateTransactionTagsParams contains all the parameters to send to the API endpoint
+   for the create transaction tags operation.
 
-	for the create transaction tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateTransactionTagsParams struct {
 

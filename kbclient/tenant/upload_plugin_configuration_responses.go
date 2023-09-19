@@ -47,8 +47,7 @@ func NewUploadPluginConfigurationCreated() *UploadPluginConfigurationCreated {
 	return &UploadPluginConfigurationCreated{}
 }
 
-/*
-UploadPluginConfigurationCreated describes a response with status code 201, with default header values.
+/* UploadPluginConfigurationCreated describes a response with status code 201, with default header values.
 
 Plugin configuration uploaded successfully
 */
@@ -116,8 +115,7 @@ func NewUploadPluginConfigurationBadRequest() *UploadPluginConfigurationBadReque
 	return &UploadPluginConfigurationBadRequest{}
 }
 
-/*
-UploadPluginConfigurationBadRequest describes a response with status code 400, with default header values.
+/* UploadPluginConfigurationBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

@@ -55,12 +55,10 @@ func NewBuildComboFormDescriptorParamsWithHTTPClient(client *http.Client) *Build
 	}
 }
 
-/*
-BuildComboFormDescriptorParams contains all the parameters to send to the API endpoint
+/* BuildComboFormDescriptorParams contains all the parameters to send to the API endpoint
+   for the build combo form descriptor operation.
 
-	for the build combo form descriptor operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type BuildComboFormDescriptorParams struct {
 

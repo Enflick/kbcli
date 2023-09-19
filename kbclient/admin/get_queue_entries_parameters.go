@@ -53,12 +53,10 @@ func NewGetQueueEntriesParamsWithHTTPClient(client *http.Client) *GetQueueEntrie
 	}
 }
 
-/*
-GetQueueEntriesParams contains all the parameters to send to the API endpoint
+/* GetQueueEntriesParams contains all the parameters to send to the API endpoint
+   for the get queue entries operation.
 
-	for the get queue entries operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetQueueEntriesParams struct {
 

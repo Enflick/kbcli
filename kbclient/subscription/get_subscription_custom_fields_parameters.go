@@ -52,12 +52,10 @@ func NewGetSubscriptionCustomFieldsParamsWithHTTPClient(client *http.Client) *Ge
 	}
 }
 
-/*
-GetSubscriptionCustomFieldsParams contains all the parameters to send to the API endpoint
+/* GetSubscriptionCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the get subscription custom fields operation.
 
-	for the get subscription custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetSubscriptionCustomFieldsParams struct {
 

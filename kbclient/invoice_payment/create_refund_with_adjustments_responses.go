@@ -47,8 +47,7 @@ func NewCreateRefundWithAdjustmentsCreated() *CreateRefundWithAdjustmentsCreated
 	return &CreateRefundWithAdjustmentsCreated{}
 }
 
-/*
-CreateRefundWithAdjustmentsCreated describes a response with status code 201, with default header values.
+/* CreateRefundWithAdjustmentsCreated describes a response with status code 201, with default header values.
 
 Created refund successfully
 */
@@ -116,8 +115,7 @@ func NewCreateRefundWithAdjustmentsBadRequest() *CreateRefundWithAdjustmentsBadR
 	return &CreateRefundWithAdjustmentsBadRequest{}
 }
 
-/*
-CreateRefundWithAdjustmentsBadRequest describes a response with status code 400, with default header values.
+/* CreateRefundWithAdjustmentsBadRequest describes a response with status code 400, with default header values.
 
 Invalid payment id supplied
 */
@@ -173,8 +171,7 @@ func NewCreateRefundWithAdjustmentsNotFound() *CreateRefundWithAdjustmentsNotFou
 	return &CreateRefundWithAdjustmentsNotFound{}
 }
 
-/*
-CreateRefundWithAdjustmentsNotFound describes a response with status code 404, with default header values.
+/* CreateRefundWithAdjustmentsNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */

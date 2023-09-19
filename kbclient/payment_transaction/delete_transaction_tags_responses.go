@@ -45,8 +45,7 @@ func NewDeleteTransactionTagsNoContent() *DeleteTransactionTagsNoContent {
 	return &DeleteTransactionTagsNoContent{}
 }
 
-/*
-DeleteTransactionTagsNoContent describes a response with status code 204, with default header values.
+/* DeleteTransactionTagsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteTransactionTagsBadRequest() *DeleteTransactionTagsBadRequest {
 	return &DeleteTransactionTagsBadRequest{}
 }
 
-/*
-DeleteTransactionTagsBadRequest describes a response with status code 400, with default header values.
+/* DeleteTransactionTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid transaction id supplied
 */

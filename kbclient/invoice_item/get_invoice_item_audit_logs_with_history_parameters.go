@@ -52,12 +52,10 @@ func NewGetInvoiceItemAuditLogsWithHistoryParamsWithHTTPClient(client *http.Clie
 	}
 }
 
-/*
-GetInvoiceItemAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+/* GetInvoiceItemAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+   for the get invoice item audit logs with history operation.
 
-	for the get invoice item audit logs with history operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetInvoiceItemAuditLogsWithHistoryParams struct {
 

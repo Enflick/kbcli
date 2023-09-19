@@ -55,12 +55,10 @@ func NewTriggerNodeCommandParamsWithHTTPClient(client *http.Client) *TriggerNode
 	}
 }
 
-/*
-TriggerNodeCommandParams contains all the parameters to send to the API endpoint
+/* TriggerNodeCommandParams contains all the parameters to send to the API endpoint
+   for the trigger node command operation.
 
-	for the trigger node command operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type TriggerNodeCommandParams struct {
 

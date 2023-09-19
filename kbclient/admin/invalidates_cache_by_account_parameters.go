@@ -52,12 +52,10 @@ func NewInvalidatesCacheByAccountParamsWithHTTPClient(client *http.Client) *Inva
 	}
 }
 
-/*
-InvalidatesCacheByAccountParams contains all the parameters to send to the API endpoint
+/* InvalidatesCacheByAccountParams contains all the parameters to send to the API endpoint
+   for the invalidates cache by account operation.
 
-	for the invalidates cache by account operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type InvalidatesCacheByAccountParams struct {
 

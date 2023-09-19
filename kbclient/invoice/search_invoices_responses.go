@@ -46,8 +46,7 @@ func NewSearchInvoicesOK() *SearchInvoicesOK {
 	return &SearchInvoicesOK{}
 }
 
-/*
-SearchInvoicesOK describes a response with status code 200, with default header values.
+/* SearchInvoicesOK describes a response with status code 200, with default header values.
 
 successful operation
 */

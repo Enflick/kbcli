@@ -47,8 +47,7 @@ func NewCreateTaxItemsCreated() *CreateTaxItemsCreated {
 	return &CreateTaxItemsCreated{}
 }
 
-/*
-CreateTaxItemsCreated describes a response with status code 201, with default header values.
+/* CreateTaxItemsCreated describes a response with status code 201, with default header values.
 
 Create tax items successfully
 */
@@ -114,8 +113,7 @@ func NewCreateTaxItemsBadRequest() *CreateTaxItemsBadRequest {
 	return &CreateTaxItemsBadRequest{}
 }
 
-/*
-CreateTaxItemsBadRequest describes a response with status code 400, with default header values.
+/* CreateTaxItemsBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -171,8 +169,7 @@ func NewCreateTaxItemsNotFound() *CreateTaxItemsNotFound {
 	return &CreateTaxItemsNotFound{}
 }
 
-/*
-CreateTaxItemsNotFound describes a response with status code 404, with default header values.
+/* CreateTaxItemsNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

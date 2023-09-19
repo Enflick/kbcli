@@ -47,8 +47,7 @@ func NewCreateBundleTagsCreated() *CreateBundleTagsCreated {
 	return &CreateBundleTagsCreated{}
 }
 
-/*
-CreateBundleTagsCreated describes a response with status code 201, with default header values.
+/* CreateBundleTagsCreated describes a response with status code 201, with default header values.
 
 Tag created successfully
 */
@@ -114,8 +113,7 @@ func NewCreateBundleTagsBadRequest() *CreateBundleTagsBadRequest {
 	return &CreateBundleTagsBadRequest{}
 }
 
-/*
-CreateBundleTagsBadRequest describes a response with status code 400, with default header values.
+/* CreateBundleTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid bundle id supplied
 */

@@ -45,8 +45,7 @@ func NewDeletePaymentTagsNoContent() *DeletePaymentTagsNoContent {
 	return &DeletePaymentTagsNoContent{}
 }
 
-/*
-DeletePaymentTagsNoContent describes a response with status code 204, with default header values.
+/* DeletePaymentTagsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeletePaymentTagsBadRequest() *DeletePaymentTagsBadRequest {
 	return &DeletePaymentTagsBadRequest{}
 }
 
-/*
-DeletePaymentTagsBadRequest describes a response with status code 400, with default header values.
+/* DeletePaymentTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid payment id supplied
 */

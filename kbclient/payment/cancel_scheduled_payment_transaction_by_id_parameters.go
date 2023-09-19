@@ -52,12 +52,10 @@ func NewCancelScheduledPaymentTransactionByIDParamsWithHTTPClient(client *http.C
 	}
 }
 
-/*
-CancelScheduledPaymentTransactionByIDParams contains all the parameters to send to the API endpoint
+/* CancelScheduledPaymentTransactionByIDParams contains all the parameters to send to the API endpoint
+   for the cancel scheduled payment transaction by Id operation.
 
-	for the cancel scheduled payment transaction by Id operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CancelScheduledPaymentTransactionByIDParams struct {
 

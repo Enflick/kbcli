@@ -44,8 +44,7 @@ func NewDeleteCatalogNoContent() *DeleteCatalogNoContent {
 	return &DeleteCatalogNoContent{}
 }
 
-/*
-DeleteCatalogNoContent describes a response with status code 204, with default header values.
+/* DeleteCatalogNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */

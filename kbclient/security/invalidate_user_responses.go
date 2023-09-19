@@ -44,8 +44,7 @@ func NewInvalidateUserNoContent() *InvalidateUserNoContent {
 	return &InvalidateUserNoContent{}
 }
 
-/*
-InvalidateUserNoContent describes a response with status code 204, with default header values.
+/* InvalidateUserNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */

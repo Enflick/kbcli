@@ -47,8 +47,7 @@ func NewGetAllTagsOK() *GetAllTagsOK {
 	return &GetAllTagsOK{}
 }
 
-/*
-GetAllTagsOK describes a response with status code 200, with default header values.
+/* GetAllTagsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetAllTagsBadRequest() *GetAllTagsBadRequest {
 	return &GetAllTagsBadRequest{}
 }
 
-/*
-GetAllTagsBadRequest describes a response with status code 400, with default header values.
+/* GetAllTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -171,8 +169,7 @@ func NewGetAllTagsNotFound() *GetAllTagsNotFound {
 	return &GetAllTagsNotFound{}
 }
 
-/*
-GetAllTagsNotFound describes a response with status code 404, with default header values.
+/* GetAllTagsNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

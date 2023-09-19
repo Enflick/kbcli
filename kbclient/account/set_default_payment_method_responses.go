@@ -45,8 +45,7 @@ func NewSetDefaultPaymentMethodNoContent() *SetDefaultPaymentMethodNoContent {
 	return &SetDefaultPaymentMethodNoContent{}
 }
 
-/*
-SetDefaultPaymentMethodNoContent describes a response with status code 204, with default header values.
+/* SetDefaultPaymentMethodNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewSetDefaultPaymentMethodBadRequest() *SetDefaultPaymentMethodBadRequest {
 	return &SetDefaultPaymentMethodBadRequest{}
 }
 
-/*
-SetDefaultPaymentMethodBadRequest describes a response with status code 400, with default header values.
+/* SetDefaultPaymentMethodBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id or payment method id supplied
 */
@@ -159,8 +157,7 @@ func NewSetDefaultPaymentMethodNotFound() *SetDefaultPaymentMethodNotFound {
 	return &SetDefaultPaymentMethodNotFound{}
 }
 
-/*
-SetDefaultPaymentMethodNotFound describes a response with status code 404, with default header values.
+/* SetDefaultPaymentMethodNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

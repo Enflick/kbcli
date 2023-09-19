@@ -52,12 +52,10 @@ func NewGetCustomFieldAuditLogsWithHistoryParamsWithHTTPClient(client *http.Clie
 	}
 }
 
-/*
-GetCustomFieldAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+/* GetCustomFieldAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+   for the get custom field audit logs with history operation.
 
-	for the get custom field audit logs with history operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetCustomFieldAuditLogsWithHistoryParams struct {
 

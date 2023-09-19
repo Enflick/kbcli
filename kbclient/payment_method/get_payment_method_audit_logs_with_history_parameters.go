@@ -52,12 +52,10 @@ func NewGetPaymentMethodAuditLogsWithHistoryParamsWithHTTPClient(client *http.Cl
 	}
 }
 
-/*
-GetPaymentMethodAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+/* GetPaymentMethodAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+   for the get payment method audit logs with history operation.
 
-	for the get payment method audit logs with history operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPaymentMethodAuditLogsWithHistoryParams struct {
 

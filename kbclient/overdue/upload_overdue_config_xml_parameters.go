@@ -52,12 +52,10 @@ func NewUploadOverdueConfigXMLParamsWithHTTPClient(client *http.Client) *UploadO
 	}
 }
 
-/*
-UploadOverdueConfigXMLParams contains all the parameters to send to the API endpoint
+/* UploadOverdueConfigXMLParams contains all the parameters to send to the API endpoint
+   for the upload overdue config Xml operation.
 
-	for the upload overdue config Xml operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UploadOverdueConfigXMLParams struct {
 

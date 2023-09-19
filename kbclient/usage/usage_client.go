@@ -62,7 +62,7 @@ type ClientService interface {
 }
 
 /*
-GetAllUsage retrieves usage for a subscription
+  GetAllUsage retrieves usage for a subscription
 */
 func (a *Client) GetAllUsage(ctx context.Context, params *GetAllUsageParams) (*GetAllUsageOK, error) {
 	// TODO: Validate the params before sending
@@ -109,7 +109,7 @@ func (a *Client) GetAllUsage(ctx context.Context, params *GetAllUsageParams) (*G
 }
 
 /*
-GetUsage retrieves usage for a subscription and unit type
+  GetUsage retrieves usage for a subscription and unit type
 */
 func (a *Client) GetUsage(ctx context.Context, params *GetUsageParams) (*GetUsageOK, error) {
 	// TODO: Validate the params before sending
@@ -156,7 +156,7 @@ func (a *Client) GetUsage(ctx context.Context, params *GetUsageParams) (*GetUsag
 }
 
 /*
-RecordUsage records usage for a subscription
+  RecordUsage records usage for a subscription
 */
 func (a *Client) RecordUsage(ctx context.Context, params *RecordUsageParams) (*RecordUsageOK, error) {
 	// TODO: Validate the params before sending

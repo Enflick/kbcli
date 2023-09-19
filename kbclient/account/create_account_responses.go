@@ -47,8 +47,7 @@ func NewCreateAccountCreated() *CreateAccountCreated {
 	return &CreateAccountCreated{}
 }
 
-/*
-CreateAccountCreated describes a response with status code 201, with default header values.
+/* CreateAccountCreated describes a response with status code 201, with default header values.
 
 Account created successfully
 */
@@ -116,8 +115,7 @@ func NewCreateAccountBadRequest() *CreateAccountBadRequest {
 	return &CreateAccountBadRequest{}
 }
 
-/*
-CreateAccountBadRequest describes a response with status code 400, with default header values.
+/* CreateAccountBadRequest describes a response with status code 400, with default header values.
 
 Invalid account data supplied
 */

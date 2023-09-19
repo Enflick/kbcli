@@ -52,12 +52,10 @@ func NewGetCurrentUserPermissionsParamsWithHTTPClient(client *http.Client) *GetC
 	}
 }
 
-/*
-GetCurrentUserPermissionsParams contains all the parameters to send to the API endpoint
+/* GetCurrentUserPermissionsParams contains all the parameters to send to the API endpoint
+   for the get current user permissions operation.
 
-	for the get current user permissions operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetCurrentUserPermissionsParams struct {
 	WithProfilingInfo     *string // If set, return KB hprof headers

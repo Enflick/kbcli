@@ -55,12 +55,10 @@ func NewChargebackReversalPaymentByExternalKeyParamsWithHTTPClient(client *http.
 	}
 }
 
-/*
-ChargebackReversalPaymentByExternalKeyParams contains all the parameters to send to the API endpoint
+/* ChargebackReversalPaymentByExternalKeyParams contains all the parameters to send to the API endpoint
+   for the chargeback reversal payment by external key operation.
 
-	for the chargeback reversal payment by external key operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ChargebackReversalPaymentByExternalKeyParams struct {
 

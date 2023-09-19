@@ -44,8 +44,7 @@ func NewUploadCatalogTranslationCreated() *UploadCatalogTranslationCreated {
 	return &UploadCatalogTranslationCreated{}
 }
 
-/*
-UploadCatalogTranslationCreated describes a response with status code 201, with default header values.
+/* UploadCatalogTranslationCreated describes a response with status code 201, with default header values.
 
 Uploaded catalog translation Successfully
 */

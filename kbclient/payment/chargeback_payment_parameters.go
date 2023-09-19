@@ -55,12 +55,10 @@ func NewChargebackPaymentParamsWithHTTPClient(client *http.Client) *ChargebackPa
 	}
 }
 
-/*
-ChargebackPaymentParams contains all the parameters to send to the API endpoint
+/* ChargebackPaymentParams contains all the parameters to send to the API endpoint
+   for the chargeback payment operation.
 
-	for the chargeback payment operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ChargebackPaymentParams struct {
 

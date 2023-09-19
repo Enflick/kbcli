@@ -53,12 +53,10 @@ func NewDeletePaymentMethodParamsWithHTTPClient(client *http.Client) *DeletePaym
 	}
 }
 
-/*
-DeletePaymentMethodParams contains all the parameters to send to the API endpoint
+/* DeletePaymentMethodParams contains all the parameters to send to the API endpoint
+   for the delete payment method operation.
 
-	for the delete payment method operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type DeletePaymentMethodParams struct {
 

@@ -55,12 +55,10 @@ func NewCompleteInvoicePaymentTransactionParamsWithHTTPClient(client *http.Clien
 	}
 }
 
-/*
-CompleteInvoicePaymentTransactionParams contains all the parameters to send to the API endpoint
+/* CompleteInvoicePaymentTransactionParams contains all the parameters to send to the API endpoint
+   for the complete invoice payment transaction operation.
 
-	for the complete invoice payment transaction operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CompleteInvoicePaymentTransactionParams struct {
 

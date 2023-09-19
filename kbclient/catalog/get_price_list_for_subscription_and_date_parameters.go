@@ -52,12 +52,10 @@ func NewGetPriceListForSubscriptionAndDateParamsWithHTTPClient(client *http.Clie
 	}
 }
 
-/*
-GetPriceListForSubscriptionAndDateParams contains all the parameters to send to the API endpoint
+/* GetPriceListForSubscriptionAndDateParams contains all the parameters to send to the API endpoint
+   for the get price list for subscription and date operation.
 
-	for the get price list for subscription and date operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPriceListForSubscriptionAndDateParams struct {
 

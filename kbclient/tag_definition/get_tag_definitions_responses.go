@@ -46,8 +46,7 @@ func NewGetTagDefinitionsOK() *GetTagDefinitionsOK {
 	return &GetTagDefinitionsOK{}
 }
 
-/*
-GetTagDefinitionsOK describes a response with status code 200, with default header values.
+/* GetTagDefinitionsOK describes a response with status code 200, with default header values.
 
 successful operation
 */

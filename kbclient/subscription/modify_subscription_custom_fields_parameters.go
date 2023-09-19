@@ -54,12 +54,10 @@ func NewModifySubscriptionCustomFieldsParamsWithHTTPClient(client *http.Client) 
 	}
 }
 
-/*
-ModifySubscriptionCustomFieldsParams contains all the parameters to send to the API endpoint
+/* ModifySubscriptionCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the modify subscription custom fields operation.
 
-	for the modify subscription custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ModifySubscriptionCustomFieldsParams struct {
 

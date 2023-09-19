@@ -53,12 +53,10 @@ func NewSearchAccountsParamsWithHTTPClient(client *http.Client) *SearchAccountsP
 	}
 }
 
-/*
-SearchAccountsParams contains all the parameters to send to the API endpoint
+/* SearchAccountsParams contains all the parameters to send to the API endpoint
+   for the search accounts operation.
 
-	for the search accounts operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type SearchAccountsParams struct {
 

@@ -53,12 +53,10 @@ func NewUndoChangeSubscriptionPlanParamsWithHTTPClient(client *http.Client) *Und
 	}
 }
 
-/*
-UndoChangeSubscriptionPlanParams contains all the parameters to send to the API endpoint
+/* UndoChangeSubscriptionPlanParams contains all the parameters to send to the API endpoint
+   for the undo change subscription plan operation.
 
-	for the undo change subscription plan operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UndoChangeSubscriptionPlanParams struct {
 

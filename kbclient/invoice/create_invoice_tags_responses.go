@@ -47,8 +47,7 @@ func NewCreateInvoiceTagsCreated() *CreateInvoiceTagsCreated {
 	return &CreateInvoiceTagsCreated{}
 }
 
-/*
-CreateInvoiceTagsCreated describes a response with status code 201, with default header values.
+/* CreateInvoiceTagsCreated describes a response with status code 201, with default header values.
 
 Tag created successfully
 */
@@ -114,8 +113,7 @@ func NewCreateInvoiceTagsBadRequest() *CreateInvoiceTagsBadRequest {
 	return &CreateInvoiceTagsBadRequest{}
 }
 
-/*
-CreateInvoiceTagsBadRequest describes a response with status code 400, with default header values.
+/* CreateInvoiceTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid invoice id supplied
 */

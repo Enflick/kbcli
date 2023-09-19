@@ -52,12 +52,10 @@ func NewValidateCatalogXMLParamsWithHTTPClient(client *http.Client) *ValidateCat
 	}
 }
 
-/*
-ValidateCatalogXMLParams contains all the parameters to send to the API endpoint
+/* ValidateCatalogXMLParams contains all the parameters to send to the API endpoint
+   for the validate catalog Xml operation.
 
-	for the validate catalog Xml operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ValidateCatalogXMLParams struct {
 

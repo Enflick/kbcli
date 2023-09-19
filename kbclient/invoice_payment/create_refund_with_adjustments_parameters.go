@@ -55,12 +55,10 @@ func NewCreateRefundWithAdjustmentsParamsWithHTTPClient(client *http.Client) *Cr
 	}
 }
 
-/*
-CreateRefundWithAdjustmentsParams contains all the parameters to send to the API endpoint
+/* CreateRefundWithAdjustmentsParams contains all the parameters to send to the API endpoint
+   for the create refund with adjustments operation.
 
-	for the create refund with adjustments operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateRefundWithAdjustmentsParams struct {
 

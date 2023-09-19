@@ -52,12 +52,10 @@ func NewGetPhaseForSubscriptionAndDateParamsWithHTTPClient(client *http.Client) 
 	}
 }
 
-/*
-GetPhaseForSubscriptionAndDateParams contains all the parameters to send to the API endpoint
+/* GetPhaseForSubscriptionAndDateParams contains all the parameters to send to the API endpoint
+   for the get phase for subscription and date operation.
 
-	for the get phase for subscription and date operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPhaseForSubscriptionAndDateParams struct {
 

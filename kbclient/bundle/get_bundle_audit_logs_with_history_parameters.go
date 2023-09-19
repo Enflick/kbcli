@@ -52,12 +52,10 @@ func NewGetBundleAuditLogsWithHistoryParamsWithHTTPClient(client *http.Client) *
 	}
 }
 
-/*
-GetBundleAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+/* GetBundleAuditLogsWithHistoryParams contains all the parameters to send to the API endpoint
+   for the get bundle audit logs with history operation.
 
-	for the get bundle audit logs with history operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetBundleAuditLogsWithHistoryParams struct {
 

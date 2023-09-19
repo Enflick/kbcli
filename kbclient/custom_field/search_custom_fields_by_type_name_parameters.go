@@ -53,12 +53,10 @@ func NewSearchCustomFieldsByTypeNameParamsWithHTTPClient(client *http.Client) *S
 	}
 }
 
-/*
-SearchCustomFieldsByTypeNameParams contains all the parameters to send to the API endpoint
+/* SearchCustomFieldsByTypeNameParams contains all the parameters to send to the API endpoint
+   for the search custom fields by type name operation.
 
-	for the search custom fields by type name operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type SearchCustomFieldsByTypeNameParams struct {
 

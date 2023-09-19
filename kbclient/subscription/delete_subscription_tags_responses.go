@@ -45,8 +45,7 @@ func NewDeleteSubscriptionTagsNoContent() *DeleteSubscriptionTagsNoContent {
 	return &DeleteSubscriptionTagsNoContent{}
 }
 
-/*
-DeleteSubscriptionTagsNoContent describes a response with status code 204, with default header values.
+/* DeleteSubscriptionTagsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteSubscriptionTagsBadRequest() *DeleteSubscriptionTagsBadRequest {
 	return &DeleteSubscriptionTagsBadRequest{}
 }
 
-/*
-DeleteSubscriptionTagsBadRequest describes a response with status code 400, with default header values.
+/* DeleteSubscriptionTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid subscription id supplied
 */

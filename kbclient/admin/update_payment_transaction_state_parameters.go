@@ -54,12 +54,10 @@ func NewUpdatePaymentTransactionStateParamsWithHTTPClient(client *http.Client) *
 	}
 }
 
-/*
-UpdatePaymentTransactionStateParams contains all the parameters to send to the API endpoint
+/* UpdatePaymentTransactionStateParams contains all the parameters to send to the API endpoint
+   for the update payment transaction state operation.
 
-	for the update payment transaction state operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UpdatePaymentTransactionStateParams struct {
 

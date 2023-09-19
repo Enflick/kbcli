@@ -45,8 +45,7 @@ func NewCreateSubscriptionCustomFieldsCreated() *CreateSubscriptionCustomFieldsC
 	return &CreateSubscriptionCustomFieldsCreated{}
 }
 
-/*
-CreateSubscriptionCustomFieldsCreated describes a response with status code 201, with default header values.
+/* CreateSubscriptionCustomFieldsCreated describes a response with status code 201, with default header values.
 
 Custom field created successfully
 */
@@ -102,8 +101,7 @@ func NewCreateSubscriptionCustomFieldsBadRequest() *CreateSubscriptionCustomFiel
 	return &CreateSubscriptionCustomFieldsBadRequest{}
 }
 
-/*
-CreateSubscriptionCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* CreateSubscriptionCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid subscription id supplied
 */

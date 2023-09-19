@@ -46,8 +46,7 @@ func NewAddRoleDefinitionCreated() *AddRoleDefinitionCreated {
 	return &AddRoleDefinitionCreated{}
 }
 
-/*
-AddRoleDefinitionCreated describes a response with status code 201, with default header values.
+/* AddRoleDefinitionCreated describes a response with status code 201, with default header values.
 
 Role definition created successfully
 */

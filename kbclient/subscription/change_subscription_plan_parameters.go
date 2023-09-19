@@ -55,12 +55,10 @@ func NewChangeSubscriptionPlanParamsWithHTTPClient(client *http.Client) *ChangeS
 	}
 }
 
-/*
-ChangeSubscriptionPlanParams contains all the parameters to send to the API endpoint
+/* ChangeSubscriptionPlanParams contains all the parameters to send to the API endpoint
+   for the change subscription plan operation.
 
-	for the change subscription plan operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ChangeSubscriptionPlanParams struct {
 

@@ -45,8 +45,7 @@ func NewDeleteTagDefinitionNoContent() *DeleteTagDefinitionNoContent {
 	return &DeleteTagDefinitionNoContent{}
 }
 
-/*
-DeleteTagDefinitionNoContent describes a response with status code 204, with default header values.
+/* DeleteTagDefinitionNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteTagDefinitionBadRequest() *DeleteTagDefinitionBadRequest {
 	return &DeleteTagDefinitionBadRequest{}
 }
 
-/*
-DeleteTagDefinitionBadRequest describes a response with status code 400, with default header values.
+/* DeleteTagDefinitionBadRequest describes a response with status code 400, with default header values.
 
 Invalid tagDefinitionId supplied
 */

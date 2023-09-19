@@ -47,8 +47,7 @@ func NewRefundPaymentCreated() *RefundPaymentCreated {
 	return &RefundPaymentCreated{}
 }
 
-/*
-RefundPaymentCreated describes a response with status code 201, with default header values.
+/* RefundPaymentCreated describes a response with status code 201, with default header values.
 
 Payment transaction created successfully
 */
@@ -116,8 +115,7 @@ func NewRefundPaymentBadRequest() *RefundPaymentBadRequest {
 	return &RefundPaymentBadRequest{}
 }
 
-/*
-RefundPaymentBadRequest describes a response with status code 400, with default header values.
+/* RefundPaymentBadRequest describes a response with status code 400, with default header values.
 
 Invalid paymentId supplied
 */
@@ -173,8 +171,7 @@ func NewRefundPaymentPaymentRequired() *RefundPaymentPaymentRequired {
 	return &RefundPaymentPaymentRequired{}
 }
 
-/*
-RefundPaymentPaymentRequired describes a response with status code 402, with default header values.
+/* RefundPaymentPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -230,8 +227,7 @@ func NewRefundPaymentNotFound() *RefundPaymentNotFound {
 	return &RefundPaymentNotFound{}
 }
 
-/*
-RefundPaymentNotFound describes a response with status code 404, with default header values.
+/* RefundPaymentNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */
@@ -287,8 +283,7 @@ func NewRefundPaymentUnprocessableEntity() *RefundPaymentUnprocessableEntity {
 	return &RefundPaymentUnprocessableEntity{}
 }
 
-/*
-RefundPaymentUnprocessableEntity describes a response with status code 422, with default header values.
+/* RefundPaymentUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -344,8 +339,7 @@ func NewRefundPaymentBadGateway() *RefundPaymentBadGateway {
 	return &RefundPaymentBadGateway{}
 }
 
-/*
-RefundPaymentBadGateway describes a response with status code 502, with default header values.
+/* RefundPaymentBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -401,8 +395,7 @@ func NewRefundPaymentServiceUnavailable() *RefundPaymentServiceUnavailable {
 	return &RefundPaymentServiceUnavailable{}
 }
 
-/*
-RefundPaymentServiceUnavailable describes a response with status code 503, with default header values.
+/* RefundPaymentServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -458,8 +451,7 @@ func NewRefundPaymentGatewayTimeout() *RefundPaymentGatewayTimeout {
 	return &RefundPaymentGatewayTimeout{}
 }
 
-/*
-RefundPaymentGatewayTimeout describes a response with status code 504, with default header values.
+/* RefundPaymentGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

@@ -47,8 +47,7 @@ func NewGetInvoiceCustomFieldsOK() *GetInvoiceCustomFieldsOK {
 	return &GetInvoiceCustomFieldsOK{}
 }
 
-/*
-GetInvoiceCustomFieldsOK describes a response with status code 200, with default header values.
+/* GetInvoiceCustomFieldsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetInvoiceCustomFieldsBadRequest() *GetInvoiceCustomFieldsBadRequest {
 	return &GetInvoiceCustomFieldsBadRequest{}
 }
 
-/*
-GetInvoiceCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* GetInvoiceCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid invoice id supplied
 */

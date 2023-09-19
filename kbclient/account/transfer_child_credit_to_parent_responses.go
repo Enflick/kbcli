@@ -45,8 +45,7 @@ func NewTransferChildCreditToParentNoContent() *TransferChildCreditToParentNoCon
 	return &TransferChildCreditToParentNoContent{}
 }
 
-/*
-TransferChildCreditToParentNoContent describes a response with status code 204, with default header values.
+/* TransferChildCreditToParentNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewTransferChildCreditToParentBadRequest() *TransferChildCreditToParentBadR
 	return &TransferChildCreditToParentBadRequest{}
 }
 
-/*
-TransferChildCreditToParentBadRequest describes a response with status code 400, with default header values.
+/* TransferChildCreditToParentBadRequest describes a response with status code 400, with default header values.
 
 Account does not have credit
 */
@@ -159,8 +157,7 @@ func NewTransferChildCreditToParentNotFound() *TransferChildCreditToParentNotFou
 	return &TransferChildCreditToParentNotFound{}
 }
 
-/*
-TransferChildCreditToParentNotFound describes a response with status code 404, with default header values.
+/* TransferChildCreditToParentNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

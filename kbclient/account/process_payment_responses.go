@@ -47,8 +47,7 @@ func NewProcessPaymentCreated() *ProcessPaymentCreated {
 	return &ProcessPaymentCreated{}
 }
 
-/*
-ProcessPaymentCreated describes a response with status code 201, with default header values.
+/* ProcessPaymentCreated describes a response with status code 201, with default header values.
 
 Payment transaction created successfully
 */
@@ -116,8 +115,7 @@ func NewProcessPaymentBadRequest() *ProcessPaymentBadRequest {
 	return &ProcessPaymentBadRequest{}
 }
 
-/*
-ProcessPaymentBadRequest describes a response with status code 400, with default header values.
+/* ProcessPaymentBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -173,8 +171,7 @@ func NewProcessPaymentPaymentRequired() *ProcessPaymentPaymentRequired {
 	return &ProcessPaymentPaymentRequired{}
 }
 
-/*
-ProcessPaymentPaymentRequired describes a response with status code 402, with default header values.
+/* ProcessPaymentPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -230,8 +227,7 @@ func NewProcessPaymentNotFound() *ProcessPaymentNotFound {
 	return &ProcessPaymentNotFound{}
 }
 
-/*
-ProcessPaymentNotFound describes a response with status code 404, with default header values.
+/* ProcessPaymentNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */
@@ -287,8 +283,7 @@ func NewProcessPaymentUnprocessableEntity() *ProcessPaymentUnprocessableEntity {
 	return &ProcessPaymentUnprocessableEntity{}
 }
 
-/*
-ProcessPaymentUnprocessableEntity describes a response with status code 422, with default header values.
+/* ProcessPaymentUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -344,8 +339,7 @@ func NewProcessPaymentBadGateway() *ProcessPaymentBadGateway {
 	return &ProcessPaymentBadGateway{}
 }
 
-/*
-ProcessPaymentBadGateway describes a response with status code 502, with default header values.
+/* ProcessPaymentBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -401,8 +395,7 @@ func NewProcessPaymentServiceUnavailable() *ProcessPaymentServiceUnavailable {
 	return &ProcessPaymentServiceUnavailable{}
 }
 
-/*
-ProcessPaymentServiceUnavailable describes a response with status code 503, with default header values.
+/* ProcessPaymentServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -458,8 +451,7 @@ func NewProcessPaymentGatewayTimeout() *ProcessPaymentGatewayTimeout {
 	return &ProcessPaymentGatewayTimeout{}
 }
 
-/*
-ProcessPaymentGatewayTimeout describes a response with status code 504, with default header values.
+/* ProcessPaymentGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

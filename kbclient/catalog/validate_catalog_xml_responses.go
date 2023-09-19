@@ -46,8 +46,7 @@ func NewValidateCatalogXMLOK() *ValidateCatalogXMLOK {
 	return &ValidateCatalogXMLOK{}
 }
 
-/*
-ValidateCatalogXMLOK describes a response with status code 200, with default header values.
+/* ValidateCatalogXMLOK describes a response with status code 200, with default header values.
 
 successful operation
 */

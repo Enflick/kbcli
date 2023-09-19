@@ -44,8 +44,7 @@ func NewAddSimplePlanCreated() *AddSimplePlanCreated {
 	return &AddSimplePlanCreated{}
 }
 
-/*
-AddSimplePlanCreated describes a response with status code 201, with default header values.
+/* AddSimplePlanCreated describes a response with status code 201, with default header values.
 
 Created new plan successfully
 */

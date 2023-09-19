@@ -47,8 +47,7 @@ func NewGetBlockingStatesOK() *GetBlockingStatesOK {
 	return &GetBlockingStatesOK{}
 }
 
-/*
-GetBlockingStatesOK describes a response with status code 200, with default header values.
+/* GetBlockingStatesOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetBlockingStatesBadRequest() *GetBlockingStatesBadRequest {
 	return &GetBlockingStatesBadRequest{}
 }
 
-/*
-GetBlockingStatesBadRequest describes a response with status code 400, with default header values.
+/* GetBlockingStatesBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */

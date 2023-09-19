@@ -53,12 +53,10 @@ func NewGetBlockingStatesParamsWithHTTPClient(client *http.Client) *GetBlockingS
 	}
 }
 
-/*
-GetBlockingStatesParams contains all the parameters to send to the API endpoint
+/* GetBlockingStatesParams contains all the parameters to send to the API endpoint
+   for the get blocking states operation.
 
-	for the get blocking states operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetBlockingStatesParams struct {
 

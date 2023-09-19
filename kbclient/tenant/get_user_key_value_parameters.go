@@ -52,12 +52,10 @@ func NewGetUserKeyValueParamsWithHTTPClient(client *http.Client) *GetUserKeyValu
 	}
 }
 
-/*
-GetUserKeyValueParams contains all the parameters to send to the API endpoint
+/* GetUserKeyValueParams contains all the parameters to send to the API endpoint
+   for the get user key value operation.
 
-	for the get user key value operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetUserKeyValueParams struct {
 

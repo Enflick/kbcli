@@ -53,12 +53,10 @@ func NewGetBundleByKeyParamsWithHTTPClient(client *http.Client) *GetBundleByKeyP
 	}
 }
 
-/*
-GetBundleByKeyParams contains all the parameters to send to the API endpoint
+/* GetBundleByKeyParams contains all the parameters to send to the API endpoint
+   for the get bundle by key operation.
 
-	for the get bundle by key operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetBundleByKeyParams struct {
 

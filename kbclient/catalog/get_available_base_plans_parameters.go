@@ -52,12 +52,10 @@ func NewGetAvailableBasePlansParamsWithHTTPClient(client *http.Client) *GetAvail
 	}
 }
 
-/*
-GetAvailableBasePlansParams contains all the parameters to send to the API endpoint
+/* GetAvailableBasePlansParams contains all the parameters to send to the API endpoint
+   for the get available base plans operation.
 
-	for the get available base plans operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetAvailableBasePlansParams struct {
 

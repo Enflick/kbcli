@@ -47,8 +47,7 @@ func NewGetOverdueAccountOK() *GetOverdueAccountOK {
 	return &GetOverdueAccountOK{}
 }
 
-/*
-GetOverdueAccountOK describes a response with status code 200, with default header values.
+/* GetOverdueAccountOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetOverdueAccountBadRequest() *GetOverdueAccountBadRequest {
 	return &GetOverdueAccountBadRequest{}
 }
 
-/*
-GetOverdueAccountBadRequest describes a response with status code 400, with default header values.
+/* GetOverdueAccountBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -173,8 +171,7 @@ func NewGetOverdueAccountNotFound() *GetOverdueAccountNotFound {
 	return &GetOverdueAccountNotFound{}
 }
 
-/*
-GetOverdueAccountNotFound describes a response with status code 404, with default header values.
+/* GetOverdueAccountNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

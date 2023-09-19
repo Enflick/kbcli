@@ -47,8 +47,7 @@ func NewAddAccountBlockingStateCreated() *AddAccountBlockingStateCreated {
 	return &AddAccountBlockingStateCreated{}
 }
 
-/*
-AddAccountBlockingStateCreated describes a response with status code 201, with default header values.
+/* AddAccountBlockingStateCreated describes a response with status code 201, with default header values.
 
 Blocking state created successfully
 */
@@ -114,8 +113,7 @@ func NewAddAccountBlockingStateBadRequest() *AddAccountBlockingStateBadRequest {
 	return &AddAccountBlockingStateBadRequest{}
 }
 
-/*
-AddAccountBlockingStateBadRequest describes a response with status code 400, with default header values.
+/* AddAccountBlockingStateBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -171,8 +169,7 @@ func NewAddAccountBlockingStateNotFound() *AddAccountBlockingStateNotFound {
 	return &AddAccountBlockingStateNotFound{}
 }
 
-/*
-AddAccountBlockingStateNotFound describes a response with status code 404, with default header values.
+/* AddAccountBlockingStateNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

@@ -55,12 +55,10 @@ func NewNotifyStateChangedParamsWithHTTPClient(client *http.Client) *NotifyState
 	}
 }
 
-/*
-NotifyStateChangedParams contains all the parameters to send to the API endpoint
+/* NotifyStateChangedParams contains all the parameters to send to the API endpoint
+   for the notify state changed operation.
 
-	for the notify state changed operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type NotifyStateChangedParams struct {
 

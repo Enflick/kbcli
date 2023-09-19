@@ -47,8 +47,7 @@ func NewGetTagAuditLogsWithHistoryOK() *GetTagAuditLogsWithHistoryOK {
 	return &GetTagAuditLogsWithHistoryOK{}
 }
 
-/*
-GetTagAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
+/* GetTagAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetTagAuditLogsWithHistoryNotFound() *GetTagAuditLogsWithHistoryNotFound
 	return &GetTagAuditLogsWithHistoryNotFound{}
 }
 
-/*
-GetTagAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
+/* GetTagAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

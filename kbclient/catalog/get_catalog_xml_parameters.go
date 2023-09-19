@@ -52,12 +52,10 @@ func NewGetCatalogXMLParamsWithHTTPClient(client *http.Client) *GetCatalogXMLPar
 	}
 }
 
-/*
-GetCatalogXMLParams contains all the parameters to send to the API endpoint
+/* GetCatalogXMLParams contains all the parameters to send to the API endpoint
+   for the get catalog Xml operation.
 
-	for the get catalog Xml operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetCatalogXMLParams struct {
 

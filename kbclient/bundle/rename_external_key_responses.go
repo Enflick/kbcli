@@ -45,8 +45,7 @@ func NewRenameExternalKeyNoContent() *RenameExternalKeyNoContent {
 	return &RenameExternalKeyNoContent{}
 }
 
-/*
-RenameExternalKeyNoContent describes a response with status code 204, with default header values.
+/* RenameExternalKeyNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewRenameExternalKeyBadRequest() *RenameExternalKeyBadRequest {
 	return &RenameExternalKeyBadRequest{}
 }
 
-/*
-RenameExternalKeyBadRequest describes a response with status code 400, with default header values.
+/* RenameExternalKeyBadRequest describes a response with status code 400, with default header values.
 
 Invalid argumnent supplied
 */
@@ -159,8 +157,7 @@ func NewRenameExternalKeyNotFound() *RenameExternalKeyNotFound {
 	return &RenameExternalKeyNotFound{}
 }
 
-/*
-RenameExternalKeyNotFound describes a response with status code 404, with default header values.
+/* RenameExternalKeyNotFound describes a response with status code 404, with default header values.
 
 Bundle not found
 */

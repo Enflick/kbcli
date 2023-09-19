@@ -55,12 +55,10 @@ func NewCreateExternalChargesParamsWithHTTPClient(client *http.Client) *CreateEx
 	}
 }
 
-/*
-CreateExternalChargesParams contains all the parameters to send to the API endpoint
+/* CreateExternalChargesParams contains all the parameters to send to the API endpoint
+   for the create external charges operation.
 
-	for the create external charges operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateExternalChargesParams struct {
 

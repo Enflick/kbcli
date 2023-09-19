@@ -47,8 +47,7 @@ func NewGetAccountTimelineOK() *GetAccountTimelineOK {
 	return &GetAccountTimelineOK{}
 }
 
-/*
-GetAccountTimelineOK describes a response with status code 200, with default header values.
+/* GetAccountTimelineOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetAccountTimelineBadRequest() *GetAccountTimelineBadRequest {
 	return &GetAccountTimelineBadRequest{}
 }
 
-/*
-GetAccountTimelineBadRequest describes a response with status code 400, with default header values.
+/* GetAccountTimelineBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -173,8 +171,7 @@ func NewGetAccountTimelineNotFound() *GetAccountTimelineNotFound {
 	return &GetAccountTimelineNotFound{}
 }
 
-/*
-GetAccountTimelineNotFound describes a response with status code 404, with default header values.
+/* GetAccountTimelineNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

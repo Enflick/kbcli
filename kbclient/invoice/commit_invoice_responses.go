@@ -45,8 +45,7 @@ func NewCommitInvoiceNoContent() *CommitInvoiceNoContent {
 	return &CommitInvoiceNoContent{}
 }
 
-/*
-CommitInvoiceNoContent describes a response with status code 204, with default header values.
+/* CommitInvoiceNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewCommitInvoiceNotFound() *CommitInvoiceNotFound {
 	return &CommitInvoiceNotFound{}
 }
 
-/*
-CommitInvoiceNotFound describes a response with status code 404, with default header values.
+/* CommitInvoiceNotFound describes a response with status code 404, with default header values.
 
 Invoice not found
 */

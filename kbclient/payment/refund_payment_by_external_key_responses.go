@@ -47,8 +47,7 @@ func NewRefundPaymentByExternalKeyCreated() *RefundPaymentByExternalKeyCreated {
 	return &RefundPaymentByExternalKeyCreated{}
 }
 
-/*
-RefundPaymentByExternalKeyCreated describes a response with status code 201, with default header values.
+/* RefundPaymentByExternalKeyCreated describes a response with status code 201, with default header values.
 
 Payment transaction created successfully
 */
@@ -116,8 +115,7 @@ func NewRefundPaymentByExternalKeyPaymentRequired() *RefundPaymentByExternalKeyP
 	return &RefundPaymentByExternalKeyPaymentRequired{}
 }
 
-/*
-RefundPaymentByExternalKeyPaymentRequired describes a response with status code 402, with default header values.
+/* RefundPaymentByExternalKeyPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -173,8 +171,7 @@ func NewRefundPaymentByExternalKeyNotFound() *RefundPaymentByExternalKeyNotFound
 	return &RefundPaymentByExternalKeyNotFound{}
 }
 
-/*
-RefundPaymentByExternalKeyNotFound describes a response with status code 404, with default header values.
+/* RefundPaymentByExternalKeyNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */
@@ -230,8 +227,7 @@ func NewRefundPaymentByExternalKeyUnprocessableEntity() *RefundPaymentByExternal
 	return &RefundPaymentByExternalKeyUnprocessableEntity{}
 }
 
-/*
-RefundPaymentByExternalKeyUnprocessableEntity describes a response with status code 422, with default header values.
+/* RefundPaymentByExternalKeyUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -287,8 +283,7 @@ func NewRefundPaymentByExternalKeyBadGateway() *RefundPaymentByExternalKeyBadGat
 	return &RefundPaymentByExternalKeyBadGateway{}
 }
 
-/*
-RefundPaymentByExternalKeyBadGateway describes a response with status code 502, with default header values.
+/* RefundPaymentByExternalKeyBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -344,8 +339,7 @@ func NewRefundPaymentByExternalKeyServiceUnavailable() *RefundPaymentByExternalK
 	return &RefundPaymentByExternalKeyServiceUnavailable{}
 }
 
-/*
-RefundPaymentByExternalKeyServiceUnavailable describes a response with status code 503, with default header values.
+/* RefundPaymentByExternalKeyServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -401,8 +395,7 @@ func NewRefundPaymentByExternalKeyGatewayTimeout() *RefundPaymentByExternalKeyGa
 	return &RefundPaymentByExternalKeyGatewayTimeout{}
 }
 
-/*
-RefundPaymentByExternalKeyGatewayTimeout describes a response with status code 504, with default header values.
+/* RefundPaymentByExternalKeyGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

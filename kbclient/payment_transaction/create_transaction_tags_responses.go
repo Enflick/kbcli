@@ -47,8 +47,7 @@ func NewCreateTransactionTagsCreated() *CreateTransactionTagsCreated {
 	return &CreateTransactionTagsCreated{}
 }
 
-/*
-CreateTransactionTagsCreated describes a response with status code 201, with default header values.
+/* CreateTransactionTagsCreated describes a response with status code 201, with default header values.
 
 Tag created successfully
 */
@@ -114,8 +113,7 @@ func NewCreateTransactionTagsBadRequest() *CreateTransactionTagsBadRequest {
 	return &CreateTransactionTagsBadRequest{}
 }
 
-/*
-CreateTransactionTagsBadRequest describes a response with status code 400, with default header values.
+/* CreateTransactionTagsBadRequest describes a response with status code 400, with default header values.
 
 Invalid transaction id supplied
 */

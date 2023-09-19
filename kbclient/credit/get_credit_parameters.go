@@ -52,12 +52,10 @@ func NewGetCreditParamsWithHTTPClient(client *http.Client) *GetCreditParams {
 	}
 }
 
-/*
-GetCreditParams contains all the parameters to send to the API endpoint
+/* GetCreditParams contains all the parameters to send to the API endpoint
+   for the get credit operation.
 
-	for the get credit operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetCreditParams struct {
 

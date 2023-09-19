@@ -60,7 +60,7 @@ type ClientService interface {
 }
 
 /*
-GetNodesInfo retrieves all the nodes infos
+  GetNodesInfo retrieves all the nodes infos
 */
 func (a *Client) GetNodesInfo(ctx context.Context, params *GetNodesInfoParams) (*GetNodesInfoOK, error) {
 	// TODO: Validate the params before sending
@@ -107,7 +107,7 @@ func (a *Client) GetNodesInfo(ctx context.Context, params *GetNodesInfoParams) (
 }
 
 /*
-TriggerNodeCommand triggers a node command
+  TriggerNodeCommand triggers a node command
 */
 func (a *Client) TriggerNodeCommand(ctx context.Context, params *TriggerNodeCommandParams) (*TriggerNodeCommandAccepted, error) {
 	// TODO: Validate the params before sending

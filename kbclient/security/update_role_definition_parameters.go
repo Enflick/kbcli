@@ -54,12 +54,10 @@ func NewUpdateRoleDefinitionParamsWithHTTPClient(client *http.Client) *UpdateRol
 	}
 }
 
-/*
-UpdateRoleDefinitionParams contains all the parameters to send to the API endpoint
+/* UpdateRoleDefinitionParams contains all the parameters to send to the API endpoint
+   for the update role definition operation.
 
-	for the update role definition operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type UpdateRoleDefinitionParams struct {
 

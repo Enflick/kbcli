@@ -53,12 +53,10 @@ func NewGetBundleTagsParamsWithHTTPClient(client *http.Client) *GetBundleTagsPar
 	}
 }
 
-/*
-GetBundleTagsParams contains all the parameters to send to the API endpoint
+/* GetBundleTagsParams contains all the parameters to send to the API endpoint
+   for the get bundle tags operation.
 
-	for the get bundle tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetBundleTagsParams struct {
 

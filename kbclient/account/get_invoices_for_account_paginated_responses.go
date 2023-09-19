@@ -47,8 +47,7 @@ func NewGetInvoicesForAccountPaginatedOK() *GetInvoicesForAccountPaginatedOK {
 	return &GetInvoicesForAccountPaginatedOK{}
 }
 
-/*
-GetInvoicesForAccountPaginatedOK describes a response with status code 200, with default header values.
+/* GetInvoicesForAccountPaginatedOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetInvoicesForAccountPaginatedBadRequest() *GetInvoicesForAccountPaginat
 	return &GetInvoicesForAccountPaginatedBadRequest{}
 }
 
-/*
-GetInvoicesForAccountPaginatedBadRequest describes a response with status code 400, with default header values.
+/* GetInvoicesForAccountPaginatedBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -171,8 +169,7 @@ func NewGetInvoicesForAccountPaginatedNotFound() *GetInvoicesForAccountPaginated
 	return &GetInvoicesForAccountPaginatedNotFound{}
 }
 
-/*
-GetInvoicesForAccountPaginatedNotFound describes a response with status code 404, with default header values.
+/* GetInvoicesForAccountPaginatedNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

@@ -46,8 +46,7 @@ func NewAddUserRolesCreated() *AddUserRolesCreated {
 	return &AddUserRolesCreated{}
 }
 
-/*
-AddUserRolesCreated describes a response with status code 201, with default header values.
+/* AddUserRolesCreated describes a response with status code 201, with default header values.
 
 User role created successfully
 */

@@ -47,8 +47,7 @@ func NewGetPluginPaymentStateMachineConfigOK() *GetPluginPaymentStateMachineConf
 	return &GetPluginPaymentStateMachineConfigOK{}
 }
 
-/*
-GetPluginPaymentStateMachineConfigOK describes a response with status code 200, with default header values.
+/* GetPluginPaymentStateMachineConfigOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetPluginPaymentStateMachineConfigBadRequest() *GetPluginPaymentStateMac
 	return &GetPluginPaymentStateMachineConfigBadRequest{}
 }
 
-/*
-GetPluginPaymentStateMachineConfigBadRequest describes a response with status code 400, with default header values.
+/* GetPluginPaymentStateMachineConfigBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

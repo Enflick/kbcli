@@ -52,12 +52,10 @@ func NewGetInvoiceMPTemplateParamsWithHTTPClient(client *http.Client) *GetInvoic
 	}
 }
 
-/*
-GetInvoiceMPTemplateParams contains all the parameters to send to the API endpoint
+/* GetInvoiceMPTemplateParams contains all the parameters to send to the API endpoint
+   for the get invoice m p template operation.
 
-	for the get invoice m p template operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetInvoiceMPTemplateParams struct {
 

@@ -61,7 +61,7 @@ type ClientService interface {
 }
 
 /*
-CreateCredits creates a credit
+  CreateCredits creates a credit
 */
 func (a *Client) CreateCredits(ctx context.Context, params *CreateCreditsParams) (*CreateCreditsCreated, error) {
 	// TODO: Validate the params before sending
@@ -149,7 +149,7 @@ func (a *Client) CreateCredits(ctx context.Context, params *CreateCreditsParams)
 }
 
 /*
-GetCredit retrieves a credit by id
+  GetCredit retrieves a credit by id
 */
 func (a *Client) GetCredit(ctx context.Context, params *GetCreditParams) (*GetCreditOK, error) {
 	// TODO: Validate the params before sending

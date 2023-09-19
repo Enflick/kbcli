@@ -47,8 +47,7 @@ func NewCaptureAuthorizationCreated() *CaptureAuthorizationCreated {
 	return &CaptureAuthorizationCreated{}
 }
 
-/*
-CaptureAuthorizationCreated describes a response with status code 201, with default header values.
+/* CaptureAuthorizationCreated describes a response with status code 201, with default header values.
 
 Payment transaction created successfully
 */
@@ -116,8 +115,7 @@ func NewCaptureAuthorizationBadRequest() *CaptureAuthorizationBadRequest {
 	return &CaptureAuthorizationBadRequest{}
 }
 
-/*
-CaptureAuthorizationBadRequest describes a response with status code 400, with default header values.
+/* CaptureAuthorizationBadRequest describes a response with status code 400, with default header values.
 
 Invalid paymentId supplied
 */
@@ -173,8 +171,7 @@ func NewCaptureAuthorizationPaymentRequired() *CaptureAuthorizationPaymentRequir
 	return &CaptureAuthorizationPaymentRequired{}
 }
 
-/*
-CaptureAuthorizationPaymentRequired describes a response with status code 402, with default header values.
+/* CaptureAuthorizationPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -230,8 +227,7 @@ func NewCaptureAuthorizationNotFound() *CaptureAuthorizationNotFound {
 	return &CaptureAuthorizationNotFound{}
 }
 
-/*
-CaptureAuthorizationNotFound describes a response with status code 404, with default header values.
+/* CaptureAuthorizationNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */
@@ -287,8 +283,7 @@ func NewCaptureAuthorizationUnprocessableEntity() *CaptureAuthorizationUnprocess
 	return &CaptureAuthorizationUnprocessableEntity{}
 }
 
-/*
-CaptureAuthorizationUnprocessableEntity describes a response with status code 422, with default header values.
+/* CaptureAuthorizationUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -344,8 +339,7 @@ func NewCaptureAuthorizationBadGateway() *CaptureAuthorizationBadGateway {
 	return &CaptureAuthorizationBadGateway{}
 }
 
-/*
-CaptureAuthorizationBadGateway describes a response with status code 502, with default header values.
+/* CaptureAuthorizationBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -401,8 +395,7 @@ func NewCaptureAuthorizationServiceUnavailable() *CaptureAuthorizationServiceUna
 	return &CaptureAuthorizationServiceUnavailable{}
 }
 
-/*
-CaptureAuthorizationServiceUnavailable describes a response with status code 503, with default header values.
+/* CaptureAuthorizationServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -458,8 +451,7 @@ func NewCaptureAuthorizationGatewayTimeout() *CaptureAuthorizationGatewayTimeout
 	return &CaptureAuthorizationGatewayTimeout{}
 }
 
-/*
-CaptureAuthorizationGatewayTimeout describes a response with status code 504, with default header values.
+/* CaptureAuthorizationGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

@@ -47,8 +47,7 @@ func NewBuildFormDescriptorOK() *BuildFormDescriptorOK {
 	return &BuildFormDescriptorOK{}
 }
 
-/*
-BuildFormDescriptorOK describes a response with status code 200, with default header values.
+/* BuildFormDescriptorOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewBuildFormDescriptorNotFound() *BuildFormDescriptorNotFound {
 	return &BuildFormDescriptorNotFound{}
 }
 
-/*
-BuildFormDescriptorNotFound describes a response with status code 404, with default header values.
+/* BuildFormDescriptorNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

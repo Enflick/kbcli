@@ -45,8 +45,7 @@ func NewGetInvoiceTranslationOK() *GetInvoiceTranslationOK {
 	return &GetInvoiceTranslationOK{}
 }
 
-/*
-GetInvoiceTranslationOK describes a response with status code 200, with default header values.
+/* GetInvoiceTranslationOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -112,8 +111,7 @@ func NewGetInvoiceTranslationBadRequest() *GetInvoiceTranslationBadRequest {
 	return &GetInvoiceTranslationBadRequest{}
 }
 
-/*
-GetInvoiceTranslationBadRequest describes a response with status code 400, with default header values.
+/* GetInvoiceTranslationBadRequest describes a response with status code 400, with default header values.
 
 Invalid locale supplied
 */
@@ -169,8 +167,7 @@ func NewGetInvoiceTranslationNotFound() *GetInvoiceTranslationNotFound {
 	return &GetInvoiceTranslationNotFound{}
 }
 
-/*
-GetInvoiceTranslationNotFound describes a response with status code 404, with default header values.
+/* GetInvoiceTranslationNotFound describes a response with status code 404, with default header values.
 
 Translation not found
 */

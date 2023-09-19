@@ -45,8 +45,7 @@ func NewInvalidatesCacheNoContent() *InvalidatesCacheNoContent {
 	return &InvalidatesCacheNoContent{}
 }
 
-/*
-InvalidatesCacheNoContent describes a response with status code 204, with default header values.
+/* InvalidatesCacheNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewInvalidatesCacheBadRequest() *InvalidatesCacheBadRequest {
 	return &InvalidatesCacheBadRequest{}
 }
 
-/*
-InvalidatesCacheBadRequest describes a response with status code 400, with default header values.
+/* InvalidatesCacheBadRequest describes a response with status code 400, with default header values.
 
 Cache name does not exist or is not alive
 */

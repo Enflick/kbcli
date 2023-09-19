@@ -45,8 +45,7 @@ func NewDeleteTransactionCustomFieldsNoContent() *DeleteTransactionCustomFieldsN
 	return &DeleteTransactionCustomFieldsNoContent{}
 }
 
-/*
-DeleteTransactionCustomFieldsNoContent describes a response with status code 204, with default header values.
+/* DeleteTransactionCustomFieldsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewDeleteTransactionCustomFieldsBadRequest() *DeleteTransactionCustomFields
 	return &DeleteTransactionCustomFieldsBadRequest{}
 }
 
-/*
-DeleteTransactionCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* DeleteTransactionCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid transaction id supplied
 */

@@ -55,12 +55,10 @@ func NewCreateSubscriptionParamsWithHTTPClient(client *http.Client) *CreateSubsc
 	}
 }
 
-/*
-CreateSubscriptionParams contains all the parameters to send to the API endpoint
+/* CreateSubscriptionParams contains all the parameters to send to the API endpoint
+   for the create subscription operation.
 
-	for the create subscription operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateSubscriptionParams struct {
 

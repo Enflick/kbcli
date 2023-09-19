@@ -52,12 +52,10 @@ func NewDeleteTagDefinitionParamsWithHTTPClient(client *http.Client) *DeleteTagD
 	}
 }
 
-/*
-DeleteTagDefinitionParams contains all the parameters to send to the API endpoint
+/* DeleteTagDefinitionParams contains all the parameters to send to the API endpoint
+   for the delete tag definition operation.
 
-	for the delete tag definition operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type DeleteTagDefinitionParams struct {
 

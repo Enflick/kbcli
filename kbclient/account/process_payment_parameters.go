@@ -55,12 +55,10 @@ func NewProcessPaymentParamsWithHTTPClient(client *http.Client) *ProcessPaymentP
 	}
 }
 
-/*
-ProcessPaymentParams contains all the parameters to send to the API endpoint
+/* ProcessPaymentParams contains all the parameters to send to the API endpoint
+   for the process payment operation.
 
-	for the process payment operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ProcessPaymentParams struct {
 

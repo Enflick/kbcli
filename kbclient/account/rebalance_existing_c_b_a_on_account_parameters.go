@@ -52,12 +52,10 @@ func NewRebalanceExistingCBAOnAccountParamsWithHTTPClient(client *http.Client) *
 	}
 }
 
-/*
-RebalanceExistingCBAOnAccountParams contains all the parameters to send to the API endpoint
+/* RebalanceExistingCBAOnAccountParams contains all the parameters to send to the API endpoint
+   for the rebalance existing c b a on account operation.
 
-	for the rebalance existing c b a on account operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type RebalanceExistingCBAOnAccountParams struct {
 

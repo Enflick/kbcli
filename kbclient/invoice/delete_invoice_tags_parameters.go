@@ -53,12 +53,10 @@ func NewDeleteInvoiceTagsParamsWithHTTPClient(client *http.Client) *DeleteInvoic
 	}
 }
 
-/*
-DeleteInvoiceTagsParams contains all the parameters to send to the API endpoint
+/* DeleteInvoiceTagsParams contains all the parameters to send to the API endpoint
+   for the delete invoice tags operation.
 
-	for the delete invoice tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type DeleteInvoiceTagsParams struct {
 

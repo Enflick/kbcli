@@ -54,12 +54,10 @@ func NewCreatePaymentMethodCustomFieldsParamsWithHTTPClient(client *http.Client)
 	}
 }
 
-/*
-CreatePaymentMethodCustomFieldsParams contains all the parameters to send to the API endpoint
+/* CreatePaymentMethodCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the create payment method custom fields operation.
 
-	for the create payment method custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreatePaymentMethodCustomFieldsParams struct {
 

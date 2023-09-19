@@ -53,12 +53,10 @@ func NewGetAccountByKeyParamsWithHTTPClient(client *http.Client) *GetAccountByKe
 	}
 }
 
-/*
-GetAccountByKeyParams contains all the parameters to send to the API endpoint
+/* GetAccountByKeyParams contains all the parameters to send to the API endpoint
+   for the get account by key operation.
 
-	for the get account by key operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetAccountByKeyParams struct {
 

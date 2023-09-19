@@ -46,8 +46,7 @@ func NewSetClockOK() *SetClockOK {
 	return &SetClockOK{}
 }
 
-/*
-SetClockOK describes a response with status code 200, with default header values.
+/* SetClockOK describes a response with status code 200, with default header values.
 
 successful operation
 */

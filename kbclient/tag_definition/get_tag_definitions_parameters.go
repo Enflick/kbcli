@@ -52,12 +52,10 @@ func NewGetTagDefinitionsParamsWithHTTPClient(client *http.Client) *GetTagDefini
 	}
 }
 
-/*
-GetTagDefinitionsParams contains all the parameters to send to the API endpoint
+/* GetTagDefinitionsParams contains all the parameters to send to the API endpoint
+   for the get tag definitions operation.
 
-	for the get tag definitions operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetTagDefinitionsParams struct {
 

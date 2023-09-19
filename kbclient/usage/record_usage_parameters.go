@@ -54,12 +54,10 @@ func NewRecordUsageParamsWithHTTPClient(client *http.Client) *RecordUsageParams 
 	}
 }
 
-/*
-RecordUsageParams contains all the parameters to send to the API endpoint
+/* RecordUsageParams contains all the parameters to send to the API endpoint
+   for the record usage operation.
 
-	for the record usage operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type RecordUsageParams struct {
 

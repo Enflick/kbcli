@@ -55,12 +55,10 @@ func NewCompleteTransactionParamsWithHTTPClient(client *http.Client) *CompleteTr
 	}
 }
 
-/*
-CompleteTransactionParams contains all the parameters to send to the API endpoint
+/* CompleteTransactionParams contains all the parameters to send to the API endpoint
+   for the complete transaction operation.
 
-	for the complete transaction operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CompleteTransactionParams struct {
 

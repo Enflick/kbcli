@@ -47,8 +47,7 @@ func NewGetTransactionCustomFieldsOK() *GetTransactionCustomFieldsOK {
 	return &GetTransactionCustomFieldsOK{}
 }
 
-/*
-GetTransactionCustomFieldsOK describes a response with status code 200, with default header values.
+/* GetTransactionCustomFieldsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetTransactionCustomFieldsBadRequest() *GetTransactionCustomFieldsBadReq
 	return &GetTransactionCustomFieldsBadRequest{}
 }
 
-/*
-GetTransactionCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* GetTransactionCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid transaction id supplied
 */

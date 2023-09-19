@@ -52,12 +52,10 @@ func NewGetCatalogJSONParamsWithHTTPClient(client *http.Client) *GetCatalogJSONP
 	}
 }
 
-/*
-GetCatalogJSONParams contains all the parameters to send to the API endpoint
+/* GetCatalogJSONParams contains all the parameters to send to the API endpoint
+   for the get catalog Json operation.
 
-	for the get catalog Json operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetCatalogJSONParams struct {
 

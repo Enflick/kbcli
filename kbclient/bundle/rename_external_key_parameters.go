@@ -54,12 +54,10 @@ func NewRenameExternalKeyParamsWithHTTPClient(client *http.Client) *RenameExtern
 	}
 }
 
-/*
-RenameExternalKeyParams contains all the parameters to send to the API endpoint
+/* RenameExternalKeyParams contains all the parameters to send to the API endpoint
+   for the rename external key operation.
 
-	for the rename external key operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type RenameExternalKeyParams struct {
 

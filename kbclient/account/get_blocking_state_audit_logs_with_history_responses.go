@@ -47,8 +47,7 @@ func NewGetBlockingStateAuditLogsWithHistoryOK() *GetBlockingStateAuditLogsWithH
 	return &GetBlockingStateAuditLogsWithHistoryOK{}
 }
 
-/*
-GetBlockingStateAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
+/* GetBlockingStateAuditLogsWithHistoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetBlockingStateAuditLogsWithHistoryNotFound() *GetBlockingStateAuditLog
 	return &GetBlockingStateAuditLogsWithHistoryNotFound{}
 }
 
-/*
-GetBlockingStateAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
+/* GetBlockingStateAuditLogsWithHistoryNotFound describes a response with status code 404, with default header values.
 
 Blocking state  not found
 */

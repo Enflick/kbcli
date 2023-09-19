@@ -53,12 +53,10 @@ func NewDeleteAccountCustomFieldsParamsWithHTTPClient(client *http.Client) *Dele
 	}
 }
 
-/*
-DeleteAccountCustomFieldsParams contains all the parameters to send to the API endpoint
+/* DeleteAccountCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the delete account custom fields operation.
 
-	for the delete account custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type DeleteAccountCustomFieldsParams struct {
 

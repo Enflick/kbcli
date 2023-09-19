@@ -52,12 +52,10 @@ func NewGetInvoiceTemplateParamsWithHTTPClient(client *http.Client) *GetInvoiceT
 	}
 }
 
-/*
-GetInvoiceTemplateParams contains all the parameters to send to the API endpoint
+/* GetInvoiceTemplateParams contains all the parameters to send to the API endpoint
+   for the get invoice template operation.
 
-	for the get invoice template operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetInvoiceTemplateParams struct {
 	WithProfilingInfo     *string // If set, return KB hprof headers

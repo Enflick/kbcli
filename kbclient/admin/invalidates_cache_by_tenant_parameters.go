@@ -52,12 +52,10 @@ func NewInvalidatesCacheByTenantParamsWithHTTPClient(client *http.Client) *Inval
 	}
 }
 
-/*
-InvalidatesCacheByTenantParams contains all the parameters to send to the API endpoint
+/* InvalidatesCacheByTenantParams contains all the parameters to send to the API endpoint
+   for the invalidates cache by tenant operation.
 
-	for the invalidates cache by tenant operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type InvalidatesCacheByTenantParams struct {
 	WithProfilingInfo     *string // If set, return KB hprof headers

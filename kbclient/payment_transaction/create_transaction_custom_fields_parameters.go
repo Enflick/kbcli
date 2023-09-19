@@ -54,12 +54,10 @@ func NewCreateTransactionCustomFieldsParamsWithHTTPClient(client *http.Client) *
 	}
 }
 
-/*
-CreateTransactionCustomFieldsParams contains all the parameters to send to the API endpoint
+/* CreateTransactionCustomFieldsParams contains all the parameters to send to the API endpoint
+   for the create transaction custom fields operation.
 
-	for the create transaction custom fields operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateTransactionCustomFieldsParams struct {
 

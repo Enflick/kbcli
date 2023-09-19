@@ -47,8 +47,7 @@ func NewGetInvoicesGroupOK() *GetInvoicesGroupOK {
 	return &GetInvoicesGroupOK{}
 }
 
-/*
-GetInvoicesGroupOK describes a response with status code 200, with default header values.
+/* GetInvoicesGroupOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -114,8 +113,7 @@ func NewGetInvoicesGroupBadRequest() *GetInvoicesGroupBadRequest {
 	return &GetInvoicesGroupBadRequest{}
 }
 
-/*
-GetInvoicesGroupBadRequest describes a response with status code 400, with default header values.
+/* GetInvoicesGroupBadRequest describes a response with status code 400, with default header values.
 
 Invalid group id supplied
 */

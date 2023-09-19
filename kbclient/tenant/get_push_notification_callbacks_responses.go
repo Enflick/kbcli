@@ -47,8 +47,7 @@ func NewGetPushNotificationCallbacksOK() *GetPushNotificationCallbacksOK {
 	return &GetPushNotificationCallbacksOK{}
 }
 
-/*
-GetPushNotificationCallbacksOK describes a response with status code 200, with default header values.
+/* GetPushNotificationCallbacksOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetPushNotificationCallbacksBadRequest() *GetPushNotificationCallbacksBa
 	return &GetPushNotificationCallbacksBadRequest{}
 }
 
-/*
-GetPushNotificationCallbacksBadRequest describes a response with status code 400, with default header values.
+/* GetPushNotificationCallbacksBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

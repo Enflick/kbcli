@@ -53,12 +53,10 @@ func NewDeleteBundleTagsParamsWithHTTPClient(client *http.Client) *DeleteBundleT
 	}
 }
 
-/*
-DeleteBundleTagsParams contains all the parameters to send to the API endpoint
+/* DeleteBundleTagsParams contains all the parameters to send to the API endpoint
+   for the delete bundle tags operation.
 
-	for the delete bundle tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type DeleteBundleTagsParams struct {
 

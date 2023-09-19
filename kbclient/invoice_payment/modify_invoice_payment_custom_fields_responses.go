@@ -45,8 +45,7 @@ func NewModifyInvoicePaymentCustomFieldsNoContent() *ModifyInvoicePaymentCustomF
 	return &ModifyInvoicePaymentCustomFieldsNoContent{}
 }
 
-/*
-ModifyInvoicePaymentCustomFieldsNoContent describes a response with status code 204, with default header values.
+/* ModifyInvoicePaymentCustomFieldsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewModifyInvoicePaymentCustomFieldsBadRequest() *ModifyInvoicePaymentCustom
 	return &ModifyInvoicePaymentCustomFieldsBadRequest{}
 }
 
-/*
-ModifyInvoicePaymentCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* ModifyInvoicePaymentCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid payment id supplied
 */

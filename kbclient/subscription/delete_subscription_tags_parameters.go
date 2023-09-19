@@ -53,12 +53,10 @@ func NewDeleteSubscriptionTagsParamsWithHTTPClient(client *http.Client) *DeleteS
 	}
 }
 
-/*
-DeleteSubscriptionTagsParams contains all the parameters to send to the API endpoint
+/* DeleteSubscriptionTagsParams contains all the parameters to send to the API endpoint
+   for the delete subscription tags operation.
 
-	for the delete subscription tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type DeleteSubscriptionTagsParams struct {
 

@@ -47,8 +47,7 @@ func NewUploadPluginPaymentStateMachineConfigCreated() *UploadPluginPaymentState
 	return &UploadPluginPaymentStateMachineConfigCreated{}
 }
 
-/*
-UploadPluginPaymentStateMachineConfigCreated describes a response with status code 201, with default header values.
+/* UploadPluginPaymentStateMachineConfigCreated describes a response with status code 201, with default header values.
 
 Per tenant state machine uploaded successfully
 */
@@ -116,8 +115,7 @@ func NewUploadPluginPaymentStateMachineConfigBadRequest() *UploadPluginPaymentSt
 	return &UploadPluginPaymentStateMachineConfigBadRequest{}
 }
 
-/*
-UploadPluginPaymentStateMachineConfigBadRequest describes a response with status code 400, with default header values.
+/* UploadPluginPaymentStateMachineConfigBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

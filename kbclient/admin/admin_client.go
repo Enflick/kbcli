@@ -72,7 +72,7 @@ type ClientService interface {
 }
 
 /*
-GetQueueEntries gets queues entries
+  GetQueueEntries gets queues entries
 */
 func (a *Client) GetQueueEntries(ctx context.Context, params *GetQueueEntriesParams) (*GetQueueEntriesOK, error) {
 	// TODO: Validate the params before sending
@@ -119,7 +119,7 @@ func (a *Client) GetQueueEntries(ctx context.Context, params *GetQueueEntriesPar
 }
 
 /*
-InvalidatesCache invalidates the given cache if specified otherwise invalidates all caches
+  InvalidatesCache invalidates the given cache if specified otherwise invalidates all caches
 */
 func (a *Client) InvalidatesCache(ctx context.Context, params *InvalidatesCacheParams) (*InvalidatesCacheNoContent, error) {
 	// TODO: Validate the params before sending
@@ -166,7 +166,7 @@ func (a *Client) InvalidatesCache(ctx context.Context, params *InvalidatesCacheP
 }
 
 /*
-InvalidatesCacheByAccount invalidates caches per account level
+  InvalidatesCacheByAccount invalidates caches per account level
 */
 func (a *Client) InvalidatesCacheByAccount(ctx context.Context, params *InvalidatesCacheByAccountParams) (*InvalidatesCacheByAccountNoContent, error) {
 	// TODO: Validate the params before sending
@@ -213,7 +213,7 @@ func (a *Client) InvalidatesCacheByAccount(ctx context.Context, params *Invalida
 }
 
 /*
-InvalidatesCacheByTenant invalidates caches per tenant level
+  InvalidatesCacheByTenant invalidates caches per tenant level
 */
 func (a *Client) InvalidatesCacheByTenant(ctx context.Context, params *InvalidatesCacheByTenantParams) (*InvalidatesCacheByTenantNoContent, error) {
 	// TODO: Validate the params before sending
@@ -260,7 +260,7 @@ func (a *Client) InvalidatesCacheByTenant(ctx context.Context, params *Invalidat
 }
 
 /*
-PutInRotation puts the host back into rotation
+  PutInRotation puts the host back into rotation
 */
 func (a *Client) PutInRotation(ctx context.Context, params *PutInRotationParams) (*PutInRotationNoContent, error) {
 	// TODO: Validate the params before sending
@@ -307,7 +307,7 @@ func (a *Client) PutInRotation(ctx context.Context, params *PutInRotationParams)
 }
 
 /*
-PutOutOfRotation puts the host out of rotation
+  PutOutOfRotation puts the host out of rotation
 */
 func (a *Client) PutOutOfRotation(ctx context.Context, params *PutOutOfRotationParams) (*PutOutOfRotationNoContent, error) {
 	// TODO: Validate the params before sending
@@ -354,7 +354,7 @@ func (a *Client) PutOutOfRotation(ctx context.Context, params *PutOutOfRotationP
 }
 
 /*
-TriggerInvoiceGenerationForParkedAccounts triggers an invoice generation for all parked accounts
+  TriggerInvoiceGenerationForParkedAccounts triggers an invoice generation for all parked accounts
 */
 func (a *Client) TriggerInvoiceGenerationForParkedAccounts(ctx context.Context, params *TriggerInvoiceGenerationForParkedAccountsParams) (*TriggerInvoiceGenerationForParkedAccountsOK, error) {
 	// TODO: Validate the params before sending
@@ -413,7 +413,7 @@ func (a *Client) TriggerInvoiceGenerationForParkedAccounts(ctx context.Context, 
 }
 
 /*
-UpdatePaymentTransactionState updates existing payment transaction and associated payment state
+  UpdatePaymentTransactionState updates existing payment transaction and associated payment state
 */
 func (a *Client) UpdatePaymentTransactionState(ctx context.Context, params *UpdatePaymentTransactionStateParams) (*UpdatePaymentTransactionStateNoContent, error) {
 	// TODO: Validate the params before sending

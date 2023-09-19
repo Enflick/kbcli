@@ -47,8 +47,7 @@ func NewGetInvoiceByNumberOK() *GetInvoiceByNumberOK {
 	return &GetInvoiceByNumberOK{}
 }
 
-/*
-GetInvoiceByNumberOK describes a response with status code 200, with default header values.
+/* GetInvoiceByNumberOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetInvoiceByNumberNotFound() *GetInvoiceByNumberNotFound {
 	return &GetInvoiceByNumberNotFound{}
 }
 
-/*
-GetInvoiceByNumberNotFound describes a response with status code 404, with default header values.
+/* GetInvoiceByNumberNotFound describes a response with status code 404, with default header values.
 
 Invoice not found
 */

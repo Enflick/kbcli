@@ -47,8 +47,7 @@ func NewAdjustInvoiceItemCreated() *AdjustInvoiceItemCreated {
 	return &AdjustInvoiceItemCreated{}
 }
 
-/*
-AdjustInvoiceItemCreated describes a response with status code 201, with default header values.
+/* AdjustInvoiceItemCreated describes a response with status code 201, with default header values.
 
 Created adjustment Successfully
 */
@@ -116,8 +115,7 @@ func NewAdjustInvoiceItemBadRequest() *AdjustInvoiceItemBadRequest {
 	return &AdjustInvoiceItemBadRequest{}
 }
 
-/*
-AdjustInvoiceItemBadRequest describes a response with status code 400, with default header values.
+/* AdjustInvoiceItemBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id, invoice id or invoice item id supplied
 */
@@ -173,8 +171,7 @@ func NewAdjustInvoiceItemNotFound() *AdjustInvoiceItemNotFound {
 	return &AdjustInvoiceItemNotFound{}
 }
 
-/*
-AdjustInvoiceItemNotFound describes a response with status code 404, with default header values.
+/* AdjustInvoiceItemNotFound describes a response with status code 404, with default header values.
 
 Invoice not found
 */

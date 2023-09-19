@@ -45,8 +45,7 @@ func NewVoidInvoiceNoContent() *VoidInvoiceNoContent {
 	return &VoidInvoiceNoContent{}
 }
 
-/*
-VoidInvoiceNoContent describes a response with status code 204, with default header values.
+/* VoidInvoiceNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewVoidInvoiceBadRequest() *VoidInvoiceBadRequest {
 	return &VoidInvoiceBadRequest{}
 }
 
-/*
-VoidInvoiceBadRequest describes a response with status code 400, with default header values.
+/* VoidInvoiceBadRequest describes a response with status code 400, with default header values.
 
 Invalid invoice id supplied
 */
@@ -159,8 +157,7 @@ func NewVoidInvoiceNotFound() *VoidInvoiceNotFound {
 	return &VoidInvoiceNotFound{}
 }
 
-/*
-VoidInvoiceNotFound describes a response with status code 404, with default header values.
+/* VoidInvoiceNotFound describes a response with status code 404, with default header values.
 
 Invoice not found
 */

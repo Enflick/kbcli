@@ -54,12 +54,10 @@ func NewCreateMigrationInvoiceParamsWithHTTPClient(client *http.Client) *CreateM
 	}
 }
 
-/*
-CreateMigrationInvoiceParams contains all the parameters to send to the API endpoint
+/* CreateMigrationInvoiceParams contains all the parameters to send to the API endpoint
+   for the create migration invoice operation.
 
-	for the create migration invoice operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateMigrationInvoiceParams struct {
 

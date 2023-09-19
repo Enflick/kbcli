@@ -45,8 +45,7 @@ func NewUploadOverdueConfigXMLCreated() *UploadOverdueConfigXMLCreated {
 	return &UploadOverdueConfigXMLCreated{}
 }
 
-/*
-UploadOverdueConfigXMLCreated describes a response with status code 201, with default header values.
+/* UploadOverdueConfigXMLCreated describes a response with status code 201, with default header values.
 
 Successfully uploaded overdue config
 */
@@ -112,8 +111,7 @@ func NewUploadOverdueConfigXMLBadRequest() *UploadOverdueConfigXMLBadRequest {
 	return &UploadOverdueConfigXMLBadRequest{}
 }
 
-/*
-UploadOverdueConfigXMLBadRequest describes a response with status code 400, with default header values.
+/* UploadOverdueConfigXMLBadRequest describes a response with status code 400, with default header values.
 
 Invalid node command supplied
 */

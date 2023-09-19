@@ -53,12 +53,10 @@ func NewResumeBundleParamsWithHTTPClient(client *http.Client) *ResumeBundleParam
 	}
 }
 
-/*
-ResumeBundleParams contains all the parameters to send to the API endpoint
+/* ResumeBundleParams contains all the parameters to send to the API endpoint
+   for the resume bundle operation.
 
-	for the resume bundle operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ResumeBundleParams struct {
 

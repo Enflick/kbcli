@@ -47,8 +47,7 @@ func NewCreateInvoiceCustomFieldsCreated() *CreateInvoiceCustomFieldsCreated {
 	return &CreateInvoiceCustomFieldsCreated{}
 }
 
-/*
-CreateInvoiceCustomFieldsCreated describes a response with status code 201, with default header values.
+/* CreateInvoiceCustomFieldsCreated describes a response with status code 201, with default header values.
 
 Custom field created successfully
 */
@@ -114,8 +113,7 @@ func NewCreateInvoiceCustomFieldsBadRequest() *CreateInvoiceCustomFieldsBadReque
 	return &CreateInvoiceCustomFieldsBadRequest{}
 }
 
-/*
-CreateInvoiceCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* CreateInvoiceCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid invoice id supplied
 */

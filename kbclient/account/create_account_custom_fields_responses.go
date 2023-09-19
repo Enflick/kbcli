@@ -47,8 +47,7 @@ func NewCreateAccountCustomFieldsCreated() *CreateAccountCustomFieldsCreated {
 	return &CreateAccountCustomFieldsCreated{}
 }
 
-/*
-CreateAccountCustomFieldsCreated describes a response with status code 201, with default header values.
+/* CreateAccountCustomFieldsCreated describes a response with status code 201, with default header values.
 
 Custom field created successfully
 */
@@ -114,8 +113,7 @@ func NewCreateAccountCustomFieldsBadRequest() *CreateAccountCustomFieldsBadReque
 	return &CreateAccountCustomFieldsBadRequest{}
 }
 
-/*
-CreateAccountCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* CreateAccountCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */

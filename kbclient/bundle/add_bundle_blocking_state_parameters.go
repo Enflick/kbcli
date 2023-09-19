@@ -55,12 +55,10 @@ func NewAddBundleBlockingStateParamsWithHTTPClient(client *http.Client) *AddBund
 	}
 }
 
-/*
-AddBundleBlockingStateParams contains all the parameters to send to the API endpoint
+/* AddBundleBlockingStateParams contains all the parameters to send to the API endpoint
+   for the add bundle blocking state operation.
 
-	for the add bundle blocking state operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type AddBundleBlockingStateParams struct {
 

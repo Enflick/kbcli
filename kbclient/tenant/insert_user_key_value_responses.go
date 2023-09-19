@@ -47,8 +47,7 @@ func NewInsertUserKeyValueCreated() *InsertUserKeyValueCreated {
 	return &InsertUserKeyValueCreated{}
 }
 
-/*
-InsertUserKeyValueCreated describes a response with status code 201, with default header values.
+/* InsertUserKeyValueCreated describes a response with status code 201, with default header values.
 
 Per tenant config uploaded successfully
 */
@@ -116,8 +115,7 @@ func NewInsertUserKeyValueBadRequest() *InsertUserKeyValueBadRequest {
 	return &InsertUserKeyValueBadRequest{}
 }
 
-/*
-InsertUserKeyValueBadRequest describes a response with status code 400, with default header values.
+/* InsertUserKeyValueBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */

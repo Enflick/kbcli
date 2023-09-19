@@ -53,12 +53,10 @@ func NewGetInvoiceByNumberParamsWithHTTPClient(client *http.Client) *GetInvoiceB
 	}
 }
 
-/*
-GetInvoiceByNumberParams contains all the parameters to send to the API endpoint
+/* GetInvoiceByNumberParams contains all the parameters to send to the API endpoint
+   for the get invoice by number operation.
 
-	for the get invoice by number operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetInvoiceByNumberParams struct {
 

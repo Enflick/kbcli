@@ -47,8 +47,7 @@ func NewGetTagDefinitionOK() *GetTagDefinitionOK {
 	return &GetTagDefinitionOK{}
 }
 
-/*
-GetTagDefinitionOK describes a response with status code 200, with default header values.
+/* GetTagDefinitionOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetTagDefinitionBadRequest() *GetTagDefinitionBadRequest {
 	return &GetTagDefinitionBadRequest{}
 }
 
-/*
-GetTagDefinitionBadRequest describes a response with status code 400, with default header values.
+/* GetTagDefinitionBadRequest describes a response with status code 400, with default header values.
 
 Invalid tagDefinitionId supplied
 */

@@ -55,12 +55,10 @@ func NewProcessPaymentByExternalKeyParamsWithHTTPClient(client *http.Client) *Pr
 	}
 }
 
-/*
-ProcessPaymentByExternalKeyParams contains all the parameters to send to the API endpoint
+/* ProcessPaymentByExternalKeyParams contains all the parameters to send to the API endpoint
+   for the process payment by external key operation.
 
-	for the process payment by external key operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ProcessPaymentByExternalKeyParams struct {
 

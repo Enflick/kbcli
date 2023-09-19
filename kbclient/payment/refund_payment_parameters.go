@@ -55,12 +55,10 @@ func NewRefundPaymentParamsWithHTTPClient(client *http.Client) *RefundPaymentPar
 	}
 }
 
-/*
-RefundPaymentParams contains all the parameters to send to the API endpoint
+/* RefundPaymentParams contains all the parameters to send to the API endpoint
+   for the refund payment operation.
 
-	for the refund payment operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type RefundPaymentParams struct {
 

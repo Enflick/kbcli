@@ -46,8 +46,7 @@ func NewGetCatalogJSONOK() *GetCatalogJSONOK {
 	return &GetCatalogJSONOK{}
 }
 
-/*
-GetCatalogJSONOK describes a response with status code 200, with default header values.
+/* GetCatalogJSONOK describes a response with status code 200, with default header values.
 
 successful operation
 */

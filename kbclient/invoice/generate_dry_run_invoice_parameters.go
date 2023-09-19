@@ -55,12 +55,10 @@ func NewGenerateDryRunInvoiceParamsWithHTTPClient(client *http.Client) *Generate
 	}
 }
 
-/*
-GenerateDryRunInvoiceParams contains all the parameters to send to the API endpoint
+/* GenerateDryRunInvoiceParams contains all the parameters to send to the API endpoint
+   for the generate dry run invoice operation.
 
-	for the generate dry run invoice operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GenerateDryRunInvoiceParams struct {
 

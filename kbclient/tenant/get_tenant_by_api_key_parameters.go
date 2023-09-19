@@ -52,12 +52,10 @@ func NewGetTenantByAPIKeyParamsWithHTTPClient(client *http.Client) *GetTenantByA
 	}
 }
 
-/*
-GetTenantByAPIKeyParams contains all the parameters to send to the API endpoint
+/* GetTenantByAPIKeyParams contains all the parameters to send to the API endpoint
+   for the get tenant by Api key operation.
 
-	for the get tenant by Api key operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetTenantByAPIKeyParams struct {
 

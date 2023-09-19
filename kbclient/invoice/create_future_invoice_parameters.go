@@ -53,12 +53,10 @@ func NewCreateFutureInvoiceParamsWithHTTPClient(client *http.Client) *CreateFutu
 	}
 }
 
-/*
-CreateFutureInvoiceParams contains all the parameters to send to the API endpoint
+/* CreateFutureInvoiceParams contains all the parameters to send to the API endpoint
+   for the create future invoice operation.
 
-	for the create future invoice operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateFutureInvoiceParams struct {
 

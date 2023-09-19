@@ -45,8 +45,7 @@ func NewRefreshPaymentMethodsNoContent() *RefreshPaymentMethodsNoContent {
 	return &RefreshPaymentMethodsNoContent{}
 }
 
-/*
-RefreshPaymentMethodsNoContent describes a response with status code 204, with default header values.
+/* RefreshPaymentMethodsNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewRefreshPaymentMethodsBadRequest() *RefreshPaymentMethodsBadRequest {
 	return &RefreshPaymentMethodsBadRequest{}
 }
 
-/*
-RefreshPaymentMethodsBadRequest describes a response with status code 400, with default header values.
+/* RefreshPaymentMethodsBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -159,8 +157,7 @@ func NewRefreshPaymentMethodsNotFound() *RefreshPaymentMethodsNotFound {
 	return &RefreshPaymentMethodsNotFound{}
 }
 
-/*
-RefreshPaymentMethodsNotFound describes a response with status code 404, with default header values.
+/* RefreshPaymentMethodsNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

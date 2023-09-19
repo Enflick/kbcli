@@ -67,7 +67,7 @@ type ClientService interface {
 }
 
 /*
-CreateTagDefinition creates a tag definition
+  CreateTagDefinition creates a tag definition
 */
 func (a *Client) CreateTagDefinition(ctx context.Context, params *CreateTagDefinitionParams) (*CreateTagDefinitionCreated, error) {
 	// TODO: Validate the params before sending
@@ -155,7 +155,7 @@ func (a *Client) CreateTagDefinition(ctx context.Context, params *CreateTagDefin
 }
 
 /*
-DeleteTagDefinition deletes a tag definition
+  DeleteTagDefinition deletes a tag definition
 */
 func (a *Client) DeleteTagDefinition(ctx context.Context, params *DeleteTagDefinitionParams) (*DeleteTagDefinitionNoContent, error) {
 	// TODO: Validate the params before sending
@@ -214,7 +214,7 @@ func (a *Client) DeleteTagDefinition(ctx context.Context, params *DeleteTagDefin
 }
 
 /*
-GetTagDefinition retrieves a tag definition
+  GetTagDefinition retrieves a tag definition
 */
 func (a *Client) GetTagDefinition(ctx context.Context, params *GetTagDefinitionParams) (*GetTagDefinitionOK, error) {
 	// TODO: Validate the params before sending
@@ -261,7 +261,7 @@ func (a *Client) GetTagDefinition(ctx context.Context, params *GetTagDefinitionP
 }
 
 /*
-GetTagDefinitionAuditLogsWithHistory retrieves tag definition audit logs with history by id
+  GetTagDefinitionAuditLogsWithHistory retrieves tag definition audit logs with history by id
 */
 func (a *Client) GetTagDefinitionAuditLogsWithHistory(ctx context.Context, params *GetTagDefinitionAuditLogsWithHistoryParams) (*GetTagDefinitionAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
@@ -308,7 +308,7 @@ func (a *Client) GetTagDefinitionAuditLogsWithHistory(ctx context.Context, param
 }
 
 /*
-GetTagDefinitions lists tag definitions
+  GetTagDefinitions lists tag definitions
 */
 func (a *Client) GetTagDefinitions(ctx context.Context, params *GetTagDefinitionsParams) (*GetTagDefinitionsOK, error) {
 	// TODO: Validate the params before sending

@@ -53,12 +53,10 @@ func NewProcessNotificationParamsWithHTTPClient(client *http.Client) *ProcessNot
 	}
 }
 
-/*
-ProcessNotificationParams contains all the parameters to send to the API endpoint
+/* ProcessNotificationParams contains all the parameters to send to the API endpoint
+   for the process notification operation.
 
-	for the process notification operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type ProcessNotificationParams struct {
 

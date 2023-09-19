@@ -52,12 +52,10 @@ func NewCreateAccountTagsParamsWithHTTPClient(client *http.Client) *CreateAccoun
 	}
 }
 
-/*
-CreateAccountTagsParams contains all the parameters to send to the API endpoint
+/* CreateAccountTagsParams contains all the parameters to send to the API endpoint
+   for the create account tags operation.
 
-	for the create account tags operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateAccountTagsParams struct {
 

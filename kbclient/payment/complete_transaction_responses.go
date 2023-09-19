@@ -45,8 +45,7 @@ func NewCompleteTransactionNoContent() *CompleteTransactionNoContent {
 	return &CompleteTransactionNoContent{}
 }
 
-/*
-CompleteTransactionNoContent describes a response with status code 204, with default header values.
+/* CompleteTransactionNoContent describes a response with status code 204, with default header values.
 
 Successful operation
 */
@@ -102,8 +101,7 @@ func NewCompleteTransactionBadRequest() *CompleteTransactionBadRequest {
 	return &CompleteTransactionBadRequest{}
 }
 
-/*
-CompleteTransactionBadRequest describes a response with status code 400, with default header values.
+/* CompleteTransactionBadRequest describes a response with status code 400, with default header values.
 
 Invalid paymentId supplied
 */
@@ -159,8 +157,7 @@ func NewCompleteTransactionPaymentRequired() *CompleteTransactionPaymentRequired
 	return &CompleteTransactionPaymentRequired{}
 }
 
-/*
-CompleteTransactionPaymentRequired describes a response with status code 402, with default header values.
+/* CompleteTransactionPaymentRequired describes a response with status code 402, with default header values.
 
 Transaction declined by gateway
 */
@@ -216,8 +213,7 @@ func NewCompleteTransactionNotFound() *CompleteTransactionNotFound {
 	return &CompleteTransactionNotFound{}
 }
 
-/*
-CompleteTransactionNotFound describes a response with status code 404, with default header values.
+/* CompleteTransactionNotFound describes a response with status code 404, with default header values.
 
 Account or payment not found
 */
@@ -273,8 +269,7 @@ func NewCompleteTransactionUnprocessableEntity() *CompleteTransactionUnprocessab
 	return &CompleteTransactionUnprocessableEntity{}
 }
 
-/*
-CompleteTransactionUnprocessableEntity describes a response with status code 422, with default header values.
+/* CompleteTransactionUnprocessableEntity describes a response with status code 422, with default header values.
 
 Payment is aborted by a control plugin
 */
@@ -330,8 +325,7 @@ func NewCompleteTransactionBadGateway() *CompleteTransactionBadGateway {
 	return &CompleteTransactionBadGateway{}
 }
 
-/*
-CompleteTransactionBadGateway describes a response with status code 502, with default header values.
+/* CompleteTransactionBadGateway describes a response with status code 502, with default header values.
 
 Failed to submit payment transaction
 */
@@ -387,8 +381,7 @@ func NewCompleteTransactionServiceUnavailable() *CompleteTransactionServiceUnava
 	return &CompleteTransactionServiceUnavailable{}
 }
 
-/*
-CompleteTransactionServiceUnavailable describes a response with status code 503, with default header values.
+/* CompleteTransactionServiceUnavailable describes a response with status code 503, with default header values.
 
 Payment in unknown status, failed to receive gateway response
 */
@@ -444,8 +437,7 @@ func NewCompleteTransactionGatewayTimeout() *CompleteTransactionGatewayTimeout {
 	return &CompleteTransactionGatewayTimeout{}
 }
 
-/*
-CompleteTransactionGatewayTimeout describes a response with status code 504, with default header values.
+/* CompleteTransactionGatewayTimeout describes a response with status code 504, with default header values.
 
 Payment operation timeout
 */

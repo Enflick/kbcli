@@ -55,8 +55,7 @@ func NewCreateInstantPaymentCreated() *CreateInstantPaymentCreated {
 	return &CreateInstantPaymentCreated{}
 }
 
-/*
-CreateInstantPaymentCreated describes a response with status code 201, with default header values.
+/* CreateInstantPaymentCreated describes a response with status code 201, with default header values.
 
 Created payment Successfully
 */
@@ -124,8 +123,7 @@ func NewCreateInstantPaymentNoContent() *CreateInstantPaymentNoContent {
 	return &CreateInstantPaymentNoContent{}
 }
 
-/*
-CreateInstantPaymentNoContent describes a response with status code 204, with default header values.
+/* CreateInstantPaymentNoContent describes a response with status code 204, with default header values.
 
 Nothing to pay for
 */
@@ -181,8 +179,7 @@ func NewCreateInstantPaymentBadRequest() *CreateInstantPaymentBadRequest {
 	return &CreateInstantPaymentBadRequest{}
 }
 
-/*
-CreateInstantPaymentBadRequest describes a response with status code 400, with default header values.
+/* CreateInstantPaymentBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id or invoice id supplied
 */
@@ -238,8 +235,7 @@ func NewCreateInstantPaymentNotFound() *CreateInstantPaymentNotFound {
 	return &CreateInstantPaymentNotFound{}
 }
 
-/*
-CreateInstantPaymentNotFound describes a response with status code 404, with default header values.
+/* CreateInstantPaymentNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

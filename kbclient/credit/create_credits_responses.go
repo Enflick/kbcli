@@ -47,8 +47,7 @@ func NewCreateCreditsCreated() *CreateCreditsCreated {
 	return &CreateCreditsCreated{}
 }
 
-/*
-CreateCreditsCreated describes a response with status code 201, with default header values.
+/* CreateCreditsCreated describes a response with status code 201, with default header values.
 
 Created credit successfully
 */
@@ -114,8 +113,7 @@ func NewCreateCreditsBadRequest() *CreateCreditsBadRequest {
 	return &CreateCreditsBadRequest{}
 }
 
-/*
-CreateCreditsBadRequest describes a response with status code 400, with default header values.
+/* CreateCreditsBadRequest describes a response with status code 400, with default header values.
 
 Invalid account id supplied
 */
@@ -171,8 +169,7 @@ func NewCreateCreditsNotFound() *CreateCreditsNotFound {
 	return &CreateCreditsNotFound{}
 }
 
-/*
-CreateCreditsNotFound describes a response with status code 404, with default header values.
+/* CreateCreditsNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

@@ -52,12 +52,10 @@ func NewGetOverdueAccountParamsWithHTTPClient(client *http.Client) *GetOverdueAc
 	}
 }
 
-/*
-GetOverdueAccountParams contains all the parameters to send to the API endpoint
+/* GetOverdueAccountParams contains all the parameters to send to the API endpoint
+   for the get overdue account operation.
 
-	for the get overdue account operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetOverdueAccountParams struct {
 

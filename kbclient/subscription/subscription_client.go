@@ -99,7 +99,7 @@ type ClientService interface {
 }
 
 /*
-AddSubscriptionBlockingState blocks a subscription
+  AddSubscriptionBlockingState blocks a subscription
 */
 func (a *Client) AddSubscriptionBlockingState(ctx context.Context, params *AddSubscriptionBlockingStateParams) (*AddSubscriptionBlockingStateCreated, error) {
 	// TODO: Validate the params before sending
@@ -187,7 +187,7 @@ func (a *Client) AddSubscriptionBlockingState(ctx context.Context, params *AddSu
 }
 
 /*
-CancelSubscriptionPlan cancels an entitlement plan
+  CancelSubscriptionPlan cancels an entitlement plan
 */
 func (a *Client) CancelSubscriptionPlan(ctx context.Context, params *CancelSubscriptionPlanParams) (*CancelSubscriptionPlanNoContent, error) {
 	// TODO: Validate the params before sending
@@ -246,7 +246,7 @@ func (a *Client) CancelSubscriptionPlan(ctx context.Context, params *CancelSubsc
 }
 
 /*
-ChangeSubscriptionPlan changes entitlement plan
+  ChangeSubscriptionPlan changes entitlement plan
 */
 func (a *Client) ChangeSubscriptionPlan(ctx context.Context, params *ChangeSubscriptionPlanParams) (*ChangeSubscriptionPlanNoContent, error) {
 	// TODO: Validate the params before sending
@@ -305,7 +305,7 @@ func (a *Client) ChangeSubscriptionPlan(ctx context.Context, params *ChangeSubsc
 }
 
 /*
-CreateSubscription creates an subscription
+  CreateSubscription creates an subscription
 */
 func (a *Client) CreateSubscription(ctx context.Context, params *CreateSubscriptionParams) (*CreateSubscriptionCreated, error) {
 	// TODO: Validate the params before sending
@@ -393,7 +393,7 @@ func (a *Client) CreateSubscription(ctx context.Context, params *CreateSubscript
 }
 
 /*
-CreateSubscriptionCustomFields adds custom fields to subscription
+  CreateSubscriptionCustomFields adds custom fields to subscription
 */
 func (a *Client) CreateSubscriptionCustomFields(ctx context.Context, params *CreateSubscriptionCustomFieldsParams) (*CreateSubscriptionCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
@@ -481,7 +481,7 @@ func (a *Client) CreateSubscriptionCustomFields(ctx context.Context, params *Cre
 }
 
 /*
-CreateSubscriptionTags create subscription tags API
+  CreateSubscriptionTags create subscription tags API
 */
 func (a *Client) CreateSubscriptionTags(ctx context.Context, params *CreateSubscriptionTagsParams) (*CreateSubscriptionTagsCreated, error) {
 	// TODO: Validate the params before sending
@@ -569,7 +569,7 @@ func (a *Client) CreateSubscriptionTags(ctx context.Context, params *CreateSubsc
 }
 
 /*
-CreateSubscriptionWithAddOns creates an entitlement with add on products
+  CreateSubscriptionWithAddOns creates an entitlement with add on products
 */
 func (a *Client) CreateSubscriptionWithAddOns(ctx context.Context, params *CreateSubscriptionWithAddOnsParams) (*CreateSubscriptionWithAddOnsCreated, error) {
 	// TODO: Validate the params before sending
@@ -657,7 +657,7 @@ func (a *Client) CreateSubscriptionWithAddOns(ctx context.Context, params *Creat
 }
 
 /*
-CreateSubscriptionsWithAddOns creates multiple entitlements with add on products
+  CreateSubscriptionsWithAddOns creates multiple entitlements with add on products
 */
 func (a *Client) CreateSubscriptionsWithAddOns(ctx context.Context, params *CreateSubscriptionsWithAddOnsParams) (*CreateSubscriptionsWithAddOnsCreated, error) {
 	// TODO: Validate the params before sending
@@ -745,7 +745,7 @@ func (a *Client) CreateSubscriptionsWithAddOns(ctx context.Context, params *Crea
 }
 
 /*
-DeleteSubscriptionCustomFields removes custom fields from subscription
+  DeleteSubscriptionCustomFields removes custom fields from subscription
 */
 func (a *Client) DeleteSubscriptionCustomFields(ctx context.Context, params *DeleteSubscriptionCustomFieldsParams) (*DeleteSubscriptionCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -804,7 +804,7 @@ func (a *Client) DeleteSubscriptionCustomFields(ctx context.Context, params *Del
 }
 
 /*
-DeleteSubscriptionTags removes tags from subscription
+  DeleteSubscriptionTags removes tags from subscription
 */
 func (a *Client) DeleteSubscriptionTags(ctx context.Context, params *DeleteSubscriptionTagsParams) (*DeleteSubscriptionTagsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -863,7 +863,7 @@ func (a *Client) DeleteSubscriptionTags(ctx context.Context, params *DeleteSubsc
 }
 
 /*
-GetSubscription retrieves a subscription by id
+  GetSubscription retrieves a subscription by id
 */
 func (a *Client) GetSubscription(ctx context.Context, params *GetSubscriptionParams) (*GetSubscriptionOK, error) {
 	// TODO: Validate the params before sending
@@ -910,7 +910,7 @@ func (a *Client) GetSubscription(ctx context.Context, params *GetSubscriptionPar
 }
 
 /*
-GetSubscriptionAuditLogsWithHistory retrieves subscription audit logs with history by id
+  GetSubscriptionAuditLogsWithHistory retrieves subscription audit logs with history by id
 */
 func (a *Client) GetSubscriptionAuditLogsWithHistory(ctx context.Context, params *GetSubscriptionAuditLogsWithHistoryParams) (*GetSubscriptionAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
@@ -957,7 +957,7 @@ func (a *Client) GetSubscriptionAuditLogsWithHistory(ctx context.Context, params
 }
 
 /*
-GetSubscriptionByKey retrieves a subscription by external key
+  GetSubscriptionByKey retrieves a subscription by external key
 */
 func (a *Client) GetSubscriptionByKey(ctx context.Context, params *GetSubscriptionByKeyParams) (*GetSubscriptionByKeyOK, error) {
 	// TODO: Validate the params before sending
@@ -1004,7 +1004,7 @@ func (a *Client) GetSubscriptionByKey(ctx context.Context, params *GetSubscripti
 }
 
 /*
-GetSubscriptionCustomFields retrieves subscription custom fields
+  GetSubscriptionCustomFields retrieves subscription custom fields
 */
 func (a *Client) GetSubscriptionCustomFields(ctx context.Context, params *GetSubscriptionCustomFieldsParams) (*GetSubscriptionCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
@@ -1051,7 +1051,7 @@ func (a *Client) GetSubscriptionCustomFields(ctx context.Context, params *GetSub
 }
 
 /*
-GetSubscriptionEventAuditLogsWithHistory retrieves subscription event audit logs with history by id
+  GetSubscriptionEventAuditLogsWithHistory retrieves subscription event audit logs with history by id
 */
 func (a *Client) GetSubscriptionEventAuditLogsWithHistory(ctx context.Context, params *GetSubscriptionEventAuditLogsWithHistoryParams) (*GetSubscriptionEventAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
@@ -1098,7 +1098,7 @@ func (a *Client) GetSubscriptionEventAuditLogsWithHistory(ctx context.Context, p
 }
 
 /*
-GetSubscriptionTags retrieves subscription tags
+  GetSubscriptionTags retrieves subscription tags
 */
 func (a *Client) GetSubscriptionTags(ctx context.Context, params *GetSubscriptionTagsParams) (*GetSubscriptionTagsOK, error) {
 	// TODO: Validate the params before sending
@@ -1145,7 +1145,7 @@ func (a *Client) GetSubscriptionTags(ctx context.Context, params *GetSubscriptio
 }
 
 /*
-ModifySubscriptionCustomFields modifies custom fields to subscription
+  ModifySubscriptionCustomFields modifies custom fields to subscription
 */
 func (a *Client) ModifySubscriptionCustomFields(ctx context.Context, params *ModifySubscriptionCustomFieldsParams) (*ModifySubscriptionCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1204,7 +1204,7 @@ func (a *Client) ModifySubscriptionCustomFields(ctx context.Context, params *Mod
 }
 
 /*
-UncancelSubscriptionPlan uns cancel an entitlement
+  UncancelSubscriptionPlan uns cancel an entitlement
 */
 func (a *Client) UncancelSubscriptionPlan(ctx context.Context, params *UncancelSubscriptionPlanParams) (*UncancelSubscriptionPlanNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1263,7 +1263,7 @@ func (a *Client) UncancelSubscriptionPlan(ctx context.Context, params *UncancelS
 }
 
 /*
-UndoChangeSubscriptionPlan undos a pending change plan on an entitlement
+  UndoChangeSubscriptionPlan undos a pending change plan on an entitlement
 */
 func (a *Client) UndoChangeSubscriptionPlan(ctx context.Context, params *UndoChangeSubscriptionPlanParams) (*UndoChangeSubscriptionPlanNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1322,7 +1322,7 @@ func (a *Client) UndoChangeSubscriptionPlan(ctx context.Context, params *UndoCha
 }
 
 /*
-UpdateSubscriptionBCD updates the b c d associated to a subscription
+  UpdateSubscriptionBCD updates the b c d associated to a subscription
 */
 func (a *Client) UpdateSubscriptionBCD(ctx context.Context, params *UpdateSubscriptionBCDParams) (*UpdateSubscriptionBCDNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1381,7 +1381,7 @@ func (a *Client) UpdateSubscriptionBCD(ctx context.Context, params *UpdateSubscr
 }
 
 /*
-UpdateSubscriptionQuantity updates the quantity associated to a subscription
+  UpdateSubscriptionQuantity updates the quantity associated to a subscription
 */
 func (a *Client) UpdateSubscriptionQuantity(ctx context.Context, params *UpdateSubscriptionQuantityParams) (*UpdateSubscriptionQuantityNoContent, error) {
 	// TODO: Validate the params before sending

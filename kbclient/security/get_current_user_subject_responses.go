@@ -46,8 +46,7 @@ func NewGetCurrentUserSubjectOK() *GetCurrentUserSubjectOK {
 	return &GetCurrentUserSubjectOK{}
 }
 
-/*
-GetCurrentUserSubjectOK describes a response with status code 200, with default header values.
+/* GetCurrentUserSubjectOK describes a response with status code 200, with default header values.
 
 successful operation
 */

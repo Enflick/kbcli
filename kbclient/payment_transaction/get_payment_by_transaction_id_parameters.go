@@ -53,12 +53,10 @@ func NewGetPaymentByTransactionIDParamsWithHTTPClient(client *http.Client) *GetP
 	}
 }
 
-/*
-GetPaymentByTransactionIDParams contains all the parameters to send to the API endpoint
+/* GetPaymentByTransactionIDParams contains all the parameters to send to the API endpoint
+   for the get payment by transaction Id operation.
 
-	for the get payment by transaction Id operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetPaymentByTransactionIDParams struct {
 

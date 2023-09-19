@@ -55,12 +55,10 @@ func NewCreateInstantPaymentParamsWithHTTPClient(client *http.Client) *CreateIns
 	}
 }
 
-/*
-CreateInstantPaymentParams contains all the parameters to send to the API endpoint
+/* CreateInstantPaymentParams contains all the parameters to send to the API endpoint
+   for the create instant payment operation.
 
-	for the create instant payment operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateInstantPaymentParams struct {
 

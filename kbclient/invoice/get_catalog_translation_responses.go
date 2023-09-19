@@ -45,8 +45,7 @@ func NewGetCatalogTranslationOK() *GetCatalogTranslationOK {
 	return &GetCatalogTranslationOK{}
 }
 
-/*
-GetCatalogTranslationOK describes a response with status code 200, with default header values.
+/* GetCatalogTranslationOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -112,8 +111,7 @@ func NewGetCatalogTranslationBadRequest() *GetCatalogTranslationBadRequest {
 	return &GetCatalogTranslationBadRequest{}
 }
 
-/*
-GetCatalogTranslationBadRequest describes a response with status code 400, with default header values.
+/* GetCatalogTranslationBadRequest describes a response with status code 400, with default header values.
 
 Invalid locale supplied
 */
@@ -169,8 +167,7 @@ func NewGetCatalogTranslationNotFound() *GetCatalogTranslationNotFound {
 	return &GetCatalogTranslationNotFound{}
 }
 
-/*
-GetCatalogTranslationNotFound describes a response with status code 404, with default header values.
+/* GetCatalogTranslationNotFound describes a response with status code 404, with default header values.
 
 Template not found
 */

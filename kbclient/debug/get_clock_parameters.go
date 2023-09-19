@@ -52,12 +52,10 @@ func NewGetClockParamsWithHTTPClient(client *http.Client) *GetClockParams {
 	}
 }
 
-/*
-GetClockParams contains all the parameters to send to the API endpoint
+/* GetClockParams contains all the parameters to send to the API endpoint
+   for the get clock operation.
 
-	for the get clock operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetClockParams struct {
 

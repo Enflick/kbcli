@@ -52,12 +52,10 @@ func NewGetNodesInfoParamsWithHTTPClient(client *http.Client) *GetNodesInfoParam
 	}
 }
 
-/*
-GetNodesInfoParams contains all the parameters to send to the API endpoint
+/* GetNodesInfoParams contains all the parameters to send to the API endpoint
+   for the get nodes info operation.
 
-	for the get nodes info operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetNodesInfoParams struct {
 	WithProfilingInfo     *string // If set, return KB hprof headers

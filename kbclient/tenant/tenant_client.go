@@ -95,7 +95,7 @@ type ClientService interface {
 }
 
 /*
-CreateTenant creates a tenant
+  CreateTenant creates a tenant
 */
 func (a *Client) CreateTenant(ctx context.Context, params *CreateTenantParams) (*CreateTenantCreated, error) {
 	// TODO: Validate the params before sending
@@ -183,7 +183,7 @@ func (a *Client) CreateTenant(ctx context.Context, params *CreateTenantParams) (
 }
 
 /*
-DeletePerTenantConfiguration deletes a per tenant configuration system properties
+  DeletePerTenantConfiguration deletes a per tenant configuration system properties
 */
 func (a *Client) DeletePerTenantConfiguration(ctx context.Context, params *DeletePerTenantConfigurationParams) (*DeletePerTenantConfigurationNoContent, error) {
 	// TODO: Validate the params before sending
@@ -242,7 +242,7 @@ func (a *Client) DeletePerTenantConfiguration(ctx context.Context, params *Delet
 }
 
 /*
-DeletePluginConfiguration deletes a per tenant configuration for a plugin
+  DeletePluginConfiguration deletes a per tenant configuration for a plugin
 */
 func (a *Client) DeletePluginConfiguration(ctx context.Context, params *DeletePluginConfigurationParams) (*DeletePluginConfigurationNoContent, error) {
 	// TODO: Validate the params before sending
@@ -301,7 +301,7 @@ func (a *Client) DeletePluginConfiguration(ctx context.Context, params *DeletePl
 }
 
 /*
-DeletePluginPaymentStateMachineConfig deletes a per tenant payment state machine for a plugin
+  DeletePluginPaymentStateMachineConfig deletes a per tenant payment state machine for a plugin
 */
 func (a *Client) DeletePluginPaymentStateMachineConfig(ctx context.Context, params *DeletePluginPaymentStateMachineConfigParams) (*DeletePluginPaymentStateMachineConfigNoContent, error) {
 	// TODO: Validate the params before sending
@@ -360,7 +360,7 @@ func (a *Client) DeletePluginPaymentStateMachineConfig(ctx context.Context, para
 }
 
 /*
-DeletePushNotificationCallbacks deletes a push notification
+  DeletePushNotificationCallbacks deletes a push notification
 */
 func (a *Client) DeletePushNotificationCallbacks(ctx context.Context, params *DeletePushNotificationCallbacksParams) (*DeletePushNotificationCallbacksNoContent, error) {
 	// TODO: Validate the params before sending
@@ -419,7 +419,7 @@ func (a *Client) DeletePushNotificationCallbacks(ctx context.Context, params *De
 }
 
 /*
-DeleteUserKeyValue deletes a per tenant user key value
+  DeleteUserKeyValue deletes a per tenant user key value
 */
 func (a *Client) DeleteUserKeyValue(ctx context.Context, params *DeleteUserKeyValueParams) (*DeleteUserKeyValueNoContent, error) {
 	// TODO: Validate the params before sending
@@ -478,7 +478,7 @@ func (a *Client) DeleteUserKeyValue(ctx context.Context, params *DeleteUserKeyVa
 }
 
 /*
-GetAllPluginConfiguration retrieves a per tenant key value based on key prefix
+  GetAllPluginConfiguration retrieves a per tenant key value based on key prefix
 */
 func (a *Client) GetAllPluginConfiguration(ctx context.Context, params *GetAllPluginConfigurationParams) (*GetAllPluginConfigurationOK, error) {
 	// TODO: Validate the params before sending
@@ -525,7 +525,7 @@ func (a *Client) GetAllPluginConfiguration(ctx context.Context, params *GetAllPl
 }
 
 /*
-GetPerTenantConfiguration retrieves a per tenant configuration system properties
+  GetPerTenantConfiguration retrieves a per tenant configuration system properties
 */
 func (a *Client) GetPerTenantConfiguration(ctx context.Context, params *GetPerTenantConfigurationParams) (*GetPerTenantConfigurationOK, error) {
 	// TODO: Validate the params before sending
@@ -572,7 +572,7 @@ func (a *Client) GetPerTenantConfiguration(ctx context.Context, params *GetPerTe
 }
 
 /*
-GetPluginConfiguration retrieves a per tenant configuration for a plugin
+  GetPluginConfiguration retrieves a per tenant configuration for a plugin
 */
 func (a *Client) GetPluginConfiguration(ctx context.Context, params *GetPluginConfigurationParams) (*GetPluginConfigurationOK, error) {
 	// TODO: Validate the params before sending
@@ -619,7 +619,7 @@ func (a *Client) GetPluginConfiguration(ctx context.Context, params *GetPluginCo
 }
 
 /*
-GetPluginPaymentStateMachineConfig retrieves a per tenant payment state machine for a plugin
+  GetPluginPaymentStateMachineConfig retrieves a per tenant payment state machine for a plugin
 */
 func (a *Client) GetPluginPaymentStateMachineConfig(ctx context.Context, params *GetPluginPaymentStateMachineConfigParams) (*GetPluginPaymentStateMachineConfigOK, error) {
 	// TODO: Validate the params before sending
@@ -666,7 +666,7 @@ func (a *Client) GetPluginPaymentStateMachineConfig(ctx context.Context, params 
 }
 
 /*
-GetPushNotificationCallbacks retrieves a push notification
+  GetPushNotificationCallbacks retrieves a push notification
 */
 func (a *Client) GetPushNotificationCallbacks(ctx context.Context, params *GetPushNotificationCallbacksParams) (*GetPushNotificationCallbacksOK, error) {
 	// TODO: Validate the params before sending
@@ -713,7 +713,7 @@ func (a *Client) GetPushNotificationCallbacks(ctx context.Context, params *GetPu
 }
 
 /*
-GetTenant retrieves a tenant by id
+  GetTenant retrieves a tenant by id
 */
 func (a *Client) GetTenant(ctx context.Context, params *GetTenantParams) (*GetTenantOK, error) {
 	// TODO: Validate the params before sending
@@ -760,7 +760,7 @@ func (a *Client) GetTenant(ctx context.Context, params *GetTenantParams) (*GetTe
 }
 
 /*
-GetTenantByAPIKey retrieves a tenant by its API key
+  GetTenantByAPIKey retrieves a tenant by its API key
 */
 func (a *Client) GetTenantByAPIKey(ctx context.Context, params *GetTenantByAPIKeyParams) (*GetTenantByAPIKeyOK, error) {
 	// TODO: Validate the params before sending
@@ -807,7 +807,7 @@ func (a *Client) GetTenantByAPIKey(ctx context.Context, params *GetTenantByAPIKe
 }
 
 /*
-GetUserKeyValue retrieves a per tenant user key value
+  GetUserKeyValue retrieves a per tenant user key value
 */
 func (a *Client) GetUserKeyValue(ctx context.Context, params *GetUserKeyValueParams) (*GetUserKeyValueOK, error) {
 	// TODO: Validate the params before sending
@@ -854,7 +854,7 @@ func (a *Client) GetUserKeyValue(ctx context.Context, params *GetUserKeyValuePar
 }
 
 /*
-InsertUserKeyValue adds a per tenant user key value
+  InsertUserKeyValue adds a per tenant user key value
 */
 func (a *Client) InsertUserKeyValue(ctx context.Context, params *InsertUserKeyValueParams) (*InsertUserKeyValueCreated, error) {
 	// TODO: Validate the params before sending
@@ -942,7 +942,7 @@ func (a *Client) InsertUserKeyValue(ctx context.Context, params *InsertUserKeyVa
 }
 
 /*
-RegisterPushNotificationCallback creates a push notification
+  RegisterPushNotificationCallback creates a push notification
 */
 func (a *Client) RegisterPushNotificationCallback(ctx context.Context, params *RegisterPushNotificationCallbackParams) (*RegisterPushNotificationCallbackCreated, error) {
 	// TODO: Validate the params before sending
@@ -1030,7 +1030,7 @@ func (a *Client) RegisterPushNotificationCallback(ctx context.Context, params *R
 }
 
 /*
-UploadPerTenantConfiguration adds a per tenant configuration system properties
+  UploadPerTenantConfiguration adds a per tenant configuration system properties
 */
 func (a *Client) UploadPerTenantConfiguration(ctx context.Context, params *UploadPerTenantConfigurationParams) (*UploadPerTenantConfigurationCreated, error) {
 	// TODO: Validate the params before sending
@@ -1118,7 +1118,7 @@ func (a *Client) UploadPerTenantConfiguration(ctx context.Context, params *Uploa
 }
 
 /*
-UploadPluginConfiguration adds a per tenant configuration for a plugin
+  UploadPluginConfiguration adds a per tenant configuration for a plugin
 */
 func (a *Client) UploadPluginConfiguration(ctx context.Context, params *UploadPluginConfigurationParams) (*UploadPluginConfigurationCreated, error) {
 	// TODO: Validate the params before sending
@@ -1206,7 +1206,7 @@ func (a *Client) UploadPluginConfiguration(ctx context.Context, params *UploadPl
 }
 
 /*
-UploadPluginPaymentStateMachineConfig adds a per tenant payment state machine for a plugin
+  UploadPluginPaymentStateMachineConfig adds a per tenant payment state machine for a plugin
 */
 func (a *Client) UploadPluginPaymentStateMachineConfig(ctx context.Context, params *UploadPluginPaymentStateMachineConfigParams) (*UploadPluginPaymentStateMachineConfigCreated, error) {
 	// TODO: Validate the params before sending

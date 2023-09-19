@@ -47,8 +47,7 @@ func NewGetAccountByKeyOK() *GetAccountByKeyOK {
 	return &GetAccountByKeyOK{}
 }
 
-/*
-GetAccountByKeyOK describes a response with status code 200, with default header values.
+/* GetAccountByKeyOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetAccountByKeyNotFound() *GetAccountByKeyNotFound {
 	return &GetAccountByKeyNotFound{}
 }
 
-/*
-GetAccountByKeyNotFound describes a response with status code 404, with default header values.
+/* GetAccountByKeyNotFound describes a response with status code 404, with default header values.
 
 Account not found
 */

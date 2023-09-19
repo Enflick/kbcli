@@ -55,12 +55,10 @@ func NewVoidPaymentByExternalKeyParamsWithHTTPClient(client *http.Client) *VoidP
 	}
 }
 
-/*
-VoidPaymentByExternalKeyParams contains all the parameters to send to the API endpoint
+/* VoidPaymentByExternalKeyParams contains all the parameters to send to the API endpoint
+   for the void payment by external key operation.
 
-	for the void payment by external key operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type VoidPaymentByExternalKeyParams struct {
 

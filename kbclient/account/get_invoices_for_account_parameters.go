@@ -53,12 +53,10 @@ func NewGetInvoicesForAccountParamsWithHTTPClient(client *http.Client) *GetInvoi
 	}
 }
 
-/*
-GetInvoicesForAccountParams contains all the parameters to send to the API endpoint
+/* GetInvoicesForAccountParams contains all the parameters to send to the API endpoint
+   for the get invoices for account operation.
 
-	for the get invoices for account operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetInvoicesForAccountParams struct {
 

@@ -44,8 +44,7 @@ func NewUploadInvoiceTemplateCreated() *UploadInvoiceTemplateCreated {
 	return &UploadInvoiceTemplateCreated{}
 }
 
-/*
-UploadInvoiceTemplateCreated describes a response with status code 201, with default header values.
+/* UploadInvoiceTemplateCreated describes a response with status code 201, with default header values.
 
 Uploaded invoice template Successfully
 */

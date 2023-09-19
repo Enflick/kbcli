@@ -47,8 +47,7 @@ func NewCreateTransactionCustomFieldsCreated() *CreateTransactionCustomFieldsCre
 	return &CreateTransactionCustomFieldsCreated{}
 }
 
-/*
-CreateTransactionCustomFieldsCreated describes a response with status code 201, with default header values.
+/* CreateTransactionCustomFieldsCreated describes a response with status code 201, with default header values.
 
 Custom field created successfully
 */
@@ -114,8 +113,7 @@ func NewCreateTransactionCustomFieldsBadRequest() *CreateTransactionCustomFields
 	return &CreateTransactionCustomFieldsBadRequest{}
 }
 
-/*
-CreateTransactionCustomFieldsBadRequest describes a response with status code 400, with default header values.
+/* CreateTransactionCustomFieldsBadRequest describes a response with status code 400, with default header values.
 
 Invalid transaction id supplied
 */

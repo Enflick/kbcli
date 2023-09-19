@@ -47,8 +47,7 @@ func NewGetTenantOK() *GetTenantOK {
 	return &GetTenantOK{}
 }
 
-/*
-GetTenantOK describes a response with status code 200, with default header values.
+/* GetTenantOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -116,8 +115,7 @@ func NewGetTenantBadRequest() *GetTenantBadRequest {
 	return &GetTenantBadRequest{}
 }
 
-/*
-GetTenantBadRequest describes a response with status code 400, with default header values.
+/* GetTenantBadRequest describes a response with status code 400, with default header values.
 
 Invalid tenantId supplied
 */
@@ -173,8 +171,7 @@ func NewGetTenantNotFound() *GetTenantNotFound {
 	return &GetTenantNotFound{}
 }
 
-/*
-GetTenantNotFound describes a response with status code 404, with default header values.
+/* GetTenantNotFound describes a response with status code 404, with default header values.
 
 Tenant not found
 */

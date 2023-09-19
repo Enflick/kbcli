@@ -54,12 +54,10 @@ func NewCreateTagDefinitionParamsWithHTTPClient(client *http.Client) *CreateTagD
 	}
 }
 
-/*
-CreateTagDefinitionParams contains all the parameters to send to the API endpoint
+/* CreateTagDefinitionParams contains all the parameters to send to the API endpoint
+   for the create tag definition operation.
 
-	for the create tag definition operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type CreateTagDefinitionParams struct {
 

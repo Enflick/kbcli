@@ -47,8 +47,7 @@ func NewCreateTagDefinitionCreated() *CreateTagDefinitionCreated {
 	return &CreateTagDefinitionCreated{}
 }
 
-/*
-CreateTagDefinitionCreated describes a response with status code 201, with default header values.
+/* CreateTagDefinitionCreated describes a response with status code 201, with default header values.
 
 Tag definition created successfully
 */
@@ -116,8 +115,7 @@ func NewCreateTagDefinitionBadRequest() *CreateTagDefinitionBadRequest {
 	return &CreateTagDefinitionBadRequest{}
 }
 
-/*
-CreateTagDefinitionBadRequest describes a response with status code 400, with default header values.
+/* CreateTagDefinitionBadRequest describes a response with status code 400, with default header values.
 
 Invalid name or description supplied
 */

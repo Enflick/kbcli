@@ -52,12 +52,10 @@ func NewGetInvoiceAsHTMLParamsWithHTTPClient(client *http.Client) *GetInvoiceAsH
 	}
 }
 
-/*
-GetInvoiceAsHTMLParams contains all the parameters to send to the API endpoint
+/* GetInvoiceAsHTMLParams contains all the parameters to send to the API endpoint
+   for the get invoice as HTML operation.
 
-	for the get invoice as HTML operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type GetInvoiceAsHTMLParams struct {
 

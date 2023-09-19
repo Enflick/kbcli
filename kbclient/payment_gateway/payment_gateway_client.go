@@ -62,7 +62,7 @@ type ClientService interface {
 }
 
 /*
-BuildComboFormDescriptor combos API to generate form data to redirect the customer to the gateway
+  BuildComboFormDescriptor combos API to generate form data to redirect the customer to the gateway
 */
 func (a *Client) BuildComboFormDescriptor(ctx context.Context, params *BuildComboFormDescriptorParams) (*BuildComboFormDescriptorOK, error) {
 	// TODO: Validate the params before sending
@@ -121,7 +121,7 @@ func (a *Client) BuildComboFormDescriptor(ctx context.Context, params *BuildComb
 }
 
 /*
-BuildFormDescriptor generates form data to redirect the customer to the gateway
+  BuildFormDescriptor generates form data to redirect the customer to the gateway
 */
 func (a *Client) BuildFormDescriptor(ctx context.Context, params *BuildFormDescriptorParams) (*BuildFormDescriptorOK, error) {
 	// TODO: Validate the params before sending
@@ -180,9 +180,9 @@ func (a *Client) BuildFormDescriptor(ctx context.Context, params *BuildFormDescr
 }
 
 /*
-ProcessNotification processes a gateway notification
+  ProcessNotification processes a gateway notification
 
-The response is built by the appropriate plugin
+  The response is built by the appropriate plugin
 */
 func (a *Client) ProcessNotification(ctx context.Context, params *ProcessNotificationParams) (*ProcessNotificationOK, error) {
 	// TODO: Validate the params before sending

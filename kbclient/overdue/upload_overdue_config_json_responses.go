@@ -47,8 +47,7 @@ func NewUploadOverdueConfigJSONCreated() *UploadOverdueConfigJSONCreated {
 	return &UploadOverdueConfigJSONCreated{}
 }
 
-/*
-UploadOverdueConfigJSONCreated describes a response with status code 201, with default header values.
+/* UploadOverdueConfigJSONCreated describes a response with status code 201, with default header values.
 
 Successfully uploaded overdue config
 */
@@ -116,8 +115,7 @@ func NewUploadOverdueConfigJSONBadRequest() *UploadOverdueConfigJSONBadRequest {
 	return &UploadOverdueConfigJSONBadRequest{}
 }
 
-/*
-UploadOverdueConfigJSONBadRequest describes a response with status code 400, with default header values.
+/* UploadOverdueConfigJSONBadRequest describes a response with status code 400, with default header values.
 
 Invalid node command supplied
 */

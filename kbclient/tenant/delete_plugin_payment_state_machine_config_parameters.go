@@ -52,12 +52,10 @@ func NewDeletePluginPaymentStateMachineConfigParamsWithHTTPClient(client *http.C
 	}
 }
 
-/*
-DeletePluginPaymentStateMachineConfigParams contains all the parameters to send to the API endpoint
+/* DeletePluginPaymentStateMachineConfigParams contains all the parameters to send to the API endpoint
+   for the delete plugin payment state machine config operation.
 
-	for the delete plugin payment state machine config operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type DeletePluginPaymentStateMachineConfigParams struct {
 

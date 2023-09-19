@@ -55,12 +55,10 @@ func NewAddAccountBlockingStateParamsWithHTTPClient(client *http.Client) *AddAcc
 	}
 }
 
-/*
-AddAccountBlockingStateParams contains all the parameters to send to the API endpoint
+/* AddAccountBlockingStateParams contains all the parameters to send to the API endpoint
+   for the add account blocking state operation.
 
-	for the add account blocking state operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type AddAccountBlockingStateParams struct {
 

@@ -47,8 +47,7 @@ func NewNotifyStateChangedCreated() *NotifyStateChangedCreated {
 	return &NotifyStateChangedCreated{}
 }
 
-/*
-NotifyStateChangedCreated describes a response with status code 201, with default header values.
+/* NotifyStateChangedCreated describes a response with status code 201, with default header values.
 
 Successfully notifiy state change
 */
@@ -116,8 +115,7 @@ func NewNotifyStateChangedBadRequest() *NotifyStateChangedBadRequest {
 	return &NotifyStateChangedBadRequest{}
 }
 
-/*
-NotifyStateChangedBadRequest describes a response with status code 400, with default header values.
+/* NotifyStateChangedBadRequest describes a response with status code 400, with default header values.
 
 Invalid paymentId supplied
 */
@@ -173,8 +171,7 @@ func NewNotifyStateChangedNotFound() *NotifyStateChangedNotFound {
 	return &NotifyStateChangedNotFound{}
 }
 
-/*
-NotifyStateChangedNotFound describes a response with status code 404, with default header values.
+/* NotifyStateChangedNotFound describes a response with status code 404, with default header values.
 
 Account or Payment not found
 */
