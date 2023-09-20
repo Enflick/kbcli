@@ -40,6 +40,7 @@ replace-module:
 		if ! grep -q "$$MARKER" .git/hooks/pre-commit; then \
 			echo "$$MARKER" >> .git/hooks/pre-commit; \
 			echo "$$HOOK_CONTENT" >> .git/hooks/pre-commit; \
+			echo "# END REPLACE MODULE HOOK" >> .git/hooks/pre-commit; \
 		fi; \
 	fi; \
 	cmd="go mod edit -replace=$$module_name=$$dir"; \
@@ -65,6 +66,6 @@ clean-replace:
 		echo "\033[0;32mRemoved .original_replace\033[0m"; \
 	fi; \
 	if [ -f .git/hooks/pre-commit ]; then \
-		sed -i "/# REPLACE MODULE HOOK/,+2d" .git/hooks/pre-commit; \
+		sed -i '/# REPLACE MODULE HOOK/,/# END REPLACE MODULE HOOK/d' .git/hooks/pre-commit; \
 		echo "\033[0;32mRemoved replace module hook from .git/hooks/pre-commit\033[0m"; \
 	fi;
