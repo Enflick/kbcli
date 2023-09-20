@@ -10,7 +10,6 @@ require (
 	github.com/go-openapi/validate v0.22.1
 	github.com/google/go-cmp v0.5.9
 	github.com/google/uuid v1.3.1
-	github.com/killbill/kbcli/v3 v3.1.0
 	github.com/oliveagle/jsonpath v0.0.0-20180606110733-2e52cf6e6852
 	github.com/stripe/stripe-go v70.15.0+incompatible
 	github.com/urfave/cli v1.22.14
@@ -39,4 +38,5 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/killbill/kbcli/v3 => /root/go/src/github.com/hibrid/kbcli
+// this is a temporary hack to allow us to use the forked version of kbcli
+replace github.com/killbill/kbcli/v3 => github.com/hibrid/kbcli/v3 v3.0.2-hibrid
