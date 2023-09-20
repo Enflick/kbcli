@@ -54,14 +54,53 @@ See the package `killbill` package under the `wrapper` directory.
 
 There is a suite of test `client_test.go` that shows how to use it.
 
-### Client code generation
+## Go-Swagger Integration and Client Generation
+
+We've integrated go-swagger into our build process to allow for easy generation of client libraries based on our API's Swagger definitions.
+
+### How to Use
+
+1. **Finding and Setting up Go-Swagger**
+
+   Run the following command to automatically search for the `go-swagger` directory:
+   ```
+   make find-swagger
+   ```
+
+   **Logic Behind Directory Search:**
+   - The script starts by checking the immediate parent directory of the Makefile.
+   - If not found, it proceeds to the grandparent directory.
+   - If the `go-swagger` directory is still not located, it will iterate over each subdirectory of the grandparent directory to find it.
+   
+   **Assumptions and Directory Structure:**
+   The script assumes a directory structure similar to `/path/to/base/github.com/your-org/your-repo/`. The `base` directory (e.g., `github.com` or `git.mena.technology`) is dynamically determined based on the original location of the Makefile. This ensures the correct formation of the `git clone` command and the destination path for cloning.
+
+   If the directory isn't found in the above locations, the script will prompt you to clone the `go-swagger` repository. It creates the `git clone` command based on the directory structure, ensuring that the cloned repo is placed in the correct location relative to the original Makefile.
+
+2. **Generating Client Libraries**
+
+   To generate the client libraries, use:
+   ```
+   make generate-extensions
+   ```
+
+   This will generate the client based on the `kbswagger.yaml` definition.
+
+3. **Post-Generation Cleanup**
+
+   After generating the client, it's recommended to run, and will be ran for you:
+   ```
+   make clean-module
+   ```
+   This command will execute `go mod tidy -compat=$go_version_in_go.mod`, ensuring that your module information is cleaned and up-to-date. An informational message will be displayed before this command runs.
+
+### Manual Client code generation
 
 We use a forked version of the `go-swagger` client hosted under https://github.com/killbill/go-swagger.
 Every so often we rebase our fork from upstream to keep it up-to-date. Given a version of a `swagger` binary, the
-client can be regenarated using:
+client can be regenerated using:
 
 `swagger  generate client -f kbswagger.yaml -m kbmodel -c kbclient --default-scheme=http`
-
 
 ### Generating dev extensions
 The original project proposed separating out the clock test API but this is moved to always be available since Kill Bill will return an error when it's not in test mode. The API, however, is always available.
