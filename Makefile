@@ -1,5 +1,5 @@
-.PHONY: replace-module clean-replace
-# grep "^go [0-9]\+\.[0-9]\+" go.mod | awk '{split($$0, a, " "); print a[2]}'
+.PHONY: replace-module clean-replace clean-module_name
+
 replace-module:
 	@read -p "Enter the directory path where the replacement exists: " dir; \
 	if [ ! -d "$$dir" ]; then \
@@ -69,3 +69,9 @@ clean-replace:
 		sed -i '/# REPLACE MODULE HOOK/,/# END REPLACE MODULE HOOK/d' .git/hooks/pre-commit; \
 		echo "\033[0;32mRemoved replace module hook from .git/hooks/pre-commit\033[0m"; \
 	fi;
+
+	
+clean-module:
+	@go_version=$$(grep "^go [0-9]\+\.[0-9]\+" go.mod | cut -d' ' -f2); \
+	go clean -modcache; \
+	go mod tidy -compat=$$go_version;
