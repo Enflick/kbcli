@@ -16,6 +16,7 @@ import (
 	"github.com/killbill/kbcli/v3/kbclient/credit"
 	"github.com/killbill/kbcli/v3/kbclient/custom_field"
 	"github.com/killbill/kbcli/v3/kbclient/export"
+	"github.com/killbill/kbcli/v3/kbclient/healthcheck"
 	"github.com/killbill/kbcli/v3/kbclient/invoice"
 	"github.com/killbill/kbcli/v3/kbclient/invoice_item"
 	"github.com/killbill/kbcli/v3/kbclient/invoice_payment"
@@ -78,6 +79,8 @@ func New(transport runtime.ClientTransport,
 	cli.CustomField = custom_field.New(transport, formats, authInfo, &cli.defaults)
 
 	cli.Export = export.New(transport, formats, authInfo, &cli.defaults)
+
+	cli.Healthcheck = healthcheck.New(transport, formats, authInfo, &cli.defaults)
 
 	cli.Invoice = invoice.New(transport, formats, authInfo, &cli.defaults)
 
@@ -159,6 +162,8 @@ type KillBill struct {
 
 	Export export.ClientService
 
+	Healthcheck healthcheck.ClientService
+
 	Invoice invoice.ClientService
 
 	InvoiceItem invoice_item.ClientService
@@ -205,6 +210,7 @@ func (c *KillBill) SetTransport(transport runtime.ClientTransport) {
 	c.Credit.SetTransport(transport)
 	c.CustomField.SetTransport(transport)
 	c.Export.SetTransport(transport)
+	c.Healthcheck.SetTransport(transport)
 	c.Invoice.SetTransport(transport)
 	c.InvoiceItem.SetTransport(transport)
 	c.InvoicePayment.SetTransport(transport)
