@@ -1,4 +1,4 @@
-.PHONY: replace-module clean-replace clean-module_name
+.PHONY: replace-module clean-replace clean-module_name generate-extensions find-swagger
 
 replace-module:
 	@read -p "Enter the directory path where the replacement exists: " dir; \
@@ -75,3 +75,11 @@ clean-module:
 	@go_version=$$(grep "^go [0-9]\+\.[0-9]\+" go.mod | cut -d' ' -f2); \
 	go clean -modcache; \
 	go mod tidy -compat=$$go_version;
+
+find-swagger:
+	./find-swagger.sh
+
+generate-extensions: find-swagger
+	./generate-extensions.sh; 
+	@echo "\033[0;36mInformation: 'go mod tidy' will be run for you now.\033[0m"
+	make clean-module

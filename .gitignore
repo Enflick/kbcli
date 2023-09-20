@@ -1,3 +1,5 @@
 .idea
 kbcmd/kbcmd
 .original_replace
+.found-swagger-path
+*.bak

@@ -64,16 +64,7 @@ client can be regenarated using:
 
 
 ### Generating dev extensions
-We also have dev extension APIs (like clock etc), that are in swagger-dev.json. To generate,
-run the following.
-
-```bash
-# Regenerate the tool
-swagger generate client -f swagger-dev.json -m kbmodel -c kbclient --default-scheme=http
-
-# Delete the client file.
-rm kbclient/kill_bill_dev_client.go
-```
+The original project proposed separating out the clock test API but this is moved to always be available since Kill Bill will return an error when it's not in test mode. The API, however, is always available.
 
 ## Kill bill command line tool (kbcmd)
 kbcmd is a command line tool that uses the go client library. This tool can do many of the
