@@ -87,7 +87,6 @@ type ClientService interface {
 */
 func (a *Client) CompleteInvoicePaymentTransaction(ctx context.Context, params *CompleteInvoicePaymentTransactionParams) (*CompleteInvoicePaymentTransactionNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCompleteInvoicePaymentTransactionParams()
 	}
@@ -146,7 +145,6 @@ func (a *Client) CompleteInvoicePaymentTransaction(ctx context.Context, params *
 */
 func (a *Client) CreateChargeback(ctx context.Context, params *CreateChargebackParams) (*CreateChargebackCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateChargebackParams()
 	}
@@ -192,15 +190,10 @@ func (a *Client) CreateChargeback(ctx context.Context, params *CreateChargebackP
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateChargebackCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateChargebackCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -219,13 +212,7 @@ func (a *Client) CreateChargeback(ctx context.Context, params *CreateChargebackP
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateChargebackCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateChargebackCreated), nil
 
 }
 
@@ -234,7 +221,6 @@ func (a *Client) CreateChargeback(ctx context.Context, params *CreateChargebackP
 */
 func (a *Client) CreateChargebackReversal(ctx context.Context, params *CreateChargebackReversalParams) (*CreateChargebackReversalCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateChargebackReversalParams()
 	}
@@ -280,15 +266,10 @@ func (a *Client) CreateChargebackReversal(ctx context.Context, params *CreateCha
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateChargebackReversalCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateChargebackReversalCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -307,13 +288,7 @@ func (a *Client) CreateChargebackReversal(ctx context.Context, params *CreateCha
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateChargebackReversalCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateChargebackReversalCreated), nil
 
 }
 
@@ -322,7 +297,6 @@ func (a *Client) CreateChargebackReversal(ctx context.Context, params *CreateCha
 */
 func (a *Client) CreateInvoicePaymentCustomFields(ctx context.Context, params *CreateInvoicePaymentCustomFieldsParams) (*CreateInvoicePaymentCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateInvoicePaymentCustomFieldsParams()
 	}
@@ -368,15 +342,10 @@ func (a *Client) CreateInvoicePaymentCustomFields(ctx context.Context, params *C
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateInvoicePaymentCustomFieldsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateInvoicePaymentCustomFieldsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -395,13 +364,7 @@ func (a *Client) CreateInvoicePaymentCustomFields(ctx context.Context, params *C
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateInvoicePaymentCustomFieldsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateInvoicePaymentCustomFieldsCreated), nil
 
 }
 
@@ -410,7 +373,6 @@ func (a *Client) CreateInvoicePaymentCustomFields(ctx context.Context, params *C
 */
 func (a *Client) CreateInvoicePaymentTags(ctx context.Context, params *CreateInvoicePaymentTagsParams) (*CreateInvoicePaymentTagsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateInvoicePaymentTagsParams()
 	}
@@ -456,15 +418,10 @@ func (a *Client) CreateInvoicePaymentTags(ctx context.Context, params *CreateInv
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateInvoicePaymentTagsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateInvoicePaymentTagsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -483,13 +440,7 @@ func (a *Client) CreateInvoicePaymentTags(ctx context.Context, params *CreateInv
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateInvoicePaymentTagsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateInvoicePaymentTagsCreated), nil
 
 }
 
@@ -498,7 +449,6 @@ func (a *Client) CreateInvoicePaymentTags(ctx context.Context, params *CreateInv
 */
 func (a *Client) CreateRefundWithAdjustments(ctx context.Context, params *CreateRefundWithAdjustmentsParams) (*CreateRefundWithAdjustmentsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateRefundWithAdjustmentsParams()
 	}
@@ -544,15 +494,10 @@ func (a *Client) CreateRefundWithAdjustments(ctx context.Context, params *Create
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateRefundWithAdjustmentsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateRefundWithAdjustmentsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -571,13 +516,7 @@ func (a *Client) CreateRefundWithAdjustments(ctx context.Context, params *Create
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateRefundWithAdjustmentsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateRefundWithAdjustmentsCreated), nil
 
 }
 
@@ -586,7 +525,6 @@ func (a *Client) CreateRefundWithAdjustments(ctx context.Context, params *Create
 */
 func (a *Client) DeleteInvoicePaymentCustomFields(ctx context.Context, params *DeleteInvoicePaymentCustomFieldsParams) (*DeleteInvoicePaymentCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeleteInvoicePaymentCustomFieldsParams()
 	}
@@ -645,7 +583,6 @@ func (a *Client) DeleteInvoicePaymentCustomFields(ctx context.Context, params *D
 */
 func (a *Client) DeleteInvoicePaymentTags(ctx context.Context, params *DeleteInvoicePaymentTagsParams) (*DeleteInvoicePaymentTagsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeleteInvoicePaymentTagsParams()
 	}
@@ -704,7 +641,6 @@ func (a *Client) DeleteInvoicePaymentTags(ctx context.Context, params *DeleteInv
 */
 func (a *Client) GetInvoicePayment(ctx context.Context, params *GetInvoicePaymentParams) (*GetInvoicePaymentOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetInvoicePaymentParams()
 	}
@@ -751,7 +687,6 @@ func (a *Client) GetInvoicePayment(ctx context.Context, params *GetInvoicePaymen
 */
 func (a *Client) GetInvoicePaymentAuditLogsWithHistory(ctx context.Context, params *GetInvoicePaymentAuditLogsWithHistoryParams) (*GetInvoicePaymentAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetInvoicePaymentAuditLogsWithHistoryParams()
 	}
@@ -798,7 +733,6 @@ func (a *Client) GetInvoicePaymentAuditLogsWithHistory(ctx context.Context, para
 */
 func (a *Client) GetInvoicePaymentCustomFields(ctx context.Context, params *GetInvoicePaymentCustomFieldsParams) (*GetInvoicePaymentCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetInvoicePaymentCustomFieldsParams()
 	}
@@ -845,7 +779,6 @@ func (a *Client) GetInvoicePaymentCustomFields(ctx context.Context, params *GetI
 */
 func (a *Client) GetInvoicePaymentTags(ctx context.Context, params *GetInvoicePaymentTagsParams) (*GetInvoicePaymentTagsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetInvoicePaymentTagsParams()
 	}
@@ -892,7 +825,6 @@ func (a *Client) GetInvoicePaymentTags(ctx context.Context, params *GetInvoicePa
 */
 func (a *Client) ModifyInvoicePaymentCustomFields(ctx context.Context, params *ModifyInvoicePaymentCustomFieldsParams) (*ModifyInvoicePaymentCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewModifyInvoicePaymentCustomFieldsParams()
 	}

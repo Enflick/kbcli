@@ -117,7 +117,6 @@ type ClientService interface {
 */
 func (a *Client) CancelScheduledPaymentTransactionByExternalKey(ctx context.Context, params *CancelScheduledPaymentTransactionByExternalKeyParams) (*CancelScheduledPaymentTransactionByExternalKeyNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCancelScheduledPaymentTransactionByExternalKeyParams()
 	}
@@ -176,7 +175,6 @@ func (a *Client) CancelScheduledPaymentTransactionByExternalKey(ctx context.Cont
 */
 func (a *Client) CancelScheduledPaymentTransactionByID(ctx context.Context, params *CancelScheduledPaymentTransactionByIDParams) (*CancelScheduledPaymentTransactionByIDNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCancelScheduledPaymentTransactionByIDParams()
 	}
@@ -235,7 +233,6 @@ func (a *Client) CancelScheduledPaymentTransactionByID(ctx context.Context, para
 */
 func (a *Client) CaptureAuthorization(ctx context.Context, params *CaptureAuthorizationParams) (*CaptureAuthorizationCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCaptureAuthorizationParams()
 	}
@@ -281,15 +278,10 @@ func (a *Client) CaptureAuthorization(ctx context.Context, params *CaptureAuthor
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CaptureAuthorizationCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CaptureAuthorizationCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -308,13 +300,7 @@ func (a *Client) CaptureAuthorization(ctx context.Context, params *CaptureAuthor
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CaptureAuthorizationCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CaptureAuthorizationCreated), nil
 
 }
 
@@ -323,7 +309,6 @@ func (a *Client) CaptureAuthorization(ctx context.Context, params *CaptureAuthor
 */
 func (a *Client) CaptureAuthorizationByExternalKey(ctx context.Context, params *CaptureAuthorizationByExternalKeyParams) (*CaptureAuthorizationByExternalKeyCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCaptureAuthorizationByExternalKeyParams()
 	}
@@ -369,15 +354,10 @@ func (a *Client) CaptureAuthorizationByExternalKey(ctx context.Context, params *
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CaptureAuthorizationByExternalKeyCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CaptureAuthorizationByExternalKeyCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -396,13 +376,7 @@ func (a *Client) CaptureAuthorizationByExternalKey(ctx context.Context, params *
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CaptureAuthorizationByExternalKeyCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CaptureAuthorizationByExternalKeyCreated), nil
 
 }
 
@@ -411,7 +385,6 @@ func (a *Client) CaptureAuthorizationByExternalKey(ctx context.Context, params *
 */
 func (a *Client) ChargebackPayment(ctx context.Context, params *ChargebackPaymentParams) (*ChargebackPaymentCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewChargebackPaymentParams()
 	}
@@ -457,15 +430,10 @@ func (a *Client) ChargebackPayment(ctx context.Context, params *ChargebackPaymen
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *ChargebackPaymentCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*ChargebackPaymentCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -484,13 +452,7 @@ func (a *Client) ChargebackPayment(ctx context.Context, params *ChargebackPaymen
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *ChargebackPaymentCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*ChargebackPaymentCreated), nil
 
 }
 
@@ -499,7 +461,6 @@ func (a *Client) ChargebackPayment(ctx context.Context, params *ChargebackPaymen
 */
 func (a *Client) ChargebackPaymentByExternalKey(ctx context.Context, params *ChargebackPaymentByExternalKeyParams) (*ChargebackPaymentByExternalKeyCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewChargebackPaymentByExternalKeyParams()
 	}
@@ -545,15 +506,10 @@ func (a *Client) ChargebackPaymentByExternalKey(ctx context.Context, params *Cha
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *ChargebackPaymentByExternalKeyCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*ChargebackPaymentByExternalKeyCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -572,13 +528,7 @@ func (a *Client) ChargebackPaymentByExternalKey(ctx context.Context, params *Cha
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *ChargebackPaymentByExternalKeyCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*ChargebackPaymentByExternalKeyCreated), nil
 
 }
 
@@ -587,7 +537,6 @@ func (a *Client) ChargebackPaymentByExternalKey(ctx context.Context, params *Cha
 */
 func (a *Client) ChargebackReversalPayment(ctx context.Context, params *ChargebackReversalPaymentParams) (*ChargebackReversalPaymentCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewChargebackReversalPaymentParams()
 	}
@@ -633,15 +582,10 @@ func (a *Client) ChargebackReversalPayment(ctx context.Context, params *Chargeba
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *ChargebackReversalPaymentCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*ChargebackReversalPaymentCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -660,13 +604,7 @@ func (a *Client) ChargebackReversalPayment(ctx context.Context, params *Chargeba
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *ChargebackReversalPaymentCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*ChargebackReversalPaymentCreated), nil
 
 }
 
@@ -675,7 +613,6 @@ func (a *Client) ChargebackReversalPayment(ctx context.Context, params *Chargeba
 */
 func (a *Client) ChargebackReversalPaymentByExternalKey(ctx context.Context, params *ChargebackReversalPaymentByExternalKeyParams) (*ChargebackReversalPaymentByExternalKeyCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewChargebackReversalPaymentByExternalKeyParams()
 	}
@@ -721,15 +658,10 @@ func (a *Client) ChargebackReversalPaymentByExternalKey(ctx context.Context, par
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *ChargebackReversalPaymentByExternalKeyCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*ChargebackReversalPaymentByExternalKeyCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -748,13 +680,7 @@ func (a *Client) ChargebackReversalPaymentByExternalKey(ctx context.Context, par
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *ChargebackReversalPaymentByExternalKeyCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*ChargebackReversalPaymentByExternalKeyCreated), nil
 
 }
 
@@ -763,7 +689,6 @@ func (a *Client) ChargebackReversalPaymentByExternalKey(ctx context.Context, par
 */
 func (a *Client) CompleteTransaction(ctx context.Context, params *CompleteTransactionParams) (*CompleteTransactionNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCompleteTransactionParams()
 	}
@@ -822,7 +747,6 @@ func (a *Client) CompleteTransaction(ctx context.Context, params *CompleteTransa
 */
 func (a *Client) CompleteTransactionByExternalKey(ctx context.Context, params *CompleteTransactionByExternalKeyParams) (*CompleteTransactionByExternalKeyNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCompleteTransactionByExternalKeyParams()
 	}
@@ -881,7 +805,6 @@ func (a *Client) CompleteTransactionByExternalKey(ctx context.Context, params *C
 */
 func (a *Client) CreateComboPayment(ctx context.Context, params *CreateComboPaymentParams) (*CreateComboPaymentCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateComboPaymentParams()
 	}
@@ -927,15 +850,10 @@ func (a *Client) CreateComboPayment(ctx context.Context, params *CreateComboPaym
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateComboPaymentCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateComboPaymentCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -954,13 +872,7 @@ func (a *Client) CreateComboPayment(ctx context.Context, params *CreateComboPaym
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateComboPaymentCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateComboPaymentCreated), nil
 
 }
 
@@ -969,7 +881,6 @@ func (a *Client) CreateComboPayment(ctx context.Context, params *CreateComboPaym
 */
 func (a *Client) CreatePaymentCustomFields(ctx context.Context, params *CreatePaymentCustomFieldsParams) (*CreatePaymentCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreatePaymentCustomFieldsParams()
 	}
@@ -1015,15 +926,10 @@ func (a *Client) CreatePaymentCustomFields(ctx context.Context, params *CreatePa
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreatePaymentCustomFieldsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreatePaymentCustomFieldsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -1042,13 +948,7 @@ func (a *Client) CreatePaymentCustomFields(ctx context.Context, params *CreatePa
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreatePaymentCustomFieldsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreatePaymentCustomFieldsCreated), nil
 
 }
 
@@ -1057,7 +957,6 @@ func (a *Client) CreatePaymentCustomFields(ctx context.Context, params *CreatePa
 */
 func (a *Client) CreatePaymentTags(ctx context.Context, params *CreatePaymentTagsParams) (*CreatePaymentTagsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreatePaymentTagsParams()
 	}
@@ -1103,15 +1002,10 @@ func (a *Client) CreatePaymentTags(ctx context.Context, params *CreatePaymentTag
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreatePaymentTagsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreatePaymentTagsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -1130,13 +1024,7 @@ func (a *Client) CreatePaymentTags(ctx context.Context, params *CreatePaymentTag
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreatePaymentTagsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreatePaymentTagsCreated), nil
 
 }
 
@@ -1145,7 +1033,6 @@ func (a *Client) CreatePaymentTags(ctx context.Context, params *CreatePaymentTag
 */
 func (a *Client) DeletePaymentCustomFields(ctx context.Context, params *DeletePaymentCustomFieldsParams) (*DeletePaymentCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeletePaymentCustomFieldsParams()
 	}
@@ -1204,7 +1091,6 @@ func (a *Client) DeletePaymentCustomFields(ctx context.Context, params *DeletePa
 */
 func (a *Client) DeletePaymentTags(ctx context.Context, params *DeletePaymentTagsParams) (*DeletePaymentTagsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeletePaymentTagsParams()
 	}
@@ -1263,7 +1149,6 @@ func (a *Client) DeletePaymentTags(ctx context.Context, params *DeletePaymentTag
 */
 func (a *Client) GetPayment(ctx context.Context, params *GetPaymentParams) (*GetPaymentOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentParams()
 	}
@@ -1310,7 +1195,6 @@ func (a *Client) GetPayment(ctx context.Context, params *GetPaymentParams) (*Get
 */
 func (a *Client) GetPaymentAttemptAuditLogsWithHistory(ctx context.Context, params *GetPaymentAttemptAuditLogsWithHistoryParams) (*GetPaymentAttemptAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentAttemptAuditLogsWithHistoryParams()
 	}
@@ -1357,7 +1241,6 @@ func (a *Client) GetPaymentAttemptAuditLogsWithHistory(ctx context.Context, para
 */
 func (a *Client) GetPaymentAuditLogsWithHistory(ctx context.Context, params *GetPaymentAuditLogsWithHistoryParams) (*GetPaymentAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentAuditLogsWithHistoryParams()
 	}
@@ -1404,7 +1287,6 @@ func (a *Client) GetPaymentAuditLogsWithHistory(ctx context.Context, params *Get
 */
 func (a *Client) GetPaymentByExternalKey(ctx context.Context, params *GetPaymentByExternalKeyParams) (*GetPaymentByExternalKeyOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentByExternalKeyParams()
 	}
@@ -1451,7 +1333,6 @@ func (a *Client) GetPaymentByExternalKey(ctx context.Context, params *GetPayment
 */
 func (a *Client) GetPaymentCustomFields(ctx context.Context, params *GetPaymentCustomFieldsParams) (*GetPaymentCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentCustomFieldsParams()
 	}
@@ -1498,7 +1379,6 @@ func (a *Client) GetPaymentCustomFields(ctx context.Context, params *GetPaymentC
 */
 func (a *Client) GetPaymentTags(ctx context.Context, params *GetPaymentTagsParams) (*GetPaymentTagsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentTagsParams()
 	}
@@ -1545,7 +1425,6 @@ func (a *Client) GetPaymentTags(ctx context.Context, params *GetPaymentTagsParam
 */
 func (a *Client) GetPayments(ctx context.Context, params *GetPaymentsParams) (*GetPaymentsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentsParams()
 	}
@@ -1592,7 +1471,6 @@ func (a *Client) GetPayments(ctx context.Context, params *GetPaymentsParams) (*G
 */
 func (a *Client) ModifyPaymentCustomFields(ctx context.Context, params *ModifyPaymentCustomFieldsParams) (*ModifyPaymentCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewModifyPaymentCustomFieldsParams()
 	}
@@ -1651,7 +1529,6 @@ func (a *Client) ModifyPaymentCustomFields(ctx context.Context, params *ModifyPa
 */
 func (a *Client) RefundPayment(ctx context.Context, params *RefundPaymentParams) (*RefundPaymentCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewRefundPaymentParams()
 	}
@@ -1697,15 +1574,10 @@ func (a *Client) RefundPayment(ctx context.Context, params *RefundPaymentParams)
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *RefundPaymentCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*RefundPaymentCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -1724,13 +1596,7 @@ func (a *Client) RefundPayment(ctx context.Context, params *RefundPaymentParams)
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *RefundPaymentCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*RefundPaymentCreated), nil
 
 }
 
@@ -1739,7 +1605,6 @@ func (a *Client) RefundPayment(ctx context.Context, params *RefundPaymentParams)
 */
 func (a *Client) RefundPaymentByExternalKey(ctx context.Context, params *RefundPaymentByExternalKeyParams) (*RefundPaymentByExternalKeyCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewRefundPaymentByExternalKeyParams()
 	}
@@ -1785,15 +1650,10 @@ func (a *Client) RefundPaymentByExternalKey(ctx context.Context, params *RefundP
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *RefundPaymentByExternalKeyCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*RefundPaymentByExternalKeyCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -1812,13 +1672,7 @@ func (a *Client) RefundPaymentByExternalKey(ctx context.Context, params *RefundP
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *RefundPaymentByExternalKeyCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*RefundPaymentByExternalKeyCreated), nil
 
 }
 
@@ -1827,7 +1681,6 @@ func (a *Client) RefundPaymentByExternalKey(ctx context.Context, params *RefundP
 */
 func (a *Client) SearchPayments(ctx context.Context, params *SearchPaymentsParams) (*SearchPaymentsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewSearchPaymentsParams()
 	}
@@ -1874,7 +1727,6 @@ func (a *Client) SearchPayments(ctx context.Context, params *SearchPaymentsParam
 */
 func (a *Client) VoidPayment(ctx context.Context, params *VoidPaymentParams) (*VoidPaymentNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewVoidPaymentParams()
 	}
@@ -1933,7 +1785,6 @@ func (a *Client) VoidPayment(ctx context.Context, params *VoidPaymentParams) (*V
 */
 func (a *Client) VoidPaymentByExternalKey(ctx context.Context, params *VoidPaymentByExternalKeyParams) (*VoidPaymentByExternalKeyNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewVoidPaymentByExternalKeyParams()
 	}

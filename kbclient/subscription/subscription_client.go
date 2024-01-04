@@ -103,7 +103,6 @@ type ClientService interface {
 */
 func (a *Client) AddSubscriptionBlockingState(ctx context.Context, params *AddSubscriptionBlockingStateParams) (*AddSubscriptionBlockingStateCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewAddSubscriptionBlockingStateParams()
 	}
@@ -149,15 +148,10 @@ func (a *Client) AddSubscriptionBlockingState(ctx context.Context, params *AddSu
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *AddSubscriptionBlockingStateCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*AddSubscriptionBlockingStateCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -176,13 +170,7 @@ func (a *Client) AddSubscriptionBlockingState(ctx context.Context, params *AddSu
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *AddSubscriptionBlockingStateCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*AddSubscriptionBlockingStateCreated), nil
 
 }
 
@@ -191,7 +179,6 @@ func (a *Client) AddSubscriptionBlockingState(ctx context.Context, params *AddSu
 */
 func (a *Client) CancelSubscriptionPlan(ctx context.Context, params *CancelSubscriptionPlanParams) (*CancelSubscriptionPlanNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCancelSubscriptionPlanParams()
 	}
@@ -250,7 +237,6 @@ func (a *Client) CancelSubscriptionPlan(ctx context.Context, params *CancelSubsc
 */
 func (a *Client) ChangeSubscriptionPlan(ctx context.Context, params *ChangeSubscriptionPlanParams) (*ChangeSubscriptionPlanNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewChangeSubscriptionPlanParams()
 	}
@@ -309,7 +295,6 @@ func (a *Client) ChangeSubscriptionPlan(ctx context.Context, params *ChangeSubsc
 */
 func (a *Client) CreateSubscription(ctx context.Context, params *CreateSubscriptionParams) (*CreateSubscriptionCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateSubscriptionParams()
 	}
@@ -355,15 +340,10 @@ func (a *Client) CreateSubscription(ctx context.Context, params *CreateSubscript
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateSubscriptionCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateSubscriptionCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -382,13 +362,7 @@ func (a *Client) CreateSubscription(ctx context.Context, params *CreateSubscript
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateSubscriptionCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateSubscriptionCreated), nil
 
 }
 
@@ -397,7 +371,6 @@ func (a *Client) CreateSubscription(ctx context.Context, params *CreateSubscript
 */
 func (a *Client) CreateSubscriptionCustomFields(ctx context.Context, params *CreateSubscriptionCustomFieldsParams) (*CreateSubscriptionCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateSubscriptionCustomFieldsParams()
 	}
@@ -443,15 +416,10 @@ func (a *Client) CreateSubscriptionCustomFields(ctx context.Context, params *Cre
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateSubscriptionCustomFieldsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateSubscriptionCustomFieldsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -470,13 +438,7 @@ func (a *Client) CreateSubscriptionCustomFields(ctx context.Context, params *Cre
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateSubscriptionCustomFieldsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateSubscriptionCustomFieldsCreated), nil
 
 }
 
@@ -485,7 +447,6 @@ func (a *Client) CreateSubscriptionCustomFields(ctx context.Context, params *Cre
 */
 func (a *Client) CreateSubscriptionTags(ctx context.Context, params *CreateSubscriptionTagsParams) (*CreateSubscriptionTagsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateSubscriptionTagsParams()
 	}
@@ -531,15 +492,10 @@ func (a *Client) CreateSubscriptionTags(ctx context.Context, params *CreateSubsc
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateSubscriptionTagsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateSubscriptionTagsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -558,13 +514,7 @@ func (a *Client) CreateSubscriptionTags(ctx context.Context, params *CreateSubsc
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateSubscriptionTagsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateSubscriptionTagsCreated), nil
 
 }
 
@@ -573,7 +523,6 @@ func (a *Client) CreateSubscriptionTags(ctx context.Context, params *CreateSubsc
 */
 func (a *Client) CreateSubscriptionWithAddOns(ctx context.Context, params *CreateSubscriptionWithAddOnsParams) (*CreateSubscriptionWithAddOnsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateSubscriptionWithAddOnsParams()
 	}
@@ -619,15 +568,10 @@ func (a *Client) CreateSubscriptionWithAddOns(ctx context.Context, params *Creat
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateSubscriptionWithAddOnsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateSubscriptionWithAddOnsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -646,13 +590,7 @@ func (a *Client) CreateSubscriptionWithAddOns(ctx context.Context, params *Creat
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateSubscriptionWithAddOnsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateSubscriptionWithAddOnsCreated), nil
 
 }
 
@@ -661,7 +599,6 @@ func (a *Client) CreateSubscriptionWithAddOns(ctx context.Context, params *Creat
 */
 func (a *Client) CreateSubscriptionsWithAddOns(ctx context.Context, params *CreateSubscriptionsWithAddOnsParams) (*CreateSubscriptionsWithAddOnsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateSubscriptionsWithAddOnsParams()
 	}
@@ -707,15 +644,10 @@ func (a *Client) CreateSubscriptionsWithAddOns(ctx context.Context, params *Crea
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateSubscriptionsWithAddOnsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateSubscriptionsWithAddOnsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -734,13 +666,7 @@ func (a *Client) CreateSubscriptionsWithAddOns(ctx context.Context, params *Crea
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateSubscriptionsWithAddOnsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateSubscriptionsWithAddOnsCreated), nil
 
 }
 
@@ -749,7 +675,6 @@ func (a *Client) CreateSubscriptionsWithAddOns(ctx context.Context, params *Crea
 */
 func (a *Client) DeleteSubscriptionCustomFields(ctx context.Context, params *DeleteSubscriptionCustomFieldsParams) (*DeleteSubscriptionCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeleteSubscriptionCustomFieldsParams()
 	}
@@ -808,7 +733,6 @@ func (a *Client) DeleteSubscriptionCustomFields(ctx context.Context, params *Del
 */
 func (a *Client) DeleteSubscriptionTags(ctx context.Context, params *DeleteSubscriptionTagsParams) (*DeleteSubscriptionTagsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeleteSubscriptionTagsParams()
 	}
@@ -867,7 +791,6 @@ func (a *Client) DeleteSubscriptionTags(ctx context.Context, params *DeleteSubsc
 */
 func (a *Client) GetSubscription(ctx context.Context, params *GetSubscriptionParams) (*GetSubscriptionOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetSubscriptionParams()
 	}
@@ -914,7 +837,6 @@ func (a *Client) GetSubscription(ctx context.Context, params *GetSubscriptionPar
 */
 func (a *Client) GetSubscriptionAuditLogsWithHistory(ctx context.Context, params *GetSubscriptionAuditLogsWithHistoryParams) (*GetSubscriptionAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetSubscriptionAuditLogsWithHistoryParams()
 	}
@@ -961,7 +883,6 @@ func (a *Client) GetSubscriptionAuditLogsWithHistory(ctx context.Context, params
 */
 func (a *Client) GetSubscriptionByKey(ctx context.Context, params *GetSubscriptionByKeyParams) (*GetSubscriptionByKeyOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetSubscriptionByKeyParams()
 	}
@@ -1008,7 +929,6 @@ func (a *Client) GetSubscriptionByKey(ctx context.Context, params *GetSubscripti
 */
 func (a *Client) GetSubscriptionCustomFields(ctx context.Context, params *GetSubscriptionCustomFieldsParams) (*GetSubscriptionCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetSubscriptionCustomFieldsParams()
 	}
@@ -1055,7 +975,6 @@ func (a *Client) GetSubscriptionCustomFields(ctx context.Context, params *GetSub
 */
 func (a *Client) GetSubscriptionEventAuditLogsWithHistory(ctx context.Context, params *GetSubscriptionEventAuditLogsWithHistoryParams) (*GetSubscriptionEventAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetSubscriptionEventAuditLogsWithHistoryParams()
 	}
@@ -1102,7 +1021,6 @@ func (a *Client) GetSubscriptionEventAuditLogsWithHistory(ctx context.Context, p
 */
 func (a *Client) GetSubscriptionTags(ctx context.Context, params *GetSubscriptionTagsParams) (*GetSubscriptionTagsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetSubscriptionTagsParams()
 	}
@@ -1149,7 +1067,6 @@ func (a *Client) GetSubscriptionTags(ctx context.Context, params *GetSubscriptio
 */
 func (a *Client) ModifySubscriptionCustomFields(ctx context.Context, params *ModifySubscriptionCustomFieldsParams) (*ModifySubscriptionCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewModifySubscriptionCustomFieldsParams()
 	}
@@ -1208,7 +1125,6 @@ func (a *Client) ModifySubscriptionCustomFields(ctx context.Context, params *Mod
 */
 func (a *Client) UncancelSubscriptionPlan(ctx context.Context, params *UncancelSubscriptionPlanParams) (*UncancelSubscriptionPlanNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewUncancelSubscriptionPlanParams()
 	}
@@ -1267,7 +1183,6 @@ func (a *Client) UncancelSubscriptionPlan(ctx context.Context, params *UncancelS
 */
 func (a *Client) UndoChangeSubscriptionPlan(ctx context.Context, params *UndoChangeSubscriptionPlanParams) (*UndoChangeSubscriptionPlanNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewUndoChangeSubscriptionPlanParams()
 	}
@@ -1326,7 +1241,6 @@ func (a *Client) UndoChangeSubscriptionPlan(ctx context.Context, params *UndoCha
 */
 func (a *Client) UpdateSubscriptionBCD(ctx context.Context, params *UpdateSubscriptionBCDParams) (*UpdateSubscriptionBCDNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewUpdateSubscriptionBCDParams()
 	}
@@ -1385,7 +1299,6 @@ func (a *Client) UpdateSubscriptionBCD(ctx context.Context, params *UpdateSubscr
 */
 func (a *Client) UpdateSubscriptionQuantity(ctx context.Context, params *UpdateSubscriptionQuantityParams) (*UpdateSubscriptionQuantityNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewUpdateSubscriptionQuantityParams()
 	}

@@ -52,12 +52,10 @@ func NewHealthcheckParamsWithHTTPClient(client *http.Client) *HealthcheckParams 
 	}
 }
 
-/*
-HealthcheckParams contains all the parameters to send to the API endpoint
+/* HealthcheckParams contains all the parameters to send to the API endpoint
+   for the healthcheck operation.
 
-	for the healthcheck operation.
-
-	Typically these are written to a http.Request.
+   Typically these are written to a http.Request.
 */
 type HealthcheckParams struct {
 	WithProfilingInfo     *string // If set, return KB hprof headers

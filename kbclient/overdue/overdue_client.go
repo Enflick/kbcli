@@ -69,7 +69,6 @@ type ClientService interface {
 */
 func (a *Client) GetOverdueConfigJSON(ctx context.Context, params *GetOverdueConfigJSONParams) (*GetOverdueConfigJSONOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetOverdueConfigJSONParams()
 	}
@@ -116,7 +115,6 @@ func (a *Client) GetOverdueConfigJSON(ctx context.Context, params *GetOverdueCon
 */
 func (a *Client) GetOverdueConfigXML(ctx context.Context, params *GetOverdueConfigXMLParams) (*GetOverdueConfigXMLOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetOverdueConfigXMLParams()
 	}
@@ -163,7 +161,6 @@ func (a *Client) GetOverdueConfigXML(ctx context.Context, params *GetOverdueConf
 */
 func (a *Client) UploadOverdueConfigJSON(ctx context.Context, params *UploadOverdueConfigJSONParams) (*UploadOverdueConfigJSONCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewUploadOverdueConfigJSONParams()
 	}
@@ -209,15 +206,10 @@ func (a *Client) UploadOverdueConfigJSON(ctx context.Context, params *UploadOver
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *UploadOverdueConfigJSONCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*UploadOverdueConfigJSONCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -236,13 +228,7 @@ func (a *Client) UploadOverdueConfigJSON(ctx context.Context, params *UploadOver
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *UploadOverdueConfigJSONCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*UploadOverdueConfigJSONCreated), nil
 
 }
 
@@ -251,7 +237,6 @@ func (a *Client) UploadOverdueConfigJSON(ctx context.Context, params *UploadOver
 */
 func (a *Client) UploadOverdueConfigXML(ctx context.Context, params *UploadOverdueConfigXMLParams) (*UploadOverdueConfigXMLCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewUploadOverdueConfigXMLParams()
 	}
@@ -297,15 +282,10 @@ func (a *Client) UploadOverdueConfigXML(ctx context.Context, params *UploadOverd
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *UploadOverdueConfigXMLCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*UploadOverdueConfigXMLCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -324,13 +304,7 @@ func (a *Client) UploadOverdueConfigXML(ctx context.Context, params *UploadOverd
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *UploadOverdueConfigXMLCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*UploadOverdueConfigXMLCreated), nil
 
 }
 

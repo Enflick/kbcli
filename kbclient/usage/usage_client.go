@@ -66,7 +66,6 @@ type ClientService interface {
 */
 func (a *Client) GetAllUsage(ctx context.Context, params *GetAllUsageParams) (*GetAllUsageOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAllUsageParams()
 	}
@@ -113,7 +112,6 @@ func (a *Client) GetAllUsage(ctx context.Context, params *GetAllUsageParams) (*G
 */
 func (a *Client) GetUsage(ctx context.Context, params *GetUsageParams) (*GetUsageOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetUsageParams()
 	}
@@ -160,7 +158,6 @@ func (a *Client) GetUsage(ctx context.Context, params *GetUsageParams) (*GetUsag
 */
 func (a *Client) RecordUsage(ctx context.Context, params *RecordUsageParams) (*RecordUsageOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewRecordUsageParams()
 	}

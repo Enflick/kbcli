@@ -62,7 +62,6 @@ type ClientService interface {
 */
 func (a *Client) GetPluginsInfo(ctx context.Context, params *GetPluginsInfoParams) (*GetPluginsInfoOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPluginsInfoParams()
 	}

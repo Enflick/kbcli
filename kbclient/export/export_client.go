@@ -62,7 +62,6 @@ type ClientService interface {
 */
 func (a *Client) ExportDataForAccount(ctx context.Context, params *ExportDataForAccountParams) (*ExportDataForAccountOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewExportDataForAccountParams()
 	}

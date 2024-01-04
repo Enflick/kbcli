@@ -58,7 +58,7 @@ type ClientService interface {
 }
 
 /*
-Healthcheck gets the healthcheck information
+  Healthcheck gets the healthcheck information
 */
 func (a *Client) Healthcheck(ctx context.Context, params *HealthcheckParams) (*HealthcheckOK, error) {
 	// TODO: Validate the params before sending

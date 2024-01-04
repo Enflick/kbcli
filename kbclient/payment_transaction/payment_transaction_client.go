@@ -83,7 +83,6 @@ type ClientService interface {
 */
 func (a *Client) CreateTransactionCustomFields(ctx context.Context, params *CreateTransactionCustomFieldsParams) (*CreateTransactionCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateTransactionCustomFieldsParams()
 	}
@@ -129,15 +128,10 @@ func (a *Client) CreateTransactionCustomFields(ctx context.Context, params *Crea
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateTransactionCustomFieldsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateTransactionCustomFieldsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -156,13 +150,7 @@ func (a *Client) CreateTransactionCustomFields(ctx context.Context, params *Crea
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateTransactionCustomFieldsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateTransactionCustomFieldsCreated), nil
 
 }
 
@@ -171,7 +159,6 @@ func (a *Client) CreateTransactionCustomFields(ctx context.Context, params *Crea
 */
 func (a *Client) CreateTransactionTags(ctx context.Context, params *CreateTransactionTagsParams) (*CreateTransactionTagsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateTransactionTagsParams()
 	}
@@ -217,15 +204,10 @@ func (a *Client) CreateTransactionTags(ctx context.Context, params *CreateTransa
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateTransactionTagsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateTransactionTagsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -244,13 +226,7 @@ func (a *Client) CreateTransactionTags(ctx context.Context, params *CreateTransa
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateTransactionTagsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateTransactionTagsCreated), nil
 
 }
 
@@ -259,7 +235,6 @@ func (a *Client) CreateTransactionTags(ctx context.Context, params *CreateTransa
 */
 func (a *Client) DeleteTransactionCustomFields(ctx context.Context, params *DeleteTransactionCustomFieldsParams) (*DeleteTransactionCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeleteTransactionCustomFieldsParams()
 	}
@@ -318,7 +293,6 @@ func (a *Client) DeleteTransactionCustomFields(ctx context.Context, params *Dele
 */
 func (a *Client) DeleteTransactionTags(ctx context.Context, params *DeleteTransactionTagsParams) (*DeleteTransactionTagsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeleteTransactionTagsParams()
 	}
@@ -377,7 +351,6 @@ func (a *Client) DeleteTransactionTags(ctx context.Context, params *DeleteTransa
 */
 func (a *Client) GetPaymentByTransactionExternalKey(ctx context.Context, params *GetPaymentByTransactionExternalKeyParams) (*GetPaymentByTransactionExternalKeyOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentByTransactionExternalKeyParams()
 	}
@@ -424,7 +397,6 @@ func (a *Client) GetPaymentByTransactionExternalKey(ctx context.Context, params 
 */
 func (a *Client) GetPaymentByTransactionID(ctx context.Context, params *GetPaymentByTransactionIDParams) (*GetPaymentByTransactionIDOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentByTransactionIDParams()
 	}
@@ -471,7 +443,6 @@ func (a *Client) GetPaymentByTransactionID(ctx context.Context, params *GetPayme
 */
 func (a *Client) GetTransactionAuditLogsWithHistory(ctx context.Context, params *GetTransactionAuditLogsWithHistoryParams) (*GetTransactionAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetTransactionAuditLogsWithHistoryParams()
 	}
@@ -518,7 +489,6 @@ func (a *Client) GetTransactionAuditLogsWithHistory(ctx context.Context, params 
 */
 func (a *Client) GetTransactionCustomFields(ctx context.Context, params *GetTransactionCustomFieldsParams) (*GetTransactionCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetTransactionCustomFieldsParams()
 	}
@@ -565,7 +535,6 @@ func (a *Client) GetTransactionCustomFields(ctx context.Context, params *GetTran
 */
 func (a *Client) GetTransactionTags(ctx context.Context, params *GetTransactionTagsParams) (*GetTransactionTagsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetTransactionTagsParams()
 	}
@@ -612,7 +581,6 @@ func (a *Client) GetTransactionTags(ctx context.Context, params *GetTransactionT
 */
 func (a *Client) ModifyTransactionCustomFields(ctx context.Context, params *ModifyTransactionCustomFieldsParams) (*ModifyTransactionCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewModifyTransactionCustomFieldsParams()
 	}
@@ -671,7 +639,6 @@ func (a *Client) ModifyTransactionCustomFields(ctx context.Context, params *Modi
 */
 func (a *Client) NotifyStateChanged(ctx context.Context, params *NotifyStateChangedParams) (*NotifyStateChangedCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewNotifyStateChangedParams()
 	}
@@ -717,15 +684,10 @@ func (a *Client) NotifyStateChanged(ctx context.Context, params *NotifyStateChan
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *NotifyStateChangedCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*NotifyStateChangedCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -744,13 +706,7 @@ func (a *Client) NotifyStateChanged(ctx context.Context, params *NotifyStateChan
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *NotifyStateChangedCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*NotifyStateChangedCreated), nil
 
 }
 
