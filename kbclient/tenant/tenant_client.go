@@ -99,7 +99,6 @@ type ClientService interface {
 */
 func (a *Client) CreateTenant(ctx context.Context, params *CreateTenantParams) (*CreateTenantCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateTenantParams()
 	}
@@ -145,15 +144,10 @@ func (a *Client) CreateTenant(ctx context.Context, params *CreateTenantParams) (
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateTenantCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateTenantCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -172,13 +166,7 @@ func (a *Client) CreateTenant(ctx context.Context, params *CreateTenantParams) (
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateTenantCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateTenantCreated), nil
 
 }
 
@@ -187,7 +175,6 @@ func (a *Client) CreateTenant(ctx context.Context, params *CreateTenantParams) (
 */
 func (a *Client) DeletePerTenantConfiguration(ctx context.Context, params *DeletePerTenantConfigurationParams) (*DeletePerTenantConfigurationNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeletePerTenantConfigurationParams()
 	}
@@ -246,7 +233,6 @@ func (a *Client) DeletePerTenantConfiguration(ctx context.Context, params *Delet
 */
 func (a *Client) DeletePluginConfiguration(ctx context.Context, params *DeletePluginConfigurationParams) (*DeletePluginConfigurationNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeletePluginConfigurationParams()
 	}
@@ -305,7 +291,6 @@ func (a *Client) DeletePluginConfiguration(ctx context.Context, params *DeletePl
 */
 func (a *Client) DeletePluginPaymentStateMachineConfig(ctx context.Context, params *DeletePluginPaymentStateMachineConfigParams) (*DeletePluginPaymentStateMachineConfigNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeletePluginPaymentStateMachineConfigParams()
 	}
@@ -364,7 +349,6 @@ func (a *Client) DeletePluginPaymentStateMachineConfig(ctx context.Context, para
 */
 func (a *Client) DeletePushNotificationCallbacks(ctx context.Context, params *DeletePushNotificationCallbacksParams) (*DeletePushNotificationCallbacksNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeletePushNotificationCallbacksParams()
 	}
@@ -423,7 +407,6 @@ func (a *Client) DeletePushNotificationCallbacks(ctx context.Context, params *De
 */
 func (a *Client) DeleteUserKeyValue(ctx context.Context, params *DeleteUserKeyValueParams) (*DeleteUserKeyValueNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeleteUserKeyValueParams()
 	}
@@ -482,7 +465,6 @@ func (a *Client) DeleteUserKeyValue(ctx context.Context, params *DeleteUserKeyVa
 */
 func (a *Client) GetAllPluginConfiguration(ctx context.Context, params *GetAllPluginConfigurationParams) (*GetAllPluginConfigurationOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAllPluginConfigurationParams()
 	}
@@ -529,7 +511,6 @@ func (a *Client) GetAllPluginConfiguration(ctx context.Context, params *GetAllPl
 */
 func (a *Client) GetPerTenantConfiguration(ctx context.Context, params *GetPerTenantConfigurationParams) (*GetPerTenantConfigurationOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPerTenantConfigurationParams()
 	}
@@ -576,7 +557,6 @@ func (a *Client) GetPerTenantConfiguration(ctx context.Context, params *GetPerTe
 */
 func (a *Client) GetPluginConfiguration(ctx context.Context, params *GetPluginConfigurationParams) (*GetPluginConfigurationOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPluginConfigurationParams()
 	}
@@ -623,7 +603,6 @@ func (a *Client) GetPluginConfiguration(ctx context.Context, params *GetPluginCo
 */
 func (a *Client) GetPluginPaymentStateMachineConfig(ctx context.Context, params *GetPluginPaymentStateMachineConfigParams) (*GetPluginPaymentStateMachineConfigOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPluginPaymentStateMachineConfigParams()
 	}
@@ -670,7 +649,6 @@ func (a *Client) GetPluginPaymentStateMachineConfig(ctx context.Context, params 
 */
 func (a *Client) GetPushNotificationCallbacks(ctx context.Context, params *GetPushNotificationCallbacksParams) (*GetPushNotificationCallbacksOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPushNotificationCallbacksParams()
 	}
@@ -717,7 +695,6 @@ func (a *Client) GetPushNotificationCallbacks(ctx context.Context, params *GetPu
 */
 func (a *Client) GetTenant(ctx context.Context, params *GetTenantParams) (*GetTenantOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetTenantParams()
 	}
@@ -764,7 +741,6 @@ func (a *Client) GetTenant(ctx context.Context, params *GetTenantParams) (*GetTe
 */
 func (a *Client) GetTenantByAPIKey(ctx context.Context, params *GetTenantByAPIKeyParams) (*GetTenantByAPIKeyOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetTenantByAPIKeyParams()
 	}
@@ -811,7 +787,6 @@ func (a *Client) GetTenantByAPIKey(ctx context.Context, params *GetTenantByAPIKe
 */
 func (a *Client) GetUserKeyValue(ctx context.Context, params *GetUserKeyValueParams) (*GetUserKeyValueOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetUserKeyValueParams()
 	}
@@ -858,7 +833,6 @@ func (a *Client) GetUserKeyValue(ctx context.Context, params *GetUserKeyValuePar
 */
 func (a *Client) InsertUserKeyValue(ctx context.Context, params *InsertUserKeyValueParams) (*InsertUserKeyValueCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewInsertUserKeyValueParams()
 	}
@@ -904,15 +878,10 @@ func (a *Client) InsertUserKeyValue(ctx context.Context, params *InsertUserKeyVa
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *InsertUserKeyValueCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*InsertUserKeyValueCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -931,13 +900,7 @@ func (a *Client) InsertUserKeyValue(ctx context.Context, params *InsertUserKeyVa
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *InsertUserKeyValueCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*InsertUserKeyValueCreated), nil
 
 }
 
@@ -946,7 +909,6 @@ func (a *Client) InsertUserKeyValue(ctx context.Context, params *InsertUserKeyVa
 */
 func (a *Client) RegisterPushNotificationCallback(ctx context.Context, params *RegisterPushNotificationCallbackParams) (*RegisterPushNotificationCallbackCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewRegisterPushNotificationCallbackParams()
 	}
@@ -992,15 +954,10 @@ func (a *Client) RegisterPushNotificationCallback(ctx context.Context, params *R
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *RegisterPushNotificationCallbackCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*RegisterPushNotificationCallbackCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -1019,13 +976,7 @@ func (a *Client) RegisterPushNotificationCallback(ctx context.Context, params *R
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *RegisterPushNotificationCallbackCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*RegisterPushNotificationCallbackCreated), nil
 
 }
 
@@ -1034,7 +985,6 @@ func (a *Client) RegisterPushNotificationCallback(ctx context.Context, params *R
 */
 func (a *Client) UploadPerTenantConfiguration(ctx context.Context, params *UploadPerTenantConfigurationParams) (*UploadPerTenantConfigurationCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewUploadPerTenantConfigurationParams()
 	}
@@ -1080,15 +1030,10 @@ func (a *Client) UploadPerTenantConfiguration(ctx context.Context, params *Uploa
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *UploadPerTenantConfigurationCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*UploadPerTenantConfigurationCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -1107,13 +1052,7 @@ func (a *Client) UploadPerTenantConfiguration(ctx context.Context, params *Uploa
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *UploadPerTenantConfigurationCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*UploadPerTenantConfigurationCreated), nil
 
 }
 
@@ -1122,7 +1061,6 @@ func (a *Client) UploadPerTenantConfiguration(ctx context.Context, params *Uploa
 */
 func (a *Client) UploadPluginConfiguration(ctx context.Context, params *UploadPluginConfigurationParams) (*UploadPluginConfigurationCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewUploadPluginConfigurationParams()
 	}
@@ -1168,15 +1106,10 @@ func (a *Client) UploadPluginConfiguration(ctx context.Context, params *UploadPl
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *UploadPluginConfigurationCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*UploadPluginConfigurationCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -1195,13 +1128,7 @@ func (a *Client) UploadPluginConfiguration(ctx context.Context, params *UploadPl
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *UploadPluginConfigurationCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*UploadPluginConfigurationCreated), nil
 
 }
 
@@ -1210,7 +1137,6 @@ func (a *Client) UploadPluginConfiguration(ctx context.Context, params *UploadPl
 */
 func (a *Client) UploadPluginPaymentStateMachineConfig(ctx context.Context, params *UploadPluginPaymentStateMachineConfigParams) (*UploadPluginPaymentStateMachineConfigCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewUploadPluginPaymentStateMachineConfigParams()
 	}
@@ -1256,15 +1182,10 @@ func (a *Client) UploadPluginPaymentStateMachineConfig(ctx context.Context, para
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *UploadPluginPaymentStateMachineConfigCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*UploadPluginPaymentStateMachineConfigCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -1283,13 +1204,7 @@ func (a *Client) UploadPluginPaymentStateMachineConfig(ctx context.Context, para
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *UploadPluginPaymentStateMachineConfigCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*UploadPluginPaymentStateMachineConfigCreated), nil
 
 }
 

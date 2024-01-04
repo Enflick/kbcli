@@ -147,7 +147,6 @@ type ClientService interface {
 */
 func (a *Client) AddAccountBlockingState(ctx context.Context, params *AddAccountBlockingStateParams) (*AddAccountBlockingStateCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewAddAccountBlockingStateParams()
 	}
@@ -193,15 +192,10 @@ func (a *Client) AddAccountBlockingState(ctx context.Context, params *AddAccount
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *AddAccountBlockingStateCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*AddAccountBlockingStateCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -220,13 +214,7 @@ func (a *Client) AddAccountBlockingState(ctx context.Context, params *AddAccount
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *AddAccountBlockingStateCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*AddAccountBlockingStateCreated), nil
 
 }
 
@@ -235,7 +223,6 @@ func (a *Client) AddAccountBlockingState(ctx context.Context, params *AddAccount
 */
 func (a *Client) AddEmail(ctx context.Context, params *AddEmailParams) (*AddEmailCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewAddEmailParams()
 	}
@@ -281,15 +268,10 @@ func (a *Client) AddEmail(ctx context.Context, params *AddEmailParams) (*AddEmai
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *AddEmailCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*AddEmailCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -308,13 +290,7 @@ func (a *Client) AddEmail(ctx context.Context, params *AddEmailParams) (*AddEmai
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *AddEmailCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*AddEmailCreated), nil
 
 }
 
@@ -323,7 +299,6 @@ func (a *Client) AddEmail(ctx context.Context, params *AddEmailParams) (*AddEmai
 */
 func (a *Client) CloseAccount(ctx context.Context, params *CloseAccountParams) (*CloseAccountNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCloseAccountParams()
 	}
@@ -382,7 +357,6 @@ func (a *Client) CloseAccount(ctx context.Context, params *CloseAccountParams) (
 */
 func (a *Client) CreateAccount(ctx context.Context, params *CreateAccountParams) (*CreateAccountCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateAccountParams()
 	}
@@ -428,15 +402,10 @@ func (a *Client) CreateAccount(ctx context.Context, params *CreateAccountParams)
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateAccountCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateAccountCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -455,13 +424,7 @@ func (a *Client) CreateAccount(ctx context.Context, params *CreateAccountParams)
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateAccountCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateAccountCreated), nil
 
 }
 
@@ -470,7 +433,6 @@ func (a *Client) CreateAccount(ctx context.Context, params *CreateAccountParams)
 */
 func (a *Client) CreateAccountCustomFields(ctx context.Context, params *CreateAccountCustomFieldsParams) (*CreateAccountCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateAccountCustomFieldsParams()
 	}
@@ -516,15 +478,10 @@ func (a *Client) CreateAccountCustomFields(ctx context.Context, params *CreateAc
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateAccountCustomFieldsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateAccountCustomFieldsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -543,13 +500,7 @@ func (a *Client) CreateAccountCustomFields(ctx context.Context, params *CreateAc
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateAccountCustomFieldsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateAccountCustomFieldsCreated), nil
 
 }
 
@@ -558,7 +509,6 @@ func (a *Client) CreateAccountCustomFields(ctx context.Context, params *CreateAc
 */
 func (a *Client) CreateAccountTags(ctx context.Context, params *CreateAccountTagsParams) (*CreateAccountTagsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateAccountTagsParams()
 	}
@@ -604,15 +554,10 @@ func (a *Client) CreateAccountTags(ctx context.Context, params *CreateAccountTag
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateAccountTagsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateAccountTagsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -631,13 +576,7 @@ func (a *Client) CreateAccountTags(ctx context.Context, params *CreateAccountTag
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateAccountTagsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateAccountTagsCreated), nil
 
 }
 
@@ -646,7 +585,6 @@ func (a *Client) CreateAccountTags(ctx context.Context, params *CreateAccountTag
 */
 func (a *Client) CreatePaymentMethod(ctx context.Context, params *CreatePaymentMethodParams) (*CreatePaymentMethodCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreatePaymentMethodParams()
 	}
@@ -692,15 +630,10 @@ func (a *Client) CreatePaymentMethod(ctx context.Context, params *CreatePaymentM
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreatePaymentMethodCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreatePaymentMethodCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -719,13 +652,7 @@ func (a *Client) CreatePaymentMethod(ctx context.Context, params *CreatePaymentM
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreatePaymentMethodCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreatePaymentMethodCreated), nil
 
 }
 
@@ -734,7 +661,6 @@ func (a *Client) CreatePaymentMethod(ctx context.Context, params *CreatePaymentM
 */
 func (a *Client) DeleteAccountCustomFields(ctx context.Context, params *DeleteAccountCustomFieldsParams) (*DeleteAccountCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeleteAccountCustomFieldsParams()
 	}
@@ -793,7 +719,6 @@ func (a *Client) DeleteAccountCustomFields(ctx context.Context, params *DeleteAc
 */
 func (a *Client) DeleteAccountTags(ctx context.Context, params *DeleteAccountTagsParams) (*DeleteAccountTagsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeleteAccountTagsParams()
 	}
@@ -852,7 +777,6 @@ func (a *Client) DeleteAccountTags(ctx context.Context, params *DeleteAccountTag
 */
 func (a *Client) GetAccount(ctx context.Context, params *GetAccountParams) (*GetAccountOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAccountParams()
 	}
@@ -899,7 +823,6 @@ func (a *Client) GetAccount(ctx context.Context, params *GetAccountParams) (*Get
 */
 func (a *Client) GetAccountAuditLogs(ctx context.Context, params *GetAccountAuditLogsParams) (*GetAccountAuditLogsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAccountAuditLogsParams()
 	}
@@ -946,7 +869,6 @@ func (a *Client) GetAccountAuditLogs(ctx context.Context, params *GetAccountAudi
 */
 func (a *Client) GetAccountAuditLogsWithHistory(ctx context.Context, params *GetAccountAuditLogsWithHistoryParams) (*GetAccountAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAccountAuditLogsWithHistoryParams()
 	}
@@ -993,7 +915,6 @@ func (a *Client) GetAccountAuditLogsWithHistory(ctx context.Context, params *Get
 */
 func (a *Client) GetAccountBundles(ctx context.Context, params *GetAccountBundlesParams) (*GetAccountBundlesOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAccountBundlesParams()
 	}
@@ -1040,7 +961,6 @@ func (a *Client) GetAccountBundles(ctx context.Context, params *GetAccountBundle
 */
 func (a *Client) GetAccountBundlesPaginated(ctx context.Context, params *GetAccountBundlesPaginatedParams) (*GetAccountBundlesPaginatedOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAccountBundlesPaginatedParams()
 	}
@@ -1087,7 +1007,6 @@ func (a *Client) GetAccountBundlesPaginated(ctx context.Context, params *GetAcco
 */
 func (a *Client) GetAccountByKey(ctx context.Context, params *GetAccountByKeyParams) (*GetAccountByKeyOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAccountByKeyParams()
 	}
@@ -1134,7 +1053,6 @@ func (a *Client) GetAccountByKey(ctx context.Context, params *GetAccountByKeyPar
 */
 func (a *Client) GetAccountCustomFields(ctx context.Context, params *GetAccountCustomFieldsParams) (*GetAccountCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAccountCustomFieldsParams()
 	}
@@ -1181,7 +1099,6 @@ func (a *Client) GetAccountCustomFields(ctx context.Context, params *GetAccountC
 */
 func (a *Client) GetAccountEmailAuditLogsWithHistory(ctx context.Context, params *GetAccountEmailAuditLogsWithHistoryParams) (*GetAccountEmailAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAccountEmailAuditLogsWithHistoryParams()
 	}
@@ -1228,7 +1145,6 @@ func (a *Client) GetAccountEmailAuditLogsWithHistory(ctx context.Context, params
 */
 func (a *Client) GetAccountTags(ctx context.Context, params *GetAccountTagsParams) (*GetAccountTagsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAccountTagsParams()
 	}
@@ -1275,7 +1191,6 @@ func (a *Client) GetAccountTags(ctx context.Context, params *GetAccountTagsParam
 */
 func (a *Client) GetAccountTimeline(ctx context.Context, params *GetAccountTimelineParams) (*GetAccountTimelineOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAccountTimelineParams()
 	}
@@ -1322,7 +1237,6 @@ func (a *Client) GetAccountTimeline(ctx context.Context, params *GetAccountTimel
 */
 func (a *Client) GetAccounts(ctx context.Context, params *GetAccountsParams) (*GetAccountsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAccountsParams()
 	}
@@ -1369,7 +1283,6 @@ func (a *Client) GetAccounts(ctx context.Context, params *GetAccountsParams) (*G
 */
 func (a *Client) GetAllCustomFields(ctx context.Context, params *GetAllCustomFieldsParams) (*GetAllCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAllCustomFieldsParams()
 	}
@@ -1416,7 +1329,6 @@ func (a *Client) GetAllCustomFields(ctx context.Context, params *GetAllCustomFie
 */
 func (a *Client) GetAllTags(ctx context.Context, params *GetAllTagsParams) (*GetAllTagsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAllTagsParams()
 	}
@@ -1463,7 +1375,6 @@ func (a *Client) GetAllTags(ctx context.Context, params *GetAllTagsParams) (*Get
 */
 func (a *Client) GetBlockingStateAuditLogsWithHistory(ctx context.Context, params *GetBlockingStateAuditLogsWithHistoryParams) (*GetBlockingStateAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetBlockingStateAuditLogsWithHistoryParams()
 	}
@@ -1510,7 +1421,6 @@ func (a *Client) GetBlockingStateAuditLogsWithHistory(ctx context.Context, param
 */
 func (a *Client) GetBlockingStates(ctx context.Context, params *GetBlockingStatesParams) (*GetBlockingStatesOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetBlockingStatesParams()
 	}
@@ -1557,7 +1467,6 @@ func (a *Client) GetBlockingStates(ctx context.Context, params *GetBlockingState
 */
 func (a *Client) GetChildrenAccounts(ctx context.Context, params *GetChildrenAccountsParams) (*GetChildrenAccountsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetChildrenAccountsParams()
 	}
@@ -1604,7 +1513,6 @@ func (a *Client) GetChildrenAccounts(ctx context.Context, params *GetChildrenAcc
 */
 func (a *Client) GetEmails(ctx context.Context, params *GetEmailsParams) (*GetEmailsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetEmailsParams()
 	}
@@ -1651,7 +1559,6 @@ func (a *Client) GetEmails(ctx context.Context, params *GetEmailsParams) (*GetEm
 */
 func (a *Client) GetInvoicePayments(ctx context.Context, params *GetInvoicePaymentsParams) (*GetInvoicePaymentsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetInvoicePaymentsParams()
 	}
@@ -1698,7 +1605,6 @@ func (a *Client) GetInvoicePayments(ctx context.Context, params *GetInvoicePayme
 */
 func (a *Client) GetInvoicesForAccount(ctx context.Context, params *GetInvoicesForAccountParams) (*GetInvoicesForAccountOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetInvoicesForAccountParams()
 	}
@@ -1745,7 +1651,6 @@ func (a *Client) GetInvoicesForAccount(ctx context.Context, params *GetInvoicesF
 */
 func (a *Client) GetInvoicesForAccountPaginated(ctx context.Context, params *GetInvoicesForAccountPaginatedParams) (*GetInvoicesForAccountPaginatedOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetInvoicesForAccountPaginatedParams()
 	}
@@ -1792,7 +1697,6 @@ func (a *Client) GetInvoicesForAccountPaginated(ctx context.Context, params *Get
 */
 func (a *Client) GetOverdueAccount(ctx context.Context, params *GetOverdueAccountParams) (*GetOverdueAccountOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetOverdueAccountParams()
 	}
@@ -1839,7 +1743,6 @@ func (a *Client) GetOverdueAccount(ctx context.Context, params *GetOverdueAccoun
 */
 func (a *Client) GetPaymentMethodsForAccount(ctx context.Context, params *GetPaymentMethodsForAccountParams) (*GetPaymentMethodsForAccountOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentMethodsForAccountParams()
 	}
@@ -1886,7 +1789,6 @@ func (a *Client) GetPaymentMethodsForAccount(ctx context.Context, params *GetPay
 */
 func (a *Client) GetPaymentsForAccount(ctx context.Context, params *GetPaymentsForAccountParams) (*GetPaymentsForAccountOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentsForAccountParams()
 	}
@@ -1933,7 +1835,6 @@ func (a *Client) GetPaymentsForAccount(ctx context.Context, params *GetPaymentsF
 */
 func (a *Client) ModifyAccountCustomFields(ctx context.Context, params *ModifyAccountCustomFieldsParams) (*ModifyAccountCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewModifyAccountCustomFieldsParams()
 	}
@@ -1992,25 +1893,22 @@ func (a *Client) ModifyAccountCustomFields(ctx context.Context, params *ModifyAc
 */
 func (a *Client) PayAllInvoices(ctx context.Context, params *PayAllInvoicesParams) (*PayAllInvoicesCreated, *PayAllInvoicesNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewPayAllInvoicesParams()
 	}
-	getParams := NewPayAllInvoicesParams()
-	getParams.Context = ctx
 	params.Context = ctx
 	if params.XKillbillComment == nil && a.defaults.XKillbillComment() != nil {
 		params.XKillbillComment = a.defaults.XKillbillComment()
 	}
-	getParams.XKillbillComment = params.XKillbillComment
+
 	if params.XKillbillCreatedBy == "" && a.defaults.XKillbillCreatedBy() != nil {
 		params.XKillbillCreatedBy = *a.defaults.XKillbillCreatedBy()
 	}
-	getParams.XKillbillCreatedBy = params.XKillbillCreatedBy
+
 	if params.XKillbillReason == nil && a.defaults.XKillbillReason() != nil {
 		params.XKillbillReason = a.defaults.XKillbillReason()
 	}
-	getParams.XKillbillReason = params.XKillbillReason
+
 	if params.WithProfilingInfo == nil && a.defaults.KillbillWithProfilingInfo() != nil {
 		params.WithProfilingInfo = a.defaults.KillbillWithProfilingInfo()
 	}
@@ -2018,7 +1916,6 @@ func (a *Client) PayAllInvoices(ctx context.Context, params *PayAllInvoicesParam
 	if params.WithStackTrace == nil && a.defaults.KillbillWithStackTrace() != nil {
 		params.WithStackTrace = a.defaults.KillbillWithStackTrace()
 	}
-	getParams.WithStackTrace = params.WithStackTrace
 
 	op := &runtime.ClientOperation{
 		ID:                 "payAllInvoices",
@@ -2038,47 +1935,15 @@ func (a *Client) PayAllInvoices(ctx context.Context, params *PayAllInvoicesParam
 	if err != nil {
 		return nil, nil, err
 	}
-	var location string
 	switch value := result.(type) {
-	case *PayAllInvoicesCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil, nil
-		}
-	case *PayAllInvoicesNoContent:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return nil, value, nil
-		}
-	default:
-		return nil, nil, fmt.Errorf("unexpected result type: %T", result)
-	}
-
-	getResult, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "payAllInvoices",
-		Method:             "GET",
-		PathPattern:        location,
-		ProducesMediaTypes: []string{"application/json"},
-		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"http"},
-		Params:             getParams,
-		Reader:             &PayAllInvoicesReader{formats: a.formats},
-		AuthInfo:           a.authInfo,
-		Context:            getParams.Context,
-		Client:             getParams.HTTPClient,
-	})
-	if err != nil {
-		return nil, nil, err
-	}
-
-	switch value := getResult.(type) {
 	case *PayAllInvoicesCreated:
 		return value, nil, nil
 	case *PayAllInvoicesNoContent:
 		return nil, value, nil
-	default:
-		return nil, nil, fmt.Errorf("unexpected result type: %T", result)
 	}
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for account: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
 
 }
 
@@ -2087,7 +1952,6 @@ func (a *Client) PayAllInvoices(ctx context.Context, params *PayAllInvoicesParam
 */
 func (a *Client) ProcessPayment(ctx context.Context, params *ProcessPaymentParams) (*ProcessPaymentCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewProcessPaymentParams()
 	}
@@ -2133,15 +1997,10 @@ func (a *Client) ProcessPayment(ctx context.Context, params *ProcessPaymentParam
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *ProcessPaymentCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*ProcessPaymentCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -2160,13 +2019,7 @@ func (a *Client) ProcessPayment(ctx context.Context, params *ProcessPaymentParam
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *ProcessPaymentCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*ProcessPaymentCreated), nil
 
 }
 
@@ -2175,7 +2028,6 @@ func (a *Client) ProcessPayment(ctx context.Context, params *ProcessPaymentParam
 */
 func (a *Client) ProcessPaymentByExternalKey(ctx context.Context, params *ProcessPaymentByExternalKeyParams) (*ProcessPaymentByExternalKeyCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewProcessPaymentByExternalKeyParams()
 	}
@@ -2221,15 +2073,10 @@ func (a *Client) ProcessPaymentByExternalKey(ctx context.Context, params *Proces
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *ProcessPaymentByExternalKeyCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*ProcessPaymentByExternalKeyCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -2248,13 +2095,7 @@ func (a *Client) ProcessPaymentByExternalKey(ctx context.Context, params *Proces
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *ProcessPaymentByExternalKeyCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*ProcessPaymentByExternalKeyCreated), nil
 
 }
 
@@ -2263,7 +2104,6 @@ func (a *Client) ProcessPaymentByExternalKey(ctx context.Context, params *Proces
 */
 func (a *Client) RebalanceExistingCBAOnAccount(ctx context.Context, params *RebalanceExistingCBAOnAccountParams) (*RebalanceExistingCBAOnAccountNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewRebalanceExistingCBAOnAccountParams()
 	}
@@ -2322,7 +2162,6 @@ func (a *Client) RebalanceExistingCBAOnAccount(ctx context.Context, params *Reba
 */
 func (a *Client) RefreshPaymentMethods(ctx context.Context, params *RefreshPaymentMethodsParams) (*RefreshPaymentMethodsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewRefreshPaymentMethodsParams()
 	}
@@ -2381,7 +2220,6 @@ func (a *Client) RefreshPaymentMethods(ctx context.Context, params *RefreshPayme
 */
 func (a *Client) RemoveEmail(ctx context.Context, params *RemoveEmailParams) (*RemoveEmailNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewRemoveEmailParams()
 	}
@@ -2440,7 +2278,6 @@ func (a *Client) RemoveEmail(ctx context.Context, params *RemoveEmailParams) (*R
 */
 func (a *Client) SearchAccounts(ctx context.Context, params *SearchAccountsParams) (*SearchAccountsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewSearchAccountsParams()
 	}
@@ -2487,7 +2324,6 @@ func (a *Client) SearchAccounts(ctx context.Context, params *SearchAccountsParam
 */
 func (a *Client) SetDefaultPaymentMethod(ctx context.Context, params *SetDefaultPaymentMethodParams) (*SetDefaultPaymentMethodNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewSetDefaultPaymentMethodParams()
 	}
@@ -2546,7 +2382,6 @@ func (a *Client) SetDefaultPaymentMethod(ctx context.Context, params *SetDefault
 */
 func (a *Client) TransferChildCreditToParent(ctx context.Context, params *TransferChildCreditToParentParams) (*TransferChildCreditToParentNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewTransferChildCreditToParentParams()
 	}
@@ -2605,7 +2440,6 @@ func (a *Client) TransferChildCreditToParent(ctx context.Context, params *Transf
 */
 func (a *Client) UpdateAccount(ctx context.Context, params *UpdateAccountParams) (*UpdateAccountNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewUpdateAccountParams()
 	}

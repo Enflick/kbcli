@@ -64,7 +64,6 @@ type ClientService interface {
 */
 func (a *Client) GetClock(ctx context.Context, params *GetClockParams) (*GetClockOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetClockParams()
 	}
@@ -111,7 +110,6 @@ func (a *Client) GetClock(ctx context.Context, params *GetClockParams) (*GetCloc
 */
 func (a *Client) SetClock(ctx context.Context, params *SetClockParams) (*SetClockOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewSetClockParams()
 	}

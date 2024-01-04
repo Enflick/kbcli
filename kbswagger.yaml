@@ -35,6 +35,7 @@ tags:
 - name: "Tenant"
 - name: "PaymentTransaction"
 - name: "Usage"
+- name: "TNCustomField"
 paths:
   /1.0/kb/accounts/{accountId}/tags:
     get:
@@ -3919,9 +3920,9 @@ paths:
       summary: "Get the test clock"
       description: ""
       operationId: "getClock"
-      produces: 
+      produces:
       - "application/json"
-      parameters: 
+      parameters:
       - name: "X-Killbill-ApiKey"
         in: "header"
         required: true
@@ -3930,22 +3931,22 @@ paths:
         in: "header"
         required: true
         type: "string"
-      responses: 
+      responses:
         "200":
           description: "successful operation"
-          schema: 
+          schema:
             $ref: "#/definitions/Clock"
       security:
       - basicAuth: []
-    post: 
+    post:
       tags:
       - "Debug"
       summary: "Set the test clock"
       description: ""
       operationId: "setClock"
-      consumes: 
+      consumes:
       - "application/json"
-      parameters: 
+      parameters:
       - in: "query"
         name: "requestedDate"
         required: true
@@ -3959,10 +3960,10 @@ paths:
         in: "header"
         required: true
         type: "string"
-      responses: 
+      responses:
         "200":
           description: "successful operation"
-          schema: 
+          schema:
             $ref: "#/definitions/Clock"
       security:
       - basicAuth: []
@@ -11955,6 +11956,134 @@ paths:
       - basicAuth: []
       - Killbill Api Key: []
       - Killbill Api Secret: []
+  /plugins/textnow-custom-field-plugin/:
+    get:
+      tags:
+      - "TNCustomField"
+      summary: "Retrieve custom fields"
+      description: "Get the custom fields with the option to filter out by object type, id, and/or account ID"
+      operationId: "getTNCustomFields"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "category"
+          in: "query"
+          type: "string"
+        - name: "objectId"
+          in: "query"
+          type: "string"
+        - name: "fieldName"
+          in: "query"
+          type: "string"
+        - name: "kbTenantId"
+          in: "query"
+          type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/TNCustomField"
+        "400":
+          description: "Invalid data supplied"
+        "404":
+          description: "Custom fields not found"
+        "500":
+          description: "Internal server error"
+      security:
+        - basicAuth: []
+        - Killbill Api Key: []
+        - Killbill Api Secret: []
+
+    post:
+      tags:
+      - "TNCustomField"
+      summary: "Create custom fields"
+      description: "Create a new TN Custom Field"
+      operationId: "createTNCustomField"
+      consumes:
+      - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "body"
+          in: "body"
+          required: true
+          schema:
+            $ref: "#/definitions/TNCustomField"
+      responses:
+        "201":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/TNCustomField"
+        "400":
+          description: "Invalid data supplied"
+        "500":
+          description: "Internal server error"
+      security:
+        - basicAuth: []
+        - Killbill Api Key: []
+        - Killbill Api Secret: []
+
+    put:
+      tags:
+      - "TNCustomField"
+      summary: "Updates custom fields"
+      description: "Updates a TN Custom Field"
+      operationId: "updateTNCustomField"
+      consumes:
+      - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "body"
+          in: "body"
+          required: true
+          schema:
+            $ref: "#/definitions/TNCustomField"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/TNCustomField"
+        "400":
+          description: "Invalid data supplied"
+        "500":
+          description: "Internal server error"
+      security:
+        - basicAuth: []
+        - Killbill Api Key: []
+        - Killbill Api Secret: []
+
+    delete:
+      tags:
+      - "TNCustomField"
+      summary: "Delete custom fields"
+      description: "Delete a TN Custom Field"
+      operationId: "deleteTNCustomField"
+      consumes:
+      - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "body"
+          in: "body"
+          required: true
+          schema:
+            $ref: "#/definitions/TNCustomField"
+      responses:
+        "200":
+          description: "successful operation"
+        "400":
+          description: "Invalid data supplied"
+        "500":
+          description: "Internal server error"
+      security:
+        - basicAuth: []
+        - Killbill Api Key: []
+        - Killbill Api Secret: []
+
 securityDefinitions:
   basicAuth:
     type: "basic"
@@ -15934,3 +16063,18 @@ definitions:
         format: "date-time"
       amount:
         type: "number"
+  TNCustomField:
+    type: "object"
+    properties:
+      objectId:
+        type: "string"
+      fieldName:
+        type: "string"
+      fieldValue:
+        type: "string"
+      category:
+        type: "string"
+      dataType:
+        type: "string"
+      kbTenantId:
+        type: "string"

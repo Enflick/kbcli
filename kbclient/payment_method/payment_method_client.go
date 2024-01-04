@@ -81,7 +81,6 @@ type ClientService interface {
 */
 func (a *Client) CreatePaymentMethodCustomFields(ctx context.Context, params *CreatePaymentMethodCustomFieldsParams) (*CreatePaymentMethodCustomFieldsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreatePaymentMethodCustomFieldsParams()
 	}
@@ -127,15 +126,10 @@ func (a *Client) CreatePaymentMethodCustomFields(ctx context.Context, params *Cr
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreatePaymentMethodCustomFieldsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreatePaymentMethodCustomFieldsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -154,13 +148,7 @@ func (a *Client) CreatePaymentMethodCustomFields(ctx context.Context, params *Cr
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreatePaymentMethodCustomFieldsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreatePaymentMethodCustomFieldsCreated), nil
 
 }
 
@@ -169,7 +157,6 @@ func (a *Client) CreatePaymentMethodCustomFields(ctx context.Context, params *Cr
 */
 func (a *Client) DeletePaymentMethod(ctx context.Context, params *DeletePaymentMethodParams) (*DeletePaymentMethodNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeletePaymentMethodParams()
 	}
@@ -228,7 +215,6 @@ func (a *Client) DeletePaymentMethod(ctx context.Context, params *DeletePaymentM
 */
 func (a *Client) DeletePaymentMethodCustomFields(ctx context.Context, params *DeletePaymentMethodCustomFieldsParams) (*DeletePaymentMethodCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeletePaymentMethodCustomFieldsParams()
 	}
@@ -287,7 +273,6 @@ func (a *Client) DeletePaymentMethodCustomFields(ctx context.Context, params *De
 */
 func (a *Client) GetPaymentMethod(ctx context.Context, params *GetPaymentMethodParams) (*GetPaymentMethodOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentMethodParams()
 	}
@@ -334,7 +319,6 @@ func (a *Client) GetPaymentMethod(ctx context.Context, params *GetPaymentMethodP
 */
 func (a *Client) GetPaymentMethodAuditLogsWithHistory(ctx context.Context, params *GetPaymentMethodAuditLogsWithHistoryParams) (*GetPaymentMethodAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentMethodAuditLogsWithHistoryParams()
 	}
@@ -381,7 +365,6 @@ func (a *Client) GetPaymentMethodAuditLogsWithHistory(ctx context.Context, param
 */
 func (a *Client) GetPaymentMethodByKey(ctx context.Context, params *GetPaymentMethodByKeyParams) (*GetPaymentMethodByKeyOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentMethodByKeyParams()
 	}
@@ -428,7 +411,6 @@ func (a *Client) GetPaymentMethodByKey(ctx context.Context, params *GetPaymentMe
 */
 func (a *Client) GetPaymentMethodCustomFields(ctx context.Context, params *GetPaymentMethodCustomFieldsParams) (*GetPaymentMethodCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentMethodCustomFieldsParams()
 	}
@@ -475,7 +457,6 @@ func (a *Client) GetPaymentMethodCustomFields(ctx context.Context, params *GetPa
 */
 func (a *Client) GetPaymentMethods(ctx context.Context, params *GetPaymentMethodsParams) (*GetPaymentMethodsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPaymentMethodsParams()
 	}
@@ -522,7 +503,6 @@ func (a *Client) GetPaymentMethods(ctx context.Context, params *GetPaymentMethod
 */
 func (a *Client) ModifyPaymentMethodCustomFields(ctx context.Context, params *ModifyPaymentMethodCustomFieldsParams) (*ModifyPaymentMethodCustomFieldsNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewModifyPaymentMethodCustomFieldsParams()
 	}
@@ -581,7 +561,6 @@ func (a *Client) ModifyPaymentMethodCustomFields(ctx context.Context, params *Mo
 */
 func (a *Client) SearchPaymentMethods(ctx context.Context, params *SearchPaymentMethodsParams) (*SearchPaymentMethodsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewSearchPaymentMethodsParams()
 	}

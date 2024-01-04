@@ -31,6 +31,7 @@ import (
 	"github.com/killbill/kbcli/v3/kbclient/security"
 	securityops "github.com/killbill/kbcli/v3/kbclient/security"
 	"github.com/killbill/kbcli/v3/kbclient/subscription"
+	"github.com/killbill/kbcli/v3/kbclient/t_n_custom_field"
 	"github.com/killbill/kbcli/v3/kbclient/tag"
 	"github.com/killbill/kbcli/v3/kbclient/tag_definition"
 	"github.com/killbill/kbcli/v3/kbclient/tenant"
@@ -108,6 +109,8 @@ func New(transport runtime.ClientTransport,
 	cli.Security = security.New(transport, formats, authInfo, &cli.defaults)
 
 	cli.Subscription = subscription.New(transport, formats, authInfo, &cli.defaults)
+
+	cli.TnCustomField = t_n_custom_field.New(transport, formats, authInfo, &cli.defaults)
 
 	cli.Tag = tag.New(transport, formats, authInfo, &cli.defaults)
 
@@ -193,6 +196,8 @@ type KillBill struct {
 
 	Subscription subscription.ClientService
 
+	TnCustomField t_n_custom_field.ClientService
+
 	Tag tag.ClientService
 
 	TagDefinition tag_definition.ClientService
@@ -229,6 +234,7 @@ func (c *KillBill) SetTransport(transport runtime.ClientTransport) {
 	c.PluginInfo.SetTransport(transport)
 	c.Security.SetTransport(transport)
 	c.Subscription.SetTransport(transport)
+	c.TnCustomField.SetTransport(transport)
 	c.Tag.SetTransport(transport)
 	c.TagDefinition.SetTransport(transport)
 	c.Tenant.SetTransport(transport)

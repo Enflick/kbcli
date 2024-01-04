@@ -68,7 +68,6 @@ type ClientService interface {
 */
 func (a *Client) GetCustomFieldAuditLogsWithHistory(ctx context.Context, params *GetCustomFieldAuditLogsWithHistoryParams) (*GetCustomFieldAuditLogsWithHistoryOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetCustomFieldAuditLogsWithHistoryParams()
 	}
@@ -115,7 +114,6 @@ func (a *Client) GetCustomFieldAuditLogsWithHistory(ctx context.Context, params 
 */
 func (a *Client) GetCustomFields(ctx context.Context, params *GetCustomFieldsParams) (*GetCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetCustomFieldsParams()
 	}
@@ -162,7 +160,6 @@ func (a *Client) GetCustomFields(ctx context.Context, params *GetCustomFieldsPar
 */
 func (a *Client) SearchCustomFields(ctx context.Context, params *SearchCustomFieldsParams) (*SearchCustomFieldsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewSearchCustomFieldsParams()
 	}
@@ -209,7 +206,6 @@ func (a *Client) SearchCustomFields(ctx context.Context, params *SearchCustomFie
 */
 func (a *Client) SearchCustomFieldsByTypeName(ctx context.Context, params *SearchCustomFieldsByTypeNameParams) (*SearchCustomFieldsByTypeNameOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewSearchCustomFieldsByTypeNameParams()
 	}

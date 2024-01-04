@@ -65,7 +65,6 @@ type ClientService interface {
 */
 func (a *Client) CreateCredits(ctx context.Context, params *CreateCreditsParams) (*CreateCreditsCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewCreateCreditsParams()
 	}
@@ -111,15 +110,10 @@ func (a *Client) CreateCredits(ctx context.Context, params *CreateCreditsParams)
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *CreateCreditsCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*CreateCreditsCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -138,13 +132,7 @@ func (a *Client) CreateCredits(ctx context.Context, params *CreateCreditsParams)
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *CreateCreditsCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*CreateCreditsCreated), nil
 
 }
 
@@ -153,7 +141,6 @@ func (a *Client) CreateCredits(ctx context.Context, params *CreateCreditsParams)
 */
 func (a *Client) GetCredit(ctx context.Context, params *GetCreditParams) (*GetCreditOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetCreditParams()
 	}

@@ -76,7 +76,6 @@ type ClientService interface {
 */
 func (a *Client) GetQueueEntries(ctx context.Context, params *GetQueueEntriesParams) (*GetQueueEntriesOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetQueueEntriesParams()
 	}
@@ -123,7 +122,6 @@ func (a *Client) GetQueueEntries(ctx context.Context, params *GetQueueEntriesPar
 */
 func (a *Client) InvalidatesCache(ctx context.Context, params *InvalidatesCacheParams) (*InvalidatesCacheNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewInvalidatesCacheParams()
 	}
@@ -170,7 +168,6 @@ func (a *Client) InvalidatesCache(ctx context.Context, params *InvalidatesCacheP
 */
 func (a *Client) InvalidatesCacheByAccount(ctx context.Context, params *InvalidatesCacheByAccountParams) (*InvalidatesCacheByAccountNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewInvalidatesCacheByAccountParams()
 	}
@@ -217,7 +214,6 @@ func (a *Client) InvalidatesCacheByAccount(ctx context.Context, params *Invalida
 */
 func (a *Client) InvalidatesCacheByTenant(ctx context.Context, params *InvalidatesCacheByTenantParams) (*InvalidatesCacheByTenantNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewInvalidatesCacheByTenantParams()
 	}
@@ -264,7 +260,6 @@ func (a *Client) InvalidatesCacheByTenant(ctx context.Context, params *Invalidat
 */
 func (a *Client) PutInRotation(ctx context.Context, params *PutInRotationParams) (*PutInRotationNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewPutInRotationParams()
 	}
@@ -311,7 +306,6 @@ func (a *Client) PutInRotation(ctx context.Context, params *PutInRotationParams)
 */
 func (a *Client) PutOutOfRotation(ctx context.Context, params *PutOutOfRotationParams) (*PutOutOfRotationNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewPutOutOfRotationParams()
 	}
@@ -358,7 +352,6 @@ func (a *Client) PutOutOfRotation(ctx context.Context, params *PutOutOfRotationP
 */
 func (a *Client) TriggerInvoiceGenerationForParkedAccounts(ctx context.Context, params *TriggerInvoiceGenerationForParkedAccountsParams) (*TriggerInvoiceGenerationForParkedAccountsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewTriggerInvoiceGenerationForParkedAccountsParams()
 	}
@@ -417,7 +410,6 @@ func (a *Client) TriggerInvoiceGenerationForParkedAccounts(ctx context.Context, 
 */
 func (a *Client) UpdatePaymentTransactionState(ctx context.Context, params *UpdatePaymentTransactionStateParams) (*UpdatePaymentTransactionStateNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewUpdatePaymentTransactionStateParams()
 	}

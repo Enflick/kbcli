@@ -87,7 +87,6 @@ type ClientService interface {
 */
 func (a *Client) AddSimplePlan(ctx context.Context, params *AddSimplePlanParams) (*AddSimplePlanCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewAddSimplePlanParams()
 	}
@@ -133,15 +132,10 @@ func (a *Client) AddSimplePlan(ctx context.Context, params *AddSimplePlanParams)
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *AddSimplePlanCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*AddSimplePlanCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -160,13 +154,7 @@ func (a *Client) AddSimplePlan(ctx context.Context, params *AddSimplePlanParams)
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *AddSimplePlanCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*AddSimplePlanCreated), nil
 
 }
 
@@ -175,7 +163,6 @@ func (a *Client) AddSimplePlan(ctx context.Context, params *AddSimplePlanParams)
 */
 func (a *Client) DeleteCatalog(ctx context.Context, params *DeleteCatalogParams) (*DeleteCatalogNoContent, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewDeleteCatalogParams()
 	}
@@ -234,7 +221,6 @@ func (a *Client) DeleteCatalog(ctx context.Context, params *DeleteCatalogParams)
 */
 func (a *Client) GetAvailableAddons(ctx context.Context, params *GetAvailableAddonsParams) (*GetAvailableAddonsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAvailableAddonsParams()
 	}
@@ -281,7 +267,6 @@ func (a *Client) GetAvailableAddons(ctx context.Context, params *GetAvailableAdd
 */
 func (a *Client) GetAvailableBasePlans(ctx context.Context, params *GetAvailableBasePlansParams) (*GetAvailableBasePlansOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetAvailableBasePlansParams()
 	}
@@ -328,7 +313,6 @@ func (a *Client) GetAvailableBasePlans(ctx context.Context, params *GetAvailable
 */
 func (a *Client) GetCatalogJSON(ctx context.Context, params *GetCatalogJSONParams) (*GetCatalogJSONOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetCatalogJSONParams()
 	}
@@ -375,7 +359,6 @@ func (a *Client) GetCatalogJSON(ctx context.Context, params *GetCatalogJSONParam
 */
 func (a *Client) GetCatalogVersions(ctx context.Context, params *GetCatalogVersionsParams) (*GetCatalogVersionsOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetCatalogVersionsParams()
 	}
@@ -422,7 +405,6 @@ func (a *Client) GetCatalogVersions(ctx context.Context, params *GetCatalogVersi
 */
 func (a *Client) GetCatalogXML(ctx context.Context, params *GetCatalogXMLParams) (*GetCatalogXMLOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetCatalogXMLParams()
 	}
@@ -469,7 +451,6 @@ func (a *Client) GetCatalogXML(ctx context.Context, params *GetCatalogXMLParams)
 */
 func (a *Client) GetPhaseForSubscriptionAndDate(ctx context.Context, params *GetPhaseForSubscriptionAndDateParams) (*GetPhaseForSubscriptionAndDateOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPhaseForSubscriptionAndDateParams()
 	}
@@ -516,7 +497,6 @@ func (a *Client) GetPhaseForSubscriptionAndDate(ctx context.Context, params *Get
 */
 func (a *Client) GetPlanForSubscriptionAndDate(ctx context.Context, params *GetPlanForSubscriptionAndDateParams) (*GetPlanForSubscriptionAndDateOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPlanForSubscriptionAndDateParams()
 	}
@@ -563,7 +543,6 @@ func (a *Client) GetPlanForSubscriptionAndDate(ctx context.Context, params *GetP
 */
 func (a *Client) GetPriceListForSubscriptionAndDate(ctx context.Context, params *GetPriceListForSubscriptionAndDateParams) (*GetPriceListForSubscriptionAndDateOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetPriceListForSubscriptionAndDateParams()
 	}
@@ -610,7 +589,6 @@ func (a *Client) GetPriceListForSubscriptionAndDate(ctx context.Context, params 
 */
 func (a *Client) GetProductForSubscriptionAndDate(ctx context.Context, params *GetProductForSubscriptionAndDateParams) (*GetProductForSubscriptionAndDateOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewGetProductForSubscriptionAndDateParams()
 	}
@@ -657,7 +635,6 @@ func (a *Client) GetProductForSubscriptionAndDate(ctx context.Context, params *G
 */
 func (a *Client) UploadCatalogXML(ctx context.Context, params *UploadCatalogXMLParams) (*UploadCatalogXMLCreated, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewUploadCatalogXMLParams()
 	}
@@ -703,15 +680,10 @@ func (a *Client) UploadCatalogXML(ctx context.Context, params *UploadCatalogXMLP
 	if err != nil {
 		return nil, err
 	}
-	var location string
-	switch value := result.(type) {
-	case *UploadCatalogXMLCreated:
-		location = kbcommon.ParseLocationHeader(value.HttpResponse.GetHeader("Location"))
-		if !params.ProcessLocationHeader || location == "" {
-			return value, nil
-		}
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
+	createdResult := result.(*UploadCatalogXMLCreated)
+	location := kbcommon.ParseLocationHeader(createdResult.HttpResponse.GetHeader("Location"))
+	if !params.ProcessLocationHeader || location == "" {
+		return createdResult, nil
 	}
 
 	getResult, err := a.transport.Submit(&runtime.ClientOperation{
@@ -730,13 +702,7 @@ func (a *Client) UploadCatalogXML(ctx context.Context, params *UploadCatalogXMLP
 	if err != nil {
 		return nil, err
 	}
-
-	switch value := getResult.(type) {
-	case *UploadCatalogXMLCreated:
-		return value, nil
-	default:
-		return nil, fmt.Errorf("unexpected result type: %T", result)
-	}
+	return getResult.(*UploadCatalogXMLCreated), nil
 
 }
 
@@ -745,7 +711,6 @@ func (a *Client) UploadCatalogXML(ctx context.Context, params *UploadCatalogXMLP
 */
 func (a *Client) ValidateCatalogXML(ctx context.Context, params *ValidateCatalogXMLParams) (*ValidateCatalogXMLOK, error) {
 	// TODO: Validate the params before sending
-
 	if params == nil {
 		params = NewValidateCatalogXMLParams()
 	}
