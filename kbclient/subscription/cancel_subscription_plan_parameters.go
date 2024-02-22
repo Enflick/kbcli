@@ -53,10 +53,12 @@ func NewCancelSubscriptionPlanParamsWithHTTPClient(client *http.Client) *CancelS
 	}
 }
 
-/* CancelSubscriptionPlanParams contains all the parameters to send to the API endpoint
-   for the cancel subscription plan operation.
+/*
+CancelSubscriptionPlanParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the cancel subscription plan operation.
+
+	Typically these are written to a http.Request.
 */
 type CancelSubscriptionPlanParams struct {
 
@@ -89,8 +91,8 @@ type CancelSubscriptionPlanParams struct {
 
 	// RequestedDate.
 	//
-	// Format: date
-	RequestedDate *strfmt.Date
+	// Format: date-time
+	RequestedDate *strfmt.DateTime
 
 	// SubscriptionID.
 	//
@@ -262,13 +264,13 @@ func (o *CancelSubscriptionPlanParams) SetPluginProperty(pluginProperty []string
 }
 
 // WithRequestedDate adds the requestedDate to the cancel subscription plan params
-func (o *CancelSubscriptionPlanParams) WithRequestedDate(requestedDate *strfmt.Date) *CancelSubscriptionPlanParams {
+func (o *CancelSubscriptionPlanParams) WithRequestedDate(requestedDate *strfmt.DateTime) *CancelSubscriptionPlanParams {
 	o.SetRequestedDate(requestedDate)
 	return o
 }
 
 // SetRequestedDate adds the requestedDate to the cancel subscription plan params
-func (o *CancelSubscriptionPlanParams) SetRequestedDate(requestedDate *strfmt.Date) {
+func (o *CancelSubscriptionPlanParams) SetRequestedDate(requestedDate *strfmt.DateTime) {
 	o.RequestedDate = requestedDate
 }
 
@@ -405,7 +407,7 @@ func (o *CancelSubscriptionPlanParams) WriteToRequest(r runtime.ClientRequest, r
 	if o.RequestedDate != nil {
 
 		// query param requestedDate
-		var qrRequestedDate strfmt.Date
+		var qrRequestedDate strfmt.DateTime
 
 		if o.RequestedDate != nil {
 			qrRequestedDate = *o.RequestedDate
