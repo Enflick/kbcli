@@ -9881,7 +9881,7 @@ paths:
         in: "query"
         required: false
         type: "string"
-        format: "date"
+        format: "date-time"
       - name: "callCompletion"
         in: "query"
         required: false
